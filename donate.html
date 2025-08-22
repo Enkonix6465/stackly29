@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NGO / Charity Website</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/donate.css">
+<script src="js/main.js" defer></script>
+  <script src="js/header.js" defer></script>
+  <script src="js/auth-check.js" defer></script>
+    <script src="js/newsletter.js" defer></script>
+
+</head>
+<body>
+  <!-- ================= HEADER ================= -->
+<header>
+  <div class="logo">
+    <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+  </div>
+
+  <div class="header-right">
+    <nav>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="index.html">Home ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li class="dropdown">
+          <a href="services.html">Services ▾</a>
+          <ul class="dropdown-menu">
+                        <li class="mobile-only"><a href="services.html">All Services</a></li>
+
+            <li><a href="service1.html">Education</a></li>
+        <li><a href="service2.html">Healthcare</a></li>
+        <li><a href="service3.html">Skill Training</a></li>
+        <li><a href="service4.html">Empowerment</a></li>
+        <li><a href="service5.html">Disaster Relief</a></li>
+        <li><a href="service6.html">Environmental Care</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="profile-container">
+      <div class="profile" id="profile-dropdown-toggle">
+        <span id="profile-initials"></span>
+      </div>
+      <ul class="profile-dropdown" id="profile-dropdown">
+        <li><a href="#" id="logout-btn">Logout</a></li>
+      </ul>
+    </div>
+
+    <button id="themeToggle">🌙</button>
+    <button id="mobile-menu-toggle" class="hamburger">☰</button>
+  </div>
+</header>
+
+  <!-- ================= MAIN SECTIONS ================= -->
+  <main>
+
+    <!-- Donate Hero Section -->
+<section class="donate-hero">
+  <div class="donate-overlay"></div>
+  <div class="donate-content">
+    <h1>Make a Difference Today</h1>
+    <p>Your support helps us bring hope, education, and care to those in need.</p>
+    <a href="#donate-form" class="donate-btn">Donate Now</a>
+  </div>
+</section>
+<!-- Why Donate Section -->
+<section class="why-donate">
+  <div class="container">
+    <h2>Why Your Donation Matters</h2>
+    <p class="subtitle">Every contribution creates hope and lasting change.</p>
+
+    <div class="donate-reasons">
+
+      <div class="reason-card">
+        <i class="fas fa-graduation-cap"></i>
+        <h3>Education</h3>
+        <p>Your donation provides books, supplies, and school access for children.</p>
+      </div>
+
+      <div class="reason-card">
+        <i class="fas fa-heartbeat"></i>
+        <h3>Healthcare</h3>
+        <p>We deliver essential medical aid to underserved communities.</p>
+      </div>
+
+      <div class="reason-card">
+        <i class="fas fa-utensils"></i>
+        <h3>Food & Shelter</h3>
+        <p>Your support helps us provide daily meals and safe housing.</p>
+      </div>
+
+      <div class="reason-card">
+        <i class="fas fa-users"></i>
+        <h3>Community Growth</h3>
+        <p>We empower families to break the cycle of poverty sustainably.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+   <!-- Donation Form Section -->
+<section id="donate-form" class="donation-form">
+  <div class="container">
+    <h2>Make a Donation</h2>
+    <p class="subtitle">Choose an amount or enter your own</p>
+
+    <form id="donationForm">
+      <!-- Preset Donation Amounts -->
+      <div class="donation-amounts">
+        <button type="button" class="amount-btn" data-amount="500">₹500</button>
+        <button type="button" class="amount-btn" data-amount="1000">₹1000</button>
+        <button type="button" class="amount-btn" data-amount="2500">₹2500</button>
+        <button type="button" class="amount-btn" data-amount="5000">₹5000</button>
+      </div>
+
+      <!-- Custom Amount -->
+      <div class="custom-amount">
+        <input type="number" id="customAmount" placeholder="Enter custom amount (₹)">
+      </div>
+
+      <!-- Donor Info -->
+      <div class="donor-info">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="donate-submit">Donate Now</button>
+    </form>
+  </div>
+</section>
+
+<!-- Thank You Popup -->
+<div id="thankYouPopup" class="thank-you-popup">
+  <div class="popup-content">
+    <h2>Thank You! 🎉</h2>
+    <p>Your donation will make a big difference.</p>
+    <button id="closePopup">Close</button>
+  </div>
+</div>
+
+<!-- Other Ways to Give Section -->
+<section id="other-ways" class="other-ways">
+  <div class="container">
+    <h2>Other Ways to Give</h2>
+    <p class="subtitle">Choose the method that works best for you</p>
+
+    <div class="ways-grid">
+      <!-- UPI -->
+      <div class="way-card">
+        <h3>UPI</h3>
+        <p>Donate directly using UPI apps</p>
+        <p class="highlight">ngo@upi</p>
+      </div>
+
+      <!-- Bank Transfer -->
+      <div class="way-card">
+        <h3>Bank Transfer</h3>
+        <p>Account Name: Helping Hands Foundation</p>
+        <p>Account No: 1234567890</p>
+        <p>IFSC: ABCD0123456</p>
+      </div>
+
+      <!-- PayPal -->
+      <div class="way-card">
+        <h3>PayPal</h3>
+        <p>For international donations</p>
+        <a href="https://www.paypal.com/in/home" class="donate-link">Donate via PayPal</a>
+      </div>
+
+      <!-- Cheque -->
+      <div class="way-card">
+        <h3>By Cheque</h3>
+        <p>Send your cheque to:</p>
+        <p>Helping Hands Foundation,<br>123 Charity Street,<br>Mumbai, India</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section (Simple Button) -->
+<section class="donate-contact">
+  <div class="container">
+    <h2>Need Assistance?</h2>
+    <p class="subtitle">Have questions about your donation? Reach out to us anytime.</p>
+    <a href="contact.html" class="contact-btn">Contact Us</a>
+  </div>
+</section>
+
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+ <footer>
+  <div class="footer-container">
+    
+    <!-- Logo Section -->
+    <div class="footer-logo">
+      <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+      <h4>NGO/CHARITY</h4>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-services">
+      <h4>Explore Services</h4>
+      <ul>
+        <li><a href="service1.html">Education</a></li>
+        <li><a href="service2.html">Healthcare</a></li>
+        <li><a href="service3.html">Skill Training</a></li>
+        <li><a href="service4.html">Women Empowerment</a></li>
+        <li><a href="service5.html">Disaster Relief</a></li>
+        <li><a href="service6.html">Environmental Care</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p><strong>Email:</strong> info@example.com</p>
+      <p><strong>Phone:</strong> +91 1234567890</p>
+
+      <h4>Follow Us</h4>
+      <div class="social">
+        <a href="https://facebook.com"><img src="images/fb.png" alt="Facebook"></a>
+        <a href="https://twitter.com"><img src="images/x.png" alt="Twitter"></a>
+        <a href="https://instagram.com"><img src="images/inst.jpeg" alt="Instagram"></a>
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Get weekly wellness tips and updates in your inbox.</p>
+      <form id="newsletter-form">
+        <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div id="newsletter-success" style="display:none; color:green; margin-top:8px;">
+    ✅ Thank you for subscribing!
+  </div>
+    </div>
+  </div>
+
+  <div class="footer-copy">
+    &copy; 2025 Your Company Name. All Rights Reserved.
+  </div>
+</footer>
+<script>
+// Donation Amount Selection
+const amountButtons = document.querySelectorAll(".amount-btn");
+const customAmountInput = document.getElementById("customAmount");
+
+amountButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    amountButtons.forEach(btn => btn.classList.remove("active"));
+    button.classList.add("active");
+    customAmountInput.value = button.dataset.amount;
+  });
+});
+
+// Thank You Popup
+const donationForm = document.getElementById("donationForm");
+const thankYouPopup = document.getElementById("thankYouPopup");
+const closePopup = document.getElementById("closePopup");
+
+donationForm.addEventListener("submit", (e) => {
+  e.preventDefault(); // stop real submission
+  thankYouPopup.style.display = "flex";
+});
+
+closePopup.addEventListener("click", () => {
+  thankYouPopup.style.display = "none";
+});
+
+
+</script>
+
+</body>
+</html>

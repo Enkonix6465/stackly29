@@ -1,0 +1,123 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard2.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/header.js" defer></script>
+    <link rel="stylesheet" href="css/header.css">
+    <script src="js/main.js" defer></script>
+    
+  </head>
+  <body>
+    <header>
+  <div class="logo">
+    <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+  </div>
+
+  <div class="header-right">
+    <nav>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="index.html">Home</a>
+          <ul class="dropdown-menu">
+            <li><a href="dashboard.html">Home1</a></li>
+            <li><a href="profile.html">Home2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+
+        <li class="dropdown">
+          <a href="services.html">Services</a>
+          <ul class="dropdown-menu">
+             <li><a href="service1.html">Education</a></li>
+        <li><a href="service2.html">Healthcare</a></li>
+        <li><a href="service3.html">Skill Training</a></li>
+        <li><a href="service4.html">Empowerment</a></li>
+        <li><a href="service5.html">Disaster Relief</a></li>
+        <li><a href="service6.html">Environmental Care</a></li>
+          </ul>
+        </li>
+
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="profile-container">
+      <div class="profile" id="profile-dropdown-toggle">
+        <span id="profile-initials">U</span>
+      </div>
+      <ul class="profile-dropdown" id="profile-dropdown">
+        <li><a href="#" id="logout-btn">Logout</a></li>
+      </ul>
+    </div>
+
+    <button id="themeToggle">🌙</button>
+  </div>
+</header>
+
+
+    <main class="dashboard-container">
+      <h2>User Dashboard</h2>
+
+      <!-- Summary Cards -->
+      <div class="summary-cards">
+        <div class="card">
+          <h4>Most Active User</h4>
+          <p id="mostActiveUser">-</p>
+        </div>
+        <div class="card">
+          <h4>Top Signups Day</h4>
+          <p id="topSignupDay">-</p>
+        </div>
+        <div class="card">
+          <h4>Total Users</h4>
+          <p id="totalUsersCard">-</p>
+        </div>
+      </div>
+
+      <!-- User Table -->
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Full Name</th>
+              <th>Username</th>
+              <th>Date</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="userTableBody"></tbody>
+        </table>
+      </div>
+
+      <!-- Charts Section -->
+      <div class="charts-container">
+        <div class="chart-card">
+          <h4>Total Users (Line)</h4>
+          <canvas id="totalUsersChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+          <h4>Signups Today (Bar)</h4>
+          <canvas id="todaySignupChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+          <h4>Weekly Signups (Line)</h4>
+          <canvas id="weeklySignupChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+          <h4>User Roles (Doughnut)</h4>
+          <canvas id="rolesChart"></canvas>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/dashboard2.js"></script>
+  </body>
+  </html>

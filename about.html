@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NGO / Charity Website</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/about2.css">
+<script src="js/main.js" defer></script>
+  <script src="js/header.js" defer></script>
+  <script src="js/newsletter.js" defer></script>
+</head>
+<body>
+  <!-- ================= HEADER ================= -->
+  <header>
+  <div class="logo">
+    <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+  </div>
+
+  <div class="header-right">
+    <nav>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="index.html">Home ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li class="dropdown">
+          <a href="services.html">Services ▾</a>
+          <ul class="dropdown-menu">
+                        <li class="mobile-only"><a href="services.html">All Services</a></li>
+
+            <li><a href="service1.html">Education</a></li>
+        <li><a href="service2.html">Healthcare</a></li>
+        <li><a href="service3.html">Skill Training</a></li>
+        <li><a href="service4.html">Empowerment</a></li>
+        <li><a href="service5.html">Disaster Relief</a></li>
+        <li><a href="service6.html">Environmental Care</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="profile-container">
+      <div class="profile" id="profile-dropdown-toggle">
+        <span id="profile-initials"></span>
+      </div>
+      <ul class="profile-dropdown" id="profile-dropdown">
+        <li><a href="#" id="logout-btn">Logout</a></li>
+      </ul>
+    </div>
+
+    <button id="themeToggle">🌙</button>
+    <button id="mobile-menu-toggle" class="hamburger">☰</button>
+  </div>
+</header>
+
+
+  <!-- ================= MAIN SECTIONS ================= -->
+  <main>
+     <!-- 🌟 About Hero Section -->
+<!-- 🌟 About Hero Section with Background Video -->
+<section class="about-hero">
+  <video class="about-hero-video" autoplay muted loop playsinline>
+    <source src="videos/home2-hero.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="about-hero-overlay"></div>
+
+  <div class="about-hero-content">
+    <h1>About Our Mission</h1>
+    <p class="typing-text">Empowering communities through education & compassion.</p>
+    <a href="#mission" class="about-hero-btn">Explore More</a>
+  </div>
+</section>
+
+
+<!-- 🌟 Mission & Vision Section -->
+<section class="mission-vision" id="mission">
+  <div class="mv-row">
+    
+    <!-- Mission -->
+    <div class="mv-col mv-mission">
+      <div class="mv-content">
+        <h2>Our Mission</h2>
+        <p>
+          Our mission is to create equal opportunities for underprivileged communities by 
+          addressing their most pressing needs — from education to healthcare and livelihood support. 
+          We strive to break the cycle of poverty by equipping children with knowledge, 
+          empowering youth with skills, and supporting families with sustainable resources.
+        </p>
+        <p>
+          Through innovative programs and collaborative efforts, we ensure that every 
+          individual has access to tools and guidance that enable them to rise above 
+          circumstances and build a future filled with hope and dignity.
+        </p>
+      </div>
+      <div class="mv-image">
+        <img src="images/our-mission2.jpeg" alt="Our Mission">
+      </div>
+    </div>
+
+    <!-- Vision -->
+    <div class="mv-col mv-vision">
+      <div class="mv-image">
+        <img src="images/vision.jpeg" alt="Our Vision">
+      </div>
+      <div class="mv-content">
+        <h2>Our Vision</h2>
+        <p>
+          We envision a world where every person, regardless of their background, 
+          has the right to education, healthcare, and the opportunity to achieve 
+          their dreams. A world where compassion bridges inequality and humanity 
+          thrives in unity.
+        </p>
+        <p>
+          Our vision extends beyond short-term solutions — we aim for long-lasting, 
+          generational change. By investing in children, nurturing women empowerment, 
+          and promoting sustainable practices, we are building communities that 
+          can grow independently and contribute positively to society.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- WHO WE ARE SECTION (TIMELINE STYLE) -->
+<section class="who-we-are-timeline" id="who-we-are">
+  <h2 class="section-title">Who We Are</h2>
+  <p class="section-subtitle">
+    Our journey is shaped by values of compassion, unity, and innovation.
+  </p>
+
+  <div class="timeline">
+    <!-- Step 1 -->
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <img src="images/global_reach.jpeg" alt="Global Reach">
+        <div>
+          <h3>Global Reach</h3>
+          <p>
+            Our impact extends across communities worldwide, reaching those
+            who need support the most with sustainable initiatives.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <img src="images/partnership.jpeg" alt="Partnerships">
+        <div>
+          <h3>Strong Partnerships</h3>
+          <p>
+            We collaborate with organizations and communities, building
+            stronger foundations together for long-lasting change.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <img src="images/innovation.jpg" alt="Innovation">
+        <div>
+          <h3>Innovative Solutions</h3>
+          <p>
+            By embracing creativity and technology, we bring forward solutions
+            that transform lives and inspire progress.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+  
+
+<!-- OUR CORE VALUES (CIRCLE ORBIT STYLE) -->
+<section class="values-orbit" id="values">
+  <div class="values-center">
+    <h2>Our Core Values</h2>
+    <p>The principles that guide our work every single day</p>
+    <div class="orbit-circle" id="orbitCircle">
+      <span class="center-label">Our Values</span>
+      <div class="orbit-item top">
+        <img src="images/compassion.jpeg" alt="Compassion">
+        <h3>Compassion</h3>
+      </div>
+      <div class="orbit-item right">
+        <img src="images/integrity.jpeg" alt="Integrity">
+        <h3>Integrity</h3>
+      </div>
+      <div class="orbit-item bottom">
+        <img src="images/sustain.jpeg" alt="Sustainability">
+        <h3>Sustainability</h3>
+      </div>
+      <div class="orbit-item left">
+        <img src="images/innovation.jpeg" alt="Innovation">
+        <h3>Innovation</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- OUR TEAM SECTION (CIRCLE STYLE) -->
+<section class="team" id="team">
+  <div class="team-container">
+    <h2 class="section-title">Meet Our Team</h2>
+    <p class="section-subtitle">The passionate people driving our mission forward</p>
+
+    <div class="team-gallery">
+      <!-- Member 1 -->
+      <div class="team-member">
+        <div class="member-photo">
+          <img src="images/team1.jpeg" alt="Sarah Johnson">
+        </div>
+        <h3>Sarah Johnson</h3>
+        <p>Founder & CEO</p>
+      </div>
+
+      <!-- Member 2 -->
+      <div class="team-member">
+        <div class="member-photo">
+          <img src="images/team2.jpeg" alt="Michael Lee">
+        </div>
+        <h3>Michael Lee</h3>
+        <p>Program Director</p>
+      </div>
+
+      <!-- Member 3 -->
+      <div class="team-member">
+        <div class="member-photo">
+          <img src="images/team3.jpeg" alt="Anita Kumar">
+        </div>
+        <h3>Anita Kumar</h3>
+        <p>Head of Operations</p>
+      </div>
+
+      <!-- Member 4 -->
+      <div class="team-member">
+        <div class="member-photo">
+          <img src="images/team4.jpeg" alt="David Smith">
+        </div>
+        <h3>David Smith</h3>
+        <p>Community Outreach</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA SECTION (SPLIT STYLE) -->
+<section class="about-cta-split">
+  <div class="cta-image">
+    <img src="images/handshake.jpeg" alt="Be Part of the Change">
+  </div>
+  <div class="cta-text">
+    <h2>Be Part of the Change</h2>
+    <p>
+      Every step we take toward a better tomorrow begins with people like you.  
+      Whether by volunteering, donating, or spreading awareness,  
+      <strong>your action today creates hope for tomorrow.</strong>
+    </p>
+    <a href="contact.html" class="cta-btn">Get Involved</a>
+  </div>
+</section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+ <footer>
+  <div class="footer-container">
+    
+    <!-- Logo Section -->
+    <div class="footer-logo">
+      <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+      <h4>NGO/CHARITY</h4>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-services">
+      <h4>Explore Services</h4>
+      <ul>
+        <li><a href="service1.html">Education</a></li>
+        <li><a href="service2.html">Healthcare</a></li>
+        <li><a href="service3.html">Skill Training</a></li>
+        <li><a href="service4.html">Women Empowerment</a></li>
+        <li><a href="service5.html">Disaster Relief</a></li>
+        <li><a href="service6.html">Environmental Care</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p><strong>Email:</strong> info@example.com</p>
+      <p><strong>Phone:</strong> +91 1234567890</p>
+
+      <h4>Follow Us</h4>
+      <div class="social">
+        <a href="https://facebook.com"><img src="images/fb.png" alt="Facebook"></a>
+        <a href="https://twitter.com"><img src="images/x.png" alt="Twitter"></a>
+        <a href="https://instagram.com"><img src="images/inst.jpeg" alt="Instagram"></a>
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Get weekly wellness tips and updates in your inbox.</p>
+      <form id="newsletter-form">
+        <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;">
+    ✅ Thank you for subscribing!
+  </div>
+    </div>
+  </div>
+
+  <div class="footer-copy">
+    &copy; 2025 Your Company Name. All Rights Reserved.
+  </div>
+</footer>
+
+<script>
+  
+  // Fade-in on scroll
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".mv-col");
+  
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add("fade-in");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  elements.forEach(el => observer.observe(el));
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".timeline-item");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  items.forEach(item => observer.observe(item));
+});
+
+
+// Reveal on scroll
+document.addEventListener("DOMContentLoaded", () => {
+  const bands = document.querySelectorAll(".value-band");
+  const reveal = () => {
+    bands.forEach(band => {
+      const rect = band.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) band.classList.add("show");
+    });
+  };
+  window.addEventListener("scroll", reveal);
+  reveal();
+});
+
+
+
+</script>
+
+</script>
+</body>
+</html>

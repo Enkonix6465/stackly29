@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NGO / Charity Website</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/contact.css">
+<script src="js/main.js" defer></script>
+  <script src="js/header.js" defer></script>
+  <script src="js/auth-check.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/newsletter.js" defer></script>
+
+
+</head>
+<body>
+  <!-- ================= HEADER ================= -->
+<header>
+  <div class="logo">
+    <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+  </div>
+
+  <div class="header-right">
+    <nav>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="index.html">Home ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li class="dropdown">
+          <a href="services.html">Services ▾</a>
+          <ul class="dropdown-menu">
+                        <li class="mobile-only"><a href="services.html">All Services</a></li>
+            <li><a href="service1.html">Education</a></li>
+        <li><a href="service2.html">Healthcare</a></li>
+        <li><a href="service3.html">Skill Training</a></li>
+        <li><a href="service4.html">Empowerment</a></li>
+        <li><a href="service5.html">Disaster Relief</a></li>
+        <li><a href="service6.html">Environmental Care</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="profile-container">
+      <div class="profile" id="profile-dropdown-toggle">
+        <span id="profile-initials"></span>
+      </div>
+      <ul class="profile-dropdown" id="profile-dropdown">
+        <li><a href="#" id="logout-btn">Logout</a></li>
+      </ul>
+    </div>
+
+    <button id="themeToggle">🌙</button>
+    <button id="mobile-menu-toggle" class="hamburger">☰</button>
+  </div>
+</header>
+
+  <!-- ================= MAIN SECTIONS ================= -->
+  <main>
+
+    <!-- Section 1: Contact Page Hero with Video Background -->
+<section class="hero contact-hero">
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="videos/contact.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>Get in Touch</h1>
+    <p>We’re here to answer your questions and support you every step of the way.</p>
+    <a href="#contact-form" class="hero-btn">Contact Us</a>
+  </div>
+</section>
+
+<!-- Section 2: Contact Information (New Style) -->
+<section class="contact-info-alt">
+  <div class="container">
+    <h2>Let’s Connect</h2>
+    <p class="subtitle">Reach us through any of the following ways:</p>
+
+    <div class="info-list">
+      <div class="info-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <div class="info-text">
+          <h3>Visit Us</h3>
+          <p>123 Hope Street, Green City, India</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <i class="fas fa-phone-alt"></i>
+        <div class="info-text">
+          <h3>Call Us</h3>
+          <p>+91 98765 43210</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <i class="fas fa-envelope"></i>
+        <div class="info-text">
+          <h3>Email Us</h3>
+          <p>support@ngoexample.org</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3: Contact Form -->
+<section class="contact-form-section" id="contact-form">
+  <div class="container">
+    <h2>Send Us a Message</h2>
+    <p class="subtitle">We’ll get back to you as soon as possible.</p>
+
+    <form class="contact-form" id="contactForm">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Your Name" required>
+      </div>
+
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Your Email" required>
+      </div>
+
+      <div class="form-group">
+        <input type="text" name="subject" placeholder="Subject" required>
+      </div>
+
+      <div class="form-group">
+        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- Popup Message -->
+<div class="popup" id="thankYouPopup">
+  <div class="popup-content">
+    <h3>✅ Thank You!</h3>
+    <p>Your message has been sent successfully.</p>
+    <button id="closePopup">Close</button>
+  </div>
+</div>
+
+
+
+    <!-- Section 4: Google Map -->
+<section class="contact-map">
+  <div class="container">
+    <h2>Find Us Here</h2>
+    <p class="subtitle">Visit our office at the heart of the city.</p>
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0861974946753!2d-122.41941548468137!3d37.77492927975971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858155f7d4e44d%3A0xf0b25f3a84b94c9d!2sSan%20Francisco%20City%20Hall!5e0!3m2!1sen!2sin!4v1692349854025!5m2!1sen!2sin" 
+        width="100%" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+<!-- Section 6: FAQ -->
+<section class="contact-faq">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+    <p class="subtitle">Find quick answers to common questions.</p>
+
+    <div class="faq-container">
+
+      <div class="faq-item">
+        <button class="faq-question">How can I get in touch with your team? <span>+</span></button>
+        <div class="faq-answer">
+          <p>You can reach us via our contact form, email, or phone. We typically respond within 24 hours.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Where is your office located? <span>+</span></button>
+        <div class="faq-answer">
+          <p>Our office is located in Green City, India. You can find us on Google Maps above.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Do you accept volunteer applications online? <span>+</span></button>
+        <div class="faq-answer">
+          <p>Yes! Please visit our volunteer page or contact us directly for more details.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What is the best way to support your NGO? <span>+</span></button>
+        <div class="faq-answer">
+          <p>You can support us through donations, volunteering, or spreading awareness about our mission.</p>
+        </div>
+      </div>
+      
+
+    </div>
+  </div>
+</section>
+
+<!-- Section 5: Social Media -->
+<section class="contact-social">
+  <div class="container">
+    <h2>Connect With Us</h2>
+    <p class="subtitle">Follow us on social media and stay updated.</p>
+
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+</section>
+
+
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+ <footer>
+  <div class="footer-container">
+    
+    <!-- Logo Section -->
+    <div class="footer-logo">
+      <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+      <h4>NGO/CHARITY</h4>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-services">
+      <h4>Explore Services</h4>
+      <ul>
+        <li><a href="service1.html">Education</a></li>
+        <li><a href="service2.html">Healthcare</a></li>
+        <li><a href="service3.html">Skill Training</a></li>
+        <li><a href="service4.html">Women Empowerment</a></li>
+        <li><a href="service5.html">Disaster Relief</a></li>
+        <li><a href="service6.html">Environmental Care</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p><strong>Email:</strong> info@example.com</p>
+      <p><strong>Phone:</strong> +91 1234567890</p>
+
+      <h4>Follow Us</h4>
+      <div class="social">
+        <a href="https://facebook.com"><img src="images/fb.png" alt="Facebook"></a>
+        <a href="https://twitter.com"><img src="images/x.png" alt="Twitter"></a>
+        <a href="https://instagram.com"><img src="images/inst.jpeg" alt="Instagram"></a>
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Get weekly wellness tips and updates in your inbox.</p>
+      <form id="newsletter-form">
+        <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;">
+    ✅ Thank you for subscribing!
+  </div>
+    </div>
+  </div>
+
+  <div class="footer-copy">
+    &copy; 2025 Your Company Name. All Rights Reserved.
+  </div>
+</footer>
+<script>
+    // Contact Form Popup Logic
+const form = document.getElementById('contactForm');
+const popup = document.getElementById('thankYouPopup');
+const closePopup = document.getElementById('closePopup');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault(); // prevent real form submission
+  popup.style.display = 'flex';
+  form.reset(); // clear form fields
+});
+
+closePopup.addEventListener('click', function() {
+  popup.style.display = 'none';
+});
+
+// Close popup if user clicks outside content
+window.addEventListener('click', function(e) {
+  if (e.target === popup) {
+    popup.style.display = 'none';
+  }
+});
+// FAQ Accordion
+const faqQuestions = document.querySelectorAll(".faq-question");
+
+faqQuestions.forEach(button => {
+  button.addEventListener("click", () => {
+    const faqItem = button.parentElement;
+    faqItem.classList.toggle("active");
+  });
+});
+
+</script>
+
+</body>
+</html>

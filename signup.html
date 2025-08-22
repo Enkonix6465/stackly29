@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+  <link rel="stylesheet" href="css/auth.css">
+  <script src="js/darkmode.js" defer></script>
+</head>
+<body>
+  <div class="auth-container">
+    <h2>Sign Up</h2>
+    <form id="signupForm">
+      <input type="text" id="signupFirstName" placeholder="First Name" required>
+      <input type="text" id="signupLastName" placeholder="Last Name" required>
+      <input type="text" id="signupUsername" placeholder="Email" required>
+
+      <div class="password-field">
+        <input type="password" id="signupPassword" placeholder="Password" required>
+        <span class="toggle-password" onclick="togglePassword('signupPassword', this)">👁️</span>
+      </div>
+
+      <div class="password-field">
+        <input type="password" id="signupConfirmPassword" placeholder="Confirm Password" required>
+        <span class="toggle-password" onclick="togglePassword('signupConfirmPassword', this)">👁️</span>
+      </div>
+
+      <button type="submit">Sign Up</button>
+      <button id="darkModeToggle">🌙</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+  </div>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>

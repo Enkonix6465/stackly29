@@ -1,0 +1,241 @@
+/* =========================
+   AUTH PAGES (Login / Signup)
+========================= */
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: linear-gradient(135deg, #74b9ff, #a29bfe);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background: linear-gradient(135deg, #1a1a1a, #3d3d3d);
+  color: #f1f1f1;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.auth-container {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  width: 380px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+}
+body.dark-mode .auth-container {
+  background: #242424;
+  color: #f1f1f1;
+}
+
+.auth-container h2 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #2d3436;
+}
+body.dark-mode .auth-container h2 {
+  color: #fff;
+}
+
+/* =========================
+   INPUT FIELDS (Floating Labels)
+========================= */
+/* =========================
+   TEXT INPUT FIELDS (First/Last Name, Email)
+========================= */
+.auth-container input[type="text"],
+.auth-container input[type="email"] {
+  width: 100%;
+  padding: 14px 16px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background: #f9f9f9;
+  font-size: 15px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.auth-container input[type="text"]:focus,
+.auth-container input[type="email"]:focus {
+  border-color: #6c5ce7;
+  background: #fff;
+}
+
+/* Dark Mode */
+body.dark-mode .auth-container input[type="text"],
+body.dark-mode .auth-container input[type="email"] {
+  background: #2a2a2a;
+  border: 1px solid #555;
+  color: #f1f1f1;
+}
+body.dark-mode .auth-container input[type="text"]:focus,
+body.dark-mode .auth-container input[type="email"]:focus {
+  border-color: #74b9ff;
+  background: #1f1f1f;
+}
+
+/* =========================
+   PASSWORD FIELDS (Keep underline style with toggle)
+========================= */
+.password-field {
+  position: relative;
+  margin: 16px 0;
+}
+.password-field input {
+  width: 100%;
+  padding: 14px 12px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: transparent;
+  font-size: 15px;
+  color: inherit;
+  outline: none;
+  transition: border-color 0.3s;
+}
+.password-field input:focus {
+  border-bottom-color: #6c5ce7;
+}
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #555;
+}
+body.dark-mode .password-field input {
+  border-bottom: 2px solid #555;
+  color: #f1f1f1;
+}
+body.dark-mode .password-field input:focus {
+  border-bottom-color: #74b9ff;
+}
+body.dark-mode .toggle-password {
+  color: #bbb;
+}
+
+
+/* Dark Mode */
+body.dark-mode .input-group input {
+  border-bottom: 2px solid #555;
+  color: #f1f1f1;
+}
+body.dark-mode .input-group input:focus {
+  border-bottom-color: #74b9ff;
+}
+body.dark-mode .input-group label {
+  color: #aaa;
+}
+body.dark-mode .input-group input:focus + label,
+body.dark-mode .input-group input:not(:placeholder-shown) + label {
+  color: #74b9ff;
+}
+
+/* =========================
+   PASSWORD FIELD + TOGGLE
+========================= */
+.password-field {
+  position: relative;
+  margin: 20px 0;
+}
+.password-field input {
+  width: 100%;
+  padding: 14px 12px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: transparent;
+  font-size: 16px;
+  color: inherit;
+  outline: none;
+}
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #555;
+  user-select: none;
+}
+body.dark-mode .password-field input {
+  border-bottom: 2px solid #555;
+  color: #f1f1f1;
+}
+body.dark-mode .password-field input:focus {
+  border-bottom-color: #74b9ff;
+}
+body.dark-mode .toggle-password {
+  color: #bbb;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.auth-container button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  background: linear-gradient(135deg, #6c5ce7, #0984e3);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: opacity 0.3s, transform 0.2s;
+}
+.auth-container button[type="submit"]:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+body.dark-mode .auth-container button[type="submit"] {
+  background: linear-gradient(135deg, #4834d4, #00a8ff);
+}
+
+/* Dark Mode Toggle */
+#darkModeToggle {
+  margin-top: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #666;
+}
+body.dark-mode #darkModeToggle {
+  color: #eee;
+}
+
+/* =========================
+   LINKS
+========================= */
+.auth-container p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+.auth-container a {
+  color: #6c5ce7;
+  text-decoration: none;
+  font-weight: bold;
+}
+.auth-container a:hover {
+  text-decoration: underline;
+}
+body.dark-mode .auth-container p {
+  color: #ddd;
+}
+body.dark-mode .auth-container a {
+  color: #74b9ff;
+}

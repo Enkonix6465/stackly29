@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NGO / Charity Website</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/service4.css">
+
+<script src="js/main.js" defer></script>
+  <script src="js/header.js" defer></script>
+  <script src="js/auth-check.js" defer></script>
+    <script src="js/newsletter.js" defer></script>
+
+</head>
+<body>
+  <!-- ================= HEADER ================= -->
+<header>
+  <div class="logo">
+    <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+  </div>
+
+  <div class="header-right">
+    <nav>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="index.html">Home ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li class="dropdown">
+          <a href="services.html">Services ▾</a>
+          <ul class="dropdown-menu">
+                        <li class="mobile-only"><a href="services.html">All Services</a></li>
+           <li><a href="service1.html">Education</a></li>
+        <li><a href="service2.html">Healthcare</a></li>
+        <li><a href="service3.html">Skill Training</a></li>
+        <li><a href="service4.html">Empowerment</a></li>
+        <li><a href="service5.html">Disaster Relief</a></li>
+        <li><a href="service6.html">Environmental Care</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="profile-container">
+      <div class="profile" id="profile-dropdown-toggle">
+        <span id="profile-initials"></span>
+      </div>
+      <ul class="profile-dropdown" id="profile-dropdown">
+        <li><a href="#" id="logout-btn">Logout</a></li>
+      </ul>
+    </div>
+
+    <button id="themeToggle">🌙</button>
+    <button id="mobile-menu-toggle" class="hamburger">☰</button>
+  </div>
+</header>
+
+  <!-- ================= MAIN SECTIONS ================= -->
+  <main>
+<!-- Hero Section -->
+<section class="service-hero">
+  <div class="service-hero-overlay"></div>
+  <div class="service-hero-content">
+    <h1>Women Empowerment</h1>
+    <p>Uplifting women through education, skills, and opportunities to lead stronger, independent lives.</p>
+  </div>
+</section>
+
+
+
+<!-- About Section -->
+<section class="about-modern">
+  <div class="about-container">
+    
+    <!-- Image Side -->
+    <div class="about-image">
+      <img src="images/about_service4.jpeg" alt="Women Empowerment Program">
+      <div class="image-shape"></div>
+    </div>
+
+    <!-- Text Side -->
+    <div class="about-content">
+      <h2>About Our Women Empowerment Mission</h2>
+      
+      <p>
+        From vocational training and self-help groups to digital literacy, entrepreneurship, and 
+        leadership workshops, we support women in unlocking their true potential. By partnering with 
+        mentors, local organizations, and change-makers, we create pathways for women to uplift 
+        themselves and inspire future generations.
+      </p>
+      <a href="contact.html" class="about-btn">Empower With Us</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="impact" id="impact">
+  <div class="impact-container">
+    <h2 class="section-title">Our Impact</h2>
+    <p class="section-subtitle">Together, we are empowering individuals with skills for a better tomorrow</p>
+
+    <div class="impact-grid">
+      <!-- Impact Card 1 -->
+      <div class="impact-card">
+        <h3 class="count" data-target="3000">0</h3>
+        <p>Youth trained in vocational and professional skills</p>
+      </div>
+
+      <!-- Impact Card 2 -->
+      <div class="impact-card">
+        <h3 class="count" data-target="1500">0</h3>
+        <p>Women empowered through livelihood and self-employment programs</p>
+      </div>
+
+      <!-- Impact Card 3 -->
+      <div class="impact-card">
+        <h3 class="count" data-target="1200">0</h3>
+        <p>Individuals equipped with digital literacy and IT skills</p>
+      </div>
+
+      <!-- Impact Card 4 -->
+      <div class="impact-card">
+        <h3 class="count" data-target="500">0</h3>
+        <p>Entrepreneurs supported in starting small businesses</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="programs-alt" id="programs">
+  <h2 class="section-title">Our Key Women Empowerment Programs</h2>
+  <p class="section-subtitle">Dedicated initiatives to uplift women through skills, leadership, and opportunities</p>
+
+  <!-- Program 1 -->
+  <div class="program-item reveal fade-left">
+    <div class="program-image">
+      <img src="images/leadership.jpeg" alt="Leadership & Confidence Building">
+    </div>
+    <div class="program-text">
+      <h3>Leadership & Confidence Building</h3>
+      <p>
+        We conduct workshops and training sessions that empower women to build self-confidence, enhance leadership skills, and actively take part in decision-making roles. By fostering personal growth and encouraging equal participation, we help women become catalysts of change in their families and communities. Empowered women not only achieve their own potential but also serve as role models who inspire others to break barriers, pursue opportunities, and create a more inclusive society.
+      </p>
+    </div>
+  </div>
+
+  <!-- Program 2 -->
+  <div class="program-item reveal fade-right">
+    <div class="program-text">
+      <h3>Vocational & Livelihood Training</h3>
+      <p>
+        Through hands-on training in tailoring, handicrafts, food processing, digital literacy, and other income-generating skills, we empower women and youth to achieve financial independence. Our livelihood programs are designed to connect participants with real market opportunities, enabling them to earn a sustainable income and support their families with dignity. By promoting entrepreneurship and self-reliance, we help improve not only individual lives but also the overall economic strength of communities.
+      </p>
+    </div>
+    <div class="program-image">
+      <img src="images/self_tailor.jpeg" alt="Vocational & Livelihood Training">
+    </div>
+  </div>
+
+  <!-- Program 3 -->
+  <div class="program-item reveal fade-left">
+    <div class="program-image">
+      <img src="images/digital_learning.jpg" alt="Digital Literacy for Women">
+    </div>
+    <div class="program-text">
+      <h3>Digital Literacy for Women</h3>
+      <p>
+        In today’s digital-first world, we empower women with computer education, online opportunities, and digital financial literacy. Our training programs equip them with essential skills such as using productivity tools, accessing online services, safe internet practices, and digital payments. By bridging the digital divide, we open doors to new jobs, entrepreneurship, and greater access to information, ensuring women can actively participate in the modern economy and uplift their communities.
+      </p>
+    </div>
+  </div>
+
+  <!-- Program 4 -->
+  <div class="program-item reveal fade-right">
+    <div class="program-text">
+      <h3>Entrepreneurship & Self-Help Groups</h3>
+      <p>
+       We encourage women to start their own businesses and form Self-Help Groups (SHGs) that promote collective strength. Through mentorship, micro-finance support, skill development, and market linkages, we help women build sustainable ventures and achieve economic independence. By working together, these groups not only create stable livelihoods but also amplify women’s voices in decision-making, fostering confidence, unity, and long-term community development.
+      </p>
+    </div>
+    <div class="program-image">
+      <img src="images/self_help.jpeg" alt="Entrepreneurship & SHGs">
+    </div>
+  </div>
+</section>
+
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <h2 class="section-title">Voices of Empowerment</h2>
+    <p class="section-subtitle">Real stories of courage, independence, and transformation through our Women Empowerment programs</p>
+
+    <div class="testimonials-grid">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <p class="quote">“Through the NGO’s women empowerment program, I learned handicraft skills and now run my own small business. I feel proud to contribute to my family’s income and decisions.”</p>
+        <div class="author">
+          <img src="images/ser4_t1.jpeg" alt="Women Beneficiary">
+          <h4>Kavita Devi</h4>
+          <span>Beneficiary</span>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <p class="quote">“Training women in digital skills and financial literacy has been life-changing for many. Seeing them gain confidence and independence is the most rewarding experience.”</p>
+        <div class="author">
+          <img src="images/ser4_t2.jpeg" alt="Trainer Volunteer">
+          <h4>Anita Joshi</h4>
+          <span>Trainer Volunteer</span>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <p class="quote">“Supporting this women’s empowerment initiative gives me immense joy. Knowing my contribution helps women achieve independence and dignity is deeply fulfilling.”</p>
+        <div class="author">
+          <img src="images/ser4_t3.jpeg" alt="Donor">
+          <h4>Rohit Malhotra</h4>
+          <span>Donor</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="cta" id="cta">
+  <div class="cta-container">
+    <h2>Support Women Empowerment</h2>
+    <p>Your contribution can uplift women by providing skill development, financial independence, and opportunities to lead with confidence.</p>
+    <div class="cta-buttons">
+      <a href="donate.html" class="cta-btn donate-btn">Donate for Women Empowerment</a>
+      <a href="contact.html" class="cta-btn volunteer-btn">Join as Volunteer</a>
+    </div>
+  </div>
+</section>
+
+
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+ <footer>
+  <div class="footer-container">
+    
+    <!-- Logo Section -->
+    <div class="footer-logo">
+      <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+      <h4>NGO/CHARITY</h4>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-services">
+      <h4>Explore Services</h4>
+      <ul>
+        <li><a href="service1.html">Education</a></li>
+        <li><a href="service2.html">Healthcare</a></li>
+        <li><a href="service3.html">Skill Training</a></li>
+        <li><a href="service4.html">Women Empowerment</a></li>
+        <li><a href="service5.html">Disaster Relief</a></li>
+        <li><a href="service6.html">Environmental Care</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p><strong>Email:</strong> info@example.com</p>
+      <p><strong>Phone:</strong> +91 1234567890</p>
+
+      <h4>Follow Us</h4>
+      <div class="social">
+        <a href="https://facebook.com"><img src="images/fb.png" alt="Facebook"></a>
+        <a href="https://twitter.com"><img src="images/x.png" alt="Twitter"></a>
+        <a href="https://instagram.com"><img src="images/inst.jpeg" alt="Instagram"></a>
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Get weekly wellness tips and updates in your inbox.</p>
+      <form id="newsletter-form">
+        <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;">
+    ✅ Thank you for subscribing!
+  </div>
+    </div>
+  </div>
+
+  <div class="footer-copy">
+    &copy; 2025 Your Company Name. All Rights Reserved.
+  </div>
+</footer>
+
+<script>
+  // Counting Animation Function
+  function animateCounter(counter) {
+    const target = +counter.getAttribute("data-target");
+    const speed = 200; // lower = faster
+
+    const updateCount = () => {
+      const current = +counter.innerText;
+      const increment = Math.ceil(target / speed);
+
+      if (current < target) {
+        counter.innerText = current + increment;
+        setTimeout(updateCount, 20);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    updateCount();
+  }
+
+  // Run animation when section is visible
+  const counters = document.querySelectorAll(".count");
+  const section = document.querySelector("#impact");
+
+  let started = false; // run once
+  window.addEventListener("scroll", () => {
+    const sectionTop = section.offsetTop - window.innerHeight + 100;
+    if (!started && window.scrollY > sectionTop) {
+      counters.forEach(counter => animateCounter(counter));
+      started = true;
+    }
+  });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const reveals = document.querySelectorAll(".reveal");
+
+  const revealOnScroll = () => {
+    reveals.forEach(el => {
+      const windowHeight = window.innerHeight;
+      const elementTop = el.getBoundingClientRect().top;
+      const elementBottom = el.getBoundingClientRect().bottom;
+
+      if (elementTop < windowHeight && elementBottom > 0) {
+        el.classList.add("active");
+      } else {
+        el.classList.remove("active"); // 👈 animation re-triggers
+      }
+    });
+  };
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll();
+});
+
+</script>
+
+</body>
+</html>

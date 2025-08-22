@@ -1,0 +1,935 @@
+/* BLOG HERO SECTION */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Background video */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Overlay for darkening */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  z-index: -1;
+}
+
+/* Content inside hero */
+.hero-content {
+  color: #fff;
+  padding: 0 20px;
+  max-width: 900px;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white; /* Highlight */
+  animation: fadeInDown 1s ease;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #f5f5f5;
+  animation: fadeIn 1.5s ease;
+}
+
+/* Button */
+.hero-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: #17877c;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #0f5e56;
+  transform: translateY(-4px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .hero-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+  .hero-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* FEATURED BLOGS */
+.featured-blogs {
+  padding: 100px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.blogs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featured-blogs .section-title {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.featured-blogs .section-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+.blogs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.blog-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+
+  /* 👇 Animation setup */
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.9s ease forwards;
+}
+
+.blog-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.blog-card:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.blog-card:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.blog-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.blog-content p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.blog-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #17877c;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.blog-btn:hover {
+  background: #0f5e56;
+}
+
+/* Animation keyframes */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✅ Responsive */
+@media (max-width: 992px) {
+  .blogs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .blogs-grid {
+    grid-template-columns: 1fr;
+  }
+  .blog-card img {
+    height: 200px;
+  }
+}
+
+
+/* SINGLE BLOG HIGHLIGHT */
+.blog-highlight {
+  padding: 100px 20px;
+  background: #fff;
+}
+
+.highlight-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.highlight-image img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.highlight-content h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.highlight-content .highlight-meta {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.highlight-content p {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.highlight-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #17877c;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.highlight-btn:hover {
+  background: #0f5e56;
+  transform: translateY(-3px);
+}
+
+/* ✅ Dark Theme */
+body.dark-theme .blog-highlight {
+  background: #111; /* Dark section background */
+}
+
+body.dark-theme .highlight-content h2 {
+  color: #f5f5f5;
+}
+
+body.dark-theme .highlight-content .highlight-meta {
+  color: #bbb;
+}
+
+body.dark-theme .highlight-content p {
+  color: #ddd;
+}
+
+body.dark-theme .highlight-btn {
+  background: #0f5e56;
+}
+
+body.dark-theme .highlight-btn:hover {
+  background: #17877c;
+}
+
+body.dark-theme .highlight-image img {
+  box-shadow: 0 8px 20px rgba(255,255,255,0.08);
+}
+
+/* ✅ Responsive */
+@media (max-width: 992px) {
+  .highlight-container {
+    grid-template-columns: 1fr;
+  }
+  .highlight-image img {
+    height: 350px;
+  }
+}
+
+
+/* ✨ Featured Blogs Section */
+.featured-blogs {
+  padding: 80px 20px;
+  background: #f9f9f9;
+}
+
+.featured-blogs .section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.featured-blogs .section-subtitle {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Layout */
+.blogs-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: stretch;
+}
+
+/* Featured Main Blog */
+.featured-main {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.featured-main img {
+  width: 100%;
+  height: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.5s ease;
+}
+
+.featured-main:hover img {
+  transform: scale(1.05);
+}
+
+.featured-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.1));
+  color: #fff;
+  padding: 20px;
+  border-radius: 0 0 12px 12px;
+}
+
+.featured-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.featured-content p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.blog-btn {
+  display: inline-block;
+  background: #17877c;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.blog-btn:hover {
+  background: #17877c;
+  transform: translateY(-2px);
+}
+
+/* Side Blogs */
+.featured-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.side-blog {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.side-blog img {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.side-blog h4 {
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.side-blog p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.side-btn {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: #0f5e56;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.side-btn:hover {
+  color: #17877c;
+}
+
+/* Hover effect for side blogs */
+.side-blog:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.side-blog:hover img {
+  transform: scale(1.05);
+}
+
+/* 🌙 Dark Theme */
+body.dark-theme .featured-blogs {
+  background: #111;
+}
+
+body.dark-theme .section-title,
+body.dark-theme .section-subtitle {
+  color: #f5f5f5;
+}
+
+body.dark-theme .featured-content {
+  background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.2));
+}
+
+body.dark-theme .side-blog {
+  background: #1e1e1e;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.05);
+}
+
+body.dark-theme .side-blog h4,
+body.dark-theme .side-blog p {
+  color: #f5f5f5;
+}
+
+body.dark-theme .side-btn {
+  color: #ff6b6b;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .blogs-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-main img {
+    max-height: 350px;
+  }
+
+  .featured-side {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .side-blog {
+    flex: 1 1 calc(50% - 10px);
+  }
+}
+
+@media (max-width: 600px) {
+  .side-blog {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .side-blog img {
+    width: 100%;
+    height: 180px;
+  }
+}
+
+/* 🌟 Blog Categories Section */
+.blog-categories {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f7f7f7, #eaeaea); /* ✅ Gradient background */
+  position: relative;
+  z-index: 1;
+}
+
+.blog-categories .section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.blog-categories .section-subtitle {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: 50px;
+}
+
+/* ✅ Background Image Option */
+.blog-categories.bg-image {
+  background: url("images/bg-pattern.jpg") center/cover no-repeat;
+  background-attachment: fixed; /* parallax effect */
+  color: #fff;
+}
+
+.blog-categories.bg-image .section-title,
+.blog-categories.bg-image .section-subtitle {
+  color: #fff;
+}
+
+/* Grid Layout */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Category Item */
+.category-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+  height: 280px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+/* Overlay */
+.category-overlay {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.75);
+  padding: 20px;
+  color: #fff;
+  transition: bottom 0.5s ease;
+  text-align: center;
+}
+
+.category-text h3 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.category-text p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Hover Effects */
+.category-card:hover img {
+  filter: grayscale(0);
+  transform: scale(1.08);
+}
+
+.category-card:hover .category-overlay {
+  bottom: 0;
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+}
+
+/* 🌙 Dark Theme */
+body.dark-theme .blog-categories {
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+}
+
+body.dark-theme .blog-categories.bg-image {
+  background: url("../images/1.jpg") center/cover no-repeat;
+}
+
+body.dark-theme .section-title,
+body.dark-theme .section-subtitle {
+  color: #f5f5f5;
+}
+
+body.dark-theme .category-overlay {
+  background: rgba(255,255,255,0.08);
+}
+
+body.dark-theme .category-text h3,
+body.dark-theme .category-text p {
+  color: #fff;
+}
+
+/* ✅ Responsive */
+@media (max-width: 1024px) {
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* 🌟 Donation Section */
+.donation {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #17877c, #0f5e56);
+  text-align: center;
+  color: #fff;
+}
+
+.donation .section-title {
+  font-size: 2.6rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.donation .section-subtitle {
+  font-size: 1.15rem;
+  max-width: 750px;
+  margin: 0 auto 50px auto;
+  line-height: 1.7;
+  color: #f0f0f0;
+}
+
+/* Inline Donation Options */
+.donation-options {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.donation-option {
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 20px 35px;
+  border-radius: 50px;
+  background: rgba(255,255,255,0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.donation-option span {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-top: 5px;
+  opacity: 0.9;
+}
+
+.donation-option:hover {
+  background: #fff;
+  color: #17877c;
+  transform: translateY(-4px);
+}
+
+.donation-option.active {
+  background: #fff;
+  color: #17877c;
+  border-color: #fff;
+  transform: scale(1.05);
+}
+
+/* Donate Button */
+.donate-btn {
+  display: inline-block;
+  padding: 14px 35px;
+  background: #fff;
+  color: #17877c;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.donate-btn:hover {
+  background: #f1f1f1;
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .donation-options {
+    flex-direction: column;
+    align-items: center;
+  }
+  .donation-option {
+    width: 80%;
+  }
+}
+/* 🌙 Dark Theme Donation Section */
+body.dark-theme .donation {
+  background: #111;
+}
+
+body.dark-theme .donation .section-title {
+  color: #f5f5f5;
+}
+
+body.dark-theme .donation .section-subtitle {
+  color: #ccc;
+}
+
+/* Donation Options */
+body.dark-theme .donation-options {
+  background: transparent;
+}
+
+body.dark-theme .donation-card {
+  background: #1b1b1b;
+  border: 1px solid #333;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+body.dark-theme .donation-card h3 {
+  color: #fff;
+}
+
+body.dark-theme .donation-card p {
+  color: #bbb;
+}
+
+/* Highlighted Donation (featured amount) */
+body.dark-theme .donation-card.highlight {
+  background: #222;
+  border-color: #17877c;
+}
+
+/* Buttons */
+body.dark-theme .donate-btn {
+  background: #17877c;
+  color: #fff;
+}
+
+body.dark-theme .donate-btn:hover {
+  background: #0f5e56;
+}
+
+
+
+/* 🌟 CTA Section */
+.cta-section {
+  padding: 100px 20px;
+  text-align: center;
+  background: #fff; /* keep it plain */
+}
+
+.cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #222;
+}
+
+.cta-container p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+/* Buttons */
+.cta-btn {
+  display: inline-block;
+  padding: 14px 35px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin: 10px;
+  border: 2px solid transparent;
+}
+
+/* Primary CTA */
+.cta-btn {
+  background: #17877c;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cta-btn:hover {
+  background: #0f5e56;
+  transform: translateY(-3px);
+}
+
+/* Secondary CTA */
+.cta-btn.secondary {
+  background: transparent;
+  border: 2px solid #17877c;
+  color: #17877c;
+}
+
+.cta-btn.secondary:hover {
+  background: #17877c;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-container h2 {
+    font-size: 2rem;
+  }
+  .cta-container p {
+    font-size: 1rem;
+  }
+  .cta-btn {
+    width: 80%;
+  }
+}
+/* 🌙 Dark Theme CTA Section */
+body.dark-theme .cta-section {
+  background: #111; /* plain dark background */
+}
+
+body.dark-theme .cta-container h2 {
+  color: #f5f5f5;
+}
+
+body.dark-theme .cta-container p {
+  color: #ccc;
+}
+
+/* Primary Button in Dark */
+body.dark-theme .cta-btn {
+  background: #17877c;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+body.dark-theme .cta-btn:hover {
+  background: #0f5e56;
+}
+
+/* Secondary Button in Dark */
+body.dark-theme .cta-btn.secondary {
+  background: transparent;
+  border: 2px solid #17877c;
+  color: #17877c;
+}
+
+body.dark-theme .cta-btn.secondary:hover {
+  background: #17877c;
+  color: #fff;
+}

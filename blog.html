@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NGO / Charity Website</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/blog.css">
+<script src="js/main.js" defer></script>
+  <script src="js/header.js" defer></script>
+  <script src="js/auth-check.js" defer></script>
+    <script src="js/newsletter.js" defer></script>
+
+</head>
+<body>
+  <!-- ================= HEADER ================= -->
+<header>
+  <div class="logo">
+    <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+  </div>
+
+  <div class="header-right">
+    <nav>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="index.html">Home ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li class="dropdown">
+          <a href="services.html">Services ▾</a>
+          <ul class="dropdown-menu">
+                        <li class="mobile-only"><a href="services.html">All Services</a></li>
+
+           <li><a href="service1.html">Education</a></li>
+        <li><a href="service2.html">Healthcare</a></li>
+        <li><a href="service3.html">Skill Training</a></li>
+        <li><a href="service4.html">Empowerment</a></li>
+        <li><a href="service5.html">Disaster Relief</a></li>
+        <li><a href="service6.html">Environmental Care</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="profile-container">
+      <div class="profile" id="profile-dropdown-toggle">
+        <span id="profile-initials"></span>
+      </div>
+      <ul class="profile-dropdown" id="profile-dropdown">
+        <li><a href="#" id="logout-btn">Logout</a></li>
+      </ul>
+    </div>
+
+    <button id="themeToggle">🌙</button>
+    <button id="mobile-menu-toggle" class="hamburger">☰</button>
+  </div>
+</header>
+
+  <!-- ================= MAIN SECTIONS ================= -->
+  <main>
+
+    <!-- BLOG HERO -->
+<section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="videos/blog-hero.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>Our Blog</h1>
+    <p>Dive into inspiring stories, latest updates, and powerful voices from our community of change-makers.</p>
+    <a href="services.html" class="hero-btn">Explore Posts</a>
+  </div>
+</section>
+<!-- SINGLE BLOG HIGHLIGHT -->
+<section class="blog-highlight" id="blog-highlight">
+  <div class="highlight-container">
+    <div class="highlight-image">
+      <img src="images/hunger.jpeg" alt="Featured Blog">
+    </div>
+    <div class="highlight-content">
+      <h2>Breaking the Cycle of Hunger</h2>
+      <p class="highlight-meta">📅 August 15, 2025 | ✍️ By Admin</p>
+      <p>
+        Hunger affects millions worldwide, but small steps can create lasting change. 
+        From community kitchens to food distribution drives, our team has been 
+        on the ground ensuring that no family sleeps hungry. This blog dives into 
+        the stories of resilience, compassion, and the power of coming together 
+        for a greater cause.
+      </p>
+      <p>
+        Through partnerships and volunteers, we’ve distributed over 10,000 meals 
+        in the last year alone. Every plate served is more than just food — it’s 
+        hope, dignity, and a chance for families to thrive again.
+      </p>
+     <!-- <a href="services.html" class="highlight-btn">Read Full Story</a>-->
+    </div>
+  </div>
+</section>
+
+
+
+<!-- FEATURED BLOGS SECTION -->
+<section class="featured-blogs" id="featured-blogs">
+  <div class="blogs-container">
+    <h2 class="section-title">Featured Stories</h2>
+    <p class="section-subtitle">Read our most impactful stories and latest updates</p>
+
+    <div class="blogs-layout">
+      <!-- Featured Blog -->
+      <div class="featured-main">
+        <img src="images/child_edu.jpeg" alt="Empowering Children with Education">
+        <div class="featured-content">
+          <h3>Empowering Children with Education</h3>
+          <p>Discover how our education initiatives are changing lives in rural communities.</p>
+          <a href="blog1.html" class="blog-btn">Read More</a>
+        </div>
+      </div>
+
+      <!-- Other Blogs -->
+      <div class="featured-side">
+        <div class="side-blog">
+          <img src="images/health.jpeg" alt="Healthcare for All">
+          <div>
+            <h4>Healthcare for All</h4>
+            <p>Providing medical support and awareness campaigns for the underserved.</p>
+            <a href="blog2.html" class="side-btn">Read More</a>
+          </div>
+        </div>
+
+        <div class="side-blog">
+          <img src="images/disaster.jpeg" alt="Women Empowerment">
+          <div>
+            <h4>Disaster Relief</h4>
+            <p>Immediate aid and long-term recovery for communities affected by natural disasters.</p>
+            <a href="blog3.html" class="side-btn">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG CATEGORIES SECTION -->
+<section class="blog-categories" id="categories">
+  <div class="categories-container">
+    <h2 class="section-title">Explore by Category</h2>
+    <p class="section-subtitle">Find the stories that matter to you most</p>
+
+    <div class="categories-grid">
+      <!-- Category 1 -->
+      <div class="category-card">
+        <img src="images/books.jpeg" alt="Education">
+        <div class="category-overlay">
+          <div class="category-text">
+            <h3>Education</h3>
+            <p>Empowering minds through knowledge and learning opportunities.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 2 -->
+      <div class="category-card">
+        <img src="images/health2.jpeg" alt="Healthcare">
+        <div class="category-overlay">
+          <div class="category-text">
+            <h3>Healthcare</h3>
+            <p>Ensuring healthier communities with care and compassion.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 3 -->
+      <div class="category-card">
+        <img src="images/sustain2.jpeg" alt="Sustainability">
+        <div class="category-overlay">
+          <div class="category-text">
+            <h3>Sustainability</h3>
+            <p>Building eco-friendly and lasting solutions for the future.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 4 -->
+      <div class="category-card">
+        <img src="images/stories.jpeg" alt="Stories">
+        <div class="category-overlay">
+          <div class="category-text">
+            <h3>Stories</h3>
+            <p>Real voices, real journeys, and inspiring community stories.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 5 -->
+      <div class="category-card">
+        <img src="images/update.jpeg" alt="Updates">
+        <div class="category-overlay">
+          <div class="category-text">
+            <h3>Updates</h3>
+            <p>Stay informed with our latest activities and achievements.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 6 (New) -->
+      <div class="category-card">
+        <img src="images/events.jpeg" alt="Events">
+        <div class="category-overlay">
+          <div class="category-text">
+            <h3>Events</h3>
+            <p>Join our community gatherings, workshops, and special initiatives.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DONATION SECTION -->
+<section class="donation" id="donation">
+  <div class="donation-container">
+    <h2 class="section-title">Support Our Mission</h2>
+    <p class="section-subtitle">
+      Your contribution helps us continue creating meaningful stories, empowering communities,  
+      and spreading hope through our initiatives.
+    </p>
+
+    <div class="donation-options">
+      <div class="donation-option" data-amount="$10">$10 <span>Help us reach more readers</span></div>
+      <div class="donation-option" data-amount="$25">$25 <span>Support community projects</span></div>
+      <div class="donation-option" data-amount="$50">$50 <span>Fund sustainable impact</span></div>
+    </div>
+
+    <a href="donate.html" class="donate-btn">Donate Now</a>
+  </div>
+</section>
+
+ <!-- CTA SECTION -->
+<section class="cta-section" id="cta">
+  <div class="cta-container">
+    <h2>Ready to Make a Difference?</h2>
+    <p>
+      Join us in empowering communities, spreading hope, and creating lasting change.  
+      Every step counts — and together, we can achieve more.
+    </p>
+    <a href="donate.html" class="cta-btn">Donate Now</a>
+    <a href="contact.html" class="cta-btn secondary">Get In Touch</a>
+  </div>
+</section>
+
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+ <footer>
+  <div class="footer-container">
+    
+    <!-- Logo Section -->
+    <div class="footer-logo">
+      <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+      <h4>NGO/CHARITY</h4>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-services">
+      <h4>Explore Services</h4>
+      <ul>
+        <li><a href="service1.html">Education</a></li>
+        <li><a href="service2.html">Healthcare</a></li>
+        <li><a href="service3.html">Skill Training</a></li>
+        <li><a href="service4.html">Women Empowerment</a></li>
+        <li><a href="service5.html">Disaster Relief</a></li>
+        <li><a href="service6.html">Environmental Care</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p><strong>Email:</strong> info@example.com</p>
+      <p><strong>Phone:</strong> +91 1234567890</p>
+
+      <h4>Follow Us</h4>
+      <div class="social">
+        <a href="https://facebook.com"><img src="images/fb.png" alt="Facebook"></a>
+        <a href="https://twitter.com"><img src="images/x.png" alt="Twitter"></a>
+        <a href="https://instagram.com"><img src="images/inst.jpeg" alt="Instagram"></a>
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Get weekly wellness tips and updates in your inbox.</p>
+      <form id="newsletter-form">
+        <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;">
+    ✅ Thank you for subscribing!
+  </div>
+    </div>
+  </div>
+
+  <div class="footer-copy">
+    &copy; 2025 Your Company Name. All Rights Reserved.
+  </div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const options = document.querySelectorAll(".donation-option");
+  const donateBtn = document.querySelector(".donate-btn");
+
+  options.forEach(option => {
+    option.addEventListener("click", () => {
+      options.forEach(o => o.classList.remove("active"));
+      option.classList.add("active");
+      donateBtn.textContent = `Donate ${option.dataset.amount} Now`;
+    });
+  });
+});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,667 @@
+/* Service Hero Section */
+.service-hero {
+  position: relative;
+  height: 70vh;
+  background: url("../images/disaster.jpeg") top/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.service-hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.service-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.service-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.service-hero p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-hero {
+    height: 50vh;
+  }
+  .service-hero h1 {
+    font-size: 2rem;
+  }
+  .service-hero p {
+    font-size: 1rem;
+  }
+}
+
+/* About Section - Modern */
+.about-modern {
+  background: #fff;
+  padding: 100px 20px;
+  position: relative;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 60px;
+  position: relative;
+}
+
+/* Image Side */
+.about-image {
+  flex: 1;
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+
+.about-image .image-shape {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: #ff6b3520; /* subtle colored shape */
+  z-index: 1;
+  transform: rotate(-3deg);
+}
+
+/* Text Side */
+.about-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #17877c;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.about-btn:hover {
+  background: #136b6a;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .about-image .image-shape {
+    display: none; /* Hide decorative shape on small screens */
+  }
+}
+
+/* Dark Theme - About Section */
+.dark-theme .about-modern {
+  background: #121212; /* Dark background */
+}
+
+.dark-theme .about-content h2 {
+  color: #f9f9f9; /* Bright heading */
+}
+
+.dark-theme .about-content p {
+  color: #cccccc; /* Softer text for readability */
+}
+
+.dark-theme .about-btn {
+  background: #ff6b35; /* Keep the brand orange */
+  color: #fff;
+}
+
+.dark-theme .about-btn:hover {
+  background: #e85c2b;
+}
+
+/* Dark Mode Image Shape */
+.dark-theme .about-image .image-shape {
+  background: #ff6b3530; /* subtle translucent orange */
+}
+
+
+/* Impact Section */
+.impact {
+  background: url("../images/our-mission.jpeg") no-repeat center center/cover;
+  background-attachment: fixed; /* keeps background sticky */
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Add a dark overlay for readability */
+.impact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4); /* adjust darkness */
+  z-index: -1;
+}
+
+.section-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #fff; /* text white for contrast */
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #f1f1f1;
+  margin-bottom: 40px;
+}
+
+.impact-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.impact-card {
+  background: rgba(255,255,255,0.9); /* semi-transparent */
+  padding: 35px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.impact-card h3 {
+  font-size: 2rem;
+  color: #ff6b35;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.impact-card p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.impact-card:hover {
+  transform: translateY(-6px);
+}
+/* 🌙 Dark Theme Styles */
+body.dark-theme .impact {
+  background-image: url("images/impact-bg-dark.jpg"); /* force override */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1;
+}
+
+body.dark-theme .impact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6); /* slightly transparent so bg is visible */
+  z-index: -1;
+}
+
+body.dark-theme .section-title {
+  color: #ffffff;
+}
+
+body.dark-theme .section-subtitle {
+  color: #cccccc;
+}
+
+body.dark-theme .impact-card {
+  background: rgba(30, 30, 30, 0.85);
+  color: #eaeaea;
+}
+
+body.dark-theme .impact-card h3 {
+  color: #ff884d;
+}
+
+body.dark-theme .impact-card p {
+  color: #dddddd;
+}
+
+/* Programs Alt Section */
+.programs-alt {
+  padding: 80px 20px;
+  background: url('../images/disaster.jpeg') no-repeat center center/cover; /* 🔹 Default light theme background */
+  text-align: center;
+  overflow-x: hidden;
+  position: relative;
+  color: #fff; /* Default text color for readability */
+}
+
+/* Optional dark overlay for better readability */
+.programs-alt::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4); /* Dark overlay */
+  z-index: 1;
+}
+
+.programs-alt .section-title,
+.programs-alt .section-subtitle,
+.program-item,
+.program-text {
+  position: relative;
+  z-index: 2; /* Keep content above overlay */
+}
+
+/* Rest of your section styling */
+.programs-alt .section-title {
+  font-size: 2.3rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.programs-alt .section-subtitle {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-bottom: 60px;
+}
+
+.program-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  gap: 40px;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+.program-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.program-image {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.program-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  object-fit: cover;
+}
+
+.program-text {
+  flex: 0 0 55%;
+}
+
+.program-text h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #ffeb3b; /* Highlighted heading color */
+}
+
+.program-text p {
+  font-size: 1.1rem;
+  color: #f5f5f5;
+  line-height: 1.8;
+  max-width: 90%;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .program-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .program-item:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .program-image,
+  .program-text {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .program-text {
+    margin-top: 20px;
+  }
+
+  .program-text p {
+    max-width: 100%;
+  }
+}
+
+/* Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-left { transform: translateX(-50px); }
+.fade-left.active { transform: translateX(0); }
+
+.fade-right { transform: translateX(50px); }
+.fade-right.active { transform: translateX(0); }
+
+/* ================= DARK THEME ================= */
+body.dark-theme .programs-alt {
+  background: url('../images/books2-dark.jpg') no-repeat center center/cover, #0f1115;
+  color: #e8e8e8;
+}
+
+body.dark-theme .programs-alt::before {
+  background: rgba(0, 0, 0, 0.65); /* darker overlay */
+}
+
+body.dark-theme .programs-alt .section-title {
+  color: #f5f7fa;
+}
+
+body.dark-theme .programs-alt .section-subtitle {
+  color: #c9cbd1;
+}
+
+body.dark-theme .program-text h3 {
+  color: #ffd166; /* warm yellow accent */
+}
+
+body.dark-theme .program-text p {
+  color: #e3e6ec;
+}
+
+body.dark-theme .program-image img {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.55);
+  filter: brightness(0.95) contrast(1.05);
+}
+body.dark-theme .program-image img:hover {
+  filter: brightness(1.05) contrast(1.08);
+}
+
+
+
+/* Testimonials Section */
+.testimonials {
+  padding: 100px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.testimonials .section-title {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.testimonials .section-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+  color: #666;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.testimonial-card {
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+}
+
+.testimonial-card .quote {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: #444;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.author img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.author span {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= DARK THEME ================= */
+body.dark-theme .testimonials {
+  background: #121212; /* Deep dark background */
+}
+
+body.dark-theme .testimonials .section-title {
+  color: #f5f7fa;
+}
+
+body.dark-theme .testimonials .section-subtitle {
+  color: #bbb;
+}
+
+body.dark-theme .testimonial-card {
+  background: #1e1e1e;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+
+body.dark-theme .testimonial-card .quote {
+  color: #e0e0e0;
+}
+
+body.dark-theme .author h4 {
+  color: #f0f0f0;
+}
+
+body.dark-theme .author span {
+  color: #aaa;
+}
+
+/* CTA Section */
+.cta {
+  padding: 100px 20px;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url("../images/ser5_con.jpeg") center/cover no-repeat;
+  text-align: center;
+  color: #fff;
+}
+
+.cta-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.cta-container p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.donate-btn {
+  background: #17877c;
+  color: #fff;
+}
+
+.donate-btn:hover {
+  background: #0f5e56;
+}
+
+.volunteer-btn {
+  background: #fff;
+  color: #17877c;
+  border: 2px solid #17877c;
+}
+
+.volunteer-btn:hover {
+  background: #17877c;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-container h2 {
+    font-size: 2rem;
+  }
+
+  .cta-container p {
+    font-size: 1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* ================= DARK THEME ================= */
+body.dark-theme .cta {
+  background: linear-gradient(rgba(18,18,18,0.85), rgba(18,18,18,0.85)),
+              url("images/cta-bg.jpeg") center/cover no-repeat;
+  color: #f5f5f5;
+}
+
+body.dark-theme .cta-container p {
+  color: #bbb;
+}
+
+body.dark-theme .donate-btn {
+  background: #ff6b35;
+  color: #fff;
+}
+
+body.dark-theme .donate-btn:hover {
+  background: #e55a28;
+}
+
+body.dark-theme .volunteer-btn {
+  background: transparent;
+  color: #ff6b35;
+  border: 2px solid #ff6b35;
+}
+
+body.dark-theme .volunteer-btn:hover {
+  background: #ff6b35;
+  color: #fff;
+}

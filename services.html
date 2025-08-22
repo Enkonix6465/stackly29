@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NGO / Charity Website</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/services.css">
+<script src="js/main.js" defer></script>
+  <script src="js/header.js" defer></script>
+  <script src="js/auth-check.js" defer></script>
+</head>
+<body>
+  <!-- ================= HEADER ================= -->
+<header>
+  <div class="logo">
+    <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+  </div>
+
+  <div class="header-right">
+    <nav>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="index.html">Home ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li class="dropdown">
+          <a href="services.html">Services ▾</a>
+          <ul class="dropdown-menu">
+            <li class="mobile-only"><a href="services.html">All Services</a></li>
+            <li><a href="service1.html">Education</a></li>
+        <li><a href="service2.html">Healthcare</a></li>
+        <li><a href="service3.html">Skill Training</a></li>
+        <li><a href="service4.html">Empowerment</a></li>
+        <li><a href="service5.html">Disaster Relief</a></li>
+        <li><a href="service6.html">Environmental Care</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="profile-container">
+      <div class="profile" id="profile-dropdown-toggle">
+        <span id="profile-initials"></span>
+      </div>
+      <ul class="profile-dropdown" id="profile-dropdown">
+        <li><a href="#" id="logout-btn">Logout</a></li>
+      </ul>
+    </div>
+
+    <button id="themeToggle">🌙</button>
+    <button id="mobile-menu-toggle" class="hamburger">☰</button>
+  </div>
+</header>
+
+  <!-- ================= MAIN SECTIONS ================= -->
+  <main>
+
+    <!-- HERO SECTION (SERVICES PAGE) -->
+<section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="videos/services.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>Our Services</h1>
+    <p>Empowering communities through education, healthcare, sustainability, and more.  
+       Explore how we create lasting change together.</p>
+    <a href="#services" class="hero-btn">Explore Services</a>
+  </div>
+</section>
+
+  <!-- SERVICES SECTION -->
+<section class="services" id="services">
+  <div class="services-container">
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-subtitle">Empowering communities through impactful programs</p>
+
+    <div class="services-grid">
+      <!-- Service 1 -->
+      <div class="service-card fade-in delay-1">
+        <img src="images/books.jpeg" alt="Education Support">
+        <h3>Education Support</h3>
+        <p>Providing access to quality education, scholarships, and mentorship for underprivileged children.</p>
+        <a href="#" class="service-btn">Learn More</a>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card fade-in delay-2">
+        <img src="images/health2.jpeg" alt="Healthcare">
+        <h3>Healthcare Access</h3>
+        <p>Ensuring medical care, health awareness, and preventive solutions for vulnerable communities.</p>
+        <a href="#" class="service-btn">Learn More</a>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card fade-in delay-3">
+        <img src="images/youth.jpeg" alt="Skill Training">
+        <h3>Skill Training</h3>
+        <p>Equipping youth with professional and vocational skills to create sustainable livelihoods.</p>
+        <a href="#" class="service-btn">Learn More</a>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-card fade-in delay-4">
+        <img src="images/women.jpeg" alt="Women Empowerment">
+        <h3>Women Empowerment</h3>
+        <p>Promoting gender equality by supporting women-led initiatives and entrepreneurship.</p>
+        <a href="#" class="service-btn">Learn More</a>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="service-card fade-in delay-5">
+        <img src="images/disaster.jpeg" alt="Community Development">
+          <h3>Disaster Relief</h3>
+        <p>Immediate aid and long-term recovery for communities affected by natural disasters.</p>
+        <a href="#" class="service-btn">Learn More</a>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="service-card fade-in delay-6">
+        <img src="images/p3.jpeg" alt="Environmental Care">
+        <h3>Environmental Care</h3>
+        <p>Encouraging eco-friendly practices and sustainable living to protect our planet.</p>
+        <a href="#" class="service-btn">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ HOW WE WORK (Horizontal Steps) -->
+<section class="workflow" id="process">
+  <div class="workflow-container">
+    <h2 class="section-title">How We Work</h2>
+    <p class="section-subtitle">A simple, transparent, and impactful process we follow</p>
+
+    <div class="workflow-steps">
+      <!-- Step 1 -->
+      <div class="workflow-step">
+        <div class="step-circle">1</div>
+        <h3>Identify Needs</h3>
+        <p>We collaborate with communities to understand their most urgent needs.</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="workflow-step">
+        <div class="step-circle">2</div>
+        <h3>Design Solutions</h3>
+        <p>We create sustainable programs tailored to local realities.</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="workflow-step">
+        <div class="step-circle">3</div>
+        <h3>Implement Projects</h3>
+        <p>We execute with strong partnerships and active community involvement.</p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="workflow-step">
+        <div class="step-circle">4</div>
+        <h3>Measure Impact</h3>
+        <p>We track results and ensure our efforts bring lasting change.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUCCESS STORIES SECTION -->
+<section class="success-stories" id="success-stories">
+  <div class="stories-container">
+    <h2 class="section-title">Our Success Stories</h2>
+    <p class="section-subtitle">Real stories of hope, impact, and change</p>
+
+    <div class="stories-grid">
+      <!-- Story 1 -->
+      <div class="story-card fade-up">
+        <img src="images/Village_edu.jpeg" alt="Education Support">
+        <div class="story-content">
+          <h3>Bringing Education to Every Child</h3>
+          <p>Our scholarship programs, hundreds of children have access to quality education & a brighter future.</p>
+          <a href="service1.html" class="story-btn">Read More</a>
+        </div>
+      </div>
+
+      <!-- Story 2 -->
+      <div class="story-card fade-up">
+        <img src="images/vilage.jpeg" alt="Healthcare">
+        <div class="story-content">
+          <h3>Healthcare for Remote Villages</h3>
+          <p>Our mobile clinics have provided life-saving care to thousands of people in underserved areas.</p>
+          <a href="service2.html" class="story-btn">Read More</a>
+        </div>
+      </div>
+
+      <!-- Story 3 -->
+      <div class="story-card fade-up">
+        <img src="images/women_emp.jpeg" alt="Empowerment">
+        <div class="story-content">
+          <h3>Women Entrepreneurs</h3>
+          <p>We supported women with skills training and micro-loans, helping them become financially independent.</p>
+          <a href="service4.html" class="story-btn">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS SECTION -->
+<section class="testimonials" id="testimonials">
+  <div class="testimonials-container">
+    <h2 class="section-title">What People Say</h2>
+    <p class="section-subtitle">Voices from our community, partners, and beneficiaries</p>
+
+    <div class="testimonials-grid">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card fade-in delay-1">
+        <p class="testimonial-text">
+          “Thanks to this foundation, our village has clean water for the first time.  
+          They didn’t just help us — they empowered us.”
+        </p>
+        <div class="testimonial-author">
+          <img src="images/1.jpg" alt="Person 1">
+          <h4>John</h4>
+          <span>Community Member</span>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card fade-in delay-2">
+        <p class="testimonial-text">
+          “Working together with this team has been an inspiring journey.  
+          Their dedication and transparency are unmatched.”
+        </p>
+        <div class="testimonial-author">
+          <img src="images/test2.jpg" alt="Person 2">
+          <h4>Michael</h4>
+          <span>Partner Organization</span>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card fade-in delay-3">
+        <p class="testimonial-text">
+          “They don’t just give charity — they build sustainable solutions  
+          that continue to change lives long after the project ends.”
+        </p>
+        <div class="testimonial-author">
+          <img src="images/test3.jpg" alt="Person 3">
+          <h4>Ayesha Khan</h4>
+          <span>Beneficiary</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DONATION CTA SECTION -->
+<section class="donation-cta" id="donate">
+  <div class="donation-overlay"></div>
+  <div class="donation-content fade-in">
+    <h2>Be the Change You Wish to See</h2>
+    <p>
+      Your contribution helps us provide food, education, and hope to those in need.  
+      Every small act of kindness adds up to a big difference.
+    </p>
+    <div class="donation-buttons">
+      <a href="donate.html" class="donation-btn primary">Donate Now</a>
+      <a href="contact.html" class="donation-btn secondary">Become a Volunteer</a>
+    </div>
+  </div>
+</section>
+
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+ <footer>
+  <div class="footer-container">
+    
+    <!-- Logo Section -->
+    <div class="footer-logo">
+      <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+      <h4>NGO/CHARITY</h4>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-services">
+      <h4>Explore Services</h4>
+      <ul>
+       <li><a href="service1.html">Education</a></li>
+        <li><a href="service2.html">Healthcare</a></li>
+        <li><a href="service3.html">Skill Training</a></li>
+        <li><a href="service4.html">Women Empowerment</a></li>
+        <li><a href="service5.html">Disaster Relief</a></li>
+        <li><a href="service6.html">Environmental Care</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p><strong>Email:</strong> info@example.com</p>
+      <p><strong>Phone:</strong> +91 1234567890</p>
+
+      <h4>Follow Us</h4>
+      <div class="social">
+        <a href="https://facebook.com"><img src="images/fb.png" alt="Facebook"></a>
+        <a href="https://twitter.com"><img src="images/x.png" alt="Twitter"></a>
+        <a href="https://instagram.com"><img src="images/inst.jpeg" alt="Instagram"></a>
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Get weekly wellness tips and updates in your inbox.</p>
+      <form id="newsletter-form">
+        <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;">
+    ✅ Thank you for subscribing!
+  </div>
+    </div>
+  </div>
+
+  <div class="footer-copy">
+    &copy; 2025 Your Company Name. All Rights Reserved.
+  </div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const faders = document.querySelectorAll(".fade-in");
+
+    const appearOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  });
+
+
+  // Fade-up animation when cards appear
+const fadeElements = document.querySelectorAll('.fade-up');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+      entry.target.style.transition = 'all 0.8s ease-out';
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+fadeElements.forEach(el => observer.observe(el));
+</script>
+
+
+</body>
+</html>

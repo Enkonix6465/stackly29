@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NGO / Charity Website</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/service1.css">
+<script src="js/main.js" defer></script>
+  <script src="js/header.js" defer></script>
+  <script src="js/auth-check.js" defer></script>
+    <script src="js/newsletter.js" defer></script>
+
+</head>
+<body>
+  <!-- ================= HEADER ================= -->
+<header>
+  <div class="logo">
+    <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+  </div>
+
+  <div class="header-right">
+    <nav>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="index.html">Home ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li class="dropdown">
+          <a href="services.html">Services ▾</a>
+          <ul class="dropdown-menu">
+                        <li class="mobile-only"><a href="services.html">All Services</a></li>
+            <li><a href="service1.html">Education</a></li>
+        <li><a href="service2.html">Healthcare</a></li>
+        <li><a href="service3.html">Skill Training</a></li>
+        <li><a href="service4.html">Empowerment</a></li>
+        <li><a href="service5.html">Disaster Relief</a></li>
+        <li><a href="service6.html">Environmental Care</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="profile-container">
+      <div class="profile" id="profile-dropdown-toggle">
+        <span id="profile-initials"></span>
+      </div>
+      <ul class="profile-dropdown" id="profile-dropdown">
+        <li><a href="#" id="logout-btn">Logout</a></li>
+      </ul>
+    </div>
+
+    <button id="themeToggle">🌙</button>
+    <button id="mobile-menu-toggle" class="hamburger">☰</button>
+  </div>
+</header>
+
+  <!-- ================= MAIN SECTIONS ================= -->
+  <main>
+<!-- Hero Section -->
+<section class="service-hero">
+  <div class="service-hero-overlay"></div>
+  <div class="service-hero-content">
+    <h1>Education Support</h1>
+    <p>Unlocking potential through learning opportunities for every child.</p>
+  </div>
+</section>
+<!-- About Section -->
+<section class="about-modern">
+  <div class="about-container">
+    
+    <!-- Image Side -->
+    <div class="about-image">
+      <img src="images/chidren_study.jpeg" alt="About Us">
+      <div class="image-shape"></div>
+    </div>
+
+    <!-- Text Side -->
+    <div class="about-content">
+      <h2>About Our Mission</h2>
+      <p>
+        We are dedicated to transforming lives through education, healthcare, and empowerment programs. 
+        Our focus is on creating opportunities that bring lasting change to communities in need.
+      </p>
+      <p>
+        By working closely with local leaders and volunteers, we ensure that every initiative 
+        makes a real difference in people’s daily lives.
+      </p>
+      <a href="contact.html" class="about-btn">Get Involved</a>
+    </div>
+  </div>
+</section>
+<section class="impact" id="impact">
+  <div class="impact-container">
+    <h2 class="section-title">Our Impact</h2>
+    <p class="section-subtitle">Together, we are making a difference in thousands of lives</p>
+
+    <div class="impact-grid">
+      <!-- Impact Card 1 -->
+      <div class="impact-card">
+        <h3 class="count" data-target="5000">0</h3>
+        <p>Children Educated</p>
+      </div>
+
+      <!-- Impact Card 2 -->
+      <div class="impact-card">
+        <h3 class="count" data-target="12000">0</h3>
+        <p>People Provided Healthcare</p>
+      </div>
+
+      <!-- Impact Card 3 -->
+      <div class="impact-card">
+        <h3 class="count" data-target="800">0</h3>
+        <p>Youth Skilled</p>
+      </div>
+
+      <!-- Impact Card 4 -->
+      <div class="impact-card">
+        <h3 class="count" data-target="300">0</h3>
+        <p>Communities Supported</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="programs-alt" id="programs">
+  <h2 class="section-title">Our Key Education Programs</h2>
+  <p class="section-subtitle">Focused initiatives to create brighter futures through learning</p>
+
+  <!-- Program 1 -->
+  <div class="program-item reveal fade-left">
+    <div class="program-image">
+      <img src="images/scholar.jpg" alt="Scholarship Support">
+    </div>
+    <div class="program-text">
+      <h3>Scholarship Support</h3>
+      <p>We believe that financial hardship should never be the reason a child drops out of school. Our Scholarship Support program provides tuition assistance, exam fee coverage, and help with uniforms and books for children from low-income families. By lifting this burden from parents, we ensure that children can continue their studies with dignity and confidence. This initiative not only keeps kids in school but also inspires them to pursue higher education and dream of a brighter future.</p>
+    </div>
+  </div>
+
+  <!-- Program 2 -->
+  <div class="program-item reveal fade-right">
+    <div class="program-text">
+      <h3>After-School Learning</h3>
+      <p>Many children struggle to keep up in school because they lack access to extra guidance at home. Our After-School Learning program provides free evening classes where trained teachers and volunteers offer tutoring in core subjects like math, science, and language. Beyond academics, we focus on building study habits, problem-solving skills, and self-confidence. These centers also act as safe community spaces where children can receive mentorship, participate in group activities, and discover their talents. By bridging learning gaps, we help children stay motivated and perform better in their regular classrooms.</p>
+    </div>
+    <div class="program-image">
+      <img src="images/after.jpg" alt="After School Learning">
+    </div>
+  </div>
+
+  <!-- Program 3 -->
+  <div class="program-item reveal fade-left">
+    <div class="program-image">
+      <img src="images/online.jpg" alt="Digital Literacy">
+    </div>
+    <div class="program-text">
+      <h3>Digital Literacy</h3>
+      <p>In today’s world, digital skills are no longer optional—they are essential. Our Digital Literacy program introduces children to computers, the internet, and modern technology through hands-on training sessions. From learning the basics of typing and using educational software to understanding online safety and communication, children gain confidence in navigating the digital world. We also provide access to e-learning resources, coding workshops, and interactive tools that expand their horizons beyond traditional textbooks. By bridging the digital divide, we ensure that underprivileged children are not left behind and are equipped with the skills they need to compete in higher education and future careers.</p>
+    </div>
+  </div>
+
+  <!-- Program 4 -->
+  <div class="program-item reveal fade-right">
+    <div class="program-text">
+      <h3>School Infrastructure</h3>
+      <p>A strong foundation for learning begins with a safe and supportive environment. Our School Infrastructure program focuses on creating classrooms and facilities that inspire children to learn and grow. We build and renovate classrooms, libraries, and sanitation facilities, ensuring that students have access to clean, well-equipped spaces. Along with furniture, blackboards, and safe drinking water, we also provide electricity and digital tools where possible, making schools more engaging and resourceful. By investing in infrastructure, we not only enhance the quality of education but also reduce dropout rates, as children feel motivated and parents feel reassured about sending them to school.</p>
+    </div>
+    <div class="program-image">
+      <img src="images/school.jpg" alt="School Infrastructure">
+    </div>
+  </div>
+
+</section>
+
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <h2 class="section-title">What People Say</h2>
+    <p class="section-subtitle">Stories of impact from our community</p>
+
+    <div class="testimonials-grid">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <p class="quote">“Thanks to the NGO’s education program, my daughter now goes to school and dreams of becoming a teacher.”</p>
+        <div class="author">
+          <img src="images/1.jpg" alt="Parent">
+          <h4>Ramesh Kumar</h4>
+          <span>Beneficiary</span>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <p class="quote">“Volunteering here has been the most fulfilling experience of my life. I feel I’m truly making a difference.”</p>
+        <div class="author">
+          <img src="images/test3.jpg" alt="Volunteer">
+          <h4>Anita Sharma</h4>
+          <span>Volunteer</span>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <p class="quote">“I am proud to support this organization. My donations go directly towards real, life-changing projects.”</p>
+        <div class="author">
+          <img src="images/test2.jpg" alt="Donor">
+          <h4>Rajiv Singh</h4>
+          <span>Donor</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="cta">
+  <div class="cta-container">
+    <h2>Be a Part of the Change</h2>
+    <p>Your support can bring education, healthcare, and hope to thousands of lives.</p>
+    <div class="cta-buttons">
+      <a href="donate.html" class="cta-btn donate-btn">Donate Now</a>
+      <a href="contact.html" class="cta-btn volunteer-btn">Join as Volunteer</a>
+    </div>
+  </div>
+</section>
+
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+ <footer>
+  <div class="footer-container">
+    
+    <!-- Logo Section -->
+    <div class="footer-logo">
+      <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+      <h4>NGO/CHARITY</h4>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-services">
+      <h4>Explore Services</h4>
+      <ul>
+        <li><a href="service1.html">Education</a></li>
+        <li><a href="service2.html">Healthcare</a></li>
+        <li><a href="service3.html">Skill Training</a></li>
+        <li><a href="service4.html">Women Empowerment</a></li>
+        <li><a href="service5.html">Disaster Relief</a></li>
+        <li><a href="service6.html">Environmental Care</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p><strong>Email:</strong> info@example.com</p>
+      <p><strong>Phone:</strong> +91 1234567890</p>
+
+      <h4>Follow Us</h4>
+      <div class="social">
+        <a href="https://facebook.com"><img src="images/fb.png" alt="Facebook"></a>
+        <a href="https://twitter.com"><img src="images/x.png" alt="Twitter"></a>
+        <a href="https://instagram.com"><img src="images/inst.jpeg" alt="Instagram"></a>
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Get weekly wellness tips and updates in your inbox.</p>
+      <form id="newsletter-form">
+        <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;">
+    ✅ Thank you for subscribing!
+  </div>
+    </div>
+  </div>
+
+  <div class="footer-copy">
+    &copy; 2025 Your Company Name. All Rights Reserved.
+  </div>
+</footer>
+
+<script>
+  // Counting Animation Function
+  function animateCounter(counter) {
+    const target = +counter.getAttribute("data-target");
+    const speed = 200; // lower = faster
+
+    const updateCount = () => {
+      const current = +counter.innerText;
+      const increment = Math.ceil(target / speed);
+
+      if (current < target) {
+        counter.innerText = current + increment;
+        setTimeout(updateCount, 20);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    updateCount();
+  }
+
+  // Run animation when section is visible
+  const counters = document.querySelectorAll(".count");
+  const section = document.querySelector("#impact");
+
+  let started = false; // run once
+  window.addEventListener("scroll", () => {
+    const sectionTop = section.offsetTop - window.innerHeight + 100;
+    if (!started && window.scrollY > sectionTop) {
+      counters.forEach(counter => animateCounter(counter));
+      started = true;
+    }
+  });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const reveals = document.querySelectorAll(".reveal");
+
+  const revealOnScroll = () => {
+    reveals.forEach(el => {
+      const windowHeight = window.innerHeight;
+      const elementTop = el.getBoundingClientRect().top;
+      const elementBottom = el.getBoundingClientRect().bottom;
+
+      if (elementTop < windowHeight && elementBottom > 0) {
+        el.classList.add("active");
+      } else {
+        el.classList.remove("active"); // 👈 animation re-triggers
+      }
+    });
+  };
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll();
+});
+
+</script>
+
+</body>
+</html>

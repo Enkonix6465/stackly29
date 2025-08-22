@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/auth.css">
+  <script src="js/darkmode.js" defer></script>
+  <style>
+   /* Layout wrapper */
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 900px;              /* overall card width */
+  max-width: 95%;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* Left image section (smaller) */
+.auth-image {
+  flex: 0.8;                 /* smaller ratio */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f5f9;
+}
+
+.auth-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* fills without stretching */
+  display: block;
+}
+
+/* Right form section (bigger) */
+.auth-container {
+  flex: 1.2;                 /* bigger ratio */
+  padding: 40px 30px;
+  text-align: center;
+  background: #ffffff;
+}
+
+.auth-logo {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="auth-wrapper">
+    <!-- Left side image -->
+    <div class="auth-image">
+      <img src="images/login.jpg" alt="Login Image">
+    </div>
+
+    <!-- Right side form -->
+    <div class="auth-right">
+      <div class="auth-container">
+        <img src="images/logo.png" alt="Logo" class="auth-logo">
+
+        <h2>Login</h2>
+        <form id="loginForm">
+          <input type="text" id="loginUsername" placeholder="Email" required>
+
+          <div class="password-field">
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <span class="toggle-password" onclick="togglePassword('loginPassword', this)">👁️</span>
+          </div>
+
+          <button type="submit">Login</button>
+          <button type="button" id="darkModeToggle">🌙</button>
+        </form>
+
+        <p>Don’t have an account? <a href="signup.html">Sign up here</a></p>
+        <a href="forgot.html">Forgot Password?</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>

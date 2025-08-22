@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NGO / Charity Website</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/service3.css">
+
+<script src="js/main.js" defer></script>
+  <script src="js/header.js" defer></script>
+  <script src="js/auth-check.js" defer></script>
+    <script src="js/newsletter.js" defer></script>
+
+</head>
+<body>
+  <!-- ================= HEADER ================= -->
+<header>
+  <div class="logo">
+    <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+  </div>
+
+  <div class="header-right">
+    <nav>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="index.html">Home ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li class="dropdown">
+          <a href="services.html">Services ▾</a>
+          <ul class="dropdown-menu">
+                        <li class="mobile-only"><a href="services.html">All Services</a></li>
+            <li><a href="service1.html">Education</a></li>
+        <li><a href="service2.html">Healthcare</a></li>
+        <li><a href="service3.html">Skill Training</a></li>
+        <li><a href="service4.html">Empowerment</a></li>
+        <li><a href="service5.html">Disaster Relief</a></li>
+        <li><a href="service6.html">Environmental Care</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="profile-container">
+      <div class="profile" id="profile-dropdown-toggle">
+        <span id="profile-initials"></span>
+      </div>
+      <ul class="profile-dropdown" id="profile-dropdown">
+        <li><a href="#" id="logout-btn">Logout</a></li>
+      </ul>
+    </div>
+
+    <button id="themeToggle">🌙</button>
+    <button id="mobile-menu-toggle" class="hamburger">☰</button>
+  </div>
+</header>
+
+  <!-- ================= MAIN SECTIONS ================= -->
+  <main>
+<!-- Hero Section -->
+<section class="service-hero">
+  <div class="service-hero-overlay"></div>
+  <div class="service-hero-content">
+    <h1>Skill Training</h1>
+    <p>Empowering youth with skills for brighter futures and sustainable livelihoods.</p>
+  </div>
+</section>
+
+
+<!-- About Section -->
+<section class="about-modern">
+  <div class="about-container">
+    
+    <!-- Image Side -->
+    <div class="about-image">
+      <img src="images/skill.jpeg" alt="Skill Training Program">
+      <div class="image-shape"></div>
+    </div>
+
+    <!-- Text Side -->
+    <div class="about-content">
+      <h2>About Our Skill Training Mission</h2>
+      <p>
+        We believe that empowering youth with practical skills is the key to breaking the cycle of poverty 
+        and building sustainable futures. Our skill training programs equip individuals with hands-on expertise 
+        that makes them job-ready and confident.
+      </p>
+      <p>
+        From vocational courses and digital literacy to entrepreneurship support and industry linkages, 
+        we ensure that young people are prepared to succeed in today’s competitive world. By working with 
+        trainers, mentors, and local organizations, we open pathways to employment and self-reliance.
+      </p>
+      <a href="contact.html" class="about-btn">Join Our Mission</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="impact" id="impact">
+  <div class="impact-container">
+    <h2 class="section-title">Our Impact</h2>
+    <p class="section-subtitle">Together, we are empowering individuals with skills for a better tomorrow</p>
+
+    <div class="impact-grid">
+      <!-- Impact Card 1 -->
+      <div class="impact-card">
+        <h3 class="count" data-target="3000">0</h3>
+        <p>Youth trained in vocational and professional skills</p>
+      </div>
+
+      <!-- Impact Card 2 -->
+      <div class="impact-card">
+        <h3 class="count" data-target="1500">0</h3>
+        <p>Women empowered through livelihood and self-employment programs</p>
+      </div>
+
+      <!-- Impact Card 3 -->
+      <div class="impact-card">
+        <h3 class="count" data-target="1200">0</h3>
+        <p>Individuals equipped with digital literacy and IT skills</p>
+      </div>
+
+      <!-- Impact Card 4 -->
+      <div class="impact-card">
+        <h3 class="count" data-target="500">0</h3>
+        <p>Entrepreneurs supported in starting small businesses</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="programs-alt" id="programs">
+  <h2 class="section-title">Our Key Skill Training Programs</h2>
+  <p class="section-subtitle">Focused initiatives to empower youth, women, and communities with skills for growth</p>
+
+  <!-- Program 1 -->
+  <div class="program-item reveal fade-left">
+    <div class="program-image">
+      <img src="images/vocation.jpeg" alt="Vocational Training">
+    </div>
+    <div class="program-text">
+      <h3>Vocational Training</h3>
+      <p>
+        We provide hands-on vocational courses in areas such as tailoring, electrical work, carpentry, computer skills, and more. These programs are designed to equip participants with practical, market-ready skills that open doors to sustainable employment and self-reliance. Our certified courses not only build technical expertise but also offer recognition in the job market, enabling individuals to secure stable livelihoods and contribute meaningfully to their local economies.
+      </p>
+    </div>
+  </div>
+
+  <!-- Program 2 -->
+  <div class="program-item reveal fade-right">
+    <div class="program-text">
+      <h3>Digital Literacy</h3>
+      <p>
+        In today’s digital age, basic computer knowledge is essential. 
+        We train youth and women in computer skills, online tools, and internet safety. 
+        These programs open pathways to jobs in the IT sector and prepare individuals for digital opportunities.
+      </p>
+    </div>
+    <div class="program-image">
+      <img src="images/digital.jpeg" alt="Digital Literacy">
+    </div>
+  </div>
+
+  <!-- Program 3 -->
+  <div class="program-item reveal fade-left">
+    <div class="program-image">
+      <img src="images/entraprener.jpeg" alt="Entrepreneurship Training">
+    </div>
+    <div class="program-text">
+      <h3>Entrepreneurship Support</h3>
+      <p>
+        Many young people aspire to start their own businesses but lack the right guidance and resources. Our entrepreneurship programs provide mentorship, business planning support, financial literacy training, and access to micro-finance opportunities. We also connect aspiring entrepreneurs with networks and market linkages, enabling them to transform their ideas into successful and sustainable ventures. By nurturing innovation and self-reliance, we help youth become job creators instead of job seekers, driving economic growth within their communities.
+      </p>
+    </div>
+  </div>
+
+  <!-- Program 4 -->
+  <div class="program-item reveal fade-right">
+    <div class="program-text">
+      <h3>Women Empowerment Programs</h3>
+      <p>
+       We conduct specialized training for women in crafts, small-scale production, financial literacy, and self-help initiatives. These programs open up income-generating opportunities while also strengthening women’s confidence, independence, and decision-making power within their families and communities. By fostering leadership, collective strength, and entrepreneurship, our initiatives ensure that women become active contributors to both their households and society, inspiring the next generation to pursue equality and empowerment.
+      </p>
+    </div>
+    <div class="program-image">
+      <img src="images/women2.jpeg" alt="Women Empowerment">
+    </div>
+  </div>
+</section>
+
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <h2 class="section-title">Voices of Change</h2>
+    <p class="section-subtitle">Real stories of empowerment and growth through our Skill Training programs</p>
+
+    <div class="testimonials-grid">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <p class="quote">“I learned tailoring skills through the NGO’s program and now run a small shop in my village. I can support my children’s education with the income I earn.”</p>
+        <div class="author">
+          <img src="images/ser3_t1.jpeg" alt="Skill Trainee">
+          <h4>Sunita Sharma</h4>
+          <span>Program Beneficiary</span>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <p class="quote">“Training young people in computer skills has been a rewarding journey. Seeing them land jobs and grow confident proves the impact of skill development.”</p>
+        <div class="author">
+          <img src="images/ser3_t2.jpeg" alt="Trainer">
+          <h4>Rahul Verma</h4>
+          <span>Trainer Volunteer</span>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <p class="quote">“Supporting this skill development initiative has been fulfilling. Knowing that my contribution helps someone build a sustainable livelihood brings me immense satisfaction.”</p>
+        <div class="author">
+          <img src="images/ser2_t3.jpeg" alt="Donor">
+          <h4>Neha Gupta</h4>
+          <span>Donor</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="cta" id="cta">
+  <div class="cta-container">
+    <h2>Support Skill Training</h2>
+    <p>Your contribution can empower youth and women with practical skills, vocational training, and opportunities for a sustainable livelihood.</p>
+    <div class="cta-buttons">
+      <a href="donate.html" class="cta-btn donate-btn">Donate for Training</a>
+      <a href="contact.html" class="cta-btn volunteer-btn">Become a Mentor</a>
+    </div>
+  </div>
+</section>
+
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+ <footer>
+  <div class="footer-container">
+    
+    <!-- Logo Section -->
+    <div class="footer-logo">
+      <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+      <h4>NGO/CHARITY</h4>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-services">
+      <h4>Explore Services</h4>
+      <ul>
+      <li><a href="service1.html">Education</a></li>
+        <li><a href="service2.html">Healthcare</a></li>
+        <li><a href="service3.html">Skill Training</a></li>
+        <li><a href="service4.html">Women Empowerment</a></li>
+        <li><a href="service5.html">Disaster Relief</a></li>
+        <li><a href="service6.html">Environmental Care</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p><strong>Email:</strong> info@example.com</p>
+      <p><strong>Phone:</strong> +91 1234567890</p>
+
+      <h4>Follow Us</h4>
+      <div class="social">
+        <a href="https://facebook.com"><img src="images/fb.png" alt="Facebook"></a>
+        <a href="https://twitter.com"><img src="images/x.png" alt="Twitter"></a>
+        <a href="https://instagram.com"><img src="images/inst.jpeg" alt="Instagram"></a>
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Get weekly wellness tips and updates in your inbox.</p>
+      <form id="newsletter-form">
+        <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;">
+    ✅ Thank you for subscribing!
+  </div>
+    </div>
+  </div>
+
+  <div class="footer-copy">
+    &copy; 2025 Your Company Name. All Rights Reserved.
+  </div>
+</footer>
+
+<script>
+  // Counting Animation Function
+  function animateCounter(counter) {
+    const target = +counter.getAttribute("data-target");
+    const speed = 200; // lower = faster
+
+    const updateCount = () => {
+      const current = +counter.innerText;
+      const increment = Math.ceil(target / speed);
+
+      if (current < target) {
+        counter.innerText = current + increment;
+        setTimeout(updateCount, 20);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    updateCount();
+  }
+
+  // Run animation when section is visible
+  const counters = document.querySelectorAll(".count");
+  const section = document.querySelector("#impact");
+
+  let started = false; // run once
+  window.addEventListener("scroll", () => {
+    const sectionTop = section.offsetTop - window.innerHeight + 100;
+    if (!started && window.scrollY > sectionTop) {
+      counters.forEach(counter => animateCounter(counter));
+      started = true;
+    }
+  });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const reveals = document.querySelectorAll(".reveal");
+
+  const revealOnScroll = () => {
+    reveals.forEach(el => {
+      const windowHeight = window.innerHeight;
+      const elementTop = el.getBoundingClientRect().top;
+      const elementBottom = el.getBoundingClientRect().bottom;
+
+      if (elementTop < windowHeight && elementBottom > 0) {
+        el.classList.add("active");
+      } else {
+        el.classList.remove("active"); // 👈 animation re-triggers
+      }
+    });
+  };
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll();
+});
+
+</script>
+
+</body>
+</html>
