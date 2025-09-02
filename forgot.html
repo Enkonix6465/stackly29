@@ -65,11 +65,24 @@
     .error {
       color: red;
     }
+    .lang-toggle {
+      margin-bottom: 15px;
+    }
   </style>
 </head>
 <body>
   <div class="forgot-container">
-    <h2>Forgot Password</h2>
+    <!-- Language Selector -->
+    <div class="lang-toggle">
+      <label for="language">🌐 </label>
+      <select id="language">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="he">עברית</option>
+      </select>
+    </div>
+
+    <h2 id="title">Forgot Password</h2>
 
     <!-- Step 1: Verify Email -->
     <div id="verifyStep">
@@ -81,13 +94,70 @@
     <form id="resetStep" class="hidden">
       <input type="password" id="forgotPassword" placeholder="Enter new password" required>
       <input type="password" id="confirmPassword" placeholder="Confirm new password" required>
-      <button type="submit">Reset Password</button>
+      <button type="submit" id="resetBtn">Reset Password</button>
     </form>
 
     <p id="forgotMsg"></p>
-    <p><a href="login.html">Back to Login</a></p>
+    <p><a id="backToLogin" href="login.html">Back to Login</a></p>
   </div>
 
   <script src="js/forgot.js"></script>
+  <script>
+    const dictionary = {
+      en: {
+        title: "Forgot Password",
+        emailPlaceholder: "Enter your email",
+        verifyBtn: "Verify Email",
+        newPassword: "Enter new password",
+        confirmPassword: "Confirm new password",
+        resetBtn: "Reset Password",
+        backToLogin: "Back to Login"
+      },
+      ar: {
+        title: "نسيت كلمة المرور",
+        emailPlaceholder: "أدخل بريدك الإلكتروني",
+        verifyBtn: "تحقق من البريد",
+        newPassword: "أدخل كلمة مرور جديدة",
+        confirmPassword: "تأكيد كلمة المرور",
+        resetBtn: "إعادة تعيين كلمة المرور",
+        backToLogin: "العودة إلى تسجيل الدخول"
+      },
+      he: {
+        title: "שכחת סיסמה",
+        emailPlaceholder: "הכנס את האימייל שלך",
+        verifyBtn: "אמת אימייל",
+        newPassword: "הזן סיסמה חדשה",
+        confirmPassword: "אשר סיסמה",
+        resetBtn: "אפס סיסמה",
+        backToLogin: "חזרה להתחברות"
+      }
+    };
+
+    const langSelect = document.getElementById("language");
+
+    function updateLanguage(lang) {
+      document.getElementById("title").textContent = dictionary[lang].title;
+      document.getElementById("forgotUsername").placeholder = dictionary[lang].emailPlaceholder;
+      document.getElementById("verifyBtn").textContent = dictionary[lang].verifyBtn;
+      document.getElementById("forgotPassword").placeholder = dictionary[lang].newPassword;
+      document.getElementById("confirmPassword").placeholder = dictionary[lang].confirmPassword;
+      document.getElementById("resetBtn").textContent = dictionary[lang].resetBtn;
+      document.getElementById("backToLogin").textContent = dictionary[lang].backToLogin;
+
+      // RTL Support for Arabic & Hebrew
+      if (lang === "ar" || lang === "he") {
+        document.body.dir = "rtl";
+      } else {
+        document.body.dir = "ltr";
+      }
+    }
+
+    langSelect.addEventListener("change", (e) => {
+      updateLanguage(e.target.value);
+    });
+
+    // Default language
+    updateLanguage("en");
+  </script>
 </body>
 </html>

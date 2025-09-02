@@ -25,36 +25,45 @@
     <nav>
       <ul class="nav-links">
         <li class="dropdown">
-          <a href="index.html">Home ▾</a>
+          <a href="index.html" data-key="nav_home">Home ▾</a>
           <ul class="dropdown-menu">
-            <li><a href="index.html">Home 1</a></li>
-            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="index.html" data-key="nav_home1">Home 1</a></li>
+            <li><a href="home2.html" data-key="nav_home2">Home 2</a></li>
           </ul>
         </li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html" data-key="nav_about">About</a></li>
+        <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
         <li class="dropdown">
-          <a href="services.html">Services ▾</a>
+          <a href="services.html" data-key="nav_services">Services ▾</a>
           <ul class="dropdown-menu">
-                        <li class="mobile-only"><a href="services.html">All Services</a></li>
-            <li><a href="service1.html">Education</a></li>
-        <li><a href="service2.html">Healthcare</a></li>
-        <li><a href="service3.html">Skill Training</a></li>
-        <li><a href="service4.html">Empowerment</a></li>
-        <li><a href="service5.html">Disaster Relief</a></li>
-        <li><a href="service6.html">Environmental Care</a></li>
+                        <li class="mobile-only"><a href="services.html" data-key="nav_all_services">All Services</a></li>
+            <li><a href="service1.html" data-key="nav_service1">Education</a></li>
+        <li><a href="service2.html" data-key="nav_service2">Healthcare</a></li>
+        <li><a href="service3.html" data-key="nav_service3">Skill Training</a></li>
+        <li><a href="service4.html" data-key="nav_service4">Empowerment</a></li>
+        <li><a href="service5.html" data-key="nav_service5">Disaster Relief</a></li>
+        <li><a href="service6.html" data-key="nav_service6">Environmental Care</a></li>
           </ul>
         </li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
       </ul>
     </nav>
+
+    <!-- Language Toggle (added) -->
+    <div class="language-toggle" style="display:inline-block; margin:0 12px;">
+      <select id="languageSelect" aria-label="Select language">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="he">עברית</option>
+      </select>
+    </div>
 
     <div class="profile-container">
       <div class="profile" id="profile-dropdown-toggle">
         <span id="profile-initials"></span>
       </div>
       <ul class="profile-dropdown" id="profile-dropdown">
-        <li><a href="#" id="logout-btn">Logout</a></li>
+        <li><a href="#" id="logout-btn" data-key="logout">Logout</a></li>
       </ul>
     </div>
 
@@ -69,8 +78,8 @@
 <section class="service-hero">
   <div class="service-hero-overlay"></div>
   <div class="service-hero-content">
-    <h1>Skill Training</h1>
-    <p>Empowering youth with skills for brighter futures and sustainable livelihoods.</p>
+    <h1 data-key="service_title">Skill Training</h1>
+    <p data-key="service_subtitle">Empowering youth with skills for brighter futures and sustainable livelihoods.</p>
   </div>
 </section>
 
@@ -87,18 +96,18 @@
 
     <!-- Text Side -->
     <div class="about-content">
-      <h2>About Our Skill Training Mission</h2>
-      <p>
+      <h2 data-key="about_title">About Our Skill Training Mission</h2>
+      <p data-key="about_p1">
         We believe that empowering youth with practical skills is the key to breaking the cycle of poverty 
         and building sustainable futures. Our skill training programs equip individuals with hands-on expertise 
         that makes them job-ready and confident.
       </p>
-      <p>
+      <p data-key="about_p2">
         From vocational courses and digital literacy to entrepreneurship support and industry linkages, 
         we ensure that young people are prepared to succeed in today’s competitive world. By working with 
         trainers, mentors, and local organizations, we open pathways to employment and self-reliance.
       </p>
-      <a href="contact.html" class="about-btn">Join Our Mission</a>
+      <a href="contact.html" class="about-btn" data-key="about_btn">Join Our Mission</a>
     </div>
   </div>
 </section>
@@ -106,40 +115,40 @@
 
 <section class="impact" id="impact">
   <div class="impact-container">
-    <h2 class="section-title">Our Impact</h2>
-    <p class="section-subtitle">Together, we are empowering individuals with skills for a better tomorrow</p>
+    <h2 class="section-title" data-key="impact_title">Our Impact</h2>
+    <p class="section-subtitle" data-key="impact_subtitle">Together, we are empowering individuals with skills for a better tomorrow</p>
 
     <div class="impact-grid">
       <!-- Impact Card 1 -->
       <div class="impact-card">
         <h3 class="count" data-target="3000">0</h3>
-        <p>Youth trained in vocational and professional skills</p>
+        <p data-key="impact_card1">Youth trained in vocational and professional skills</p>
       </div>
 
       <!-- Impact Card 2 -->
       <div class="impact-card">
         <h3 class="count" data-target="1500">0</h3>
-        <p>Women empowered through livelihood and self-employment programs</p>
+        <p data-key="impact_card2">Women empowered through livelihood and self-employment programs</p>
       </div>
 
       <!-- Impact Card 3 -->
       <div class="impact-card">
         <h3 class="count" data-target="1200">0</h3>
-        <p>Individuals equipped with digital literacy and IT skills</p>
+        <p data-key="impact_card3">Individuals equipped with digital literacy and IT skills</p>
       </div>
 
       <!-- Impact Card 4 -->
       <div class="impact-card">
         <h3 class="count" data-target="500">0</h3>
-        <p>Entrepreneurs supported in starting small businesses</p>
+        <p data-key="impact_card4">Entrepreneurs supported in starting small businesses</p>
       </div>
     </div>
   </div>
 </section>
 
 <section class="programs-alt" id="programs">
-  <h2 class="section-title">Our Key Skill Training Programs</h2>
-  <p class="section-subtitle">Focused initiatives to empower youth, women, and communities with skills for growth</p>
+  <h2 class="section-title" data-key="programs_title">Our Key Skill Training Programs</h2>
+  <p class="section-subtitle" data-key="programs_sub">Focused initiatives to empower youth, women, and communities with skills for growth</p>
 
   <!-- Program 1 -->
   <div class="program-item reveal fade-left">
@@ -147,8 +156,8 @@
       <img src="images/vocation.jpeg" alt="Vocational Training">
     </div>
     <div class="program-text">
-      <h3>Vocational Training</h3>
-      <p>
+      <h3 data-key="prog1_title">Vocational Training</h3>
+      <p data-key="prog1_p">
         We provide hands-on vocational courses in areas such as tailoring, electrical work, carpentry, computer skills, and more. These programs are designed to equip participants with practical, market-ready skills that open doors to sustainable employment and self-reliance. Our certified courses not only build technical expertise but also offer recognition in the job market, enabling individuals to secure stable livelihoods and contribute meaningfully to their local economies.
       </p>
     </div>
@@ -157,8 +166,8 @@
   <!-- Program 2 -->
   <div class="program-item reveal fade-right">
     <div class="program-text">
-      <h3>Digital Literacy</h3>
-      <p>
+      <h3 data-key="prog2_title">Digital Literacy</h3>
+      <p data-key="prog2_p">
         In today’s digital age, basic computer knowledge is essential. 
         We train youth and women in computer skills, online tools, and internet safety. 
         These programs open pathways to jobs in the IT sector and prepare individuals for digital opportunities.
@@ -175,8 +184,8 @@
       <img src="images/entraprener.jpeg" alt="Entrepreneurship Training">
     </div>
     <div class="program-text">
-      <h3>Entrepreneurship Support</h3>
-      <p>
+      <h3 data-key="prog3_title">Entrepreneurship Support</h3>
+      <p data-key="prog3_p">
         Many young people aspire to start their own businesses but lack the right guidance and resources. Our entrepreneurship programs provide mentorship, business planning support, financial literacy training, and access to micro-finance opportunities. We also connect aspiring entrepreneurs with networks and market linkages, enabling them to transform their ideas into successful and sustainable ventures. By nurturing innovation and self-reliance, we help youth become job creators instead of job seekers, driving economic growth within their communities.
       </p>
     </div>
@@ -185,8 +194,8 @@
   <!-- Program 4 -->
   <div class="program-item reveal fade-right">
     <div class="program-text">
-      <h3>Women Empowerment Programs</h3>
-      <p>
+      <h3 data-key="prog4_title">Women Empowerment Programs</h3>
+      <p data-key="prog4_p">
        We conduct specialized training for women in crafts, small-scale production, financial literacy, and self-help initiatives. These programs open up income-generating opportunities while also strengthening women’s confidence, independence, and decision-making power within their families and communities. By fostering leadership, collective strength, and entrepreneurship, our initiatives ensure that women become active contributors to both their households and society, inspiring the next generation to pursue equality and empowerment.
       </p>
     </div>
@@ -198,37 +207,37 @@
 
 <section class="testimonials" id="testimonials">
   <div class="container">
-    <h2 class="section-title">Voices of Change</h2>
-    <p class="section-subtitle">Real stories of empowerment and growth through our Skill Training programs</p>
+    <h2 class="section-title" data-key="testi_title">Voices of Change</h2>
+    <p class="section-subtitle" data-key="testi_sub">Real stories of empowerment and growth through our Skill Training programs</p>
 
     <div class="testimonials-grid">
       <!-- Testimonial 1 -->
       <div class="testimonial-card">
-        <p class="quote">“I learned tailoring skills through the NGO’s program and now run a small shop in my village. I can support my children’s education with the income I earn.”</p>
+        <p class="quote" data-key="testi_quote1">“I learned tailoring skills through the NGO’s program and now run a small shop in my village. I can support my children’s education with the income I earn.”</p>
         <div class="author">
           <img src="images/ser3_t1.jpeg" alt="Skill Trainee">
-          <h4>Sunita Sharma</h4>
-          <span>Program Beneficiary</span>
+          <h4 data-key="testi_author1_name">Sunita Sharma</h4>
+          <span data-key="testi_author1_role">Program Beneficiary</span>
         </div>
       </div>
 
       <!-- Testimonial 2 -->
       <div class="testimonial-card">
-        <p class="quote">“Training young people in computer skills has been a rewarding journey. Seeing them land jobs and grow confident proves the impact of skill development.”</p>
+        <p class="quote" data-key="testi_quote2">“Training young people in computer skills has been a rewarding journey. Seeing them land jobs and grow confident proves the impact of skill development.”</p>
         <div class="author">
           <img src="images/ser3_t2.jpeg" alt="Trainer">
-          <h4>Rahul Verma</h4>
-          <span>Trainer Volunteer</span>
+          <h4 data-key="testi_author2_name">Rahul Verma</h4>
+          <span data-key="testi_author2_role">Trainer Volunteer</span>
         </div>
       </div>
 
       <!-- Testimonial 3 -->
       <div class="testimonial-card">
-        <p class="quote">“Supporting this skill development initiative has been fulfilling. Knowing that my contribution helps someone build a sustainable livelihood brings me immense satisfaction.”</p>
+        <p class="quote" data-key="testi_quote3">“Supporting this skill development initiative has been fulfilling. Knowing that my contribution helps someone build a sustainable livelihood brings me immense satisfaction.”</p>
         <div class="author">
           <img src="images/ser2_t3.jpeg" alt="Donor">
-          <h4>Neha Gupta</h4>
-          <span>Donor</span>
+          <h4 data-key="testi_author3_name">Neha Gupta</h4>
+          <span data-key="testi_author3_role">Donor</span>
         </div>
       </div>
     </div>
@@ -239,11 +248,11 @@
 
 <section class="cta" id="cta">
   <div class="cta-container">
-    <h2>Support Skill Training</h2>
-    <p>Your contribution can empower youth and women with practical skills, vocational training, and opportunities for a sustainable livelihood.</p>
+    <h2 data-key="cta_title">Support Skill Training</h2>
+    <p data-key="cta_text">Your contribution can empower youth and women with practical skills, vocational training, and opportunities for a sustainable livelihood.</p>
     <div class="cta-buttons">
-      <a href="donate.html" class="cta-btn donate-btn">Donate for Training</a>
-      <a href="contact.html" class="cta-btn volunteer-btn">Become a Mentor</a>
+      <a href="donate.html" class="cta-btn donate-btn" data-key="cta_donate">Donate for Training</a>
+      <a href="contact.html" class="cta-btn volunteer-btn" data-key="cta_volunteer">Become a Mentor</a>
     </div>
   </div>
 </section>
@@ -258,40 +267,40 @@
     <!-- Logo Section -->
     <div class="footer-logo">
       <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
-      <h4>NGO/CHARITY</h4>
+      <h4 data-key="footer_brand">NGO/CHARITY</h4>
     </div>
 
     <!-- Quick Links -->
     <div class="footer-links">
-      <h4>Quick Links</h4>
+      <h4 data-key="footer_quick_links">Quick Links</h4>
       <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html" data-key="nav_about">About</a></li>
+        <li><a href="services.html" data-key="nav_services">Services</a></li>
+        <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
+        <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
       </ul>
     </div>
 
     <!-- Services -->
     <div class="footer-services">
-      <h4>Explore Services</h4>
+      <h4 data-key="footer_services">Explore Services</h4>
       <ul>
-      <li><a href="service1.html">Education</a></li>
-        <li><a href="service2.html">Healthcare</a></li>
-        <li><a href="service3.html">Skill Training</a></li>
-        <li><a href="service4.html">Women Empowerment</a></li>
-        <li><a href="service5.html">Disaster Relief</a></li>
-        <li><a href="service6.html">Environmental Care</a></li>
+      <li><a href="service1.html" data-key="nav_service1">Education</a></li>
+        <li><a href="service2.html" data-key="nav_service2">Healthcare</a></li>
+        <li><a href="service3.html" data-key="nav_service3">Skill Training</a></li>
+        <li><a href="service4.html" data-key="nav_service4">Women Empowerment</a></li>
+        <li><a href="service5.html" data-key="nav_service5">Disaster Relief</a></li>
+        <li><a href="service6.html" data-key="nav_service6">Environmental Care</a></li>
       </ul>
     </div>
 
     <!-- Contact -->
     <div class="footer-contact">
-      <h4>Contact Us</h4>
-      <p><strong>Email:</strong> info@example.com</p>
-      <p><strong>Phone:</strong> +91 1234567890</p>
+      <h4 data-key="footer_contact">Contact Us</h4>
+      <p><strong data-key="footer_email_label">Email:</strong> <span data-key="footer_email">info@example.com</span></p>
+      <p><strong data-key="footer_phone_label">Phone:</strong> <span data-key="footer_phone">+91 1234567890</span></p>
 
-      <h4>Follow Us</h4>
+      <h4 data-key="follow_us">Follow Us</h4>
       <div class="social">
         <a href="https://facebook.com"><img src="images/fb.png" alt="Facebook"></a>
         <a href="https://twitter.com"><img src="images/x.png" alt="Twitter"></a>
@@ -301,22 +310,303 @@
 
     <!-- Newsletter -->
     <div class="footer-newsletter">
-      <h4>Newsletter</h4>
-      <p>Get weekly wellness tips and updates in your inbox.</p>
+      <h4 data-key="newsletter_title">Newsletter</h4>
+      <p data-key="newsletter_text">Get weekly wellness tips and updates in your inbox.</p>
       <form id="newsletter-form">
-        <input type="email" id="newsletter-email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
+        <input type="email" id="newsletter-email" placeholder="Enter your email" required data-placeholder-key="newsletter_placeholder">
+        <button type="submit" data-key="subscribe_btn">Subscribe</button>
       </form>
-      <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;">
+      <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;" data-key="newsletter_success">
     ✅ Thank you for subscribing!
   </div>
     </div>
   </div>
 
-  <div class="footer-copy">
+  <div class="footer-copy" data-key="footer_copy">
     &copy; 2025 Your Company Name. All Rights Reserved.
   </div>
 </footer>
+
+<!-- ================= Language logic (added) ================= -->
+<script>
+  (function(){
+    const dictionary = {
+      en: {
+        nav_home: "Home ▾",
+        nav_home1: "Home 1",
+        nav_home2: "Home 2",
+        nav_about: "About",
+        nav_blog: "Blog",
+        nav_services: "Services ▾",
+        nav_all_services: "All Services",
+        nav_service1: "Education",
+        nav_service2: "Healthcare",
+        nav_service3: "Skill Training",
+        nav_service4: "Empowerment",
+        nav_service5: "Disaster Relief",
+        nav_service6: "Environmental Care",
+        nav_contact: "Contact",
+        logout: "Logout",
+
+        service_title: "Skill Training",
+        service_subtitle: "Empowering youth with skills for brighter futures and sustainable livelihoods.",
+
+        about_title: "About Our Skill Training Mission",
+        about_p1: "We believe that empowering youth with practical skills is the key to breaking the cycle of poverty and building sustainable futures. Our skill training programs equip individuals with hands-on expertise that makes them job-ready and confident.",
+        about_p2: "From vocational courses and digital literacy to entrepreneurship support and industry linkages, we ensure that young people are prepared to succeed in today’s competitive world. By working with trainers, mentors, and local organizations, we open pathways to employment and self-reliance.",
+        about_btn: "Join Our Mission",
+
+        impact_title: "Our Impact",
+        impact_subtitle: "Together, we are empowering individuals with skills for a better tomorrow",
+        impact_card1: "Youth trained in vocational and professional skills",
+        impact_card2: "Women empowered through livelihood and self-employment programs",
+        impact_card3: "Individuals equipped with digital literacy and IT skills",
+        impact_card4: "Entrepreneurs supported in starting small businesses",
+
+        programs_title: "Our Key Skill Training Programs",
+        programs_sub: "Focused initiatives to empower youth, women, and communities with skills for growth",
+        prog1_title: "Vocational Training",
+        prog1_p: "We provide hands-on vocational courses in areas such as tailoring, electrical work, carpentry, computer skills, and more. These programs are designed to equip participants with practical, market-ready skills that open doors to sustainable employment and self-reliance.",
+        prog2_title: "Digital Literacy",
+        prog2_p: "In today’s digital age, basic computer knowledge is essential. We train youth and women in computer skills, online tools, and internet safety.",
+        prog3_title: "Entrepreneurship Support",
+        prog3_p: "Our entrepreneurship programs provide mentorship, business planning support, financial literacy training, and access to micro-finance opportunities to help aspiring entrepreneurs launch sustainable ventures.",
+        prog4_title: "Women Empowerment Programs",
+        prog4_p: "We conduct specialized training for women in crafts, small-scale production, financial literacy, and self-help initiatives to support income generation and independence.",
+
+        testi_title: "Voices of Change",
+        testi_sub: "Real stories of empowerment and growth through our Skill Training programs",
+        testi_quote1: "“I learned tailoring skills through the NGO’s program and now run a small shop in my village. I can support my children’s education with the income I earn.”",
+        testi_author1_name: "Sunita Sharma",
+        testi_author1_role: "Program Beneficiary",
+        testi_quote2: "“Training young people in computer skills has been a rewarding journey. Seeing them land jobs and grow confident proves the impact of skill development.”",
+        testi_author2_name: "Rahul Verma",
+        testi_author2_role: "Trainer Volunteer",
+        testi_quote3: "“Supporting this skill development initiative has been fulfilling. Knowing that my contribution helps someone build a sustainable livelihood brings me immense satisfaction.”",
+        testi_author3_name: "Neha Gupta",
+        testi_author3_role: "Donor",
+
+        cta_title: "Support Skill Training",
+        cta_text: "Your contribution can empower youth and women with practical skills, vocational training, and opportunities for a sustainable livelihood.",
+        cta_donate: "Donate for Training",
+        cta_volunteer: "Become a Mentor",
+
+        footer_brand: "NGO/CHARITY",
+        footer_quick_links: "Quick Links",
+        footer_services: "Explore Services",
+        footer_contact: "Contact Us",
+        footer_email_label: "Email:",
+        footer_email: "info@example.com",
+        footer_phone_label: "Phone:",
+        footer_phone: "+91 1234567890",
+        follow_us: "Follow Us",
+        newsletter_title: "Newsletter",
+        newsletter_text: "Get weekly wellness tips and updates in your inbox.",
+        subscribe_btn: "Subscribe",
+        newsletter_placeholder: "Enter your email",
+        newsletter_success: "✅ Thank you for subscribing!",
+        footer_copy: "© 2025 Your Company Name. All Rights Reserved."
+      },
+      ar: {
+        nav_home: "الرئيسية ▾",
+        nav_home1: "الرئيسية 1",
+        nav_home2: "الرئيسية 2",
+        nav_about: "معلومات عنا",
+        nav_blog: "المدونة",
+        nav_services: "الخدمات ▾",
+        nav_all_services: "جميع الخدمات",
+        nav_service1: "التعليم",
+        nav_service2: "الرعاية الصحية",
+        nav_service3: "التدريب المهني",
+        nav_service4: "التمكين",
+        nav_service5: "الإغاثة في الكوارث",
+        nav_service6: "رعاية البيئة",
+        nav_contact: "اتصل بنا",
+        logout: "تسجيل الخروج",
+
+        service_title: "التدريب المهني",
+        service_subtitle: "تمكين الشباب بالمهارات من أجل مستقبل أفضل وسبل عيش مستدامة.",
+
+        about_title: "عن مهمة التدريب المهني",
+        about_p1: "نؤمن أن تمكين الشباب بمهارات عملية هو المفتاح لكسر حلقة الفقر وبناء مستقبل مستدام. برامجنا تمنح الأفراد خبرات عملية تجعلهم جاهزين للعمل وواثقين.",
+        about_p2: "من الدورات المهنية والمهارات الرقمية إلى دعم ريادة الأعمال وروابط الصناعة، نجهز الشباب للنجاح في عالم المنافسة. نعمل مع المدربين والجهات المحلية لفتح مسارات عمل واعتماد ذاتي.",
+        about_btn: "انضم إلى مهمتنا",
+
+        impact_title: "أثرنا",
+        impact_subtitle: "معًا، نمكّن الأفراد بالمهارات نحو غدٍ أفضل",
+        impact_card1: "الشباب المدربون في المهارات المهنية",
+        impact_card2: "تمكين النساء من خلال برامج سبل العيش",
+        impact_card3: "الأفراد المجهزون بالمهارات الرقمية وتقنية المعلومات",
+        impact_card4: "دعم رواد الأعمال لبدء مشاريع صغيرة",
+
+        programs_title: "برامجنا الرئيسية للتدريب المهني",
+        programs_sub: "مبادرات مركزة لتمكين الشباب والنساء والمجتمعات بالمهارات",
+        prog1_title: "التدريب المهني",
+        prog1_p: "نوفر دورات عملية في الخياطة، والكهرباء، والنجارة، ومهارات الحاسوب وغيرها لتزويد المشاركين بمهارات سوقية مستدامة.",
+        prog2_title: "المهارات الرقمية",
+        prog2_p: "في عصر الرقمية، ندرّب الشباب والنساء على مهارات الحاسوب والأدوات عبر الإنترنت وسلامة الإنترنت.",
+        prog3_title: "دعم ريادة الأعمال",
+        prog3_p: "نوفر إرشادًا، وتخطيطًا للأعمال، وتدريبًا على الثقافة المالية وإمكانيات التمويل المصغر لمساعدة رواد الأعمال.",
+        prog4_title: "برامج تمكين المرأة",
+        prog4_p: "ندير تدريبًا متخصصًا للنساء في الحرف والإنتاج الصغير والتمويل الصغير لدعم الدخل والاستقلال.",
+
+        testi_title: "أصوات التغيير",
+        testi_sub: "قصص حقيقية للتمكين والنمو من خلال برامجنا",
+        testi_quote1: "“تعلمت الخياطة من خلال برنامج الجمعية والآن أدير متجرًا صغيرًا بقريةي وأستطيع دعم تعليم أطفالي.”",
+        testi_author1_name: "سونيطا شارما",
+        testi_author1_role: "مستفيدة من البرنامج",
+        testi_quote2: "“تدريب الشباب على مهارات الحاسوب كان تجربة مثمرة. رؤية توظيفهم وثقتهم دليل على تأثير التطوير المهاري.”",
+        testi_author2_name: "راهول فيرما",
+        testi_author2_role: "متطوع مدرب",
+        testi_quote3: "“دعم هذه المبادرة يمنحني شعورًا بالرضا؛ أعلم أن مساهمتي تساعد في بناء سبل عيش مستدامة.”",
+        testi_author3_name: "نيها غوبتا",
+        testi_author3_role: "متبرعة",
+
+        cta_title: "ادعم برامج التدريب المهني",
+        cta_text: "مساهمتك تمكن الشباب والنساء بالمهارات والتدريب وفرص سبل عيش مستدامة.",
+        cta_donate: "التبرع للتدريب",
+        cta_volunteer: "كن مرشدًا",
+
+        footer_brand: "المنظمة الخيرية",
+        footer_quick_links: "روابط سريعة",
+        footer_services: "استكشف الخدمات",
+        footer_contact: "اتصل بنا",
+        footer_email_label: "البريد الإلكتروني:",
+        footer_email: "info@example.com",
+        footer_phone_label: "الهاتف:",
+        footer_phone: "+91 1234567890",
+        follow_us: "تابعنا",
+        newsletter_title: "النشرة الإخبارية",
+        newsletter_text: "احصل على نصائح وتحديثات أسبوعية في صندوق بريدك.",
+        subscribe_btn: "اشترك",
+        newsletter_placeholder: "أدخل بريدك الإلكتروني",
+        newsletter_success: "✅ شكرًا لاشتراكك!",
+        footer_copy: "© 2025 اسم شركتك. جميع الحقوق محفوظة."
+      },
+      he: {
+        nav_home: "בית ▾",
+        nav_home1: "בית 1",
+        nav_home2: "בית 2",
+        nav_about: "עלינו",
+        nav_blog: "בלוג",
+        nav_services: "שירותים ▾",
+        nav_all_services: "כל השירותים",
+        nav_service1: "חינוך",
+        nav_service2: "בריאות",
+        nav_service3: "הכשרה מקצועית",
+        nav_service4: "העצמה",
+        nav_service5: "סיוע בשעת חירום",
+        nav_service6: "שמירה על הסביבה",
+        nav_contact: "צור קשר",
+        logout: "התנתק",
+
+        service_title: "הכשרות מקצועיות",
+        service_subtitle: "העצמת צעירים עם מיומנויות לעתיד טוב יותר ופרנסה בת קיימא.",
+
+        about_title: "על משימת ההכשרות שלנו",
+        about_p1: "אנו מאמינים שהעצמת צעירים בכישורים מעשיים היא המפתח לשבירת מעגל העוני ובניית עתיד בר-קיימא. תוכניות ההכשרה שלנו מציידות אנשים במיומנויות מעשיות שהופכות אותם מוכנים לתעסוקה.",
+        about_p2: "ממקצועות ויכולות דיגיטליות ועד תמיכה ביזמות וחיבורים לתעשייה — אנו מכינים את הצעירים לתחרות של ימינו באמצעות מאמני ומנטורים מקומיים.",
+        about_btn: "הצטרפו למשימה",
+
+        impact_title: "ההשפעה שלנו",
+        impact_subtitle: "ביחד, אנו מעצימים אנשים עם מיומנויות לעתיד טוב יותר",
+        impact_card1: "צעירים שהוכשרו במיומנויות מקצועיות",
+        impact_card2: "נשים שהועצמו דרך תוכניות פרנסה",
+        impact_card3: "אנשים שרכשו מיומנויות דיגיטליות ו-IT",
+        impact_card4: "תמיכה ביזמים בהקמת עסקים קטנים",
+
+        programs_title: "תוכניות ההכשרה המובילות שלנו",
+        programs_sub: "יוזמות ממוקדות להעצמת צעירים, נשים וקהילות",
+        prog1_title: "הכשרה מקצועית",
+        prog1_p: "אנו מציעים קורסים מעשיים בתחומים כמו תפירה, חשמל, נגרות וכישורי מחשב, שמעניקים למשתתפים כישורים רלוונטיים לשוק.",
+        prog2_title: "אוריינות דיגיטלית",
+        prog2_p: "בעידן הדיגיטלי אנו מלמדים כישורי מחשב, כלים מקוונים ובטיחות ברשת.",
+        prog3_title: "תמיכה ביזמות",
+        prog3_p: "תוכניות היזמות שלנו מציעות מנטורינג, תכנון עסקי וחינוך פיננסי כדי לתמוך ביזמים בתחילת דרכם.",
+        prog4_title: "תוכניות העצמת נשים",
+        prog4_p: "אנו מקיימים הדרכות מיוחדות לנשים בתחומי מלאכה, ייצור קטן וכישורי כלכלה קטנה להעצמה כלכלית.",
+
+        testi_title: "קולות של שינוי",
+        testi_sub: "סיפורים אמיתיים של העצמה וצמיחה דרך תוכניות ההכשרה שלנו",
+        testi_quote1: "“למדתי תפירה בתוכנית של העמותה וכעת אני מנהלת חנות קטנה בכפר. אני יכולה לממן את חינוך ילדיי.”",
+        testi_author1_name: "סוניטה שרמה",
+        testi_author1_role: "מוטבת תוכנית",
+        testi_quote2: "“הכשרת צעירים בכישורי מחשב הייתה מסע מתגמל. לראות אותם מוצאים עבודה ובטוחים בעצמם מוכיח את השפעת ההכשרות.”",
+        testi_author2_name: "ראהול ורמה",
+        testi_author2_role: "מדריך מתנדב",
+        testi_quote3: "“לתמוך ביוזמת ההכשרה הזו מספק לי סיפוק אדיר. לדעת שממני נבנית פרנסה בת-קיימא זה חשוב.”",
+        testi_author3_name: "נהה גופטה",
+        testi_author3_role: "תורמת",
+
+        cta_title: "תמכו בהכשרות מקצועיות",
+        cta_text: "התרומה שלכם מאפשרת הכשרה מעשית, סדנאות ותעסוקה עבור צעירים ונשים.",
+        cta_donate: "תרום להכשרה",
+        cta_volunteer: "הצטרף כמנטור",
+
+        footer_brand: "עמותה / צדקה",
+        footer_quick_links: "קישורים מהירים",
+        footer_services: "גלו שירותים",
+        footer_contact: "צור קשר",
+        footer_email_label: "דוא\"ל:",
+        footer_email: "info@example.com",
+        footer_phone_label: "טלפון:",
+        footer_phone: "+91 1234567890",
+        follow_us: "עקבו אחרינו",
+        newsletter_title: "ניוזלטר",
+        newsletter_text: "קבלו עדכונים וטיפים שבועיים לתיבת הדואר.",
+        subscribe_btn: "הרשמה",
+        newsletter_placeholder: "הכנס את המייל שלך",
+        newsletter_success: "✅ תודה שנרשמת!",
+        footer_copy: "© 2025 שם החברה שלך. כל הזכויות שמורות."
+      }
+    };
+
+    function applyTranslations(lang) {
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (!key) return;
+        if (dictionary[lang] && dictionary[lang][key] !== undefined) {
+          el.textContent = dictionary[lang][key];
+        }
+      });
+
+      document.querySelectorAll('[data-placeholder-key]').forEach(el => {
+        const key = el.getAttribute('data-placeholder-key');
+        if (!key) return;
+        if (dictionary[lang] && dictionary[lang][key] !== undefined) {
+          el.setAttribute('placeholder', dictionary[lang][key]);
+        }
+      });
+
+      document.documentElement.lang = lang;
+      if (lang === 'ar' || lang === 'he') {
+        document.documentElement.setAttribute('dir', 'rtl');
+        document.body.classList.add('is-rtl');
+      } else {
+        document.documentElement.setAttribute('dir', 'ltr');
+        document.body.classList.remove('is-rtl');
+      }
+    }
+
+    function setLanguage(lang) {
+      if (!dictionary[lang]) lang = 'en';
+      localStorage.setItem('siteLanguage', lang);
+      const sel = document.getElementById('languageSelect');
+      if (sel) sel.value = lang;
+      applyTranslations(lang);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('siteLanguage') || 'en';
+      const sel = document.getElementById('languageSelect');
+      if (sel) {
+        sel.value = saved;
+        sel.addEventListener('change', e => setLanguage(e.target.value));
+      }
+      applyTranslations(saved);
+    });
+  })();
+</script>
 
 <script>
   // Counting Animation Function

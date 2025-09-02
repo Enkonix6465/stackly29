@@ -11,6 +11,26 @@
   <script src="js/header.js" defer></script>
   <script src="js/auth-check.js" defer></script>
   <script src="js/newsletter.js" defer></script>
+
+  <style>
+    /* tiny style so the language select fits the header without changing layout */
+    .language-toggle {
+      display: inline-block;
+      margin-left: 12px;
+      vertical-align: middle;
+    }
+    .language-toggle select {
+      padding: 6px 10px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      background: #fff;
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+    /* simple RTL helper so menus align when rtl is active */
+    body.is-rtl .nav-links { direction: rtl; }
+    body.is-rtl .nav-links .dropdown-menu { text-align: right; }
+  </style>
 </head>
 <body>
   <!-- ================= HEADER ================= -->
@@ -23,36 +43,45 @@
       <nav>
         <ul class="nav-links">
           <li class="dropdown">
-            <a href="index.html">Home ▾</a>
+            <a href="index.html" data-key="nav_home">Home ▾</a>
             <ul class="dropdown-menu">
-              <li><a href="index.html">Home 1</a></li>
-              <li><a href="home2.html">Home 2</a></li>
+              <li><a href="index.html" data-key="nav_home1">Home 1</a></li>
+              <li><a href="home2.html" data-key="nav_home2">Home 2</a></li>
             </ul>
           </li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html" data-key="nav_about">About</a></li>
+          <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
           <li class="dropdown">
-            <a href="services.html">Services ▾</a>
+            <a href="services.html" data-key="nav_services">Services ▾</a>
             <ul class="dropdown-menu">
-              <li class="mobile-only"><a href="services.html">All Services</a></li>
-              <li><a href="service1.html">Education</a></li>
-              <li><a href="service2.html">Healthcare</a></li>
-              <li><a href="service3.html">Skill Training</a></li>
-              <li><a href="service4.html">Empowerment</a></li>
-              <li><a href="service5.html">Disaster Relief</a></li>
-              <li><a href="service6.html">Environmental Care</a></li>
+              <li class="mobile-only"><a href="services.html" data-key="nav_all_services">All Services</a></li>
+              <li><a href="service1.html" data-key="nav_service1">Education</a></li>
+              <li><a href="service2.html" data-key="nav_service2">Healthcare</a></li>
+              <li><a href="service3.html" data-key="nav_service3">Skill Training</a></li>
+              <li><a href="service4.html" data-key="nav_service4">Empowerment</a></li>
+              <li><a href="service5.html" data-key="nav_service5">Disaster Relief</a></li>
+              <li><a href="service6.html" data-key="nav_service6">Environmental Care</a></li>
             </ul>
           </li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
         </ul>
       </nav>
+
+      <!-- Language Toggle: added, does not remove any existing elements -->
+      <div class="language-toggle" aria-hidden="false">
+        <select id="languageSelect" aria-label="Select language">
+          <option value="en">English</option>
+          <option value="ar">العربية</option>
+          <option value="he">עברית</option>
+        </select>
+      </div>
 
       <div class="profile-container">
         <div class="profile" id="profile-dropdown-toggle">
           <span id="profile-initials"></span>
         </div>
         <ul class="profile-dropdown" id="profile-dropdown">
-          <li><a href="#" id="logout-btn">Logout</a></li>
+          <li><a href="#" id="logout-btn" data-key="logout">Logout</a></li>
         </ul>
       </div>
 
@@ -65,8 +94,8 @@
   <section class="blog-hero">
     <img src="images/blog1.jpeg" alt="Children Learning">
     <div class="blog-hero-overlay">
-      <h1>Empowering Children with Education</h1>
-      <p>How our education initiatives are transforming rural communities</p>
+      <h1 data-key="blog1_heading">Empowering Children with Education</h1>
+      <p data-key="blog1_subheading">How our education initiatives are transforming rural communities</p>
     </div>
   </section>
 
@@ -75,23 +104,23 @@
     <!-- Blog Main Content -->
     <div class="blog-main">
       <article>
-        <h2>Breaking the Cycle of Poverty</h2>
-        <p>Education is more than just learning to read and write — it is the key to breaking the cycle of poverty...</p>
+        <h2 data-key="blog1_section1_title">Breaking the Cycle of Poverty</h2>
+        <p data-key="blog1_section1_text">Education is more than just learning to read and write — it is the key to breaking the cycle of poverty...</p>
 
-        <h2>Creating Safe Learning Spaces</h2>
-        <p>We have established safe and inclusive learning spaces where children can explore, ask questions...</p>
+        <h2 data-key="blog1_section2_title">Creating Safe Learning Spaces</h2>
+        <p data-key="blog1_section2_text">We have established safe and inclusive learning spaces where children can explore, ask questions...</p>
 
-        <h2>Empowering Girls Through Education</h2>
-        <p>One of the biggest challenges in rural areas is the lack of access to education for girls...</p>
+        <h2 data-key="blog1_section3_title">Empowering Girls Through Education</h2>
+        <p data-key="blog1_section3_text">One of the biggest challenges in rural areas is the lack of access to education for girls...</p>
 
-        <h2>Impact Stories</h2>
-        <p>From children who are now the first in their families to attend school, to young girls who dream...</p>
+        <h2 data-key="blog1_section4_title">Impact Stories</h2>
+        <p data-key="blog1_section4_text">From children who are now the first in their families to attend school, to young girls who dream...</p>
 
-        <h2>How You Can Help</h2>
-        <p>Every small contribution makes a big difference. You can support our mission by sponsoring...</p>
+        <h2 data-key="blog1_section5_title">How You Can Help</h2>
+        <p data-key="blog1_section5_text">Every small contribution makes a big difference. You can support our mission by sponsoring...</p>
 
         <div class="blog-cta">
-          <a href="donate.html" class="btn">Support Education</a>
+          <a href="donate.html" class="btn" data-key="blog1_cta">Support Education</a>
         </div>
       </article>
 
@@ -99,22 +128,22 @@
       <div class="author-box">
         <img src="images/1.jpg" alt="Author">
         <div>
-          <h4>Written by Abc</h4>
-          <p>Passionate about education and child empowerment. Works with NGOs to create meaningful impact in rural communities.</p>
+          <h4 data-key="blog1_author">Written by Abc</h4>
+          <p data-key="blog1_author_bio">Passionate about education and child empowerment. Works with NGOs to create meaningful impact in rural communities.</p>
         </div>
       </div>
 
       <!-- Related Posts -->
       <div class="related-posts">
-        <h3>Related Posts</h3>
+        <h3 data-key="related_posts">Related Posts</h3>
         <div class="related-grid">
           <a href="service2.html" class="related-card">
             <img src="images/health.jpeg" alt="Healthcare">
-            <p>Improving Rural Healthcare Access</p>
+            <p data-key="related_post1">Improving Rural Healthcare Access</p>
           </a>
           <a href="service3.html" class="related-card">
             <img src="images/disaster.jpeg" alt="Environment">
-            <p>Protecting the Environment Together</p>
+            <p data-key="related_post2">Protecting the Environment Together</p>
           </a>
         </div>
       </div>
@@ -124,20 +153,20 @@
     <aside class="blog-sidebar">
      
       <div class="sidebar-box">
-        <h3>Categories</h3>
+        <h3 data-key="categories">Categories</h3>
         <ul>
-          <li><a href="blog1.html">Education</a></li>
-          <li><a href="blog2.html">Healthcare</a></li>
-          <li><a href="blog3.html">Environment</a></li>
+          <li><a href="blog1.html" data-key="cat_edu">Education</a></li>
+          <li><a href="blog2.html" data-key="cat_health">Healthcare</a></li>
+          <li><a href="blog3.html" data-key="cat_env">Environment</a></li>
         </ul>
       </div>
 
       <div class="sidebar-box">
-        <h3>Recent Posts</h3>
+        <h3 data-key="recent_posts">Recent Posts</h3>
         <ul>
-          <li><a href="blog1.html">Empowering Children with Education</a></li>
-          <li><a href="blog2.html">Improving Rural Healthcare Access</a></li>
-          <li><a href="blog3.html">Protecting the Environment Together</a></li>
+          <li><a href="blog1.html" data-key="recent_post1">Empowering Children with Education</a></li>
+          <li><a href="blog2.html" data-key="recent_post2">Improving Rural Healthcare Access</a></li>
+          <li><a href="blog3.html" data-key="recent_post3">Protecting the Environment Together</a></li>
         </ul>
       </div>
     </aside>
@@ -149,36 +178,36 @@
       <!-- Logo Section -->
       <div class="footer-logo">
         <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
-        <h4>NGO/CHARITY</h4>
+        <h4 data-key="footer_logo">NGO/CHARITY</h4>
       </div>
       <!-- Quick Links -->
       <div class="footer-links">
-        <h4>Quick Links</h4>
+        <h4 data-key="quick_links">Quick Links</h4>
         <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html" data-key="nav_about">About</a></li>
+          <li><a href="services.html" data-key="nav_services">Services</a></li>
+          <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
+          <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
         </ul>
       </div>
       <!-- Services -->
       <div class="footer-services">
-        <h4>Explore Services</h4>
+        <h4 data-key="explore_services">Explore Services</h4>
         <ul>
-          <li><a href="service1.html">Education</a></li>
-          <li><a href="service2.html">Healthcare</a></li>
-          <li><a href="service3.html">Skill Training</a></li>
-          <li><a href="service4.html">Women Empowerment</a></li>
-          <li><a href="service5.html">Disaster Relief</a></li>
-          <li><a href="service6.html">Environmental Care</a></li>
+          <li><a href="service1.html" data-key="nav_service1">Education</a></li>
+          <li><a href="service2.html" data-key="nav_service2">Healthcare</a></li>
+          <li><a href="service3.html" data-key="nav_service3">Skill Training</a></li>
+          <li><a href="service4.html" data-key="nav_service4">Women Empowerment</a></li>
+          <li><a href="service5.html" data-key="nav_service5">Disaster Relief</a></li>
+          <li><a href="service6.html" data-key="nav_service6">Environmental Care</a></li>
         </ul>
       </div>
       <!-- Contact -->
       <div class="footer-contact">
-        <h4>Contact Us</h4>
+        <h4 data-key="contact_us">Contact Us</h4>
         <p><strong>Email:</strong> info@example.com</p>
         <p><strong>Phone:</strong> +91 1234567890</p>
-        <h4>Follow Us</h4>
+        <h4 data-key="follow_us">Follow Us</h4>
         <div class="social">
           <a href="#"><img src="images/fb.png" alt="Facebook"></a>
           <a href="#"><img src="images/x.png" alt="Twitter"></a>
@@ -187,18 +216,251 @@
       </div>
       <!-- Newsletter -->
       <div class="footer-newsletter">
-        <h4>Newsletter</h4>
-        <p>Get weekly wellness tips and updates in your inbox.</p>
+        <h4 data-key="newsletter">Newsletter</h4>
+        <p data-key="newsletter_text">Get weekly wellness tips and updates in your inbox.</p>
         <form id="newsletter-form">
-          <input type="email" id="newsletter-email" placeholder="Enter your email" required>
-          <button type="submit">Subscribe</button>
+          <input type="email" id="newsletter-email" placeholder="Enter your email" required data-placeholder-key="newsletter_placeholder">
+          <button type="submit" data-key="subscribe_btn">Subscribe</button>
         </form>
-        <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;">
+        <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;" data-key="newsletter_success">
           ✅ Thank you for subscribing!
         </div>
       </div>
     </div>
-    <div class="footer-copy">&copy; 2025 Your Company Name. All Rights Reserved.</div>
+    <div class="footer-copy" data-key="footer_copy">&copy; 2025 Your Company Name. All Rights Reserved.</div>
   </footer>
+
+  <!-- ================= Language logic (inline, safe & isolated) ================= -->
+  <script>
+    (function() {
+      const dictionary = {
+        en: {
+          nav_home: "Home ▾",
+          nav_home1: "Home 1",
+          nav_home2: "Home 2",
+          nav_about: "About",
+          nav_blog: "Blog",
+          nav_services: "Services ▾",
+          nav_all_services: "All Services",
+          nav_service1: "Education",
+          nav_service2: "Healthcare",
+          nav_service3: "Skill Training",
+          nav_service4: "Empowerment",
+          nav_service5: "Disaster Relief",
+          nav_service6: "Environmental Care",
+          nav_contact: "Contact",
+          logout: "Logout",
+
+          blog1_heading: "Empowering Children with Education",
+          blog1_subheading: "How our education initiatives are transforming rural communities",
+          blog1_section1_title: "Breaking the Cycle of Poverty",
+          blog1_section1_text: "Education is more than just learning to read and write — it is the key to breaking the cycle of poverty...",
+          blog1_section2_title: "Creating Safe Learning Spaces",
+          blog1_section2_text: "We have established safe and inclusive learning spaces where children can explore, ask questions...",
+          blog1_section3_title: "Empowering Girls Through Education",
+          blog1_section3_text: "One of the biggest challenges in rural areas is the lack of access to education for girls...",
+          blog1_section4_title: "Impact Stories",
+          blog1_section4_text: "From children who are now the first in their families to attend school, to young girls who dream...",
+          blog1_section5_title: "How You Can Help",
+          blog1_section5_text: "Every small contribution makes a big difference. You can support our mission by sponsoring...",
+          blog1_cta: "Support Education",
+          blog1_author: "Written by Abc",
+          blog1_author_bio: "Passionate about education and child empowerment. Works with NGOs to create meaningful impact in rural communities.",
+
+          related_posts: "Related Posts",
+          related_post1: "Improving Rural Healthcare Access",
+          related_post2: "Protecting the Environment Together",
+
+          categories: "Categories",
+          cat_edu: "Education",
+          cat_health: "Healthcare",
+          cat_env: "Environment",
+
+          recent_posts: "Recent Posts",
+          recent_post1: "Empowering Children with Education",
+          recent_post2: "Improving Rural Healthcare Access",
+          recent_post3: "Protecting the Environment Together",
+
+          footer_logo: "NGO/CHARITY",
+          quick_links: "Quick Links",
+          explore_services: "Explore Services",
+          contact_us: "Contact Us",
+          follow_us: "Follow Us",
+          newsletter: "Newsletter",
+          newsletter_text: "Get weekly wellness tips and updates in your inbox.",
+          newsletter_placeholder: "Enter your email",
+          subscribe_btn: "Subscribe",
+          newsletter_success: "✅ Thank you for subscribing!",
+          footer_copy: "© 2025 Your Company Name. All Rights Reserved."
+        },
+
+        ar: {
+          nav_home: "الرئيسية ▾",
+          nav_home1: "الصفحة الرئيسية 1",
+          nav_home2: "الصفحة الرئيسية 2",
+          nav_about: "من نحن",
+          nav_blog: "المدونة",
+          nav_services: "الخدمات ▾",
+          nav_all_services: "كل الخدمات",
+          nav_service1: "التعليم",
+          nav_service2: "الرعاية الصحية",
+          nav_service3: "تدريب المهارات",
+          nav_service4: "التمكين",
+          nav_service5: "الإغاثة في الكوارث",
+          nav_service6: "العناية بالبيئة",
+          nav_contact: "اتصل بنا",
+          logout: "تسجيل خروج",
+
+          blog1_heading: "تمكين الأطفال من خلال التعليم",
+          blog1_subheading: "كيف تغير مبادراتنا التعليمية المجتمعات الريفية",
+          blog1_section1_title: "كسر حلقة الفقر",
+          blog1_section1_text: "التعليم أكثر من مجرد تعلم القراءة والكتابة — إنه المفتاح لكسر حلقة الفقر...",
+          blog1_section2_title: "إنشاء مساحات تعليمية آمنة",
+          blog1_section2_text: "قمنا بإنشاء مساحات تعليمية آمنة وشاملة حيث يمكن للأطفال الاستكشاف وطرح الأسئلة...",
+          blog1_section3_title: "تمكين الفتيات من خلال التعليم",
+          blog1_section3_text: "أحد أكبر التحديات في المناطق الريفية هو نقص الوصول إلى التعليم للفتيات...",
+          blog1_section4_title: "قصص التأثير",
+          blog1_section4_text: "من أطفال أصبحوا أول من يلتحق بالمدرسة في أسرهم، إلى فتيات شابات يحلمن...",
+          blog1_section5_title: "كيف يمكنك المساعدة",
+          blog1_section5_text: "كل مساهمة صغيرة تحدث فرقًا كبيرًا. يمكنك دعم مهمتنا من خلال رعاية...",
+          blog1_cta: "دعم التعليم",
+          blog1_author: "بقلم abc",
+          blog1_author_bio: "شغوف/ة بالتعليم وتمكين الأطفال. يعمل مع منظمات غير حكومية لإحداث تأثير ذي معنى في المجتمعات الريفية.",
+
+          related_posts: "المقالات ذات الصلة",
+          related_post1: "تحسين الوصول إلى الرعاية الصحية الريفية",
+          related_post2: "حماية البيئة معًا",
+
+          categories: "الفئات",
+          cat_edu: "التعليم",
+          cat_health: "الرعاية الصحية",
+          cat_env: "البيئة",
+
+          recent_posts: "أحدث المنشورات",
+          recent_post1: "تمكين الأطفال من خلال التعليم",
+          recent_post2: "تحسين الوصول إلى الرعاية الصحية الريفية",
+          recent_post3: "حماية البيئة معًا",
+
+          footer_logo: "المنظمة الخيرية",
+          quick_links: "روابط سريعة",
+          explore_services: "استكشف الخدمات",
+          contact_us: "اتصل بنا",
+          follow_us: "تابعنا",
+          newsletter: "النشرة الإخبارية",
+          newsletter_text: "احصل على نصائح أسبوعية وتحديثات في بريدك.",
+          newsletter_placeholder: "أدخل بريدك الإلكتروني",
+          subscribe_btn: "اشترك",
+          newsletter_success: "✅ شكرًا لاشتراكك!",
+          footer_copy: "© 2025 اسم شركتك. جميع الحقوق محفوظة."
+        },
+
+        he: {
+          nav_home: "בית ▾",
+          nav_home1: "בית 1",
+          nav_home2: "בית 2",
+          nav_about: "עלינו",
+          nav_blog: "בלוג",
+          nav_services: "שירותים ▾",
+          nav_all_services: "כל השירותים",
+          nav_service1: "חינוך",
+          nav_service2: "בריאות",
+          nav_service3: "הכשרת מיומנויות",
+          nav_service4: "העצמה",
+          nav_service5: "סיוע בחירום",
+          nav_service6: "דאגה לסביבה",
+          nav_contact: "צור קשר",
+          logout: "התנתק",
+
+          blog1_heading: "העצמת ילדים באמצעות חינוך",
+          blog1_subheading: "כיצד יוזמות החינוך שלנו משנות קהילות כפריות",
+          blog1_section1_title: "לשבור את מעגל העוני",
+          blog1_section1_text: "חינוך הוא יותר מללמוד לקרוא ולכתוב — זה המפתח לשבירת מעגל העוני...",
+          blog1_section2_title: "יצירת מרחבי לימוד בטוחים",
+          blog1_section2_text: "הקמנו מרחבי לימוד בטוחים ומכילים שבהם ילדים יכולים לחקור ולשאול שאלות...",
+          blog1_section3_title: "העצמת בנות באמצעות חינוך",
+          blog1_section3_text: "אחת האתגרים הגדולים באזורים כפריים היא חוסר הגישה לחינוך עבור בנות...",
+          blog1_section4_title: "סיפורי השפעה",
+          blog1_section4_text: "מילדים שהיום הם הראשונים במשפחותיהם הלומדים בבית ספר, ועד נערות חולמות...",
+          blog1_section5_title: "איך תוכלו לעזור",
+          blog1_section5_text: "כל תרומה קטנה עושה הבדל גדול. אתם יכולים לתמוך במשימה שלנו באמצעות חסות...",
+          blog1_cta: "תמכו בחינוך",
+          blog1_author: "נכתב על ידי Abc",
+          blog1_author_bio: "נלהב/ת לגבי חינוך והעצמת ילדים. עובד/ת עם ארגונים כדי ליצור השפעה משמעותית בקהילות כפריות.",
+
+          related_posts: "פוסטים קשורים",
+          related_post1: "שיפור הגישה לבריאות בכפרים",
+          related_post2: "הגנה על הסביבה יחד",
+
+          categories: "קטגוריות",
+          cat_edu: "חינוך",
+          cat_health: "בריאות",
+          cat_env: "סביבה",
+
+          recent_posts: "פוסטים אחרונים",
+          recent_post1: "העצמת ילדים באמצעות חינוך",
+          recent_post2: "שיפור הגישה לבריאות בכפרים",
+          recent_post3: "הגנה על הסביבה יחד",
+
+          footer_logo: "עמותה/ארגון",
+          quick_links: "קישורים מהירים",
+          explore_services: "חקור שירותים",
+          contact_us: "צור קשר",
+          follow_us: "עקוב אחרינו",
+          newsletter: "ניוזלטר",
+          newsletter_text: "קבל טיפים ועדכונים שבועיים לתיבת הדואר שלך.",
+          newsletter_placeholder: "הכנס את האימייל שלך",
+          subscribe_btn: "הרשם",
+          newsletter_success: "✅ תודה שנרשמת!",
+          footer_copy: "© 2025 שם החברה שלך. כל הזכויות שמורות."
+        }
+      };
+
+      function applyTranslations(lang) {
+        document.querySelectorAll('[data-key]').forEach(el => {
+          const key = el.getAttribute('data-key');
+          if (!key) return;
+          if (dictionary[lang] && dictionary[lang][key] !== undefined) {
+            el.textContent = dictionary[lang][key];
+          }
+        });
+
+        document.querySelectorAll('[data-placeholder-key]').forEach(el => {
+          const key = el.getAttribute('data-placeholder-key');
+          if (!key) return;
+          if (dictionary[lang] && dictionary[lang][key] !== undefined) {
+            el.setAttribute('placeholder', dictionary[lang][key]);
+          }
+        });
+
+        document.documentElement.lang = lang;
+        if (lang === 'ar' || lang === 'he') {
+          document.documentElement.setAttribute('dir', 'rtl');
+          document.body.classList.add('is-rtl');
+        } else {
+          document.documentElement.setAttribute('dir', 'ltr');
+          document.body.classList.remove('is-rtl');
+        }
+      }
+
+      function setLanguage(lang) {
+        if (!dictionary[lang]) lang = 'en';
+        localStorage.setItem('siteLanguage', lang);
+        const sel = document.getElementById('languageSelect');
+        if (sel) sel.value = lang;
+        applyTranslations(lang);
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const saved = localStorage.getItem('siteLanguage') || 'en';
+        const sel = document.getElementById('languageSelect');
+        if (sel) {
+          sel.value = saved;
+          sel.addEventListener('change', e => setLanguage(e.target.value));
+        }
+        applyTranslations(saved);
+      });
+    })();
+  </script>
+
 </body>
 </html>

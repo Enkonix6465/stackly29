@@ -1,123 +1,247 @@
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="css/dashboard2.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/header.js" defer></script>
-    <link rel="stylesheet" href="css/header.css">
-    <script src="js/main.js" defer></script>
-    
-  </head>
-  <body>
-    <header>
-  <div class="logo">
-    <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
-  </div>
-
-  <div class="header-right">
-    <nav>
-      <ul class="nav-links">
-        <li class="dropdown">
-          <a href="index.html">Home</a>
-          <ul class="dropdown-menu">
-            <li><a href="dashboard.html">Home1</a></li>
-            <li><a href="profile.html">Home2</a></li>
-          </ul>
-        </li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
-
-        <li class="dropdown">
-          <a href="services.html">Services</a>
-          <ul class="dropdown-menu">
-             <li><a href="service1.html">Education</a></li>
-        <li><a href="service2.html">Healthcare</a></li>
-        <li><a href="service3.html">Skill Training</a></li>
-        <li><a href="service4.html">Empowerment</a></li>
-        <li><a href="service5.html">Disaster Relief</a></li>
-        <li><a href="service6.html">Environmental Care</a></li>
-          </ul>
-        </li>
-
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div class="profile-container">
-      <div class="profile" id="profile-dropdown-toggle">
-        <span id="profile-initials">U</span>
-      </div>
-      <ul class="profile-dropdown" id="profile-dropdown">
-        <li><a href="#" id="logout-btn">Logout</a></li>
-      </ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/dashboard2.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/header.js" defer></script>
+  <link rel="stylesheet" href="css/header.css">
+  <script src="js/main.js" defer></script>
+  <style>
+    .lang-toggle {
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
     </div>
 
-    <button id="themeToggle">🌙</button>
-  </div>
-</header>
+    <div class="header-right">
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li class="dropdown">
+            <a id="navHome" href="index.html">Home</a>
+            <ul class="dropdown-menu">
+              <li><a id="navHome1" href="dashboard.html">Home1</a></li>
+              <li><a id="navHome2" href="profile.html">Home2</a></li>
+            </ul>
+          </li>
+          <li><a id="navAbout" href="about.html">About</a></li>
+          <li><a id="navBlog" href="blog.html">Blog</a></li>
 
+          <li class="dropdown">
+            <a id="navServices" href="services.html">Services</a>
+            <ul class="dropdown-menu">
+              <li><a id="service1" href="service1.html">Education</a></li>
+              <li><a id="service2" href="service2.html">Healthcare</a></li>
+              <li><a id="service3" href="service3.html">Skill Training</a></li>
+              <li><a id="service4" href="service4.html">Empowerment</a></li>
+              <li><a id="service5" href="service5.html">Disaster Relief</a></li>
+              <li><a id="service6" href="service6.html">Environmental Care</a></li>
+            </ul>
+          </li>
 
-    <main class="dashboard-container">
-      <h2>User Dashboard</h2>
+          <li><a id="navContact" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
 
-      <!-- Summary Cards -->
-      <div class="summary-cards">
-        <div class="card">
-          <h4>Most Active User</h4>
-          <p id="mostActiveUser">-</p>
-        </div>
-        <div class="card">
-          <h4>Top Signups Day</h4>
-          <p id="topSignupDay">-</p>
-        </div>
-        <div class="card">
-          <h4>Total Users</h4>
-          <p id="totalUsersCard">-</p>
-        </div>
+      <!-- Language Selector -->
+      <div class="lang-toggle">
+        <label for="language">🌐 </label>
+        <select id="language">
+          <option value="en">English</option>
+          <option value="ar">العربية</option>
+          <option value="he">עברית</option>
+        </select>
       </div>
 
-      <!-- User Table -->
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>Full Name</th>
-              <th>Username</th>
-              <th>Date</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody id="userTableBody"></tbody>
-        </table>
+      <div class="profile-container">
+        <div class="profile" id="profile-dropdown-toggle">
+          <span id="profile-initials">U</span>
+        </div>
+        <ul class="profile-dropdown" id="profile-dropdown">
+          <li><a href="#" id="logout-btn">Logout</a></li>
+        </ul>
       </div>
 
-      <!-- Charts Section -->
-      <div class="charts-container">
-        <div class="chart-card">
-          <h4>Total Users (Line)</h4>
-          <canvas id="totalUsersChart"></canvas>
-        </div>
+      <button id="themeToggle">🌙</button>
+    </div>
+  </header>
 
-        <div class="chart-card">
-          <h4>Signups Today (Bar)</h4>
-          <canvas id="todaySignupChart"></canvas>
-        </div>
+  <main class="dashboard-container">
+    <h2 id="dashboardTitle">User Dashboard</h2>
 
-        <div class="chart-card">
-          <h4>Weekly Signups (Line)</h4>
-          <canvas id="weeklySignupChart"></canvas>
-        </div>
-
-        <div class="chart-card">
-          <h4>User Roles (Doughnut)</h4>
-          <canvas id="rolesChart"></canvas>
-        </div>
+    <!-- Summary Cards -->
+    <div class="summary-cards">
+      <div class="card">
+        <h4 id="cardActiveUser">Most Active User</h4>
+        <p id="mostActiveUser">-</p>
       </div>
-    </main>
+      <div class="card">
+        <h4 id="cardTopSignup">Top Signups Day</h4>
+        <p id="topSignupDay">-</p>
+      </div>
+      <div class="card">
+        <h4 id="cardTotalUsers">Total Users</h4>
+        <p id="totalUsersCard">-</p>
+      </div>
+    </div>
 
-    <script src="js/dashboard2.js"></script>
-  </body>
-  </html>
+    <!-- User Table -->
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th id="thName">Full Name</th>
+            <th id="thUsername">Username</th>
+            <th id="thDate">Date</th>
+            <th id="thActions">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="userTableBody"></tbody>
+      </table>
+    </div>
+
+    <!-- Charts Section -->
+    <div class="charts-container">
+      <div class="chart-card">
+        <h4 id="chartTotalUsers">Total Users (Line)</h4>
+        <canvas id="totalUsersChart"></canvas>
+      </div>
+
+      <div class="chart-card">
+        <h4 id="chartTodaySignups">Signups Today (Bar)</h4>
+        <canvas id="todaySignupChart"></canvas>
+      </div>
+
+      <div class="chart-card">
+        <h4 id="chartWeeklySignups">Weekly Signups (Line)</h4>
+        <canvas id="weeklySignupChart"></canvas>
+      </div>
+
+      <div class="chart-card">
+        <h4 id="chartUserRoles">User Roles (Doughnut)</h4>
+        <canvas id="rolesChart"></canvas>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/dashboard2.js"></script>
+  <script>
+    const dictionary = {
+      en: {
+        navHome: "Home",
+        navHome1: "Home1",
+        navHome2: "Home2",
+        navAbout: "About",
+        navBlog: "Blog",
+        navServices: "Services",
+        service1: "Education",
+        service2: "Healthcare",
+        service3: "Skill Training",
+        service4: "Empowerment",
+        service5: "Disaster Relief",
+        service6: "Environmental Care",
+        navContact: "Contact",
+        logout: "Logout",
+        dashboardTitle: "User Dashboard",
+        cardActiveUser: "Most Active User",
+        cardTopSignup: "Top Signups Day",
+        cardTotalUsers: "Total Users",
+        thName: "Full Name",
+        thUsername: "Username",
+        thDate: "Date",
+        thActions: "Actions",
+        chartTotalUsers: "Total Users (Line)",
+        chartTodaySignups: "Signups Today (Bar)",
+        chartWeeklySignups: "Weekly Signups (Line)",
+        chartUserRoles: "User Roles (Doughnut)"
+      },
+      ar: {
+        navHome: "الرئيسية",
+        navHome1: "الرئيسية 1",
+        navHome2: "الرئيسية 2",
+        navAbout: "معلومات عنا",
+        navBlog: "مدونة",
+        navServices: "الخدمات",
+        service1: "التعليم",
+        service2: "الرعاية الصحية",
+        service3: "تدريب المهارات",
+        service4: "التمكين",
+        service5: "الإغاثة في الكوارث",
+        service6: "رعاية البيئة",
+        navContact: "اتصل بنا",
+        logout: "تسجيل خروج",
+        dashboardTitle: "لوحة المستخدم",
+        cardActiveUser: "أنشط مستخدم",
+        cardTopSignup: "أعلى يوم تسجيل",
+        cardTotalUsers: "إجمالي المستخدمين",
+        thName: "الاسم الكامل",
+        thUsername: "اسم المستخدم",
+        thDate: "التاريخ",
+        thActions: "إجراءات",
+        chartTotalUsers: "إجمالي المستخدمين (خط)",
+        chartTodaySignups: "التسجيلات اليوم (شريط)",
+        chartWeeklySignups: "التسجيلات الأسبوعية (خط)",
+        chartUserRoles: "أدوار المستخدمين (دونات)"
+      },
+      he: {
+        navHome: "דף הבית",
+        navHome1: "בית 1",
+        navHome2: "בית 2",
+        navAbout: "אודות",
+        navBlog: "בלוג",
+        navServices: "שירותים",
+        service1: "חינוך",
+        service2: "בריאות",
+        service3: "הכשרת מיומנויות",
+        service4: "העצמה",
+        service5: "סיוע באסונות",
+        service6: "טיפול סביבתי",
+        navContact: "צור קשר",
+        logout: "התנתק",
+        dashboardTitle: "לוח משתמש",
+        cardActiveUser: "המשתמש הפעיל ביותר",
+        cardTopSignup: "יום ההרשמות המוביל",
+        cardTotalUsers: "סה\"כ משתמשים",
+        thName: "שם מלא",
+        thUsername: "שם משתמש",
+        thDate: "תאריך",
+        thActions: "פעולות",
+        chartTotalUsers: "סה\"כ משתמשים (קו)",
+        chartTodaySignups: "הרשמות היום (עמודות)",
+        chartWeeklySignups: "הרשמות שבועיות (קו)",
+        chartUserRoles: "תפקידי משתמשים (דונאט)"
+      }
+    };
+
+    const langSelect = document.getElementById("language");
+
+    function updateLanguage(lang) {
+      Object.keys(dictionary[lang]).forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = dictionary[lang][id];
+      });
+
+      // RTL for Arabic/Hebrew
+      if (lang === "ar" || lang === "he") {
+        document.body.dir = "rtl";
+      } else {
+        document.body.dir = "ltr";
+      }
+    }
+
+    langSelect.addEventListener("change", (e) => {
+      updateLanguage(e.target.value);
+    });
+
+    // Default language
+    updateLanguage("en");
+  </script>
+</body>
+</html>

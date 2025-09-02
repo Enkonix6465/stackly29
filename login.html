@@ -48,7 +48,6 @@
   width: 80px;
   margin-bottom: 20px;
 }
-
   </style>
 </head>
 <body>
@@ -64,25 +63,113 @@
       <div class="auth-container">
         <img src="images/logo.png" alt="Logo" class="auth-logo">
 
-        <h2>Login</h2>
+        <!-- Language Toggle -->
+        <div style="text-align:right; margin-bottom:10px;">
+          <label for="languageToggle">🌐</label>
+          <select id="languageToggle">
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+            <option value="he">עברית</option>
+          </select>
+        </div>
+
+        <h2 data-i18n="loginTitle">Login</h2>
         <form id="loginForm">
-          <input type="text" id="loginUsername" placeholder="Email" required>
+          <input type="text" id="loginUsername" placeholder="Email" data-i18n-placeholder="email" required>
 
           <div class="password-field">
-            <input type="password" id="loginPassword" placeholder="Password" required>
+            <input type="password" id="loginPassword" placeholder="Password" data-i18n-placeholder="password" required>
             <span class="toggle-password" onclick="togglePassword('loginPassword', this)">👁️</span>
           </div>
 
-          <button type="submit">Login</button>
+          <button type="submit" data-i18n="loginBtn">Login</button>
           <button type="button" id="darkModeToggle">🌙</button>
         </form>
 
-        <p>Don’t have an account? <a href="signup.html">Sign up here</a></p>
-        <a href="forgot.html">Forgot Password?</a>
+        <p data-i18n="noAccount">Don’t have an account? <a href="signup.html" data-i18n="signupLink">Sign up here</a></p>
+        <p>
+  <span data-i18n="noAccount">Don’t have an account?</span>
+  <a href="signup.html" data-i18n="signupLink">Sign up here</a>
+</p>
+        <a href="forgot.html" data-i18n="forgotPassword">Forgot Password?</a>
       </div>
     </div>
   </div>
 
   <script src="js/auth.js"></script>
+
+  <script>
+    const I18N = {
+  en: {
+    loginTitle: "Login",
+    email: "Email",
+    password: "Password",
+    loginBtn: "Login",
+    noAccount: "Don’t have an account?",
+    signupLink: "Sign up here",
+    forgotPassword: "Forgot Password?"
+  },
+  ar: {
+    loginTitle: "تسجيل الدخول",
+    email: "البريد الإلكتروني",
+    password: "كلمة المرور",
+    loginBtn: "تسجيل الدخول",
+    noAccount: "ليس لديك حساب؟",
+    signupLink: "إنشاء حساب هنا",
+    forgotPassword: "هل نسيت كلمة المرور؟"
+  },
+  he: {
+    loginTitle: "התחברות",
+    email: "אימייל",
+    password: "סיסמה",
+    loginBtn: "התחבר",
+    noAccount: "אין לך חשבון?",
+    signupLink: "הירשם כאן",
+    forgotPassword: "שכחת סיסמה?"
+  }
+};
+
+
+    function applyLanguage(lang) {
+      const dict = I18N[lang] || I18N.en;
+
+      // Update lang & direction
+      const html = document.documentElement;
+      html.setAttribute("lang", lang);
+      html.setAttribute("dir", (lang === "ar" || lang === "he") ? "rtl" : "ltr");
+
+      // Replace inner text
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (dict[key]) el.textContent = dict[key];
+      });
+
+      // Replace placeholders
+      document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+        const key = el.getAttribute("data-i18n-placeholder");
+        if (dict[key]) el.setAttribute("placeholder", dict[key]);
+      });
+
+      // Persist
+      try { localStorage.setItem("lang", lang); } catch(e) {}
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const select = document.getElementById("languageToggle");
+
+      let initLang = "en";
+      try {
+        initLang = localStorage.getItem("lang") || (navigator.language || "en").slice(0,2);
+      } catch(e){}
+      if (!I18N[initLang]) initLang = "en";
+
+      select.value = initLang;
+      applyLanguage(initLang);
+
+      select.addEventListener("change", (e) => {
+        applyLanguage(e.target.value);
+      });
+    });
+  </script>
 </body>
 </html>

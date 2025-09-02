@@ -24,36 +24,45 @@
     <nav>
       <ul class="nav-links">
         <li class="dropdown">
-          <a href="index.html">Home ▾</a>
+          <a href="index.html" data-key="nav_home">Home ▾</a>
           <ul class="dropdown-menu">
-            <li><a href="index.html">Home 1</a></li>
-            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="index.html" data-key="nav_home1">Home 1</a></li>
+            <li><a href="home2.html" data-key="nav_home2">Home 2</a></li>
           </ul>
         </li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html" data-key="nav_about">About</a></li>
+        <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
         <li class="dropdown">
-          <a href="services.html">Services ▾</a>
+          <a href="services.html" data-key="nav_services">Services ▾</a>
           <ul class="dropdown-menu">
-                        <li class="mobile-only"><a href="services.html">All Services</a></li>
-            <li><a href="service1.html">Education</a></li>
-        <li><a href="service2.html">Healthcare</a></li>
-        <li><a href="service3.html">Skill Training</a></li>
-        <li><a href="service4.html">Empowerment</a></li>
-        <li><a href="service5.html">Disaster Relief</a></li>
-        <li><a href="service6.html">Environmental Care</a></li>
+                        <li class="mobile-only"><a href="services.html" data-key="nav_all_services">All Services</a></li>
+            <li><a href="service1.html" data-key="nav_service1">Education</a></li>
+        <li><a href="service2.html" data-key="nav_service2">Healthcare</a></li>
+        <li><a href="service3.html" data-key="nav_service3">Skill Training</a></li>
+        <li><a href="service4.html" data-key="nav_service4">Empowerment</a></li>
+        <li><a href="service5.html" data-key="nav_service5">Disaster Relief</a></li>
+        <li><a href="service6.html" data-key="nav_service6">Environmental Care</a></li>
           </ul>
         </li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
       </ul>
     </nav>
+
+    <!-- Language toggle -->
+    <div style="display:inline-block; margin:0 12px;">
+      <select id="languageSelect" aria-label="Select language">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="he">עברית</option>
+      </select>
+    </div>
 
     <div class="profile-container">
       <div class="profile" id="profile-dropdown-toggle">
         <span id="profile-initials"></span>
       </div>
       <ul class="profile-dropdown" id="profile-dropdown">
-        <li><a href="#" id="logout-btn">Logout</a></li>
+        <li><a href="#" id="logout-btn" data-key="logout">Logout</a></li>
       </ul>
     </div>
 
@@ -68,8 +77,8 @@
 <section class="service-hero">
   <div class="service-hero-overlay"></div>
   <div class="service-hero-content">
-    <h1>Education Support</h1>
-    <p>Unlocking potential through learning opportunities for every child.</p>
+    <h1 data-key="edu_title">Education Support</h1>
+    <p data-key="edu_sub">Unlocking potential through learning opportunities for every child.</p>
   </div>
 </section>
 <!-- About Section -->
@@ -84,54 +93,54 @@
 
     <!-- Text Side -->
     <div class="about-content">
-      <h2>About Our Mission</h2>
-      <p>
+      <h2 data-key="about_title">About Our Mission</h2>
+      <p data-key="about_p1">
         We are dedicated to transforming lives through education, healthcare, and empowerment programs. 
         Our focus is on creating opportunities that bring lasting change to communities in need.
       </p>
-      <p>
+      <p data-key="about_p2">
         By working closely with local leaders and volunteers, we ensure that every initiative 
         makes a real difference in people’s daily lives.
       </p>
-      <a href="contact.html" class="about-btn">Get Involved</a>
+      <a href="contact.html" class="about-btn" data-key="about_btn">Get Involved</a>
     </div>
   </div>
 </section>
 <section class="impact" id="impact">
   <div class="impact-container">
-    <h2 class="section-title">Our Impact</h2>
-    <p class="section-subtitle">Together, we are making a difference in thousands of lives</p>
+    <h2 class="section-title" data-key="impact_title">Our Impact</h2>
+    <p class="section-subtitle" data-key="impact_sub">Together, we are making a difference in thousands of lives</p>
 
     <div class="impact-grid">
       <!-- Impact Card 1 -->
       <div class="impact-card">
         <h3 class="count" data-target="5000">0</h3>
-        <p>Children Educated</p>
+        <p data-key="impact_children">Children Educated</p>
       </div>
 
       <!-- Impact Card 2 -->
       <div class="impact-card">
         <h3 class="count" data-target="12000">0</h3>
-        <p>People Provided Healthcare</p>
+        <p data-key="impact_health">People Provided Healthcare</p>
       </div>
 
       <!-- Impact Card 3 -->
       <div class="impact-card">
         <h3 class="count" data-target="800">0</h3>
-        <p>Youth Skilled</p>
+        <p data-key="impact_youth">Youth Skilled</p>
       </div>
 
       <!-- Impact Card 4 -->
       <div class="impact-card">
         <h3 class="count" data-target="300">0</h3>
-        <p>Communities Supported</p>
+        <p data-key="impact_communities">Communities Supported</p>
       </div>
     </div>
   </div>
 </section>
 <section class="programs-alt" id="programs">
-  <h2 class="section-title">Our Key Education Programs</h2>
-  <p class="section-subtitle">Focused initiatives to create brighter futures through learning</p>
+  <h2 class="section-title" data-key="programs_title">Our Key Education Programs</h2>
+  <p class="section-subtitle" data-key="programs_sub">Focused initiatives to create brighter futures through learning</p>
 
   <!-- Program 1 -->
   <div class="program-item reveal fade-left">
@@ -139,16 +148,16 @@
       <img src="images/scholar.jpg" alt="Scholarship Support">
     </div>
     <div class="program-text">
-      <h3>Scholarship Support</h3>
-      <p>We believe that financial hardship should never be the reason a child drops out of school. Our Scholarship Support program provides tuition assistance, exam fee coverage, and help with uniforms and books for children from low-income families. By lifting this burden from parents, we ensure that children can continue their studies with dignity and confidence. This initiative not only keeps kids in school but also inspires them to pursue higher education and dream of a brighter future.</p>
+      <h3 data-key="prog1_title">Scholarship Support</h3>
+      <p data-key="prog1_p">We believe that financial hardship should never be the reason a child drops out of school. Our Scholarship Support program provides tuition assistance, exam fee coverage, and help with uniforms and books for children from low-income families. By lifting this burden from parents, we ensure that children can continue their studies with dignity and confidence. This initiative not only keeps kids in school but also inspires them to pursue higher education and dream of a brighter future.</p>
     </div>
   </div>
 
   <!-- Program 2 -->
   <div class="program-item reveal fade-right">
     <div class="program-text">
-      <h3>After-School Learning</h3>
-      <p>Many children struggle to keep up in school because they lack access to extra guidance at home. Our After-School Learning program provides free evening classes where trained teachers and volunteers offer tutoring in core subjects like math, science, and language. Beyond academics, we focus on building study habits, problem-solving skills, and self-confidence. These centers also act as safe community spaces where children can receive mentorship, participate in group activities, and discover their talents. By bridging learning gaps, we help children stay motivated and perform better in their regular classrooms.</p>
+      <h3 data-key="prog2_title">After-School Learning</h3>
+      <p data-key="prog2_p">Many children struggle to keep up in school because they lack access to extra guidance at home. Our After-School Learning program provides free evening classes where trained teachers and volunteers offer tutoring in core subjects like math, science, and language. Beyond academics, we focus on building study habits, problem-solving skills, and self-confidence. These centers also act as safe community spaces where children can receive mentorship, participate in group activities, and discover their talents. By bridging learning gaps, we help children stay motivated and perform better in their regular classrooms.</p>
     </div>
     <div class="program-image">
       <img src="images/after.jpg" alt="After School Learning">
@@ -161,16 +170,16 @@
       <img src="images/online.jpg" alt="Digital Literacy">
     </div>
     <div class="program-text">
-      <h3>Digital Literacy</h3>
-      <p>In today’s world, digital skills are no longer optional—they are essential. Our Digital Literacy program introduces children to computers, the internet, and modern technology through hands-on training sessions. From learning the basics of typing and using educational software to understanding online safety and communication, children gain confidence in navigating the digital world. We also provide access to e-learning resources, coding workshops, and interactive tools that expand their horizons beyond traditional textbooks. By bridging the digital divide, we ensure that underprivileged children are not left behind and are equipped with the skills they need to compete in higher education and future careers.</p>
+      <h3 data-key="prog3_title">Digital Literacy</h3>
+      <p data-key="prog3_p">In today’s world, digital skills are no longer optional—they are essential. Our Digital Literacy program introduces children to computers, the internet, and modern technology through hands-on training sessions. From learning the basics of typing and using educational software to understanding online safety and communication, children gain confidence in navigating the digital world. We also provide access to e-learning resources, coding workshops, and interactive tools that expand their horizons beyond traditional textbooks. By bridging the digital divide, we ensure that underprivileged children are not left behind and are equipped with the skills they need to compete in higher education and future careers.</p>
     </div>
   </div>
 
   <!-- Program 4 -->
   <div class="program-item reveal fade-right">
     <div class="program-text">
-      <h3>School Infrastructure</h3>
-      <p>A strong foundation for learning begins with a safe and supportive environment. Our School Infrastructure program focuses on creating classrooms and facilities that inspire children to learn and grow. We build and renovate classrooms, libraries, and sanitation facilities, ensuring that students have access to clean, well-equipped spaces. Along with furniture, blackboards, and safe drinking water, we also provide electricity and digital tools where possible, making schools more engaging and resourceful. By investing in infrastructure, we not only enhance the quality of education but also reduce dropout rates, as children feel motivated and parents feel reassured about sending them to school.</p>
+      <h3 data-key="prog4_title">School Infrastructure</h3>
+      <p data-key="prog4_p">A strong foundation for learning begins with a safe and supportive environment. Our School Infrastructure program focuses on creating classrooms and facilities that inspire children to learn and grow. We build and renovate classrooms, libraries, and sanitation facilities, ensuring that students have access to clean, well-equipped spaces. Along with furniture, blackboards, and safe drinking water, we also provide electricity and digital tools where possible, making schools more engaging and resourceful. By investing in infrastructure, we not only enhance the quality of education but also reduce dropout rates, as children feel motivated and parents feel reassured about sending them to school.</p>
     </div>
     <div class="program-image">
       <img src="images/school.jpg" alt="School Infrastructure">
@@ -181,37 +190,37 @@
 
 <section class="testimonials" id="testimonials">
   <div class="container">
-    <h2 class="section-title">What People Say</h2>
-    <p class="section-subtitle">Stories of impact from our community</p>
+    <h2 class="section-title" data-key="test_title">What People Say</h2>
+    <p class="section-subtitle" data-key="test_sub">Stories of impact from our community</p>
 
     <div class="testimonials-grid">
       <!-- Testimonial 1 -->
       <div class="testimonial-card">
-        <p class="quote">“Thanks to the NGO’s education program, my daughter now goes to school and dreams of becoming a teacher.”</p>
+        <p class="quote" data-key="quote1">“Thanks to the NGO’s education program, my daughter now goes to school and dreams of becoming a teacher.”</p>
         <div class="author">
           <img src="images/1.jpg" alt="Parent">
-          <h4>Ramesh Kumar</h4>
-          <span>Beneficiary</span>
+          <h4 data-key="quote1_author">Ramesh Kumar</h4>
+          <span data-key="quote1_role">Beneficiary</span>
         </div>
       </div>
 
       <!-- Testimonial 2 -->
       <div class="testimonial-card">
-        <p class="quote">“Volunteering here has been the most fulfilling experience of my life. I feel I’m truly making a difference.”</p>
+        <p class="quote" data-key="quote2">“Volunteering here has been the most fulfilling experience of my life. I feel I’m truly making a difference.”</p>
         <div class="author">
           <img src="images/test3.jpg" alt="Volunteer">
-          <h4>Anita Sharma</h4>
-          <span>Volunteer</span>
+          <h4 data-key="quote2_author">Anita Sharma</h4>
+          <span data-key="quote2_role">Volunteer</span>
         </div>
       </div>
 
       <!-- Testimonial 3 -->
       <div class="testimonial-card">
-        <p class="quote">“I am proud to support this organization. My donations go directly towards real, life-changing projects.”</p>
+        <p class="quote" data-key="quote3">“I am proud to support this organization. My donations go directly towards real, life-changing projects.”</p>
         <div class="author">
           <img src="images/test2.jpg" alt="Donor">
-          <h4>Rajiv Singh</h4>
-          <span>Donor</span>
+          <h4 data-key="quote3_author">Rajiv Singh</h4>
+          <span data-key="quote3_role">Donor</span>
         </div>
       </div>
     </div>
@@ -220,11 +229,11 @@
 
 <section class="cta" id="cta">
   <div class="cta-container">
-    <h2>Be a Part of the Change</h2>
-    <p>Your support can bring education, healthcare, and hope to thousands of lives.</p>
+    <h2 data-key="cta_title">Be a Part of the Change</h2>
+    <p data-key="cta_p">Your support can bring education, healthcare, and hope to thousands of lives.</p>
     <div class="cta-buttons">
-      <a href="donate.html" class="cta-btn donate-btn">Donate Now</a>
-      <a href="contact.html" class="cta-btn volunteer-btn">Join as Volunteer</a>
+      <a href="donate.html" class="cta-btn donate-btn" data-key="cta_donate">Donate Now</a>
+      <a href="contact.html" class="cta-btn volunteer-btn" data-key="cta_volunteer">Join as Volunteer</a>
     </div>
   </div>
 </section>
@@ -239,40 +248,40 @@
     <!-- Logo Section -->
     <div class="footer-logo">
       <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
-      <h4>NGO/CHARITY</h4>
+      <h4 data-key="footer_brand">NGO/CHARITY</h4>
     </div>
 
     <!-- Quick Links -->
     <div class="footer-links">
-      <h4>Quick Links</h4>
+      <h4 data-key="footer_quick_links">Quick Links</h4>
       <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html" data-key="nav_about">About</a></li>
+        <li><a href="services.html" data-key="nav_services">Services</a></li>
+        <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
+        <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
       </ul>
     </div>
 
     <!-- Services -->
     <div class="footer-services">
-      <h4>Explore Services</h4>
+      <h4 data-key="footer_services">Explore Services</h4>
       <ul>
-        <li><a href="service1.html">Education</a></li>
-        <li><a href="service2.html">Healthcare</a></li>
-        <li><a href="service3.html">Skill Training</a></li>
-        <li><a href="service4.html">Women Empowerment</a></li>
-        <li><a href="service5.html">Disaster Relief</a></li>
-        <li><a href="service6.html">Environmental Care</a></li>
+       <li><a href="service1.html" data-key="nav_service1">Education</a></li>
+        <li><a href="service2.html" data-key="nav_service2">Healthcare</a></li>
+        <li><a href="service3.html" data-key="nav_service3">Skill Training</a></li>
+        <li><a href="service4.html" data-key="nav_service4">Women Empowerment</a></li>
+        <li><a href="service5.html" data-key="nav_service5">Disaster Relief</a></li>
+        <li><a href="service6.html" data-key="nav_service6">Environmental Care</a></li>
       </ul>
     </div>
 
     <!-- Contact -->
     <div class="footer-contact">
-      <h4>Contact Us</h4>
-      <p><strong>Email:</strong> info@example.com</p>
-      <p><strong>Phone:</strong> +91 1234567890</p>
+      <h4 data-key="footer_contact">Contact Us</h4>
+      <p><strong data-key="footer_email_label">Email:</strong> info@example.com</p>
+      <p><strong data-key="footer_phone_label">Phone:</strong> +91 1234567890</p>
 
-      <h4>Follow Us</h4>
+      <h4 data-key="footer_follow">Follow Us</h4>
       <div class="social">
         <a href="https://facebook.com"><img src="images/fb.png" alt="Facebook"></a>
         <a href="https://twitter.com"><img src="images/x.png" alt="Twitter"></a>
@@ -282,19 +291,19 @@
 
     <!-- Newsletter -->
     <div class="footer-newsletter">
-      <h4>Newsletter</h4>
-      <p>Get weekly wellness tips and updates in your inbox.</p>
+      <h4 data-key="newsletter_title">Newsletter</h4>
+      <p data-key="newsletter_text">Get weekly wellness tips and updates in your inbox.</p>
       <form id="newsletter-form">
-        <input type="email" id="newsletter-email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
+        <input type="email" id="newsletter-email" placeholder="Enter your email" required data-placeholder-key="newsletter_placeholder">
+        <button type="submit" data-key="subscribe_btn">Subscribe</button>
       </form>
-      <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;">
+      <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;" data-key="newsletter_success">
     ✅ Thank you for subscribing!
   </div>
     </div>
   </div>
 
-  <div class="footer-copy">
+  <div class="footer-copy" data-key="footer_copy">
     &copy; 2025 Your Company Name. All Rights Reserved.
   </div>
 </footer>
@@ -354,6 +363,301 @@ document.addEventListener("DOMContentLoaded", () => {
   revealOnScroll();
 });
 
+</script>
+
+<!-- ================= Language toggle script ================= -->
+<script>
+(function(){
+  const dictionary = {
+    en: {
+      nav_home: "Home ▾",
+      nav_home1: "Home 1",
+      nav_home2: "Home 2",
+      nav_about: "About",
+      nav_blog: "Blog",
+      nav_services: "Services ▾",
+      nav_all_services: "All Services",
+      nav_service1: "Education",
+      nav_service2: "Healthcare",
+      nav_service3: "Skill Training",
+      nav_service4: "Empowerment",
+      nav_service5: "Disaster Relief",
+      nav_service6: "Environmental Care",
+      nav_contact: "Contact",
+      logout: "Logout",
+
+      edu_title: "Education Support",
+      edu_sub: "Unlocking potential through learning opportunities for every child.",
+
+      about_title: "About Our Mission",
+      about_p1: `We are dedicated to transforming lives through education, healthcare, and empowerment programs. 
+        Our focus is on creating opportunities that bring lasting change to communities in need.`,
+      about_p2: `By working closely with local leaders and volunteers, we ensure that every initiative 
+        makes a real difference in people’s daily lives.`,
+      about_btn: "Get Involved",
+
+      impact_title: "Our Impact",
+      impact_sub: "Together, we are making a difference in thousands of lives",
+      impact_children: "Children Educated",
+      impact_health: "People Provided Healthcare",
+      impact_youth: "Youth Skilled",
+      impact_communities: "Communities Supported",
+
+      programs_title: "Our Key Education Programs",
+      programs_sub: "Focused initiatives to create brighter futures through learning",
+      prog1_title: "Scholarship Support",
+      prog1_p: `We believe that financial hardship should never be the reason a child drops out of school. Our Scholarship Support program provides tuition assistance, exam fee coverage, and help with uniforms and books for children from low-income families. By lifting this burden from parents, we ensure that children can continue their studies with dignity and confidence. This initiative not only keeps kids in school but also inspires them to pursue higher education and dream of a brighter future.
+
+`,
+      prog2_title: "After-School Learning",
+      prog2_p: `Many children struggle to keep up in school because they lack access to extra guidance at home. Our After-School Learning program provides free evening classes where trained teachers and volunteers offer tutoring in core subjects like math, science, and language. Beyond academics, we focus on building study habits, problem-solving skills, and self-confidence. These centers also act as safe community spaces where children can receive mentorship, participate in group activities, and discover their talents. By bridging learning gaps, we help children stay motivated and perform better in their regular classrooms.
+
+
+
+`,
+      prog3_title: "Digital Literacy",
+      prog3_p: `In today’s world, digital skills are no longer optional—they are essential. Our Digital Literacy program introduces children to computers, the internet, and modern technology through hands-on training sessions. From learning the basics of typing and using educational software to understanding online safety and communication, children gain confidence in navigating the digital world. We also provide access to e-learning resources, coding workshops, and interactive tools that expand their horizons beyond traditional textbooks. By bridging the digital divide, we ensure that underprivileged children are not left behind and are equipped with the skills they need to compete in higher education and future careers.`,
+      prog4_title: "School Infrastructure",
+      prog4_p: `A strong foundation for learning begins with a safe and supportive environment. Our School Infrastructure program focuses on creating classrooms and facilities that inspire children to learn and grow. We build and renovate classrooms, libraries, and sanitation facilities, ensuring that students have access to clean, well-equipped spaces. Along with furniture, blackboards, and safe drinking water, we also provide electricity and digital tools where possible, making schools more engaging and resourceful. By investing in infrastructure, we not only enhance the quality of education but also reduce dropout rates, as children feel motivated and parents feel reassured about sending them to school.`,
+
+      test_title: "What People Say",
+      test_sub: "Stories of impact from our community",
+      quote1: "“Thanks to the NGO’s education program, my daughter now goes to school and dreams of becoming a teacher.”",
+      quote1_author: "Ramesh Kumar",
+      quote1_role: "Beneficiary",
+      quote2: "“Volunteering here has been the most fulfilling experience of my life. I feel I’m truly making a difference.”",
+      quote2_author: "Anita Sharma",
+      quote2_role: "Volunteer",
+      quote3: "“I am proud to support this organization. My donations go directly towards real, life-changing projects.”",
+      quote3_author: "Rajiv Singh",
+      quote3_role: "Donor",
+
+      cta_title: "Be a Part of the Change",
+      cta_p: "Your support can bring education, healthcare, and hope to thousands of lives.",
+      cta_donate: "Donate Now",
+      cta_volunteer: "Join as Volunteer",
+
+      footer_brand: "NGO/CHARITY",
+      footer_quick_links: "Quick Links",
+      footer_services: "Explore Services",
+      footer_contact: "Contact Us",
+      footer_email_label: "Email:",
+      footer_phone_label: "Phone:",
+      footer_follow: "Follow Us",
+      newsletter_title: "Newsletter",
+      newsletter_text: "Get weekly wellness tips and updates in your inbox.",
+      subscribe_btn: "Subscribe",
+      newsletter_placeholder: "Enter your email",
+      newsletter_success: "✅ Thank you for subscribing!",
+      footer_copy: "© 2025 Your Company Name. All Rights Reserved."
+    },
+    ar: {
+      nav_home: "الرئيسية ▾",
+      nav_home1: "الرئيسية 1",
+      nav_home2: "الرئيسية 2",
+      nav_about: "معلومات عنا",
+      nav_blog: "المدونة",
+      nav_services: "الخدمات ▾",
+      nav_all_services: "جميع الخدمات",
+      nav_service1: "التعليم",
+      nav_service2: "الرعاية الصحية",
+      nav_service3: "التدريب المهني",
+      nav_service4: "التمكين",
+      nav_service5: "الإغاثة في الكوارث",
+      nav_service6: "رعاية البيئة",
+      nav_contact: "اتصل بنا",
+      logout: "تسجيل الخروج",
+
+      edu_title: "دعم التعليم",
+      edu_sub: "فتح الإمكانات من خلال فرص التعلم لكل طفل.",
+
+      about_title: "عن مهمتنا",
+      about_p1: `نكرس جهودنا لتحويل حياة الناس من خلال برامج التعليم والرعاية الصحية والتمكين. 
+        نركز على خلق فرص تحدث تغييرات مستدامة في المجتمعات المحتاجة.`,
+      about_p2: `من خلال العمل مع القادة المحليين والمتطوعين، نضمن أن كل مبادرة تحدث فرقًا حقيقيًا في حياة الناس اليومية.`,
+      about_btn: "شارك معنا",
+
+      impact_title: "أثرنا",
+      impact_sub: "معًا نُحدث فرقًا في حياة آلاف الأشخاص",
+      impact_children: "أطفال متعلمون",
+      impact_health: "أشخاص تم تقديم الرعاية لهم",
+      impact_youth: "شباب مدرب",
+      impact_communities: "مجتمعات مدعومة",
+
+      programs_title: "برامجنا التعليمية الرئيسية",
+      programs_sub: "مبادرات مركزة لبناء مستقبل أفضل من خلال التعلم",
+      prog1_title: "دعم المنح الدراسية",
+      prog1_p: `نؤمن بأن الصعوبات المالية يجب ألا تكون أبدًا سببًا لترك الطفل المدرسة. يقدم برنامجنا لدعم المنح الدراسية مساعدة في الرسوم الدراسية، وتغطية لرسوم الامتحانات، ومساعدة في توفير الزي المدرسي والكتب للأطفال من الأسر ذات الدخل المحدود. من خلال رفع هذا العبء عن كاهل الآباء، نضمن أن يتمكن الأطفال من مواصلة دراستهم بكرامة وثقة. لا تقتصر هذه المبادرة على إبقاء الأطفال في المدرسة فحسب، بل تلهمهم أيضًا لمتابعة التعليم العالي والحلم بمستقبل أكثر إشراقًا.`,
+      prog2_title: "التعلم بعد المدرسة",
+      prog2_p: `يكافح العديد من الأطفال لمواكبة الدراسة في المدرسة بسبب افتقارهم إلى التوجيه الإضافي في المنزل. يوفر برنامج "التعلم بعد المدرسة" دروسًا مسائية مجانية حيث يقدم معلمون ومتطوعون مدربون دروسًا خصوصية في المواد الأساسية مثل الرياضيات والعلوم واللغة. بالإضافة إلى الجانب الأكاديمي، نركز على بناء عادات الدراسة، ومهارات حل المشكلات، والثقة بالنفس. تعمل هذه المراكز أيضًا كمساحات مجتمعية آمنة حيث يمكن للأطفال الحصول على الإرشاد، والمشاركة في الأنشطة الجماعية، واكتشاف مواهبهم. من خلال سد الفجوات التعليمية، نساعد الأطفال على البقاء متحمسين وتقديم أداء أفضل في فصولهم الدراسية العادية.`,
+      prog3_title: "المهارات الرقمية",
+      prog3_p: `في عالم اليوم، لم تعد المهارات الرقمية خيارًا بل أصبحت ضرورة. يقدم برنامجنا لمحو الأمية الرقمية للأطفال عالم الكمبيوتر والإنترنت والتكنولوجيا الحديثة من خلال دورات تدريبية عملية. بدءًا من تعلم أساسيات الكتابة واستخدام البرامج التعليمية، وصولًا إلى فهم الأمان عبر الإنترنت ومهارات التواصل، يكتسب الأطفال الثقة في التنقل في العالم الرقمي. كما نوفر لهم إمكانية الوصول إلى مصادر التعلم الإلكتروني، وورش عمل في البرمجة، وأدوات تفاعلية توسع آفاقهم بما يتجاوز الكتب المدرسية التقليدية. من خلال سد الفجوة الرقمية، نضمن أن الأطفال المحرومين لا يتخلفون عن الركب ويتم تزويدهم بالمهارات التي يحتاجونها للتفوق في التعليم العالي والمسارات المهنية المستقبلية.`,
+      prog4_title: "بنية مدرسية",
+      prog4_p: `الأساس القوي للتعلم يبدأ ببيئة آمنة وداعمة. يركز برنامجنا "البنية التحتية للمدارس" على إنشاء فصول دراسية ومرافق تلهم الأطفال للتعلم والنمو. نقوم ببناء وتجديد الفصول الدراسية والمكتبات ومرافق الصرف الصحي، مما يضمن حصول الطلاب على مساحات نظيفة ومجهزة جيدًا. بالإضافة إلى الأثاث والسبورات ومياه الشرب الآمنة، نوفر أيضًا الكهرباء والأدوات الرقمية حيثما أمكن، مما يجعل المدارس أكثر جاذبية وثراءً بالموارد. من خلال الاستثمار في البنية التحتية، لا نعزز جودة التعليم فحسب، بل نقلل أيضًا من معدلات التسرب من المدرسة، حيث يشعر الأطفال بالتحفيز ويشعر الآباء بالاطمئنان بشأن إرسالهم إلى المدرسة.`,
+
+      test_title: "آراء الناس",
+      test_sub: "قصص تأثير من مجتمعنا",
+      quote1: "«بفضل برنامج التعليم، ابنتي تذهب إلى المدرسة وتُحلم بأن تصبح مُعلمة.»",
+      quote1_author: "راميش كومار",
+      quote1_role: "مستفيد",
+      quote2: "«التطوع هنا كان تجربة مُرضية للغاية. أشعر أنني أحدث فرقًا حقيقيًا.»",
+      quote2_author: "أنيتا شارما",
+      quote2_role: "متطوعة",
+      quote3: "«أفخر بدعم هذه المنظمة. تذهب تبرعاتي مباشرة إلى مشاريع تغير الحياة.»",
+      quote3_author: "راجيف سينغ",
+      quote3_role: "متبرع",
+
+      cta_title: "كن جزءًا من التغيير",
+      cta_p: "يمكن لمساندتك أن تجلب التعليم والرعاية والأمل لآلاف الأشخاص.",
+      cta_donate: "تبرع الآن",
+      cta_volunteer: "انضم كمتطوع",
+
+      footer_brand: "منظمة/مؤسسة",
+      footer_quick_links: "روابط سريعة",
+      footer_services: "استكشف الخدمات",
+      footer_contact: "اتصل بنا",
+      footer_email_label: "البريد الإلكتروني:",
+      footer_phone_label: "الهاتف:",
+      footer_follow: "تابعنا",
+      newsletter_title: "النشرة",
+      newsletter_text: "احصل على نصائح أسبوعية وتحديثات في بريدك.",
+      subscribe_btn: "اشترك",
+      newsletter_placeholder: "أدخل بريدك الإلكتروني",
+      newsletter_success: "✅ شكرًا لاشتراكك!",
+      footer_copy: "© 2025 اسم شركتك. جميع الحقوق محفوظة."
+    },
+    he: {
+      nav_home: "בית ▾",
+      nav_home1: "בית 1",
+      nav_home2: "בית 2",
+      nav_about: "עלינו",
+      nav_blog: "בלוג",
+      nav_services: "שירותים ▾",
+      nav_all_services: "כל השירותים",
+      nav_service1: "חינוך",
+      nav_service2: "בריאות",
+      nav_service3: "הכשרה מקצועית",
+      nav_service4: "העצמה",
+      nav_service5: "סיוע בשעת חירום",
+      nav_service6: "שימור הסביבה",
+      nav_contact: "צור קשר",
+      logout: "יציאה",
+
+      edu_title: "תמיכה בחינוך",
+      edu_sub: "פתיחת פוטנציאל באמצעות הזדמנויות למידה לכל ילד.",
+
+      about_title: "על המשימה שלנו",
+      about_p1: `אנו מחויבים לשינוי חיים באמצעות תוכניות חינוך, בריאות והעצמה. 
+        אנו שואפים ליצור הזדמנויות שמביאות לשינוי ממושך בקהילות הזקוקות לכך.`,
+      about_p2: `בעבודה עם מנהיגים מקומיים ומתנדבים אנו מוודאים שכל יוזמה עושה הבדל ממשי בחיי היומיום.`,
+      about_btn: "הצטרף אלינו",
+
+      impact_title: "ההשפעה שלנו",
+      impact_sub: "ביחד אנו יוצרים שינוי בחייהם של אלפים",
+      impact_children: "ילדים שלמדו",
+      impact_health: "אנשים שקיבלו טיפול",
+      impact_youth: "נוער מיומן",
+      impact_communities: "קהילות נתמכות",
+
+      programs_title: "תוכניות החינוך המרכזיות שלנו",
+      programs_sub: "יוזמות ממוקדות ליצירת עתיד טוב יותר באמצעות למידה",
+      prog1_title: "תמיכה במלגות",
+      prog1_p: ` אנו מאמינים כי קושי כלכלי לעולם לא צריך להיות הסיבה לנשירת ילדים מבית הספר. תוכנית "תמיכת המלגות" שלנו מספקת סיוע בשכר לימוד, כיסוי דמי בחינות ועזרה במדים וספרים לילדים ממשפחות מעוטות הכנסה. על ידי הסרת נטל זה מההורים, אנו מבטיחים שילדים יוכלו להמשיך את לימודיהם בכבוד ובביטחון. יוזמה זו לא רק משאירה ילדים בבית הספר אלא גם מעניקה להם השראה להמשיך ללימודים גבוהים ולחלום על עתיד מזהיר יותר.
+
+`,
+      prog2_title: "למידה לאחר הלימודים",
+      prog2_p:`ילדים רבים מתקשים להישאר בקצב בבית הספר מכיוון שאין להם גישה להדרכה נוספת בבית. תוכנית הלמידה שלנו לאחר שעות הלימודים מספקת שיעורי ערב חינם בהם מורים ומתנדבים מיומנים מציעים שיעורים פרטיים במקצועות הליבה כמו מתמטיקה, מדעים ושפה. מעבר לאקדמיה, אנו מתמקדים בבניית הרגלי למידה, מיומנויות לפתרון בעיות וביטחון עצמי. מרכזים אלו משמשים גם כמרחבים קהילתיים בטוחים בהם ילדים יכולים לקבל חונכות, להשתתף בפעילויות קבוצתיות ולגלות את כישרונותיהם. על ידי גישור על פערים לימודיים, אנו עוזרים לילדים להישאר עם מוטיבציה ולהצליח יותר בכיתות הרגילות שלהם.
+
+`,
+      prog3_title: "אוריינות דיגיטלית",
+      prog3_p: `בעולם של היום, כישורים דיגיטליים אינם עוד בגדר בחירה אלא הכרח. תוכנית האוריינות הדיגיטלית שלנו מציגה בפני ילדים מחשבים, אינטרנט וטכנולוגיה מודרנית באמצעות מפגשי הכשרה מעשיים. החל מלימוד יסודות ההקלדה ושימוש בתוכנות חינוכיות ועד להבנת בטיחות מקוונת ותקשורת, ילדים רוכשים ביטחון בניווט בעולם הדיגיטלי. אנו מספקים גם גישה למשאבי למידה מקוונים, סדנאות קידוד וכלים אינטראקטיביים המרחיבים את אופקיהם מעבר לספרי לימוד מסורתיים. על ידי גישור על הפער הדיגיטלי, אנו מבטיחים שילדים ממשפחות מעוטות הכנסה לא יישארו מאחור ויהיו מצוידים בכישורים שהם צריכים כדי להתחרות בהשכלה גבוהה ובעתיד המקצועי שלהם.
+
+`,
+      prog4_title: "תשתיות בית ספריות",
+      prog4_p: `יסוד חזק ללמידה מתחיל בסביבה בטוחה ותומכת. תוכנית "תשתיות בתי הספר" שלנו מתמקדת ביצירת כיתות ומתקנים המעוררים השראה בילדים ללמוד ולצמוח. אנו בונים ומשפצים כיתות, ספריות ומתקני תברואה, ומבטיחים שלתלמידים תהיה גישה למרחבים נקיים ומאובזרים היטב. לצד ריהוט, לוחות ומי שתייה בטוחים, אנו מספקים גם חשמל וכלים דיגיטליים היכן שניתן, מה שהופך את בתי הספר למרתקים ועשירים יותר במשאבים. על ידי השקעה בתשתיות, אנו לא רק משפרים את איכות החינוך אלא גם מפחיתים את שיעורי הנשירה, שכן ילדים מרגישים מוטיבציה והורים מרגישים בטוחים יותר לשלוח אותם לבית הספר.
+
+`,
+
+      test_title: "מה אנשים אומרים",
+      test_sub: "סיפורי השפעה מהקהילה שלנו",
+      quote1: "״בזכות תוכנית החינוך, בתי הולכת לבית הספר וחולמת להיות מורה.״",
+      quote1_author: "רמיש קומאר",
+      quote1_role: "מוטב",
+      quote2: "״ההתנדבות כאן הייתה החוויה המספקת ביותר בחיי. אני מרגיש שאני יוצר שינוי אמיתי.״",
+      quote2_author: "אניטה שרמה",
+      quote2_role: "מתנדבת",
+      quote3: "״אני גאה לתמוך בארגון הזה. התרומות שלי הולכות ישירות לפרויקטים שמשנים חיים.״",
+      quote3_author: "רג'יב סינג",
+      quote3_role: "תורם",
+
+      cta_title: "היה חלק מהשינוי",
+      cta_p: "התמיכה שלך יכולה להביא חינוך, בריאות ותקווה לאלפים.",
+      cta_donate: "תרום עכשיו",
+      cta_volunteer: "הצטרף כמתנדב",
+
+      footer_brand: "עמותה/ארגון",
+      footer_quick_links: "קישורים מהירים",
+      footer_services: "חקור שירותים",
+      footer_contact: "צור קשר",
+      footer_email_label: "דוא\"ל:",
+      footer_phone_label: "טלפון:",
+      footer_follow: "עקבו אחרינו",
+      newsletter_title: "ניוזלטר",
+      newsletter_text: "קבל טיפים ועדכונים שבועיים לדוא\"ל שלך.",
+      subscribe_btn: "הירשם",
+      newsletter_placeholder: "הכנס את האימייל שלך",
+      newsletter_success: "✅ תודה שנרשמת!",
+      footer_copy: "© 2025 שם החברה שלך. כל הזכויות שמורות."
+    }
+  };
+
+  function applyTranslations(lang) {
+    if (!dictionary[lang]) lang = 'en';
+    document.querySelectorAll('[data-key]').forEach(el => {
+      const key = el.getAttribute('data-key');
+      if (!key) return;
+      const val = dictionary[lang][key];
+      if (val !== undefined) {
+        // Use textContent to avoid injecting HTML
+        el.textContent = val;
+      }
+    });
+
+    document.querySelectorAll('[data-placeholder-key]').forEach(el => {
+      const key = el.getAttribute('data-placeholder-key');
+      if (!key) return;
+      const val = dictionary[lang][key];
+      if (val !== undefined) el.setAttribute('placeholder', val);
+    });
+
+    document.documentElement.lang = lang;
+    if (lang === 'ar' || lang === 'he') {
+      document.documentElement.setAttribute('dir', 'rtl');
+      document.body.classList.add('is-rtl');
+    } else {
+      document.documentElement.setAttribute('dir', 'ltr');
+      document.body.classList.remove('is-rtl');
+    }
+  }
+
+  function setLanguage(lang) {
+    if (!dictionary[lang]) lang = 'en';
+    localStorage.setItem('siteLanguage', lang);
+    const sel = document.getElementById('languageSelect');
+    if (sel) sel.value = lang;
+    applyTranslations(lang);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const saved = localStorage.getItem('siteLanguage') || 'en';
+    const sel = document.getElementById('languageSelect');
+    if (sel) {
+      sel.value = saved;
+      sel.addEventListener('change', e => setLanguage(e.target.value));
+    }
+    applyTranslations(saved);
+  });
+})();
 </script>
 
 </body>

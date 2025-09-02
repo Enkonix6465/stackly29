@@ -8,11 +8,10 @@
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/service4.css">
 
-<script src="js/main.js" defer></script>
+  <script src="js/main.js" defer></script>
   <script src="js/header.js" defer></script>
   <script src="js/auth-check.js" defer></script>
-    <script src="js/newsletter.js" defer></script>
-
+  <script src="js/newsletter.js" defer></script>
 </head>
 <body>
   <!-- ================= HEADER ================= -->
@@ -25,41 +24,51 @@
     <nav>
       <ul class="nav-links">
         <li class="dropdown">
-          <a href="index.html">Home ▾</a>
+          <a href="index.html" data-key="nav_home">Home ▾</a>
           <ul class="dropdown-menu">
-            <li><a href="index.html">Home 1</a></li>
-            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="index.html" data-key="nav_home1">Home 1</a></li>
+            <li><a href="home2.html" data-key="nav_home2">Home 2</a></li>
           </ul>
         </li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html" data-key="nav_about">About</a></li>
+        <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
         <li class="dropdown">
-          <a href="services.html">Services ▾</a>
+          <a href="services.html" data-key="nav_services">Services ▾</a>
           <ul class="dropdown-menu">
-                        <li class="mobile-only"><a href="services.html">All Services</a></li>
-           <li><a href="service1.html">Education</a></li>
-        <li><a href="service2.html">Healthcare</a></li>
-        <li><a href="service3.html">Skill Training</a></li>
-        <li><a href="service4.html">Empowerment</a></li>
-        <li><a href="service5.html">Disaster Relief</a></li>
-        <li><a href="service6.html">Environmental Care</a></li>
+            <li class="mobile-only"><a href="services.html" data-key="nav_all_services">All Services</a></li>
+            <li><a href="service1.html" data-key="nav_service1">Education</a></li>
+            <li><a href="service2.html" data-key="nav_service2">Healthcare</a></li>
+            <li><a href="service3.html" data-key="nav_service3">Skill Training</a></li>
+            <li><a href="service4.html" data-key="nav_service4">Empowerment</a></li>
+            <li><a href="service5.html" data-key="nav_service5">Disaster Relief</a></li>
+            <li><a href="service6.html" data-key="nav_service6">Environmental Care</a></li>
           </ul>
         </li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
       </ul>
     </nav>
+    <!-- ================= Language Toggle (added) ================= -->
+    <div class="language-toggle" style="display:inline-block; margin:0 12px;">
+      <select id="languageSelect" aria-label="Select language">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="he">עברית</option>
+      </select>
+    </div>
 
     <div class="profile-container">
       <div class="profile" id="profile-dropdown-toggle">
         <span id="profile-initials"></span>
       </div>
       <ul class="profile-dropdown" id="profile-dropdown">
-        <li><a href="#" id="logout-btn">Logout</a></li>
+        <li><a href="#" id="logout-btn" data-key="logout">Logout</a></li>
       </ul>
     </div>
 
     <button id="themeToggle">🌙</button>
     <button id="mobile-menu-toggle" class="hamburger">☰</button>
+
+    
   </div>
 </header>
 
@@ -69,12 +78,10 @@
 <section class="service-hero">
   <div class="service-hero-overlay"></div>
   <div class="service-hero-content">
-    <h1>Women Empowerment</h1>
-    <p>Uplifting women through education, skills, and opportunities to lead stronger, independent lives.</p>
+    <h1 data-key="service_title">Women Empowerment</h1>
+    <p data-key="service_subtitle">Uplifting women through education, skills, and opportunities to lead stronger, independent lives.</p>
   </div>
 </section>
-
-
 
 <!-- About Section -->
 <section class="about-modern">
@@ -88,55 +95,54 @@
 
     <!-- Text Side -->
     <div class="about-content">
-      <h2>About Our Women Empowerment Mission</h2>
-      
-      <p>
+      <h2 data-key="about_title">About Our Women Empowerment Mission</h2>
+      <p data-key="about_p">
         From vocational training and self-help groups to digital literacy, entrepreneurship, and 
         leadership workshops, we support women in unlocking their true potential. By partnering with 
         mentors, local organizations, and change-makers, we create pathways for women to uplift 
         themselves and inspire future generations.
       </p>
-      <a href="contact.html" class="about-btn">Empower With Us</a>
+      <a href="contact.html" class="about-btn" data-key="about_btn">Empower With Us</a>
     </div>
   </div>
 </section>
 
-
 <section class="impact" id="impact">
   <div class="impact-container">
-    <h2 class="section-title">Our Impact</h2>
-    <p class="section-subtitle">Together, we are empowering individuals with skills for a better tomorrow</p>
+    <h2 class="section-title" data-key="impact_title">Our Impact</h2>
+    <p class="section-subtitle" data-key="impact_subtitle">Together, we are empowering individuals with skills for a better tomorrow</p>
 
     <div class="impact-grid">
       <!-- Impact Card 1 -->
       <div class="impact-card">
         <h3 class="count" data-target="3000">0</h3>
-        <p>Youth trained in vocational and professional skills</p>
+        <p data-key="impact_card1">Youth trained in vocational and professional skills</p>
       </div>
 
       <!-- Impact Card 2 -->
       <div class="impact-card">
         <h3 class="count" data-target="1500">0</h3>
-        <p>Women empowered through livelihood and self-employment programs</p>
+        <p data-key="impact_card2">Women empowered through livelihood and self-employment programs</p>
       </div>
 
       <!-- Impact Card 3 -->
       <div class="impact-card">
         <h3 class="count" data-target="1200">0</h3>
-        <p>Individuals equipped with digital literacy and IT skills</p>
+        <p data-key="impact_card3">Individuals equipped with digital literacy and IT skills</p>
       </div>
 
       <!-- Impact Card 4 -->
       <div class="impact-card">
         <h3 class="count" data-target="500">0</h3>
-        <p>Entrepreneurs supported in starting small businesses</p>
+        <p data-key="impact_card4">Entrepreneurs supported in starting small businesses</p>
       </div>
     </div>
   </div>
 </section>
+
 <section class="programs-alt" id="programs">
-  <h2 class="section-title">Our Key Women Empowerment Programs</h2>
-  <p class="section-subtitle">Dedicated initiatives to uplift women through skills, leadership, and opportunities</p>
+  <h2 class="section-title" data-key="programs_title">Our Key Women Empowerment Programs</h2>
+  <p class="section-subtitle" data-key="programs_sub">Dedicated initiatives to uplift women through skills, leadership, and opportunities</p>
 
   <!-- Program 1 -->
   <div class="program-item reveal fade-left">
@@ -144,8 +150,8 @@
       <img src="images/leadership.jpeg" alt="Leadership & Confidence Building">
     </div>
     <div class="program-text">
-      <h3>Leadership & Confidence Building</h3>
-      <p>
+      <h3 data-key="prog1_title">Leadership & Confidence Building</h3>
+      <p data-key="prog1_p">
         We conduct workshops and training sessions that empower women to build self-confidence, enhance leadership skills, and actively take part in decision-making roles. By fostering personal growth and encouraging equal participation, we help women become catalysts of change in their families and communities. Empowered women not only achieve their own potential but also serve as role models who inspire others to break barriers, pursue opportunities, and create a more inclusive society.
       </p>
     </div>
@@ -154,8 +160,8 @@
   <!-- Program 2 -->
   <div class="program-item reveal fade-right">
     <div class="program-text">
-      <h3>Vocational & Livelihood Training</h3>
-      <p>
+      <h3 data-key="prog2_title">Vocational & Livelihood Training</h3>
+      <p data-key="prog2_p">
         Through hands-on training in tailoring, handicrafts, food processing, digital literacy, and other income-generating skills, we empower women and youth to achieve financial independence. Our livelihood programs are designed to connect participants with real market opportunities, enabling them to earn a sustainable income and support their families with dignity. By promoting entrepreneurship and self-reliance, we help improve not only individual lives but also the overall economic strength of communities.
       </p>
     </div>
@@ -170,8 +176,8 @@
       <img src="images/digital_learning.jpg" alt="Digital Literacy for Women">
     </div>
     <div class="program-text">
-      <h3>Digital Literacy for Women</h3>
-      <p>
+      <h3 data-key="prog3_title">Digital Literacy for Women</h3>
+      <p data-key="prog3_p">
         In today’s digital-first world, we empower women with computer education, online opportunities, and digital financial literacy. Our training programs equip them with essential skills such as using productivity tools, accessing online services, safe internet practices, and digital payments. By bridging the digital divide, we open doors to new jobs, entrepreneurship, and greater access to information, ensuring women can actively participate in the modern economy and uplift their communities.
       </p>
     </div>
@@ -180,8 +186,8 @@
   <!-- Program 4 -->
   <div class="program-item reveal fade-right">
     <div class="program-text">
-      <h3>Entrepreneurship & Self-Help Groups</h3>
-      <p>
+      <h3 data-key="prog4_title">Entrepreneurship & Self-Help Groups</h3>
+      <p data-key="prog4_p">
        We encourage women to start their own businesses and form Self-Help Groups (SHGs) that promote collective strength. Through mentorship, micro-finance support, skill development, and market linkages, we help women build sustainable ventures and achieve economic independence. By working together, these groups not only create stable livelihoods but also amplify women’s voices in decision-making, fostering confidence, unity, and long-term community development.
       </p>
     </div>
@@ -193,59 +199,53 @@
 
 <section class="testimonials" id="testimonials">
   <div class="container">
-    <h2 class="section-title">Voices of Empowerment</h2>
-    <p class="section-subtitle">Real stories of courage, independence, and transformation through our Women Empowerment programs</p>
+    <h2 class="section-title" data-key="testi_title">Voices of Empowerment</h2>
+    <p class="section-subtitle" data-key="testi_sub">Real stories of courage, independence, and transformation through our Women Empowerment programs</p>
 
     <div class="testimonials-grid">
       <!-- Testimonial 1 -->
       <div class="testimonial-card">
-        <p class="quote">“Through the NGO’s women empowerment program, I learned handicraft skills and now run my own small business. I feel proud to contribute to my family’s income and decisions.”</p>
+        <p class="quote" data-key="testi_quote1">“Through the NGO’s women empowerment program, I learned handicraft skills and now run my own small business. I feel proud to contribute to my family’s income and decisions.”</p>
         <div class="author">
           <img src="images/ser4_t1.jpeg" alt="Women Beneficiary">
-          <h4>Kavita Devi</h4>
-          <span>Beneficiary</span>
+          <h4 data-key="testi_author1_name">Kavita Devi</h4>
+          <span data-key="testi_author1_role">Beneficiary</span>
         </div>
       </div>
 
       <!-- Testimonial 2 -->
       <div class="testimonial-card">
-        <p class="quote">“Training women in digital skills and financial literacy has been life-changing for many. Seeing them gain confidence and independence is the most rewarding experience.”</p>
+        <p class="quote" data-key="testi_quote2">“Training women in digital skills and financial literacy has been life-changing for many. Seeing them gain confidence and independence is the most rewarding experience.”</p>
         <div class="author">
           <img src="images/ser4_t2.jpeg" alt="Trainer Volunteer">
-          <h4>Anita Joshi</h4>
-          <span>Trainer Volunteer</span>
+          <h4 data-key="testi_author2_name">Anita Joshi</h4>
+          <span data-key="testi_author2_role">Trainer Volunteer</span>
         </div>
       </div>
 
       <!-- Testimonial 3 -->
       <div class="testimonial-card">
-        <p class="quote">“Supporting this women’s empowerment initiative gives me immense joy. Knowing my contribution helps women achieve independence and dignity is deeply fulfilling.”</p>
+        <p class="quote" data-key="testi_quote3">“Supporting this women’s empowerment initiative gives me immense joy. Knowing my contribution helps women achieve independence and dignity is deeply fulfilling.”</p>
         <div class="author">
           <img src="images/ser4_t3.jpeg" alt="Donor">
-          <h4>Rohit Malhotra</h4>
-          <span>Donor</span>
+          <h4 data-key="testi_author3_name">Rohit Malhotra</h4>
+          <span data-key="testi_author3_role">Donor</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-
-
-
 <section class="cta" id="cta">
   <div class="cta-container">
-    <h2>Support Women Empowerment</h2>
-    <p>Your contribution can uplift women by providing skill development, financial independence, and opportunities to lead with confidence.</p>
+    <h2 data-key="cta_title">Support Women Empowerment</h2>
+    <p data-key="cta_text">Your contribution can uplift women by providing skill development, financial independence, and opportunities to lead with confidence.</p>
     <div class="cta-buttons">
-      <a href="donate.html" class="cta-btn donate-btn">Donate for Women Empowerment</a>
-      <a href="contact.html" class="cta-btn volunteer-btn">Join as Volunteer</a>
+      <a href="donate.html" class="cta-btn donate-btn" data-key="cta_donate">Donate for Women Empowerment</a>
+      <a href="contact.html" class="cta-btn volunteer-btn" data-key="cta_volunteer">Join as Volunteer</a>
     </div>
   </div>
 </section>
-
-
-
   </main>
 
   <!-- ================= FOOTER ================= -->
@@ -255,40 +255,40 @@
     <!-- Logo Section -->
     <div class="footer-logo">
       <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
-      <h4>NGO/CHARITY</h4>
+      <h4 data-key="footer_brand">NGO/CHARITY</h4>
     </div>
 
     <!-- Quick Links -->
     <div class="footer-links">
-      <h4>Quick Links</h4>
+      <h4 data-key="footer_quick_links">Quick Links</h4>
       <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html" data-key="nav_about">About</a></li>
+        <li><a href="services.html" data-key="nav_services">Services</a></li>
+        <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
+        <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
       </ul>
     </div>
 
     <!-- Services -->
     <div class="footer-services">
-      <h4>Explore Services</h4>
+      <h4 data-key="footer_services">Explore Services</h4>
       <ul>
-        <li><a href="service1.html">Education</a></li>
-        <li><a href="service2.html">Healthcare</a></li>
-        <li><a href="service3.html">Skill Training</a></li>
-        <li><a href="service4.html">Women Empowerment</a></li>
-        <li><a href="service5.html">Disaster Relief</a></li>
-        <li><a href="service6.html">Environmental Care</a></li>
+        <li><a href="service1.html" data-key="nav_service1">Education</a></li>
+        <li><a href="service2.html" data-key="nav_service2">Healthcare</a></li>
+        <li><a href="service3.html" data-key="nav_service3">Skill Training</a></li>
+        <li><a href="service4.html" data-key="nav_service4">Women Empowerment</a></li>
+        <li><a href="service5.html" data-key="nav_service5">Disaster Relief</a></li>
+        <li><a href="service6.html" data-key="nav_service6">Environmental Care</a></li>
       </ul>
     </div>
 
     <!-- Contact -->
     <div class="footer-contact">
-      <h4>Contact Us</h4>
-      <p><strong>Email:</strong> info@example.com</p>
-      <p><strong>Phone:</strong> +91 1234567890</p>
+      <h4 data-key="footer_contact">Contact Us</h4>
+      <p><strong data-key="footer_email_label">Email:</strong> <span data-key="footer_email">info@example.com</span></p>
+      <p><strong data-key="footer_phone_label">Phone:</strong> <span data-key="footer_phone">+91 1234567890</span></p>
 
-      <h4>Follow Us</h4>
+      <h4 data-key="follow_us">Follow Us</h4>
       <div class="social">
         <a href="https://facebook.com"><img src="images/fb.png" alt="Facebook"></a>
         <a href="https://twitter.com"><img src="images/x.png" alt="Twitter"></a>
@@ -298,22 +298,300 @@
 
     <!-- Newsletter -->
     <div class="footer-newsletter">
-      <h4>Newsletter</h4>
-      <p>Get weekly wellness tips and updates in your inbox.</p>
+      <h4 data-key="newsletter_title">Newsletter</h4>
+      <p data-key="newsletter_text">Get weekly wellness tips and updates in your inbox.</p>
       <form id="newsletter-form">
-        <input type="email" id="newsletter-email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
+        <input type="email" id="newsletter-email" placeholder="Enter your email" required data-placeholder-key="newsletter_placeholder">
+        <button type="submit" data-key="subscribe_btn">Subscribe</button>
       </form>
-      <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;">
+      <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;" data-key="newsletter_success">
     ✅ Thank you for subscribing!
   </div>
     </div>
   </div>
 
-  <div class="footer-copy">
+  <div class="footer-copy" data-key="footer_copy">
     &copy; 2025 Your Company Name. All Rights Reserved.
   </div>
 </footer>
+
+<!-- ================= Language logic (added) ================= -->
+<script>
+  (function(){
+    const dictionary = {
+      en: {
+        nav_home: "Home ▾",
+        nav_home1: "Home 1",
+        nav_home2: "Home 2",
+        nav_about: "About",
+        nav_blog: "Blog",
+        nav_services: "Services ▾",
+        nav_all_services: "All Services",
+        nav_service1: "Education",
+        nav_service2: "Healthcare",
+        nav_service3: "Skill Training",
+        nav_service4: "Women Empowerment",
+        nav_service5: "Disaster Relief",
+        nav_service6: "Environmental Care",
+        nav_contact: "Contact",
+        logout: "Logout",
+
+        service_title: "Women Empowerment",
+        service_subtitle: "Uplifting women through education, skills, and opportunities to lead stronger, independent lives.",
+
+        about_title: "About Our Women Empowerment Mission",
+        about_p: "From vocational training and self-help groups to digital literacy, entrepreneurship, and leadership workshops, we support women in unlocking their true potential. By partnering with mentors, local organizations, and change-makers, we create pathways for women to uplift themselves and inspire future generations.",
+        about_btn: "Empower With Us",
+
+        impact_title: "Our Impact",
+        impact_subtitle: "Together, we are empowering individuals with skills for a better tomorrow",
+        impact_card1: "Youth trained in vocational and professional skills",
+        impact_card2: "Women empowered through livelihood and self-employment programs",
+        impact_card3: "Individuals equipped with digital literacy and IT skills",
+        impact_card4: "Entrepreneurs supported in starting small businesses",
+
+        programs_title: "Our Key Women Empowerment Programs",
+        programs_sub: "Dedicated initiatives to uplift women through skills, leadership, and opportunities",
+        prog1_title: "Leadership & Confidence Building",
+        prog1_p: "We conduct workshops and training sessions that empower women to build self-confidence, enhance leadership skills, and actively take part in decision-making roles. By fostering personal growth and encouraging equal participation, we help women become catalysts of change in their families and communities. Empowered women not only achieve their own potential but also serve as role models who inspire others to break barriers, pursue opportunities, and create a more inclusive society.",
+        prog2_title: "Vocational & Livelihood Training",
+        prog2_p: "Through hands-on training in tailoring, handicrafts, food processing, digital literacy, and other income-generating skills, we empower women and youth to achieve financial independence. Our livelihood programs are designed to connect participants with real market opportunities, enabling them to earn a sustainable income and support their families with dignity. By promoting entrepreneurship and self-reliance, we help improve not only individual lives but also the overall economic strength of communities.",
+        prog3_title: "Digital Literacy for Women",
+        prog3_p: "In today’s digital-first world, we empower women with computer education, online opportunities, and digital financial literacy. Our training programs equip them with essential skills such as using productivity tools, accessing online services, safe internet practices, and digital payments. By bridging the digital divide, we open doors to new jobs, entrepreneurship, and greater access to information, ensuring women can actively participate in the modern economy and uplift their communities.",
+        prog4_title: "Entrepreneurship & Self-Help Groups",
+        prog4_p: "We encourage women to start their own businesses and form Self-Help Groups (SHGs) that promote collective strength. Through mentorship, micro-finance support, skill development, and market linkages, we help women build sustainable ventures and achieve economic independence. By working together, these groups not only create stable livelihoods but also amplify women’s voices in decision-making, fostering confidence, unity, and long-term community development.",
+
+        testi_title: "Voices of Empowerment",
+        testi_sub: "Real stories of courage, independence, and transformation through our Women Empowerment programs",
+        testi_quote1: "“Through the NGO’s women empowerment program, I learned handicraft skills and now run my own small business. I feel proud to contribute to my family’s income and decisions.”",
+        testi_author1_name: "Kavita Devi",
+        testi_author1_role: "Beneficiary",
+        testi_quote2: "“Training women in digital skills and financial literacy has been life-changing for many. Seeing them gain confidence and independence is the most rewarding experience.”",
+        testi_author2_name: "Anita Joshi",
+        testi_author2_role: "Trainer Volunteer",
+        testi_quote3: "“Supporting this women’s empowerment initiative gives me immense joy. Knowing my contribution helps women achieve independence and dignity is deeply fulfilling.”",
+        testi_author3_name: "Rohit Malhotra",
+        testi_author3_role: "Donor",
+
+        cta_title: "Support Women Empowerment",
+        cta_text: "Your contribution can uplift women by providing skill development, financial independence, and opportunities to lead with confidence.",
+        cta_donate: "Donate for Women Empowerment",
+        cta_volunteer: "Join as Volunteer",
+
+        footer_brand: "NGO/CHARITY",
+        footer_quick_links: "Quick Links",
+        footer_services: "Explore Services",
+        footer_contact: "Contact Us",
+        footer_email_label: "Email:",
+        footer_email: "info@example.com",
+        footer_phone_label: "Phone:",
+        footer_phone: "+91 1234567890",
+        follow_us: "Follow Us",
+        newsletter_title: "Newsletter",
+        newsletter_text: "Get weekly wellness tips and updates in your inbox.",
+        subscribe_btn: "Subscribe",
+        newsletter_placeholder: "Enter your email",
+        newsletter_success: "✅ Thank you for subscribing!",
+        footer_copy: "© 2025 Your Company Name. All Rights Reserved."
+      },
+      ar: {
+        nav_home: "الرئيسية ▾",
+        nav_home1: "الرئيسية 1",
+        nav_home2: "الرئيسية 2",
+        nav_about: "معلومات عنا",
+        nav_blog: "المدونة",
+        nav_services: "الخدمات ▾",
+        nav_all_services: "جميع الخدمات",
+        nav_service1: "التعليم",
+        nav_service2: "الرعاية الصحية",
+        nav_service3: "تدريب المهارات",
+        nav_service4: "تمكين المرأة",
+        nav_service5: "الإغاثة في الكوارث",
+        nav_service6: "رعاية البيئة",
+        nav_contact: "اتصل بنا",
+        logout: "تسجيل الخروج",
+
+        service_title: "تمكين المرأة",
+        service_subtitle: "تمكين النساء من خلال التعليم والمهارات والفرص لقيادة حياة أقوى وأكثر استقلالية.",
+
+        about_title: "حول مهمتنا لتمكين المرأة",
+        about_p: "من التدريب المهني ومجموعات المساعدة الذاتية إلى محو الأمية الرقمية وريادة الأعمال وورش القيادة، ندعم النساء في إطلاق إمكاناتهن الحقيقية. وبالشراكة مع المرشدين والمنظمات المحلية وصنّاع التغيير، نُنشئ مسارات تساعد النساء على النهوض بأنفسهن وإلهام الأجيال القادمة.",
+        about_btn: "تمكين معنا",
+
+        impact_title: "أثرنا",
+        impact_subtitle: "معًا نمكّن الأفراد بالمهارات لغدٍ أفضل",
+        impact_card1: "الشباب المدرَّبون على المهارات المهنية والاحترافية",
+        impact_card2: "النساء المُعَزَّزات عبر سبل العيش والعمل الحر",
+        impact_card3: "أفراد مجهزون بالمهارات الرقمية وتقنية المعلومات",
+        impact_card4: "روّاد أعمال مدعومون لبدء مشاريع صغيرة",
+
+        programs_title: "برامج تمكين المرأة الرئيسية",
+        programs_sub: "مبادرات مخصّصة لرفع مكانة النساء عبر المهارات والقيادة والفرص",
+        prog1_title: "القيادة وبناء الثقة",
+        prog1_p: "نُقيم ورش عمل وتدريبات تمكّن النساء من بناء الثقة بالنفس، وتعزيز مهارات القيادة، والمشاركة الفعالة في صنع القرار. من خلال تنمية الشخصية وتشجيع المشاركة المتكافئة، نصنع مُحَرّكات تغيير داخل الأسر والمجتمعات، ونُلهم أخريات لكسر الحواجز وخلق مجتمع أكثر شمولًا.",
+        prog2_title: "التدريب المهني وسبل العيش",
+        prog2_p: "من خلال تدريب عملي في الخياطة والحرف اليدوية وتجهيز الأغذية والمهارات الرقمية وغيرها، نُمكّن النساء والشباب من تحقيق الاستقلال المالي. تربط برامج سُبل العيش المشاركات بفرص سوقية حقيقية لكسب دخل مستدام ودعم الأسر بكرامة، مع تعزيز الريادة والاعتماد على الذات لخدمة المجتمع ككل.",
+        prog3_title: "المهارات الرقمية للنساء",
+        prog3_p: "في عالم رقمي أولًا، نُزوّد النساء بتعليم الحاسوب والفرص عبر الإنترنت والثقافة المالية الرقمية. نُنمّي مهارات ضرورية مثل أدوات الإنتاجية والخدمات الإلكترونية وأمان الإنترنت والمدفوعات الرقمية لفتح أبواب وظائف وريادة أعمال ومعلومات أوسع.",
+        prog4_title: "الريادة ومجموعات المساعدة الذاتية",
+        prog4_p: "نشجّع النساء على إطلاق أعمالهن وتكوين مجموعات مساعدة ذاتية تُعزّز القوة الجماعية. عبر الإرشاد والدعم بالتمويل الأصغر وتنمية المهارات وروابط السوق، نُساعد على بناء مشاريع مستدامة واستقلال اقتصادي وتعزيز الصوت في صنع القرار.",
+
+        testi_title: "أصوات التمكين",
+        testi_sub: "قصص حقيقية عن الشجاعة والاستقلال والتحوّل عبر برامجنا",
+        testi_quote1: "“من خلال برنامج تمكين المرأة بالمنظمة، تعلّمتُ مهارات الحِرَف وأدير الآن مشروعًا صغيرًا. أشعر بالفخر لمساهمتي في دخل أسرتي وقراراتها.”",
+        testi_author1_name: "كافيتا ديفي",
+        testi_author1_role: "مستفيدة",
+        testi_quote2: "“كان تدريب النساء على المهارات الرقمية والثقافة المالية مُغيّرًا للحياة للكثيرات. مشاهدتهن يكتسبن الثقة والاستقلال هو أعظم مكافأة.”",
+        testi_author2_name: "أنيتا جوشي",
+        testi_author2_role: "مدربة متطوعة",
+        testi_quote3: "“دعم مبادرة تمكين المرأة يمنحني سعادة كبيرة؛ أعلم أن مساهمتي تساعد النساء على الاستقلال والكرامة.”",
+        testi_author3_name: "روهيت مالهوترا",
+        testi_author3_role: "متبرع",
+
+        cta_title: "ادعم تمكين المرأة",
+        cta_text: "بمساهمتك نوفّر تنمية المهارات والاستقلال المالي وفرص القيادة بثقة.",
+        cta_donate: "تبرع لتمكين المرأة",
+        cta_volunteer: "انضم كمتطوع",
+
+        footer_brand: "منظمة خيرية",
+        footer_quick_links: "روابط سريعة",
+        footer_services: "استكشف الخدمات",
+        footer_contact: "اتصل بنا",
+        footer_email_label: "البريد الإلكتروني:",
+        footer_email: "info@example.com",
+        footer_phone_label: "الهاتف:",
+        footer_phone: "+91 1234567890",
+        follow_us: "تابعنا",
+        newsletter_title: "النشرة البريدية",
+        newsletter_text: "احصل على نصائح وتحديثات أسبوعية في بريدك.",
+        subscribe_btn: "اشترك",
+        newsletter_placeholder: "أدخل بريدك الإلكتروني",
+        newsletter_success: "✅ شكرًا لاشتراكك!",
+        footer_copy: "© 2025 اسم شركتك. جميع الحقوق محفوظة."
+      },
+      he: {
+        nav_home: "בית ▾",
+        nav_home1: "בית 1",
+        nav_home2: "בית 2",
+        nav_about: "עלינו",
+        nav_blog: "בלוג",
+        nav_services: "שירותים ▾",
+        nav_all_services: "כל השירותים",
+        nav_service1: "חינוך",
+        nav_service2: "בריאות",
+        nav_service3: "הכשרה מקצועית",
+        nav_service4: "העצמת נשים",
+        nav_service5: "סיוע בשעת חירום",
+        nav_service6: "שמירה על הסביבה",
+        nav_contact: "צור קשר",
+        logout: "התנתק",
+
+        service_title: "העצמת נשים",
+        service_subtitle: "העלאת נשים באמצעות חינוך, מיומנויות והזדמנויות לחיים עצמאיים וחזקים יותר.",
+
+        about_title: "על משימת העצמת הנשים שלנו",
+        about_p: "מכשרות מקצועיות וקבוצות עזרה עצמית ועד אוריינות דיגיטלית, יזמות וסדנאות מנהיגות – אנו מסייעים לנשים לממש את מלוא הפוטנציאל שלהן. בשותפות עם מנטורים וארגונים מקומיים אנו יוצרים מסלולים להובלה ולהשראה לדורות הבאים.",
+        about_btn: "הצטרפו אלינו",
+
+        impact_title: "ההשפעה שלנו",
+        impact_subtitle: "ביחד אנו מעצימים אנשים במיומנויות למחר טוב יותר",
+        impact_card1: "צעירים שהוכשרו במיומנויות מקצועיות",
+        impact_card2: "נשים שהועצמו דרך פרנסה ועצמאות תעסוקתית",
+        impact_card3: "אנשים שרכשו אוריינות דיגיטלית וכישורי IT",
+        impact_card4: "יזמים שנתמכו בהקמת עסקים קטנים",
+
+        programs_title: "תוכניות הדגל להעצמת נשים",
+        programs_sub: "יוזמות ממוקדות להעצמה דרך מיומנויות, מנהיגות והזדמנויות",
+        prog1_title: "מנהיגות ובניית ביטחון עצמי",
+        prog1_p: "אנו מקיימים סדנאות והכשרות שמחזקות ביטחון עצמי, משפרות כישורי מנהיגות ומקדמות השתתפות בקבלת החלטות. כך נשים הופכות לסוכנות שינוי בבית ובקהילה ומעניקות השראה לאחרות לשבור מחסומים ולבנות חברה שוויונית יותר.",
+        prog2_title: "הכשרה מקצועית ופרנסה",
+        prog2_p: "באמצעות הכשרה מעשית בתפירה, מלאכות יד, עיבוד מזון, אוריינות דיגיטלית ועוד, אנו מסייעים לנשים ולצעירים להשיג עצמאות כלכלית ולהתחבר להזדמנויות שוק אמיתיות להכנסה יציבה בכבוד.",
+        prog3_title: "אוריינות דיגיטלית לנשים",
+        prog3_p: "בעולם דיגיטלי-קודם אנו מציידים נשים בכישורי מחשב, הזדמנויות מקוונות וחינוך פיננסי דיגיטלי – שימוש בכלי פרודוקטיביות, שירותים מקוונים, בטיחות ברשת ותשלומים דיגיטליים – לפתיחת דלתות לתעסוקה ויזמות.",
+        prog4_title: "יזמות וקבוצות עזרה עצמית",
+        prog4_p: "אנו מעודדים נשים לפתוח עסקים ולהקים קבוצות עזרה עצמית לחיזוק הכוח המשותף. דרך חונכות, מיקרו־מימון, פיתוח מיומנויות וחיבורים לשוק – נשים מקימות מיזמים ברי קיימא ומחזקות קול בקבלת החלטות.",
+
+        testi_title: "קולות של העצמה",
+        testi_sub: "סיפורים אמיתיים של אומץ, עצמאות ושינוי דרך התוכניות שלנו",
+        testi_quote1: "“בזכות תוכנית העצמת נשים של העמותה רכשתי מיומנויות מלאכה וכעת יש לי עסק קטן. אני גאה לתרום להכנסות המשפחה ולקבלת ההחלטות.”",
+        testi_author1_name: "קאוויתה דווי",
+        testi_author1_role: "מוטבת",
+        testi_quote2: "“הכשרת נשים במיומנויות דיגיטליות ואוריינות פיננסית שינתה חיים לרבות. לראות אותן מתחזקות ומרוויחות עצמאות זו החוויה הכי מתגמלת.”",
+        testi_author2_name: "אניטה ג'ושי",
+        testi_author2_role: "מדריכה מתנדבת",
+        testi_quote3: "“לתמוך ביוזמת העצמת נשים ממלא אותי שמחה; הידיעה שהתרומה שלי מסייעת לנשים להשיג עצמאות וכבוד – משמעותית מאוד.”",
+        testi_author3_name: "רוהיט מאלחוטרה",
+        testi_author3_role: "תורם",
+
+        cta_title: "תמכו בהעצמת נשים",
+        cta_text: "התרומה שלכם מאפשרת פיתוח מיומנויות, עצמאות כלכלית והזדמנויות להנהיג בביטחון.",
+        cta_donate: "תרומה להעצמת נשים",
+        cta_volunteer: "הצטרפו כמתנדבים",
+
+        footer_brand: "עמותה / צדקה",
+        footer_quick_links: "קישורים מהירים",
+        footer_services: "גלו שירותים",
+        footer_contact: "צור קשר",
+        footer_email_label: "דוא\"ל:",
+        footer_email: "info@example.com",
+        footer_phone_label: "טלפון:",
+        footer_phone: "+91 1234567890",
+        follow_us: "עקבו אחרינו",
+        newsletter_title: "ניוזלטר",
+        newsletter_text: "קבלו טיפים ועדכונים שבועיים ישירות לתיבה.",
+        subscribe_btn: "הרשמה",
+        newsletter_placeholder: "הזינו את כתובת המייל",
+        newsletter_success: "✅ תודה שנרשמתם!",
+        footer_copy: "© 2025 שם החברה שלך. כל הזכויות שמורות."
+      }
+    };
+
+    function applyTranslations(lang) {
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (!key) return;
+        if (dictionary[lang] && dictionary[lang][key] !== undefined) {
+          el.textContent = dictionary[lang][key];
+        }
+      });
+
+      document.querySelectorAll('[data-placeholder-key]').forEach(el => {
+        const key = el.getAttribute('data-placeholder-key');
+        if (!key) return;
+        if (dictionary[lang] && dictionary[lang][key] !== undefined) {
+          el.setAttribute('placeholder', dictionary[lang][key]);
+        }
+      });
+
+      document.documentElement.lang = lang;
+      if (lang === 'ar' || lang === 'he') {
+        document.documentElement.setAttribute('dir', 'rtl');
+        document.body.classList.add('is-rtl');
+      } else {
+        document.documentElement.setAttribute('dir', 'ltr');
+        document.body.classList.remove('is-rtl');
+      }
+    }
+
+    function setLanguage(lang) {
+      if (!dictionary[lang]) lang = 'en';
+      localStorage.setItem('siteLanguage', lang);
+      const sel = document.getElementById('languageSelect');
+      if (sel) sel.value = lang;
+      applyTranslations(lang);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('siteLanguage') || 'en';
+      const sel = document.getElementById('languageSelect');
+      if (sel) {
+        sel.value = saved;
+        sel.addEventListener('change', e => setLanguage(e.target.value));
+      }
+      applyTranslations(saved);
+    });
+  })();
+</script>
 
 <script>
   // Counting Animation Function

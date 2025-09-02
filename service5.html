@@ -8,11 +8,10 @@
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/services5.css">
 
-<script src="js/main.js" defer></script>
+  <script src="js/main.js" defer></script>
   <script src="js/header.js" defer></script>
   <script src="js/auth-check.js" defer></script>
-    <script src="js/newsletter.js" defer></script>
-
+  <script src="js/newsletter.js" defer></script>
 </head>
 <body>
   <!-- ================= HEADER ================= -->
@@ -25,57 +24,65 @@
     <nav>
       <ul class="nav-links">
         <li class="dropdown">
-          <a href="index.html">Home ▾</a>
+          <a href="index.html" data-key="nav_home">Home ▾</a>
           <ul class="dropdown-menu">
-            <li><a href="index.html">Home 1</a></li>
-            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="index.html" data-key="nav_home1">Home 1</a></li>
+            <li><a href="home2.html" data-key="nav_home2">Home 2</a></li>
           </ul>
         </li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html" data-key="nav_about">About</a></li>
+        <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
         <li class="dropdown">
-          <a href="services.html">Services ▾</a>
+          <a href="services.html" data-key="nav_services">Services ▾</a>
           <ul class="dropdown-menu">
-                        <li class="mobile-only"><a href="services.html">All Services</a></li>
-<li><a href="service1.html">Education</a></li>
-        <li><a href="service2.html">Healthcare</a></li>
-        <li><a href="service3.html">Skill Training</a></li>
-        <li><a href="service4.html">Empowerment</a></li>
-        <li><a href="service5.html">Disaster Relief</a></li>
-        <li><a href="service6.html">Environmental Care</a></li>
+            <li class="mobile-only"><a href="services.html" data-key="nav_all_services">All Services</a></li>
+            <li><a href="service1.html" data-key="nav_service1">Education</a></li>
+            <li><a href="service2.html" data-key="nav_service2">Healthcare</a></li>
+            <li><a href="service3.html" data-key="nav_service3">Skill Training</a></li>
+            <li><a href="service4.html" data-key="nav_service4">Empowerment</a></li>
+            <li><a href="service5.html" data-key="nav_service5">Disaster Relief</a></li>
+            <li><a href="service6.html" data-key="nav_service6">Environmental Care</a></li>
           </ul>
         </li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
       </ul>
     </nav>
+
+    <!-- ================= Language Toggle (added) ================= -->
+    <div class="language-toggle" style="display:inline-block; margin:0 12px;">
+      <select id="languageSelect" aria-label="Select language">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="he">עברית</option>
+      </select>
+    </div>
 
     <div class="profile-container">
       <div class="profile" id="profile-dropdown-toggle">
         <span id="profile-initials"></span>
       </div>
       <ul class="profile-dropdown" id="profile-dropdown">
-        <li><a href="#" id="logout-btn">Logout</a></li>
+        <li><a href="#" id="logout-btn" data-key="logout">Logout</a></li>
       </ul>
     </div>
 
     <button id="themeToggle">🌙</button>
     <button id="mobile-menu-toggle" class="hamburger">☰</button>
+
+    
   </div>
 </header>
 
   <!-- ================= MAIN SECTIONS ================= -->
   <main>
 <!-- Hero Section -->
-<!-- Hero Section -->
 <section class="service-hero">
   <div class="service-hero-overlay"></div>
   <div class="service-hero-content">
-    <h1>Disaster Relief</h1>
-    <p>Providing urgent aid, shelter, and hope to communities affected by natural disasters and emergencies.</p>
+    <h1 data-key="service_title">Disaster Relief</h1>
+    <p data-key="service_subtitle">Providing urgent aid, shelter, and hope to communities affected by natural disasters and emergencies.</p>
   </div>
 </section>
-
-
 
 <!-- About Section -->
 <section class="about-modern">
@@ -89,56 +96,55 @@
 
     <!-- Text Side -->
     <div class="about-content">
-      <h2>About Our Disaster Relief Mission</h2>
+      <h2 data-key="about_title">About Our Disaster Relief Mission</h2>
     
-      <p>
+      <p data-key="about_p">
         In times of crisis, from distributing food, clean water, and medical aid to setting up temporary shelters and 
         rehabilitation programs, we work tirelessly to restore hope and dignity. By collaborating with 
         volunteers, local authorities, and relief organizations, we ensure that help reaches those who 
         need it the most—quickly and effectively.
       </p>
-      <a href="contact.html" class="about-btn">Join Relief Efforts</a>
+      <a href="contact.html" class="about-btn" data-key="about_btn">Join Relief Efforts</a>
     </div>
   </div>
 </section>
 
-
-
 <section class="impact" id="impact">
   <div class="impact-container">
-    <h2 class="section-title">Our Impact</h2>
-    <p class="section-subtitle">Together, we are empowering individuals with skills for a better tomorrow</p>
+    <h2 class="section-title" data-key="impact_title">Our Impact</h2>
+    <p class="section-subtitle" data-key="impact_subtitle">Together, we are empowering individuals with skills for a better tomorrow</p>
 
     <div class="impact-grid">
       <!-- Impact Card 1 -->
       <div class="impact-card">
         <h3 class="count" data-target="3000">0</h3>
-        <p>Youth trained in vocational and professional skills</p>
+        <p data-key="impact_card1">Youth trained in vocational and professional skills</p>
       </div>
 
       <!-- Impact Card 2 -->
       <div class="impact-card">
         <h3 class="count" data-target="1500">0</h3>
-        <p>Women empowered through livelihood and self-employment programs</p>
+        <p data-key="impact_card2">Women empowered through livelihood and self-employment programs</p>
       </div>
 
       <!-- Impact Card 3 -->
       <div class="impact-card">
         <h3 class="count" data-target="1200">0</h3>
-        <p>Individuals equipped with digital literacy and IT skills</p>
+        <p data-key="impact_card3">Individuals equipped with digital literacy and IT skills</p>
       </div>
 
       <!-- Impact Card 4 -->
       <div class="impact-card">
         <h3 class="count" data-target="500">0</h3>
-        <p>Entrepreneurs supported in starting small businesses</p>
+        <p data-key="impact_card4">Entrepreneurs supported in starting small businesses</p>
       </div>
     </div>
   </div>
 </section>
+
 <section class="programs-alt" id="programs">
-  <h2 class="section-title">Our Key Disaster Relief Programs</h2>
-  <p class="section-subtitle">Swift and compassionate initiatives to support communities in times of crisis</p>
+  <h2 class="section-title" data-key="programs_title">Our Key Disaster Relief Programs</h2>
+  <p class="section-subtitle" data-key="programs_sub">Swift and compassionate initiatives to support communities in times of crisis</p>
 
   <!-- Program 1 -->
   <div class="program-item reveal fade-left">
@@ -146,8 +152,8 @@
       <img src="images/ser5_1.jpeg" alt="Emergency Relief Aid">
     </div>
     <div class="program-text">
-      <h3>Emergency Relief Aid</h3>
-      <p>
+      <h3 data-key="prog1_title">Emergency Relief Aid</h3>
+      <p data-key="prog1_p">
        We provide immediate relief through food packets, clean drinking water, blankets, medical supplies, and other essentials to families affected by floods, earthquakes, and other natural disasters. Our rapid-response teams work tirelessly to reach vulnerable communities during their toughest hours, ensuring survival and dignity. Beyond emergency response, we also support rehabilitation efforts to help affected families rebuild their lives and restore hope.
       </p>
     </div>
@@ -156,8 +162,8 @@
   <!-- Program 2 -->
   <div class="program-item reveal fade-right">
     <div class="program-text">
-      <h3>Medical Assistance & Health Camps</h3>
-      <p>
+      <h3 data-key="prog2_title">Medical Assistance & Health Camps</h3>
+      <p data-key="prog2_p">
         Our dedicated teams set up mobile health camps to deliver first aid, medical check-ups, vaccinations, and psychological support to disaster-affected individuals. By reaching remote and vulnerable communities, we ensure access to essential healthcare during critical times. In addition to emergency care, we focus on preventive health awareness, nutrition guidance, and mental well-being, helping people recover with strength and dignity.
       </p>
     </div>
@@ -172,8 +178,8 @@
       <img src="images/ser5_3.jpeg" alt="Temporary Shelter & Rehabilitation">
     </div>
     <div class="program-text">
-      <h3>Temporary Shelter & Rehabilitation</h3>
-      <p>
+      <h3 data-key="prog3_title">Temporary Shelter & Rehabilitation</h3>
+      <p data-key="prog3_p">
         We establish safe shelters with essential amenities for families displaced by natural disasters and crises. These shelters provide immediate protection, food, and basic necessities to ensure safety and dignity during difficult times. Beyond relief, our rehabilitation programs focus on rebuilding homes, restoring livelihoods, and empowering families to restart their lives with resilience and security. By combining compassion with long-term support, we help communities move from survival to stability.
       </p>
     </div>
@@ -182,8 +188,8 @@
   <!-- Program 4 -->
   <div class="program-item reveal fade-right">
     <div class="program-text">
-      <h3>Community Preparedness & Training</h3>
-      <p>
+      <h3 data-key="prog4_title">Community Preparedness & Training</h3>
+      <p data-key="prog4_p">
         Prevention is as important as relief. We organize disaster preparedness workshops, evacuation drills, and resilience training to ensure communities are equipped to respond swiftly and effectively during emergencies. Our programs empower local volunteers, schools, and families with practical knowledge on risk reduction, first aid, and safe evacuation practices. By building awareness and readiness, we help minimize loss of life and property, creating resilient communities that can withstand future challenges.
       </p>
     </div>
@@ -195,37 +201,37 @@
 
 <section class="testimonials" id="testimonials">
   <div class="container">
-    <h2 class="section-title">Voices of Resilience</h2>
-    <p class="section-subtitle">Real stories of survival, support, and rebuilding lives through our Disaster Relief programs</p>
+    <h2 class="section-title" data-key="testi_title">Voices of Resilience</h2>
+    <p class="section-subtitle" data-key="testi_sub">Real stories of survival, support, and rebuilding lives through our Disaster Relief programs</p>
 
     <div class="testimonials-grid">
       <!-- Testimonial 1 -->
       <div class="testimonial-card">
-        <p class="quote">“When floods destroyed our home, the NGO team provided us with food, blankets, and a safe shelter. Their quick support gave us the strength to survive those critical days.”</p>
+        <p class="quote" data-key="testi_quote1">“When floods destroyed our home, the NGO team provided us with food, blankets, and a safe shelter. Their quick support gave us the strength to survive those critical days.”</p>
         <div class="author">
           <img src="images/ser5_t1.jpeg" alt="Disaster Survivor">
-          <h4>Meena Kumari</h4>
-          <span>Flood Survivor</span>
+          <h4 data-key="testi_author1_name">Meena Kumari</h4>
+          <span data-key="testi_author1_role">Flood Survivor</span>
         </div>
       </div>
 
       <!-- Testimonial 2 -->
       <div class="testimonial-card">
-        <p class="quote">“As a volunteer during the earthquake relief mission, I witnessed how timely aid and medical camps saved countless lives. It was a life-changing experience to serve my community.”</p>
+        <p class="quote" data-key="testi_quote2">“As a volunteer during the earthquake relief mission, I witnessed how timely aid and medical camps saved countless lives. It was a life-changing experience to serve my community.”</p>
         <div class="author">
           <img src="images/ser5_t2.jpeg" alt="Volunteer">
-          <h4>Arun Singh</h4>
-          <span>Relief Volunteer</span>
+          <h4 data-key="testi_author2_name">Arun Singh</h4>
+          <span data-key="testi_author2_role">Relief Volunteer</span>
         </div>
       </div>
 
       <!-- Testimonial 3 -->
       <div class="testimonial-card">
-        <p class="quote">“Contributing to the disaster relief fund was one of the most meaningful decisions of my life. Knowing that my support helped rebuild homes and bring hope to families is truly rewarding.”</p>
+        <p class="quote" data-key="testi_quote3">“Contributing to the disaster relief fund was one of the most meaningful decisions of my life. Knowing that my support helped rebuild homes and bring hope to families is truly rewarding.”</p>
         <div class="author">
           <img src="images/ser5_t3.jpeg" alt="Donor">
-          <h4>Priya Mehta</h4>
-          <span>Donor</span>
+          <h4 data-key="testi_author3_name">Priya Mehta</h4>
+          <span data-key="testi_author3_role">Donor</span>
         </div>
       </div>
     </div>
@@ -234,11 +240,11 @@
 
 <section class="cta" id="cta">
   <div class="cta-container">
-    <h2>Support Disaster Relief</h2>
-    <p>Your help can provide emergency aid, food, shelter, and medical care to families affected by natural disasters. Together, we can bring hope and rebuild lives.</p>
+    <h2 data-key="cta_title">Support Disaster Relief</h2>
+    <p data-key="cta_text">Your help can provide emergency aid, food, shelter, and medical care to families affected by natural disasters. Together, we can bring hope and rebuild lives.</p>
     <div class="cta-buttons">
-      <a href="donate.html" class="cta-btn donate-btn">Donate for Relief</a>
-      <a href="contact.html" class="cta-btn volunteer-btn">Join as Volunteer</a>
+      <a href="donate.html" class="cta-btn donate-btn" data-key="cta_donate">Donate for Relief</a>
+      <a href="contact.html" class="cta-btn volunteer-btn" data-key="cta_volunteer">Join as Volunteer</a>
     </div>
   </div>
 </section>
@@ -254,40 +260,40 @@
     <!-- Logo Section -->
     <div class="footer-logo">
       <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
-      <h4>NGO/CHARITY</h4>
+      <h4 data-key="footer_brand">NGO/CHARITY</h4>
     </div>
 
     <!-- Quick Links -->
     <div class="footer-links">
-      <h4>Quick Links</h4>
+      <h4 data-key="footer_quick_links">Quick Links</h4>
       <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html" data-key="nav_about">About</a></li>
+        <li><a href="services.html" data-key="nav_services">Services</a></li>
+        <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
+        <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
       </ul>
     </div>
 
     <!-- Services -->
     <div class="footer-services">
-      <h4>Explore Services</h4>
+      <h4 data-key="footer_services">Explore Services</h4>
       <ul>
-       <li><a href="service1.html">Education</a></li>
-        <li><a href="service2.html">Healthcare</a></li>
-        <li><a href="service3.html">Skill Training</a></li>
-        <li><a href="service4.html">Women Empowerment</a></li>
-        <li><a href="service5.html">Disaster Relief</a></li>
-        <li><a href="service6.html">Environmental Care</a></li>
+       <li><a href="service1.html" data-key="nav_service1">Education</a></li>
+        <li><a href="service2.html" data-key="nav_service2">Healthcare</a></li>
+        <li><a href="service3.html" data-key="nav_service3">Skill Training</a></li>
+        <li><a href="service4.html" data-key="nav_service4">Women Empowerment</a></li>
+        <li><a href="service5.html" data-key="nav_service5">Disaster Relief</a></li>
+        <li><a href="service6.html" data-key="nav_service6">Environmental Care</a></li>
       </ul>
     </div>
 
     <!-- Contact -->
     <div class="footer-contact">
-      <h4>Contact Us</h4>
-      <p><strong>Email:</strong> info@example.com</p>
-      <p><strong>Phone:</strong> +91 1234567890</p>
+      <h4 data-key="footer_contact">Contact Us</h4>
+      <p><strong data-key="footer_email_label">Email:</strong> <span data-key="footer_email">info@example.com</span></p>
+      <p><strong data-key="footer_phone_label">Phone:</strong> <span data-key="footer_phone">+91 1234567890</span></p>
 
-      <h4>Follow Us</h4>
+      <h4 data-key="follow_us">Follow Us</h4>
       <div class="social">
         <a href="https://facebook.com"><img src="images/fb.png" alt="Facebook"></a>
         <a href="https://twitter.com"><img src="images/x.png" alt="Twitter"></a>
@@ -297,22 +303,300 @@
 
     <!-- Newsletter -->
     <div class="footer-newsletter">
-      <h4>Newsletter</h4>
-      <p>Get weekly wellness tips and updates in your inbox.</p>
+      <h4 data-key="newsletter_title">Newsletter</h4>
+      <p data-key="newsletter_text">Get weekly wellness tips and updates in your inbox.</p>
       <form id="newsletter-form">
-        <input type="email" id="newsletter-email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
+        <input type="email" id="newsletter-email" placeholder="Enter your email" required data-placeholder-key="newsletter_placeholder">
+        <button type="submit" data-key="subscribe_btn">Subscribe</button>
       </form>
-      <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;">
+      <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;" data-key="newsletter_success">
     ✅ Thank you for subscribing!
   </div>
     </div>
   </div>
 
-  <div class="footer-copy">
+  <div class="footer-copy" data-key="footer_copy">
     &copy; 2025 Your Company Name. All Rights Reserved.
   </div>
 </footer>
+
+<!-- ================= Language logic (added) ================= -->
+<script>
+  (function(){
+    const dictionary = {
+      en: {
+        nav_home: "Home ▾",
+        nav_home1: "Home 1",
+        nav_home2: "Home 2",
+        nav_about: "About",
+        nav_blog: "Blog",
+        nav_services: "Services ▾",
+        nav_all_services: "All Services",
+        nav_service1: "Education",
+        nav_service2: "Healthcare",
+        nav_service3: "Skill Training",
+        nav_service4: "Empowerment",
+        nav_service5: "Disaster Relief",
+        nav_service6: "Environmental Care",
+        nav_contact: "Contact",
+        logout: "Logout",
+
+        service_title: "Disaster Relief",
+        service_subtitle: "Providing urgent aid, shelter, and hope to communities affected by natural disasters and emergencies.",
+
+        about_title: "About Our Disaster Relief Mission",
+        about_p: "In times of crisis, from distributing food, clean water, and medical aid to setting up temporary shelters and rehabilitation programs, we work tirelessly to restore hope and dignity. By collaborating with volunteers, local authorities, and relief organizations, we ensure that help reaches those who need it the most—quickly and effectively.",
+        about_btn: "Join Relief Efforts",
+
+        impact_title: "Our Impact",
+        impact_subtitle: "Together, we are empowering individuals with skills for a better tomorrow",
+        impact_card1: "Youth trained in vocational and professional skills",
+        impact_card2: "Women empowered through livelihood and self-employment programs",
+        impact_card3: "Individuals equipped with digital literacy and IT skills",
+        impact_card4: "Entrepreneurs supported in starting small businesses",
+
+        programs_title: "Our Key Disaster Relief Programs",
+        programs_sub: "Swift and compassionate initiatives to support communities in times of crisis",
+        prog1_title: "Emergency Relief Aid",
+        prog1_p: "We provide immediate relief through food packets, clean drinking water, blankets, medical supplies, and other essentials to families affected by floods, earthquakes, and other natural disasters. Our rapid-response teams work tirelessly to reach vulnerable communities during their toughest hours, ensuring survival and dignity. Beyond emergency response, we also support rehabilitation efforts to help affected families rebuild their lives and restore hope.",
+        prog2_title: "Medical Assistance & Health Camps",
+        prog2_p: "Our dedicated teams set up mobile health camps to deliver first aid, medical check-ups, vaccinations, and psychological support to disaster-affected individuals. By reaching remote and vulnerable communities, we ensure access to essential healthcare during critical times. In addition to emergency care, we focus on preventive health awareness, nutrition guidance, and mental well-being, helping people recover with strength and dignity.",
+        prog3_title: "Temporary Shelter & Rehabilitation",
+        prog3_p: "We establish safe shelters with essential amenities for families displaced by natural disasters and crises. These shelters provide immediate protection, food, and basic necessities to ensure safety and dignity during difficult times. Beyond relief, our rehabilitation programs focus on rebuilding homes, restoring livelihoods, and empowering families to restart their lives with resilience and security. By combining compassion with long-term support, we help communities move from survival to stability.",
+        prog4_title: "Community Preparedness & Training",
+        prog4_p: "Prevention is as important as relief. We organize disaster preparedness workshops, evacuation drills, and resilience training to ensure communities are equipped to respond swiftly and effectively during emergencies. Our programs empower local volunteers, schools, and families with practical knowledge on risk reduction, first aid, and safe evacuation practices. By building awareness and readiness, we help minimize loss of life and property, creating resilient communities that can withstand future challenges.",
+
+        testi_title: "Voices of Resilience",
+        testi_sub: "Real stories of survival, support, and rebuilding lives through our Disaster Relief programs",
+        testi_quote1: "“When floods destroyed our home, the NGO team provided us with food, blankets, and a safe shelter. Their quick support gave us the strength to survive those critical days.”",
+        testi_author1_name: "Meena Kumari",
+        testi_author1_role: "Flood Survivor",
+        testi_quote2: "“As a volunteer during the earthquake relief mission, I witnessed how timely aid and medical camps saved countless lives. It was a life-changing experience to serve my community.”",
+        testi_author2_name: "Arun Singh",
+        testi_author2_role: "Relief Volunteer",
+        testi_quote3: "“Contributing to the disaster relief fund was one of the most meaningful decisions of my life. Knowing that my support helped rebuild homes and bring hope to families is truly rewarding.”",
+        testi_author3_name: "Priya Mehta",
+        testi_author3_role: "Donor",
+
+        cta_title: "Support Disaster Relief",
+        cta_text: "Your help can provide emergency aid, food, shelter, and medical care to families affected by natural disasters. Together, we can bring hope and rebuild lives.",
+        cta_donate: "Donate for Relief",
+        cta_volunteer: "Join as Volunteer",
+
+        footer_brand: "NGO/CHARITY",
+        footer_quick_links: "Quick Links",
+        footer_services: "Explore Services",
+        footer_contact: "Contact Us",
+        footer_email_label: "Email:",
+        footer_email: "info@example.com",
+        footer_phone_label: "Phone:",
+        footer_phone: "+91 1234567890",
+        follow_us: "Follow Us",
+        newsletter_title: "Newsletter",
+        newsletter_text: "Get weekly wellness tips and updates in your inbox.",
+        subscribe_btn: "Subscribe",
+        newsletter_placeholder: "Enter your email",
+        newsletter_success: "✅ Thank you for subscribing!",
+        footer_copy: "© 2025 Your Company Name. All Rights Reserved."
+      },
+      ar: {
+        nav_home: "الرئيسية ▾",
+        nav_home1: "الرئيسية 1",
+        nav_home2: "الرئيسية 2",
+        nav_about: "معلومات عنا",
+        nav_blog: "المدونة",
+        nav_services: "الخدمات ▾",
+        nav_all_services: "جميع الخدمات",
+        nav_service1: "التعليم",
+        nav_service2: "الرعاية الصحية",
+        nav_service3: "تدريب المهارات",
+        nav_service4: "تمكين المرأة",
+        nav_service5: "الإغاثة في الكوارث",
+        nav_service6: "رعاية البيئة",
+        nav_contact: "اتصل بنا",
+        logout: "تسجيل الخروج",
+
+        service_title: "الإغاثة في الكوارث",
+        service_subtitle: "تقديم المساعدة العاجلة والمأوى والأمل للمجتمعات المتضررة من الكوارث الطبيعية وحالات الطوارئ.",
+
+        about_title: "حول مهمتنا للإغاثة في الكوارث",
+        about_p: "في أوقات الأزمات، من توزيع الغذاء والمياه النظيفة والمساعدات الطبية إلى إنشاء الملاجئ المؤقتة وبرامج إعادة التأهيل، نعمل بلا كلل لاستعادة الأمل والكرامة. ومن خلال التعاون مع المتطوعين والسلطات المحلية ومنظمات الإغاثة، نضمن وصول المساعدة إلى من هم في أمسّ الحاجة إليها — بسرعة وفعالية.",
+        about_btn: "انضم لجهود الإغاثة",
+
+        impact_title: "أثرنا",
+        impact_subtitle: "معًا نمكّن الأفراد بالمهارات لغدٍ أفضل",
+        impact_card1: "الشباب المدرَّبون على المهارات المهنية والاحترافية",
+        impact_card2: "النساء المُعَزَّزات عبر سبل العيش والعمل الحر",
+        impact_card3: "أفراد مجهزون بالمهارات الرقمية وتقنية المعلومات",
+        impact_card4: "روّاد أعمال مدعومون لبدء مشاريع صغيرة",
+
+        programs_title: "برامج الإغاثة في الكوارث الرئيسية",
+        programs_sub: "مبادرات سريعة ورحيمة لدعم المجتمعات في أوقات الأزمات",
+        prog1_title: "المساعدات الطارئة",
+        prog1_p: "نوفّر إغاثة فورية عبر طرود غذائية ومياه شرب نظيفة وبطانيات وإمدادات طبية وغيرها من الضروريات للأسر المتضررة من الفيضانات والزلازل وغيرها من الكوارث. تعمل فرق الاستجابة السريعة بلا توقف للوصول إلى الفئات الأشد ضعفًا في أصعب ساعاتهم، لضمان البقاء والكرامة. وإضافة إلى الاستجابة العاجلة، ندعم جهود إعادة التأهيل لمساعدة الأسر على إعادة بناء حياتها واستعادة الأمل.",
+        prog2_title: "المساعدة الطبية والمعسكرات الصحية",
+        prog2_p: "تقيم فرقنا المتخصصة عيادات متنقلة لتقديم الإسعافات الأولية والفحوصات واللقاحات والدعم النفسي للمحتاجين في المناطق المتضررة. ومن خلال الوصول إلى المجتمعات النائية والهشة، نضمن الحصول على الرعاية الأساسية في الأوقات الحرجة. كما نركز على التوعية الصحية الوقائية والتغذية والصحة النفسية لمساندة التعافي بالقوة والكرامة.",
+        prog3_title: "مأوى مؤقت وإعادة التأهيل",
+        prog3_p: "ننشئ ملاجئ آمنة بخدمات أساسية للأسر التي شُرّدت بسبب الكوارث والأزمات. توفّر هذه الملاجئ الحماية الفورية والغذاء والاحتياجات الأساسية لضمان الأمان والكرامة في الأوقات الصعبة. بعد مرحلة الإغاثة، تُعنى برامجنا بإعادة بناء المنازل واستعادة سبل العيش وتمكين الأسر من بدء حياة جديدة بمرونة وأمان.",
+        prog4_title: "جاهزية المجتمع والتدريب",
+        prog4_p: "الوقاية لا تقل أهمية عن الإغاثة. ننظم ورش جاهزية للكوارث وتمارين إخلاء وتدريب على المرونة لضمان استعداد المجتمع للاستجابة بسرعة وفعالية أثناء الطوارئ. نُمكّن المتطوعين والمدارس والأسر بالمعرفة العملية حول الحد من المخاطر والإسعافات الأولية وممارسات الإخلاء الآمن، للحد من الخسائر وبناء مجتمعات قادرة على الصمود.",
+
+        testi_title: "أصوات الصمود",
+        testi_sub: "قصص حقيقية عن النجاة والدعم وإعادة البناء عبر برامج الإغاثة",
+        testi_quote1: "“حين جرفت الفيضانات منزلنا، قدّم لنا فريق المنظمة الطعام والبطانيات ومأوى آمنًا. دعمهم السريع منحنا قوة البقاء في تلك الأيام الحرجة.”",
+        testi_author1_name: "مينا كوماري",
+        testi_author1_role: "ناجية من الفيضانات",
+        testi_quote2: "“بصفتي متطوعًا خلال مهمة إغاثة الزلزال، شاهدت كيف أن المساعدات في الوقت المناسب والعيادات الطبية أنقذت أرواحًا كثيرة. كانت تجربة غيّرت حياتي في خدمة مجتمعي.”",
+        testi_author2_name: "أرون سينغ",
+        testi_author2_role: "متطوع إغاثة",
+        testi_quote3: "“كانت المساهمة في صندوق الإغاثة من الكوارث أحد أكثر قراراتي معنىً. معرفة أن دعمي ساعد في إعادة بناء المنازل وبث الأمل في الأسر أمر مجزٍ للغاية.”",
+        testi_author3_name: "بريا ميهتا",
+        testi_author3_role: "متبرعة",
+
+        cta_title: "ادعم الإغاثة في الكوارث",
+        cta_text: "يمكن لمساعدتك أن توفّر الإغاثة العاجلة والغذاء والمأوى والرعاية الطبية للأسر المتضررة. معًا نستطيع بث الأمل وإعادة البناء.",
+        cta_donate: "تبرع للإغاثة",
+        cta_volunteer: "انضم كمتطوع",
+
+        footer_brand: "منظمة خيرية",
+        footer_quick_links: "روابط سريعة",
+        footer_services: "استكشف الخدمات",
+        footer_contact: "اتصل بنا",
+        footer_email_label: "البريد الإلكتروني:",
+        footer_email: "info@example.com",
+        footer_phone_label: "الهاتف:",
+        footer_phone: "+91 1234567890",
+        follow_us: "تابعنا",
+        newsletter_title: "النشرة البريدية",
+        newsletter_text: "احصل على نصائح وتحديثات أسبوعية في بريدك.",
+        subscribe_btn: "اشترك",
+        newsletter_placeholder: "أدخل بريدك الإلكتروني",
+        newsletter_success: "✅ شكرًا لاشتراكك!",
+        footer_copy: "© 2025 اسم شركتك. جميع الحقوق محفوظة."
+      },
+      he: {
+        nav_home: "בית ▾",
+        nav_home1: "בית 1",
+        nav_home2: "בית 2",
+        nav_about: "עלינו",
+        nav_blog: "בלוג",
+        nav_services: "שירותים ▾",
+        nav_all_services: "כל השירותים",
+        nav_service1: "חינוך",
+        nav_service2: "בריאות",
+        nav_service3: "הכשרה מקצועית",
+        nav_service4: "העצמה",
+        nav_service5: "סיוע בשעת חירום",
+        nav_service6: "שמירה על הסביבה",
+        nav_contact: "צור קשר",
+        logout: "התנתק",
+
+        service_title: "סיוע בעת אסון",
+        service_subtitle: "הענקת סיוע דחוף, מקלט ותקווה לקהילות שנפגעו מאסונות טבע ומקרי חירום.",
+
+        about_title: "על משימת הסיוע שלנו בעת אסון",
+        about_p: "בשעת משבר אנו מחלקים מזון, מים נקיים וציוד רפואי, ומקימים מקלטים זמניים ותוכניות שיקום. בשיתוף מתנדבים, רשויות מקומיות וארגוני סיוע, אנו דואגים שהעזרה תגיע במהירות וביעילות אל מי שנזקק לה ביותר.",
+        about_btn: "הצטרפו למאמצי הסיוע",
+
+        impact_title: "ההשפעה שלנו",
+        impact_subtitle: "ביחד אנו מעצימים אנשים במיומנויות למחר טוב יותר",
+        impact_card1: "צעירים שהוכשרו במיומנויות מקצועיות",
+        impact_card2: "נשים שעצמאותן הכלכלית התחזקה",
+        impact_card3: "אנשים שרכשו אוריינות דיגיטלית וכישורי IT",
+        impact_card4: "יזמים שנתמכו בהקמת עסקים קטנים",
+
+        programs_title: "תוכניות הסיוע המרכזיות שלנו",
+        programs_sub: "יוזמות מהירות ואמפתיות לתמיכה בקהילות בשעת משבר",
+        prog1_title: "סיוע חירום מיידי",
+        prog1_p: "אנו מספקים מזון, מים לשתייה, שמיכות, ציוד רפואי ופריטים חיוניים למשפחות שנפגעו משיטפונות, רעידות אדמה ואסונות נוספים. צוותי התגובה שלנו פועלים ללא הרף להגיע לאוכלוסיות פגיעות בשעותיהן הקשות. בנוסף, אנו מלווים בשיקום כדי לסייע למשפחות לשקם את חייהן ולהשיב תקווה.",
+        prog2_title: "סיוע רפואי ומרפאות ניידות",
+        prog2_p: "צוותינו מקימים מרפאות ניידות למתן עזרה ראשונה, בדיקות, חיסונים ותמיכה נפשית לנפגעי אסון. אנו מגיעים גם לקהילות מרוחקות כדי להבטיח נגישות לשירותי בריאות חיוניים, לצד הסברה מניעתית, תזונה ורווחה נפשית.",
+        prog3_title: "מקלט זמני ושיקום",
+        prog3_p: "אנו מקימים מקלטים בטוחים עם שירותים בסיסיים למשפחות שאיבדו את ביתן. המקלטים מעניקים הגנה, מזון וצרכים בסיסיים לשמירה על בטיחות וכבוד. בהמשך אנו מתמקדים בבנייה מחדש, בשיקום מקורות פרנסה ובהעצמה לחזרה לחיים יציבים.",
+        prog4_title: "היערכות קהילתית והכשרה",
+        prog4_p: "מניעה חשובה כמו הסיוע עצמו. אנו מקיימים סדנאות היערכות, תרגילי פינוי והכשרות לחוסן, ומקנים ידע מעשי לצמצום סיכונים, לעזרה ראשונה ולפינוי בטוח – כדי למזער אבדות ולחזק קהילות עמידות.",
+
+        testi_title: "קולות של חוסן",
+        testi_sub: "סיפורי הישרדות, תמיכה ובנייה מחדש מתוכניות הסיוע שלנו",
+        testi_quote1: "“כשהשיטפון החריב את ביתנו, צוות העמותה נתן לנו מזון, שמיכות ומקלט בטוח. הסיוע המהיר שלהם נתן לנו כוח לשרוד את הימים הקריטיים.”",
+        testi_author1_name: "מינה קומהרי",
+        testi_author1_role: "שורדת שיטפון",
+        testi_quote2: "“כמתנדב במשימת סיוע לרעידת אדמה, ראיתי כיצד סיוע בזמן ומרפאות ניידות מצילים חיים. הייתה זו חוויה ששינתה את חיי.”",
+        testi_author2_name: "ארון סינג",
+        testi_author2_role: "מתנדב סיוע",
+        testi_quote3: "“התרומה לקרן הסיוע באסונות הייתה אחת ההחלטות המשמעותיות שלי. הידיעה שסייעתי לבנות בתים ולהחזיר תקווה – מרגשת במיוחד.”",
+        testi_author3_name: "פריה מהטה",
+        testi_author3_role: "תורמת",
+
+        cta_title: "תמכו בסיוע בעת אסון",
+        cta_text: "עזרתכם מאפשרת סיוע חירום, מזון, מקלט וטיפול רפואי למשפחות שנפגעו. יחד נחזיר תקווה ונבנה מחדש.",
+        cta_donate: "תרומה לסיוע",
+        cta_volunteer: "הצטרפו כמתנדבים",
+
+        footer_brand: "עמותה / צדקה",
+        footer_quick_links: "קישורים מהירים",
+        footer_services: "גלו שירותים",
+        footer_contact: "צור קשר",
+        footer_email_label: "דוא\"ל:",
+        footer_email: "info@example.com",
+        footer_phone_label: "טלפון:",
+        footer_phone: "+91 1234567890",
+        follow_us: "עקבו אחרינו",
+        newsletter_title: "ניוזלטר",
+        newsletter_text: "קבלו טיפים ועדכונים שבועיים ישירות לתיבה.",
+        subscribe_btn: "הרשמה",
+        newsletter_placeholder: "הזינו את כתובת המייל",
+        newsletter_success: "✅ תודה שנרשמתם!",
+        footer_copy: "© 2025 שם החברה שלך. כל הזכויות שמורות."
+      }
+    };
+
+    function applyTranslations(lang) {
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (!key) return;
+        if (dictionary[lang] && dictionary[lang][key] !== undefined) {
+          el.textContent = dictionary[lang][key];
+        }
+      });
+
+      document.querySelectorAll('[data-placeholder-key]').forEach(el => {
+        const key = el.getAttribute('data-placeholder-key');
+        if (!key) return;
+        if (dictionary[lang] && dictionary[lang][key] !== undefined) {
+          el.setAttribute('placeholder', dictionary[lang][key]);
+        }
+      });
+
+      document.documentElement.lang = lang;
+      if (lang === 'ar' || lang === 'he') {
+        document.documentElement.setAttribute('dir', 'rtl');
+        document.body.classList.add('is-rtl');
+      } else {
+        document.documentElement.setAttribute('dir', 'ltr');
+        document.body.classList.remove('is-rtl');
+      }
+    }
+
+    function setLanguage(lang) {
+      if (!dictionary[lang]) lang = 'en';
+      localStorage.setItem('siteLanguage', lang);
+      const sel = document.getElementById('languageSelect');
+      if (sel) sel.value = lang;
+      applyTranslations(lang);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('siteLanguage') || 'en';
+      const sel = document.getElementById('languageSelect');
+      if (sel) {
+        sel.value = saved;
+        sel.addEventListener('change', e => setLanguage(e.target.value));
+      }
+      applyTranslations(saved);
+    });
+  })();
+</script>
 
 <script>
   // Counting Animation Function

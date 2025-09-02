@@ -12,6 +12,7 @@
   <script src="js/auth-check.js" defer></script>
     <script src="js/newsletter.js" defer></script>
 
+  
 </head>
 <body>
   <!-- ================= HEADER ================= -->
@@ -24,37 +25,46 @@
     <nav>
       <ul class="nav-links">
         <li class="dropdown">
-          <a href="index.html">Home ▾</a>
+          <a href="index.html" data-key="nav_home">Home ▾</a>
           <ul class="dropdown-menu">
-            <li><a href="index.html">Home 1</a></li>
-            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="index.html" data-key="nav_home1">Home 1</a></li>
+            <li><a href="home2.html" data-key="nav_home2">Home 2</a></li>
           </ul>
         </li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html" data-key="nav_about">About</a></li>
+        <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
         <li class="dropdown">
-          <a href="services.html">Services ▾</a>
+          <a href="services.html" data-key="nav_services">Services ▾</a>
           <ul class="dropdown-menu">
-                        <li class="mobile-only"><a href="services.html">All Services</a></li>
+                        <li class="mobile-only"><a href="services.html" data-key="nav_all_services">All Services</a></li>
 
-           <li><a href="service1.html">Education</a></li>
-        <li><a href="service2.html">Healthcare</a></li>
-        <li><a href="service3.html">Skill Training</a></li>
-        <li><a href="service4.html">Empowerment</a></li>
-        <li><a href="service5.html">Disaster Relief</a></li>
-        <li><a href="service6.html">Environmental Care</a></li>
+           <li><a href="service1.html" data-key="nav_service1">Education</a></li>
+        <li><a href="service2.html" data-key="nav_service2">Healthcare</a></li>
+        <li><a href="service3.html" data-key="nav_service3">Skill Training</a></li>
+        <li><a href="service4.html" data-key="nav_service4">Empowerment</a></li>
+        <li><a href="service5.html" data-key="nav_service5">Disaster Relief</a></li>
+        <li><a href="service6.html" data-key="nav_service6">Environmental Care</a></li>
           </ul>
         </li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
       </ul>
     </nav>
+
+    <!-- Language Toggle (added) -->
+    <div class="language-toggle">
+      <select id="languageSelect" aria-label="Select language">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="he">עברית</option>
+      </select>
+    </div>
 
     <div class="profile-container">
       <div class="profile" id="profile-dropdown-toggle">
         <span id="profile-initials"></span>
       </div>
       <ul class="profile-dropdown" id="profile-dropdown">
-        <li><a href="#" id="logout-btn">Logout</a></li>
+        <li><a href="#" id="logout-btn" data-key="logout">Logout</a></li>
       </ul>
     </div>
 
@@ -76,9 +86,9 @@
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
-    <h1>Our Blog</h1>
-    <p>Dive into inspiring stories, latest updates, and powerful voices from our community of change-makers.</p>
-    <a href="services.html" class="hero-btn">Explore Posts</a>
+    <h1 data-key="blog_hero_title">Our Blog</h1>
+    <p data-key="blog_hero_subtitle">Dive into inspiring stories, latest updates, and powerful voices from our community of change-makers.</p>
+    <a href="services.html" class="hero-btn" data-key="blog_explore_btn">Explore Posts</a>
   </div>
 </section>
 <!-- SINGLE BLOG HIGHLIGHT -->
@@ -88,16 +98,16 @@
       <img src="images/hunger.jpeg" alt="Featured Blog">
     </div>
     <div class="highlight-content">
-      <h2>Breaking the Cycle of Hunger</h2>
+      <h2 data-key="highlight_title">Breaking the Cycle of Hunger</h2>
       <p class="highlight-meta">📅 August 15, 2025 | ✍️ By Admin</p>
-      <p>
+      <p data-key="highlight_p1">
         Hunger affects millions worldwide, but small steps can create lasting change. 
         From community kitchens to food distribution drives, our team has been 
         on the ground ensuring that no family sleeps hungry. This blog dives into 
         the stories of resilience, compassion, and the power of coming together 
         for a greater cause.
       </p>
-      <p>
+      <p data-key="highlight_p2">
         Through partnerships and volunteers, we’ve distributed over 10,000 meals 
         in the last year alone. Every plate served is more than just food — it’s 
         hope, dignity, and a chance for families to thrive again.
@@ -112,17 +122,17 @@
 <!-- FEATURED BLOGS SECTION -->
 <section class="featured-blogs" id="featured-blogs">
   <div class="blogs-container">
-    <h2 class="section-title">Featured Stories</h2>
-    <p class="section-subtitle">Read our most impactful stories and latest updates</p>
+    <h2 class="section-title" data-key="featured_title">Featured Stories</h2>
+    <p class="section-subtitle" data-key="featured_sub">Read our most impactful stories and latest updates</p>
 
     <div class="blogs-layout">
       <!-- Featured Blog -->
       <div class="featured-main">
         <img src="images/child_edu.jpeg" alt="Empowering Children with Education">
         <div class="featured-content">
-          <h3>Empowering Children with Education</h3>
-          <p>Discover how our education initiatives are changing lives in rural communities.</p>
-          <a href="blog1.html" class="blog-btn">Read More</a>
+          <h3 data-key="fm_title">Empowering Children with Education</h3>
+          <p data-key="fm_desc">Discover how our education initiatives are changing lives in rural communities.</p>
+          <a href="blog1.html" class="blog-btn" data-key="fm_read">Read More</a>
         </div>
       </div>
 
@@ -131,18 +141,18 @@
         <div class="side-blog">
           <img src="images/health.jpeg" alt="Healthcare for All">
           <div>
-            <h4>Healthcare for All</h4>
-            <p>Providing medical support and awareness campaigns for the underserved.</p>
-            <a href="blog2.html" class="side-btn">Read More</a>
+            <h4 data-key="side1_title">Healthcare for All</h4>
+            <p data-key="side1_desc">Providing medical support and awareness campaigns for the underserved.</p>
+            <a href="blog2.html" class="side-btn" data-key="side1_btn">Read More</a>
           </div>
         </div>
 
         <div class="side-blog">
           <img src="images/disaster.jpeg" alt="Women Empowerment">
           <div>
-            <h4>Disaster Relief</h4>
-            <p>Immediate aid and long-term recovery for communities affected by natural disasters.</p>
-            <a href="blog3.html" class="side-btn">Read More</a>
+            <h4 data-key="side2_title">Disaster Relief</h4>
+            <p data-key="side2_desc">Immediate aid and long-term recovery for communities affected by natural disasters.</p>
+            <a href="blog3.html" class="side-btn" data-key="side2_btn">Read More</a>
           </div>
         </div>
       </div>
@@ -153,8 +163,8 @@
 <!-- BLOG CATEGORIES SECTION -->
 <section class="blog-categories" id="categories">
   <div class="categories-container">
-    <h2 class="section-title">Explore by Category</h2>
-    <p class="section-subtitle">Find the stories that matter to you most</p>
+    <h2 class="section-title" data-key="categories_title">Explore by Category</h2>
+    <p class="section-subtitle" data-key="categories_sub">Find the stories that matter to you most</p>
 
     <div class="categories-grid">
       <!-- Category 1 -->
@@ -162,8 +172,8 @@
         <img src="images/books.jpeg" alt="Education">
         <div class="category-overlay">
           <div class="category-text">
-            <h3>Education</h3>
-            <p>Empowering minds through knowledge and learning opportunities.</p>
+            <h3 data-key="cat1_title">Education</h3>
+            <p data-key="cat1_desc">Empowering minds through knowledge and learning opportunities.</p>
           </div>
         </div>
       </div>
@@ -173,8 +183,8 @@
         <img src="images/health2.jpeg" alt="Healthcare">
         <div class="category-overlay">
           <div class="category-text">
-            <h3>Healthcare</h3>
-            <p>Ensuring healthier communities with care and compassion.</p>
+            <h3 data-key="cat2_title">Healthcare</h3>
+            <p data-key="cat2_desc">Ensuring healthier communities with care and compassion.</p>
           </div>
         </div>
       </div>
@@ -184,8 +194,8 @@
         <img src="images/sustain2.jpeg" alt="Sustainability">
         <div class="category-overlay">
           <div class="category-text">
-            <h3>Sustainability</h3>
-            <p>Building eco-friendly and lasting solutions for the future.</p>
+            <h3 data-key="cat3_title">Sustainability</h3>
+            <p data-key="cat3_desc">Building eco-friendly and lasting solutions for the future.</p>
           </div>
         </div>
       </div>
@@ -195,8 +205,8 @@
         <img src="images/stories.jpeg" alt="Stories">
         <div class="category-overlay">
           <div class="category-text">
-            <h3>Stories</h3>
-            <p>Real voices, real journeys, and inspiring community stories.</p>
+            <h3 data-key="cat4_title">Stories</h3>
+            <p data-key="cat4_desc">Real voices, real journeys, and inspiring community stories.</p>
           </div>
         </div>
       </div>
@@ -206,8 +216,8 @@
         <img src="images/update.jpeg" alt="Updates">
         <div class="category-overlay">
           <div class="category-text">
-            <h3>Updates</h3>
-            <p>Stay informed with our latest activities and achievements.</p>
+            <h3 data-key="cat5_title">Updates</h3>
+            <p data-key="cat5_desc">Stay informed with our latest activities and achievements.</p>
           </div>
         </div>
       </div>
@@ -217,8 +227,8 @@
         <img src="images/events.jpeg" alt="Events">
         <div class="category-overlay">
           <div class="category-text">
-            <h3>Events</h3>
-            <p>Join our community gatherings, workshops, and special initiatives.</p>
+            <h3 data-key="cat6_title">Events</h3>
+            <p data-key="cat6_desc">Join our community gatherings, workshops, and special initiatives.</p>
           </div>
         </div>
       </div>
@@ -229,32 +239,32 @@
 <!-- DONATION SECTION -->
 <section class="donation" id="donation">
   <div class="donation-container">
-    <h2 class="section-title">Support Our Mission</h2>
-    <p class="section-subtitle">
+    <h2 class="section-title" data-key="donation_title">Support Our Mission</h2>
+    <p class="section-subtitle" data-key="donation_sub">
       Your contribution helps us continue creating meaningful stories, empowering communities,  
       and spreading hope through our initiatives.
     </p>
 
     <div class="donation-options">
-      <div class="donation-option" data-amount="$10">$10 <span>Help us reach more readers</span></div>
-      <div class="donation-option" data-amount="$25">$25 <span>Support community projects</span></div>
-      <div class="donation-option" data-amount="$50">$50 <span>Fund sustainable impact</span></div>
+      <div class="donation-option" data-amount="$10">$10 <span data-key="don_opt_10_sub">Help us reach more readers</span></div>
+      <div class="donation-option" data-amount="$25">$25 <span data-key="don_opt_25_sub">Support community projects</span></div>
+      <div class="donation-option" data-amount="$50">$50 <span data-key="don_opt_50_sub">Fund sustainable impact</span></div>
     </div>
 
-    <a href="donate.html" class="donate-btn">Donate Now</a>
+    <a href="donate.html" class="donate-btn" data-key="donate_btn">Donate Now</a>
   </div>
 </section>
 
  <!-- CTA SECTION -->
 <section class="cta-section" id="cta">
   <div class="cta-container">
-    <h2>Ready to Make a Difference?</h2>
-    <p>
+    <h2 data-key="cta_title">Ready to Make a Difference?</h2>
+    <p data-key="cta_text">
       Join us in empowering communities, spreading hope, and creating lasting change.  
       Every step counts — and together, we can achieve more.
     </p>
-    <a href="donate.html" class="cta-btn">Donate Now</a>
-    <a href="contact.html" class="cta-btn secondary">Get In Touch</a>
+    <a href="donate.html" class="cta-btn" data-key="cta_donate">Donate Now</a>
+    <a href="contact.html" class="cta-btn secondary" data-key="cta_contact">Get In Touch</a>
   </div>
 </section>
 
@@ -273,35 +283,35 @@
 
     <!-- Quick Links -->
     <div class="footer-links">
-      <h4>Quick Links</h4>
+      <h4 data-key="footer_quick_links">Quick Links</h4>
       <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html" data-key="nav_about">About</a></li>
+        <li><a href="services.html" data-key="nav_services">Services</a></li>
+        <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
+        <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
       </ul>
     </div>
 
     <!-- Services -->
     <div class="footer-services">
-      <h4>Explore Services</h4>
+      <h4 data-key="footer_services">Explore Services</h4>
       <ul>
-        <li><a href="service1.html">Education</a></li>
-        <li><a href="service2.html">Healthcare</a></li>
-        <li><a href="service3.html">Skill Training</a></li>
-        <li><a href="service4.html">Women Empowerment</a></li>
-        <li><a href="service5.html">Disaster Relief</a></li>
-        <li><a href="service6.html">Environmental Care</a></li>
+        <li><a href="service1.html" data-key="nav_service1">Education</a></li>
+        <li><a href="service2.html" data-key="nav_service2">Healthcare</a></li>
+        <li><a href="service3.html" data-key="nav_service3">Skill Training</a></li>
+        <li><a href="service4.html" data-key="nav_service4">Women Empowerment</a></li>
+        <li><a href="service5.html" data-key="nav_service5">Disaster Relief</a></li>
+        <li><a href="service6.html" data-key="nav_service6">Environmental Care</a></li>
       </ul>
     </div>
 
     <!-- Contact -->
     <div class="footer-contact">
-      <h4>Contact Us</h4>
+      <h4 data-key="footer_contact">Contact Us</h4>
       <p><strong>Email:</strong> info@example.com</p>
       <p><strong>Phone:</strong> +91 1234567890</p>
 
-      <h4>Follow Us</h4>
+      <h4 data-key="follow_us">Follow Us</h4>
       <div class="social">
         <a href="https://facebook.com"><img src="images/fb.png" alt="Facebook"></a>
         <a href="https://twitter.com"><img src="images/x.png" alt="Twitter"></a>
@@ -311,22 +321,324 @@
 
     <!-- Newsletter -->
     <div class="footer-newsletter">
-      <h4>Newsletter</h4>
-      <p>Get weekly wellness tips and updates in your inbox.</p>
+      <h4 data-key="newsletter_title">Newsletter</h4>
+      <p data-key="newsletter_text">Get weekly wellness tips and updates in your inbox.</p>
       <form id="newsletter-form">
-        <input type="email" id="newsletter-email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
+        <input type="email" id="newsletter-email" placeholder="Enter your email" required data-placeholder-key="newsletter_placeholder">
+        <button type="submit" data-key="subscribe_btn">Subscribe</button>
       </form>
-      <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;">
+      <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;" data-key="newsletter_success">
     ✅ Thank you for subscribing!
   </div>
     </div>
   </div>
 
-  <div class="footer-copy">
+  <div class="footer-copy" data-key="footer_copy">
     &copy; 2025 Your Company Name. All Rights Reserved.
   </div>
 </footer>
+
+<!-- ================= Language logic (inline) ================= -->
+<script>
+  (function(){
+    const dictionary = {
+      en: {
+        nav_home: "Home ▾",
+        nav_home1: "Home 1",
+        nav_home2: "Home 2",
+        nav_about: "About",
+        nav_blog: "Blog",
+        nav_services: "Services ▾",
+        nav_all_services: "All Services",
+        nav_service1: "Education",
+        nav_service2: "Healthcare",
+        nav_service3: "Skill Training",
+        nav_service4: "Empowerment",
+        nav_service5: "Disaster Relief",
+        nav_service6: "Environmental Care",
+        nav_contact: "Contact",
+        logout: "Logout",
+
+        blog_hero_title: "Our Blog",
+        blog_hero_subtitle: "Dive into inspiring stories, latest updates, and powerful voices from our community of change-makers.",
+        blog_explore_btn: "Explore Posts",
+
+        highlight_title: "Breaking the Cycle of Hunger",
+        highlight_p1: `Hunger affects millions worldwide, but small steps can create lasting change. 
+        From community kitchens to food distribution drives, our team has been on the ground ensuring that no family sleeps hungry.`,
+        highlight_p2: `Through partnerships and volunteers, we’ve distributed over 10,000 meals in the last year alone. Every plate served is more than just food — it’s hope, dignity, and a chance for families to thrive again.`,
+
+        featured_title: "Featured Stories",
+        featured_sub: "Read our most impactful stories and latest updates",
+        fm_title: "Empowering Children with Education",
+        fm_desc: "Discover how our education initiatives are changing lives in rural communities.",
+        fm_read: "Read More",
+        side1_title: "Healthcare for All",
+        side1_desc: "Providing medical support and awareness campaigns for the underserved.",
+        side1_btn: "Read More",
+        side2_title: "Disaster Relief",
+        side2_desc: "Immediate aid and long-term recovery for communities affected by natural disasters.",
+        side2_btn: "Read More",
+
+        categories_title: "Explore by Category",
+        categories_sub: "Find the stories that matter to you most",
+        cat1_title: "Education",
+        cat1_desc: "Empowering minds through knowledge and learning opportunities.",
+        cat2_title: "Healthcare",
+        cat2_desc: "Ensuring healthier communities with care and compassion.",
+        cat3_title: "Sustainability",
+        cat3_desc: "Building eco-friendly and lasting solutions for the future.",
+        cat4_title: "Stories",
+        cat4_desc: "Real voices, real journeys, and inspiring community stories.",
+        cat5_title: "Updates",
+        cat5_desc: "Stay informed with our latest activities and achievements.",
+        cat6_title: "Events",
+        cat6_desc: "Join our community gatherings, workshops, and special initiatives.",
+
+        donation_title: "Support Our Mission",
+        donation_sub: "Your contribution helps us continue creating meaningful stories, empowering communities, and spreading hope through our initiatives.",
+        don_opt_10_sub: "Help us reach more readers",
+        don_opt_25_sub: "Support community projects",
+        don_opt_50_sub: "Fund sustainable impact",
+        donate_btn: "Donate Now",
+
+        cta_title: "Ready to Make a Difference?",
+        cta_text: "Join us in empowering communities, spreading hope, and creating lasting change. Every step counts — and together, we can achieve more.",
+        cta_donate: "Donate Now",
+        cta_contact: "Get In Touch",
+
+        footer_quick_links: "Quick Links",
+        footer_services: "Explore Services",
+        footer_contact: "Contact Us",
+        follow_us: "Follow Us",
+        newsletter_title: "Newsletter",
+        newsletter_text: "Get weekly wellness tips and updates in your inbox.",
+        subscribe_btn: "Subscribe",
+        newsletter_placeholder: "Enter your email",
+        newsletter_success: "✅ Thank you for subscribing!",
+        footer_copy: "© 2025 Your Company Name. All Rights Reserved."
+      },
+
+      ar: {
+        nav_home: "الرئيسية ▾",
+        nav_home1: "الرئيسية 1",
+        nav_home2: "الرئيسية 2",
+        nav_about: "من نحن",
+        nav_blog: "المدونة",
+        nav_services: "الخدمات ▾",
+        nav_all_services: "جميع الخدمات",
+        nav_service1: "التعليم",
+        nav_service2: "الرعاية الصحية",
+        nav_service3: "التدريب المهني",
+        nav_service4: "التمكين",
+        nav_service5: "الإغاثة في الكوارث",
+        nav_service6: "رعاية البيئة",
+        nav_contact: "اتصل بنا",
+        logout: "تسجيل الخروج",
+
+        blog_hero_title: "مدونتنا",
+        blog_hero_subtitle: "اكتشف القصص الملهمة، وآخر التحديثات، والأصوات المؤثرة من مجتمعنا.",
+        blog_explore_btn: "استكشف المقالات",
+
+        highlight_title: "كسر حلقة الجوع",
+        highlight_p1: `يؤثر الجوع على ملايين الأشخاص في جميع أنحاء العالم، لكن الخطوات الصغيرة يمكن أن تحدث تغييرًا دائمًا. من مطابخ المجتمع إلى حملات توزيع الطعام، يعمل فريقنا على الأرض للتأكد من أن أي أسرة لا تنام جائعة.`,
+        highlight_p2: `من خلال الشراكات والمتطوعين، قمنا بتوزيع أكثر من 10,000 وجبة في العام الماضي. كل طبق مُقدم يعني أكثر من طعام — إنه أمل وكرامة وفرصة للعائلات للازدهار.`,
+
+        featured_title: "القصص المميزة",
+        featured_sub: "اقرأ قصصنا الأكثر تأثيرًا وآخر التحديثات",
+        fm_title: "تمكين الأطفال من خلال التعليم",
+        fm_desc: "اكتشف كيف تغير مبادراتنا التعليمية حياة الأطفال في المجتمعات الريفية.",
+        fm_read: "اقرأ المزيد",
+        side1_title: "الرعاية الصحية للجميع",
+        side1_desc: "تقديم الدعم الطبي وحملات التوعية للمحرومين.",
+        side1_btn: "اقرأ المزيد",
+        side2_title: "الإغاثة في الكوارث",
+        side2_desc: "المساعدة الفورية والتعافي الطويل الأمد للمجتمعات المتضررة من الكوارث الطبيعية.",
+        side2_btn: "اقرأ المزيد",
+
+        categories_title: "استكشف حسب الفئة",
+        categories_sub: "اعثر على القصص التي تهمك أكثر",
+        cat1_title: "التعليم",
+        cat1_desc: "تمكين العقول من خلال المعرفة وفرص التعلم.",
+        cat2_title: "الرعاية الصحية",
+        cat2_desc: "ضمان مجتمعات أكثر صحة من خلال الرعاية والتعاطف.",
+        cat3_title: "الاستدامة",
+        cat3_desc: "بناء حلول صديقة للبيئة وطويلة الأمد للمستقبل.",
+        cat4_title: "القصص",
+        cat4_desc: "أصوات حقيقية ورحلات ملهمة من المجتمع.",
+        cat5_title: "التحديثات",
+        cat5_desc: "ابق مطلعًا على أحدث نشاطاتنا وإنجازاتنا.",
+        cat6_title: "الفعاليات",
+        cat6_desc: "انضم إلى تجمعاتنا وورش العمل والمبادرات الخاصة.",
+
+        donation_title: "ادعم مهمتنا",
+        donation_sub: "تساعد مساهمتك في مواصلة سرد قصص ذات مغزى، وتمكين المجتمعات، ونشر الأمل من خلال مبادراتنا.",
+        don_opt_10_sub: "ساعدنا في الوصول إلى مزيد من القراء",
+        don_opt_25_sub: "دعم المشاريع المجتمعية",
+        don_opt_50_sub: "تمويل تأثير مستدام",
+        donate_btn: "تبرع الآن",
+
+        cta_title: "هل أنت مستعد لإحداث فرق؟",
+        cta_text: "انضم إلينا في تمكين المجتمعات، ونشر الأمل، وخلق تغيير دائم. كل خطوة مهمة — ومعًا نستطيع تحقيق المزيد.",
+        cta_donate: "تبرع الآن",
+        cta_contact: "اتصل بنا",
+
+        footer_quick_links: "روابط سريعة",
+        footer_services: "استكشف الخدمات",
+        footer_contact: "اتصل بنا",
+        follow_us: "تابعنا",
+        newsletter_title: "النشرة الإخبارية",
+        newsletter_text: "احصل على نصائح أسبوعية وتحديثات في بريدك.",
+        subscribe_btn: "اشترك",
+        newsletter_placeholder: "أدخل بريدك الإلكتروني",
+        newsletter_success: "✅ شكرًا لاشتراكك!",
+        footer_copy: "© 2025 اسم شركتك. جميع الحقوق محفوظة."
+      },
+
+      he: {
+        nav_home: "בית ▾",
+        nav_home1: "בית 1",
+        nav_home2: "בית 2",
+        nav_about: "עלינו",
+        nav_blog: "בלוג",
+        nav_services: "שירותים ▾",
+        nav_all_services: "כל השירותים",
+        nav_service1: "חינוך",
+        nav_service2: "בריאות",
+        nav_service3: "הכשרה מקצועית",
+        nav_service4: "העצמה",
+        nav_service5: "סיוע בשעת חירום",
+        nav_service6: "שמירה על הסביבה",
+        nav_contact: "צור קשר",
+        logout: "התנתק",
+
+        blog_hero_title: "הבלוג שלנו",
+        blog_hero_subtitle: "גלה סיפורים מעוררי השראה, עדכונים אחרונים וקולות חזקים מקהילתנו.",
+        blog_explore_btn: "גלו פוסטים",
+
+        highlight_title: "לשבור את מעגל הרעב",
+        highlight_p1: `רעב משפיע על מיליונים ברחבי העולם, אך צעדים קטנים יכולים ליצור שינוי מתמשך. ממטבחים קהילתיים ועד מבצעי חלוקת מזון, הצוות שלנו פועל בשטח כדי להבטיח שאף משפחה לא תישאר רעבה.`,
+        highlight_p2: `באמצעות שותפויות ומתנדבים, חילקנו למעלה מ-10,000 ארוחות בשנה האחרונה. כל צלחת היא יותר ממזון — היא תקווה, כבוד והזדמנות למשפחות לשגשג.`,
+
+        featured_title: "סיפורים נבחרים",
+        featured_sub: "קראו את הסיפורים המשפיעים ביותר שלנו והעדכונים האחרונים",
+        fm_title: "העצמת ילדים באמצעות חינוך",
+        fm_desc: "גלה כיצד יוזמות החינוך שלנו משנות חיים בקהילות כפריות.",
+        fm_read: "קרא עוד",
+        side1_title: "בריאות לכולם",
+        side1_desc: "מתן תמיכה רפואית ומסעות מודעות לאוכלוסיות מוחלשות.",
+        side1_btn: "קרא עוד",
+        side2_title: "סיוע בחירום",
+        side2_desc: "סיוע מיידי ושיקום ארוך טווח לקהילות שנפגעו מאסונות טבע.",
+        side2_btn: "קרא עוד",
+
+        categories_title: "חפשו לפי קטגוריה",
+        categories_sub: "מצאו את הסיפורים שחשובים לכם ביותר",
+        cat1_title: "חינוך",
+        cat1_desc: "העצמת מוחות באמצעות ידע והזדמנויות למידה.",
+        cat2_title: "בריאות",
+        cat2_desc: "הבטחת קהילות בריאות יותר באמצעות טיפול וחמלה.",
+        cat3_title: "קיימות",
+        cat3_desc: "בנייה של פתרונות ידידותיים לסביבה וברי-קיימא לעתיד.",
+        cat4_title: "סיפורים",
+        cat4_desc: "קולות אמיתיים, מסלולים מעוררי השראה וסיפורים קהילתיים.",
+        cat5_title: "עדכונים",
+        cat5_desc: "השאר מעודכן בפעילויות ובהישגים שלנו.",
+        cat6_title: "אירועים",
+        cat6_desc: "הצטרפו למפגשים, סדנאות ומיזמים מיוחדים של הקהילה.",
+
+        donation_title: "תמכו במשימתנו",
+        donation_sub: "התרומתכם עוזרת לנו להמשיך לספר סיפורים משמעותיים, להעצים קהילות ולהפיץ תקווה באמצעות היוזמות שלנו.",
+        don_opt_10_sub: "עזרו לנו להגיע ליותר קוראים",
+        don_opt_25_sub: "תמכו בפרויקטים קהילתיים",
+        don_opt_50_sub: "מימנו השפעה בת-קיימא",
+        donate_btn: "תרום עכשיו",
+
+        cta_title: "מוכנים לעשות שינוי?",
+        cta_text: "הצטרפו אלינו בהעצמת קהילות, הפצת תקווה ויצירת שינוי מתמשך. כל צעד נחשב — וביחד נוכל להשיג יותר.",
+        cta_donate: "תרמו עכשיו",
+        cta_contact: "צור קשר",
+
+        footer_quick_links: "קישורים מהירים",
+        footer_services: "חקר שירותים",
+        footer_contact: "צור קשר",
+        follow_us: "עקוב אחרינו",
+        newsletter_title: "ניוזלטר",
+        newsletter_text: "קבל טיפים ועדכונים שבועיים לתיבת הדואר שלך.",
+        subscribe_btn: "הרשמה",
+        newsletter_placeholder: "הכנס את האימייל שלך",
+        newsletter_success: "✅ תודה שנרשמת!",
+        footer_copy: "© 2025 שם החברה שלך. כל הזכויות שמורות."
+      }
+    };
+
+    function applyTranslations(lang) {
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (!key) return;
+        if (dictionary[lang] && dictionary[lang][key] !== undefined) {
+          el.textContent = dictionary[lang][key];
+        }
+      });
+
+      document.querySelectorAll('[data-placeholder-key]').forEach(el => {
+        const key = el.getAttribute('data-placeholder-key');
+        if (!key) return;
+        if (dictionary[lang] && dictionary[lang][key] !== undefined) {
+          el.setAttribute('placeholder', dictionary[lang][key]);
+        }
+      });
+
+      // Update html lang & dir
+      document.documentElement.lang = lang;
+      if (lang === 'ar' || lang === 'he') {
+        document.documentElement.setAttribute('dir', 'rtl');
+        document.body.classList.add('is-rtl');
+      } else {
+        document.documentElement.setAttribute('dir', 'ltr');
+        document.body.classList.remove('is-rtl');
+      }
+
+      // If donation button should show translated label with amount (optional)
+      // Keep existing behaviour but also allow translation when clicking options
+    }
+
+    function setLanguage(lang) {
+      if (!dictionary[lang]) lang = 'en';
+      localStorage.setItem('siteLanguage', lang);
+      const sel = document.getElementById('languageSelect');
+      if (sel) sel.value = lang;
+      applyTranslations(lang);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('siteLanguage') || 'en';
+      const sel = document.getElementById('languageSelect');
+      if (sel) {
+        sel.value = saved;
+        sel.addEventListener('change', e => setLanguage(e.target.value));
+      }
+      applyTranslations(saved);
+
+      // Enhance donation-option click to use language-aware template
+      const options = document.querySelectorAll(".donation-option");
+      const donateBtn = document.querySelector(".donate-btn");
+      options.forEach(option => {
+        option.addEventListener("click", () => {
+          options.forEach(o => o.classList.remove("active"));
+          option.classList.add("active");
+          const lang = localStorage.getItem('siteLanguage') || 'en';
+          // If dictionary has a donate template, use it; otherwise fallback to original English template
+          const tpl = (dictionary[lang] && dictionary[lang].donate_with_amount) || "Donate {amount} Now";
+          const text = tpl.replace("{amount}", option.dataset.amount);
+          // Some languages prefer amount before verb — if you want per-language templates, add donate_with_amount to dictionary.
+          donateBtn.textContent = text;
+        });
+      });
+    });
+  })();
+</script>
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const options = document.querySelectorAll(".donation-option");
@@ -336,6 +648,8 @@ document.addEventListener("DOMContentLoaded", () => {
     option.addEventListener("click", () => {
       options.forEach(o => o.classList.remove("active"));
       option.classList.add("active");
+      // This script will be overridden by the language-aware handler above if the user clicked language-aware options handler.
+      // Keep fallback behavior:
       donateBtn.textContent = `Donate ${option.dataset.amount} Now`;
     });
   });

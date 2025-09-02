@@ -6,31 +6,136 @@
   <title>Signup</title>
   <link rel="stylesheet" href="css/auth.css">
   <script src="js/darkmode.js" defer></script>
+  <style>
+    .lang-switcher {
+      text-align: right;
+      margin-bottom: 15px;
+    }
+    .lang-switcher select {
+      padding: 5px 10px;
+      border-radius: 6px;
+    }
+  </style>
 </head>
 <body>
   <div class="auth-container">
-    <h2>Sign Up</h2>
+
+   
+    <h2 data-i18n="signupTitle">Sign Up</h2>
+     <!-- Language Toggle -->
+    <div class="lang-switcher">
+      <label for="languageToggle">🌐</label>
+      <select id="languageToggle">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="he">עברית</option>
+      </select>
+    </div>
+
     <form id="signupForm">
-      <input type="text" id="signupFirstName" placeholder="First Name" required>
-      <input type="text" id="signupLastName" placeholder="Last Name" required>
-      <input type="text" id="signupUsername" placeholder="Email" required>
+      <input type="text" id="signupFirstName" placeholder="First Name" data-i18n-placeholder="firstName" required>
+      <input type="text" id="signupLastName" placeholder="Last Name" data-i18n-placeholder="lastName" required>
+      <input type="text" id="signupUsername" placeholder="Email" data-i18n-placeholder="email" required>
 
       <div class="password-field">
-        <input type="password" id="signupPassword" placeholder="Password" required>
+        <input type="password" id="signupPassword" placeholder="Password" data-i18n-placeholder="password" required>
         <span class="toggle-password" onclick="togglePassword('signupPassword', this)">👁️</span>
       </div>
 
       <div class="password-field">
-        <input type="password" id="signupConfirmPassword" placeholder="Confirm Password" required>
+        <input type="password" id="signupConfirmPassword" placeholder="Confirm Password" data-i18n-placeholder="confirmPassword" required>
         <span class="toggle-password" onclick="togglePassword('signupConfirmPassword', this)">👁️</span>
       </div>
 
-      <button type="submit">Sign Up</button>
-      <button id="darkModeToggle">🌙</button>
+      <button type="submit" data-i18n="signupBtn">Sign Up</button>
+      <button type="button" id="darkModeToggle">🌙</button>
     </form>
-    <p>Already have an account? <a href="login.html">Login here</a></p>
+
+    <p>
+      <span data-i18n="alreadyAccount">Already have an account?</span>
+      <a href="login.html" data-i18n="loginLink">Login here</a>
+    </p>
   </div>
 
   <script src="js/auth.js"></script>
+
+  <script>
+    const I18N = {
+      en: {
+        signupTitle: "Sign Up",
+        firstName: "First Name",
+        lastName: "Last Name",
+        email: "Email",
+        password: "Password",
+        confirmPassword: "Confirm Password",
+        signupBtn: "Sign Up",
+        alreadyAccount: "Already have an account?",
+        loginLink: "Login here"
+      },
+      ar: {
+        signupTitle: "إنشاء حساب",
+        firstName: "الاسم الأول",
+        lastName: "اسم العائلة",
+        email: "البريد الإلكتروني",
+        password: "كلمة المرور",
+        confirmPassword: "تأكيد كلمة المرور",
+        signupBtn: "إنشاء حساب",
+        alreadyAccount: "لديك حساب بالفعل؟",
+        loginLink: "تسجيل الدخول هنا"
+      },
+      he: {
+        signupTitle: "הרשמה",
+        firstName: "שם פרטי",
+        lastName: "שם משפחה",
+        email: "אימייל",
+        password: "סיסמה",
+        confirmPassword: "אישור סיסמה",
+        signupBtn: "הירשם",
+        alreadyAccount: "כבר יש לך חשבון?",
+        loginLink: "התחבר כאן"
+      }
+    };
+
+    function applyLanguage(lang) {
+      const dict = I18N[lang] || I18N.en;
+
+      // Update lang & direction
+      const html = document.documentElement;
+      html.setAttribute("lang", lang);
+      html.setAttribute("dir", (lang === "ar" || lang === "he") ? "rtl" : "ltr");
+
+      // Replace inner text
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (dict[key]) el.textContent = dict[key];
+      });
+
+      // Replace placeholders
+      document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+        const key = el.getAttribute("data-i18n-placeholder");
+        if (dict[key]) el.setAttribute("placeholder", dict[key]);
+      });
+
+      // Persist
+      try { localStorage.setItem("lang", lang); } catch(e) {}
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const select = document.getElementById("languageToggle");
+
+      let initLang = "en";
+      try {
+        initLang = localStorage.getItem("lang") || (navigator.language || "en").slice(0,2);
+      } catch(e){}
+      if (!I18N[initLang]) initLang = "en";
+
+      select.value = initLang;
+      applyLanguage(initLang);
+
+      select.addEventListener("change", (e) => {
+        applyLanguage(e.target.value);
+      });
+    });
+  </script>
 </body>
 </html>

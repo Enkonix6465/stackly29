@@ -7,11 +7,22 @@
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/donate.css">
-<script src="js/main.js" defer></script>
+  <script src="js/main.js" defer></script>
   <script src="js/header.js" defer></script>
   <script src="js/auth-check.js" defer></script>
-    <script src="js/newsletter.js" defer></script>
-
+  <script src="js/newsletter.js" defer></script>
+  <style>
+    .lang-switcher {
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .lang-switcher select {
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+  </style>
 </head>
 <body>
   <!-- ================= HEADER ================= -->
@@ -21,31 +32,41 @@
   </div>
 
   <div class="header-right">
+
+    <!-- Language Toggle -->
+    <div class="lang-switcher">
+      <label for="languageToggle" aria-label="Language">🌐</label>
+      <select id="languageToggle">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="he">עברית</option>
+      </select>
+    </div>
+
     <nav>
       <ul class="nav-links">
         <li class="dropdown">
-          <a href="index.html">Home ▾</a>
+          <a href="index.html" data-i18n="nav_home">Home ▾</a>
           <ul class="dropdown-menu">
-            <li><a href="index.html">Home 1</a></li>
-            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="index.html" data-i18n="nav_home1">Home 1</a></li>
+            <li><a href="home2.html" data-i18n="nav_home2">Home 2</a></li>
           </ul>
         </li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html" data-i18n="nav_about">About</a></li>
+        <li><a href="blog.html" data-i18n="nav_blog">Blog</a></li>
         <li class="dropdown">
-          <a href="services.html">Services ▾</a>
+          <a href="services.html" data-i18n="nav_services">Services ▾</a>
           <ul class="dropdown-menu">
-                        <li class="mobile-only"><a href="services.html">All Services</a></li>
-
-            <li><a href="service1.html">Education</a></li>
-        <li><a href="service2.html">Healthcare</a></li>
-        <li><a href="service3.html">Skill Training</a></li>
-        <li><a href="service4.html">Empowerment</a></li>
-        <li><a href="service5.html">Disaster Relief</a></li>
-        <li><a href="service6.html">Environmental Care</a></li>
+            <li class="mobile-only"><a href="services.html" data-i18n="nav_all_services">All Services</a></li>
+            <li><a href="service1.html" data-i18n="nav_service1">Education</a></li>
+            <li><a href="service2.html" data-i18n="nav_service2">Healthcare</a></li>
+            <li><a href="service3.html" data-i18n="nav_service3">Skill Training</a></li>
+            <li><a href="service4.html" data-i18n="nav_service4">Empowerment</a></li>
+            <li><a href="service5.html" data-i18n="nav_service5">Disaster Relief</a></li>
+            <li><a href="service6.html" data-i18n="nav_service6">Environmental Care</a></li>
           </ul>
         </li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
       </ul>
     </nav>
 
@@ -54,7 +75,7 @@
         <span id="profile-initials"></span>
       </div>
       <ul class="profile-dropdown" id="profile-dropdown">
-        <li><a href="#" id="logout-btn">Logout</a></li>
+        <li><a href="#" id="logout-btn" data-i18n="logout">Logout</a></li>
       </ul>
     </div>
 
@@ -70,54 +91,53 @@
 <section class="donate-hero">
   <div class="donate-overlay"></div>
   <div class="donate-content">
-    <h1>Make a Difference Today</h1>
-    <p>Your support helps us bring hope, education, and care to those in need.</p>
-    <a href="#donate-form" class="donate-btn">Donate Now</a>
+    <h1 data-i18n="donate_hero_title">Make a Difference Today</h1>
+    <p data-i18n="donate_hero_text">Your support helps us bring hope, education, and care to those in need.</p>
+    <a href="#donate-form" class="donate-btn" data-i18n="donate_now">Donate Now</a>
   </div>
 </section>
+
 <!-- Why Donate Section -->
 <section class="why-donate">
   <div class="container">
-    <h2>Why Your Donation Matters</h2>
-    <p class="subtitle">Every contribution creates hope and lasting change.</p>
+    <h2 data-i18n="why_title">Why Your Donation Matters</h2>
+    <p class="subtitle" data-i18n="why_subtitle">Every contribution creates hope and lasting change.</p>
 
     <div class="donate-reasons">
 
       <div class="reason-card">
         <i class="fas fa-graduation-cap"></i>
-        <h3>Education</h3>
-        <p>Your donation provides books, supplies, and school access for children.</p>
+        <h3 data-i18n="education">Education</h3>
+        <p data-i18n="education_text">Your donation provides books, supplies, and school access for children.</p>
       </div>
 
       <div class="reason-card">
         <i class="fas fa-heartbeat"></i>
-        <h3>Healthcare</h3>
-        <p>We deliver essential medical aid to underserved communities.</p>
+        <h3 data-i18n="healthcare">Healthcare</h3>
+        <p data-i18n="healthcare_text">We deliver essential medical aid to underserved communities.</p>
       </div>
 
       <div class="reason-card">
         <i class="fas fa-utensils"></i>
-        <h3>Food & Shelter</h3>
-        <p>Your support helps us provide daily meals and safe housing.</p>
+        <h3 data-i18n="food">Food & Shelter</h3>
+        <p data-i18n="food_text">Your support helps us provide daily meals and safe housing.</p>
       </div>
 
       <div class="reason-card">
         <i class="fas fa-users"></i>
-        <h3>Community Growth</h3>
-        <p>We empower families to break the cycle of poverty sustainably.</p>
+        <h3 data-i18n="community">Community Growth</h3>
+        <p data-i18n="community_text">We empower families to break the cycle of poverty sustainably.</p>
       </div>
 
     </div>
   </div>
 </section>
 
-
-
    <!-- Donation Form Section -->
 <section id="donate-form" class="donation-form">
   <div class="container">
-    <h2>Make a Donation</h2>
-    <p class="subtitle">Choose an amount or enter your own</p>
+    <h2 data-i18n="donation_form_title">Make a Donation</h2>
+    <p class="subtitle" data-i18n="donation_form_subtitle">Choose an amount or enter your own</p>
 
     <form id="donationForm">
       <!-- Preset Donation Amounts -->
@@ -130,17 +150,17 @@
 
       <!-- Custom Amount -->
       <div class="custom-amount">
-        <input type="number" id="customAmount" placeholder="Enter custom amount (₹)">
+        <input type="number" id="customAmount" placeholder="Enter custom amount (₹)" data-i18n-placeholder="custom_amount">
       </div>
 
       <!-- Donor Info -->
       <div class="donor-info">
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email Address" required>
+        <input type="text" placeholder="Full Name" data-i18n-placeholder="full_name" required>
+        <input type="email" placeholder="Email Address" data-i18n-placeholder="email_address" required>
       </div>
 
       <!-- Submit -->
-      <button type="submit" class="donate-submit">Donate Now</button>
+      <button type="submit" class="donate-submit" data-i18n="donate_now">Donate Now</button>
     </form>
   </div>
 </section>
@@ -148,45 +168,45 @@
 <!-- Thank You Popup -->
 <div id="thankYouPopup" class="thank-you-popup">
   <div class="popup-content">
-    <h2>Thank You! 🎉</h2>
-    <p>Your donation will make a big difference.</p>
-    <button id="closePopup">Close</button>
+    <h2 data-i18n="thank_you">Thank You! 🎉</h2>
+    <p data-i18n="thank_you_text">Your donation will make a big difference.</p>
+    <button id="closePopup" data-i18n="close">Close</button>
   </div>
 </div>
 
 <!-- Other Ways to Give Section -->
 <section id="other-ways" class="other-ways">
   <div class="container">
-    <h2>Other Ways to Give</h2>
-    <p class="subtitle">Choose the method that works best for you</p>
+    <h2 data-i18n="other_ways">Other Ways to Give</h2>
+    <p class="subtitle" data-i18n="other_ways_subtitle">Choose the method that works best for you</p>
 
     <div class="ways-grid">
       <!-- UPI -->
       <div class="way-card">
-        <h3>UPI</h3>
-        <p>Donate directly using UPI apps</p>
+        <h3 data-i18n="upi">UPI</h3>
+        <p data-i18n="upi_text">Donate directly using UPI apps</p>
         <p class="highlight">ngo@upi</p>
       </div>
 
       <!-- Bank Transfer -->
       <div class="way-card">
-        <h3>Bank Transfer</h3>
-        <p>Account Name: Helping Hands Foundation</p>
+        <h3 data-i18n="bank_transfer">Bank Transfer</h3>
+        <p data-i18n="bank_text">Account Name: Helping Hands Foundation</p>
         <p>Account No: 1234567890</p>
         <p>IFSC: ABCD0123456</p>
       </div>
 
       <!-- PayPal -->
       <div class="way-card">
-        <h3>PayPal</h3>
-        <p>For international donations</p>
-        <a href="https://www.paypal.com/in/home" class="donate-link">Donate via PayPal</a>
+        <h3 data-i18n="paypal">PayPal</h3>
+        <p data-i18n="paypal_text">For international donations</p>
+        <a href="https://www.paypal.com/in/home" class="donate-link" data-i18n="donate_via_paypal">Donate via PayPal</a>
       </div>
 
       <!-- Cheque -->
       <div class="way-card">
-        <h3>By Cheque</h3>
-        <p>Send your cheque to:</p>
+        <h3 data-i18n="by_cheque">By Cheque</h3>
+        <p data-i18n="cheque_text">Send your cheque to:</p>
         <p>Helping Hands Foundation,<br>123 Charity Street,<br>Mumbai, India</p>
       </div>
     </div>
@@ -196,12 +216,11 @@
 <!-- Contact Section (Simple Button) -->
 <section class="donate-contact">
   <div class="container">
-    <h2>Need Assistance?</h2>
-    <p class="subtitle">Have questions about your donation? Reach out to us anytime.</p>
-    <a href="contact.html" class="contact-btn">Contact Us</a>
+    <h2 data-i18n="need_assistance">Need Assistance?</h2>
+    <p class="subtitle" data-i18n="need_assistance_text">Have questions about your donation? Reach out to us anytime.</p>
+    <a href="contact.html" class="contact-btn" data-i18n="contact_us">Contact Us</a>
   </div>
 </section>
-
 
   </main>
 
@@ -217,35 +236,35 @@
 
     <!-- Quick Links -->
     <div class="footer-links">
-      <h4>Quick Links</h4>
+      <h4 data-i18n="footer_links">Quick Links</h4>
       <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html" data-i18n="nav_about">About</a></li>
+        <li><a href="services.html" data-i18n="nav_services_plain">Services</a></li>
+        <li><a href="blog.html" data-i18n="nav_blog">Blog</a></li>
+        <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
       </ul>
     </div>
 
     <!-- Services -->
     <div class="footer-services">
-      <h4>Explore Services</h4>
+      <h4 data-i18n="footer_services">Explore Services</h4>
       <ul>
-        <li><a href="service1.html">Education</a></li>
-        <li><a href="service2.html">Healthcare</a></li>
-        <li><a href="service3.html">Skill Training</a></li>
-        <li><a href="service4.html">Women Empowerment</a></li>
-        <li><a href="service5.html">Disaster Relief</a></li>
-        <li><a href="service6.html">Environmental Care</a></li>
+        <li><a href="service1.html" data-i18n="nav_service1">Education</a></li>
+        <li><a href="service2.html" data-i18n="nav_service2">Healthcare</a></li>
+        <li><a href="service3.html" data-i18n="nav_service3">Skill Training</a></li>
+        <li><a href="service4.html" data-i18n="footer_service4">Women Empowerment</a></li>
+        <li><a href="service5.html" data-i18n="nav_service5">Disaster Relief</a></li>
+        <li><a href="service6.html" data-i18n="nav_service6">Environmental Care</a></li>
       </ul>
     </div>
 
     <!-- Contact -->
     <div class="footer-contact">
-      <h4>Contact Us</h4>
+      <h4 data-i18n="footer_contact">Contact Us</h4>
       <p><strong>Email:</strong> info@example.com</p>
       <p><strong>Phone:</strong> +91 1234567890</p>
 
-      <h4>Follow Us</h4>
+      <h4 data-i18n="follow_us">Follow Us</h4>
       <div class="social">
         <a href="https://facebook.com"><img src="images/fb.png" alt="Facebook"></a>
         <a href="https://twitter.com"><img src="images/x.png" alt="Twitter"></a>
@@ -255,22 +274,23 @@
 
     <!-- Newsletter -->
     <div class="footer-newsletter">
-      <h4>Newsletter</h4>
-      <p>Get weekly wellness tips and updates in your inbox.</p>
+      <h4 data-i18n="footer_newsletter">Newsletter</h4>
+      <p data-i18n="newsletter_text">Get weekly wellness tips and updates in your inbox.</p>
       <form id="newsletter-form">
-        <input type="email" id="newsletter-email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
+        <input type="email" id="newsletter-email" placeholder="Enter your email" required data-i18n-placeholder="newsletter_placeholder">
+        <button type="submit" data-i18n="newsletter_btn">Subscribe</button>
       </form>
-      <div id="newsletter-success" style="display:none; color:green; margin-top:8px;">
-    ✅ Thank you for subscribing!
-  </div>
+      <div id="newsletter-success" style="display:none; color:green; margin-top:8px;" data-i18n="newsletter_success">
+        ✅ Thank you for subscribing!
+      </div>
     </div>
   </div>
 
-  <div class="footer-copy">
+  <div class="footer-copy" data-i18n="footer_copy">
     &copy; 2025 Your Company Name. All Rights Reserved.
   </div>
 </footer>
+
 <script>
 // Donation Amount Selection
 const amountButtons = document.querySelectorAll(".amount-btn");
@@ -298,7 +318,292 @@ closePopup.addEventListener("click", () => {
   thankYouPopup.style.display = "none";
 });
 
+/* ===================== I18N: Dictionary + Toggle ===================== */
+const I18N = {
+  en: {
+    // nav
+    nav_home: "Home ▾",
+    nav_home1: "Home 1",
+    nav_home2: "Home 2",
+    nav_about: "About",
+    nav_blog: "Blog",
+    nav_services: "Services ▾",
+    nav_services_plain: "Services",
+    nav_all_services: "All Services",
+    nav_service1: "Education",
+    nav_service2: "Healthcare",
+    nav_service3: "Skill Training",
+    nav_service4: "Empowerment",
+    footer_service4: "Women Empowerment",
+    nav_service5: "Disaster Relief",
+    nav_service6: "Environmental Care",
+    nav_contact: "Contact",
+    logout: "Logout",
 
+    // donate hero
+    donate_hero_title: "Make a Difference Today",
+    donate_hero_text: "Your support helps us bring hope, education, and care to those in need.",
+    donate_now: "Donate Now",
+
+    // why donate
+    why_title: "Why Your Donation Matters",
+    why_subtitle: "Every contribution creates hope and lasting change.",
+    education: "Education",
+    education_text: "Your donation provides books, supplies, and school access for children.",
+    healthcare: "Healthcare",
+    healthcare_text: "We deliver essential medical aid to underserved communities.",
+    food: "Food & Shelter",
+    food_text: "Your support helps us provide daily meals and safe housing.",
+    community: "Community Growth",
+    community_text: "We empower families to break the cycle of poverty sustainably.",
+
+    // donation form
+    donation_form_title: "Make a Donation",
+    donation_form_subtitle: "Choose an amount or enter your own",
+    custom_amount: "Enter custom amount (₹)",
+    full_name: "Full Name",
+    email_address: "Email Address",
+
+    // popup
+    thank_you: "Thank You! 🎉",
+    thank_you_text: "Your donation will make a big difference.",
+    close: "Close",
+
+    // other ways
+    other_ways: "Other Ways to Give",
+    other_ways_subtitle: "Choose the method that works best for you",
+    upi: "UPI",
+    upi_text: "Donate directly using UPI apps",
+    bank_transfer: "Bank Transfer",
+    bank_text: "Account Name: Helping Hands Foundation",
+    paypal: "PayPal",
+    paypal_text: "For international donations",
+    donate_via_paypal: "Donate via PayPal",
+    by_cheque: "By Cheque",
+    cheque_text: "Send your cheque to:",
+
+    // contact section
+    need_assistance: "Need Assistance?",
+    need_assistance_text: "Have questions about your donation? Reach out to us anytime.",
+    contact_us: "Contact Us",
+
+    // footer/newsletter
+    footer_links: "Quick Links",
+    footer_services: "Explore Services",
+    footer_contact: "Contact Us",
+    follow_us: "Follow Us",
+    footer_newsletter: "Newsletter",
+    newsletter_text: "Get weekly wellness tips and updates in your inbox.",
+    newsletter_btn: "Subscribe",
+    newsletter_placeholder: "Enter your email",
+    newsletter_success: "✅ Thank you for subscribing!",
+    footer_copy: "© 2025 Your Company Name. All Rights Reserved."
+  },
+  ar: {
+    // nav
+    nav_home: "الرئيسية ▾",
+    nav_home1: "الرئيسية 1",
+    nav_home2: "الرئيسية 2",
+    nav_about: "معلومات عنا",
+    nav_blog: "المدونة",
+    nav_services: "الخدمات ▾",
+    nav_services_plain: "الخدمات",
+    nav_all_services: "جميع الخدمات",
+    nav_service1: "التعليم",
+    nav_service2: "الرعاية الصحية",
+    nav_service3: "التدريب المهني",
+    nav_service4: "التمكين",
+    footer_service4: "تمكين المرأة",
+    nav_service5: "الإغاثة في الكوارث",
+    nav_service6: "رعاية البيئة",
+    nav_contact: "اتصل بنا",
+    logout: "تسجيل الخروج",
+
+    // donate hero
+    donate_hero_title: "اصنع فرقًا اليوم",
+    donate_hero_text: "دعمك يساعدنا في جلب الأمل والتعليم والرعاية للمحتاجين.",
+    donate_now: "تبرع الآن",
+
+    // why donate
+    why_title: "لماذا تبرعك مهم",
+    why_subtitle: "كل مساهمة تخلق الأمل وتُحدث تغييرًا دائمًا.",
+    education: "التعليم",
+    education_text: "تبرعك يوفر الكتب واللوازم وإمكانية الوصول إلى المدارس للأطفال.",
+    healthcare: "الرعاية الصحية",
+    healthcare_text: "نحن نقدم المساعدة الطبية الأساسية للمجتمعات المحرومة.",
+    food: "الغذاء والمأوى",
+    food_text: "دعمك يساعدنا على توفير وجبات يومية وسكن آمن.",
+    community: "نمو المجتمع",
+    community_text: "نمكن الأسر من كسر دائرة الفقر بشكل مستدام.",
+
+    // donation form
+    donation_form_title: "قم بالتبرع",
+    donation_form_subtitle: "اختر مبلغًا أو أدخل المبلغ الخاص بك",
+    custom_amount: "أدخل المبلغ المخصص (₹)",
+    full_name: "الاسم الكامل",
+    email_address: "عنوان البريد الإلكتروني",
+
+    // popup
+    thank_you: "شكرًا لك! 🎉",
+    thank_you_text: "سيسهم تبرعك في إحداث فرق كبير.",
+    close: "إغلاق",
+
+    // other ways
+    other_ways: "طرق أخرى للتبرع",
+    other_ways_subtitle: "اختر الطريقة الأنسب لك",
+    upi: "UPI",
+    upi_text: "تبرع مباشرة باستخدام تطبيقات UPI",
+    bank_transfer: "التحويل البنكي",
+    bank_text: "اسم الحساب: Helping Hands Foundation",
+    paypal: "باي بال",
+    paypal_text: "للتبرعات الدولية",
+    donate_via_paypal: "تبرع عبر باي بال",
+    by_cheque: "بالشيك",
+    cheque_text: "أرسل الشيك إلى:",
+
+    // contact section
+    need_assistance: "تحتاج مساعدة؟",
+    need_assistance_text: "لديك أسئلة حول تبرعك؟ تواصل معنا في أي وقت.",
+    contact_us: "اتصل بنا",
+
+    // footer/newsletter
+    footer_links: "روابط سريعة",
+    footer_services: "استكشف الخدمات",
+    footer_contact: "اتصل بنا",
+    follow_us: "تابعنا",
+    footer_newsletter: "النشرة البريدية",
+    newsletter_text: "احصل على نصائح وتحديثات أسبوعية على بريدك.",
+    newsletter_btn: "اشترك",
+    newsletter_placeholder: "أدخل بريدك الإلكتروني",
+    newsletter_success: "✅ شكرًا لاشتراكك!",
+    footer_copy: "© 2025 اسم شركتك. جميع الحقوق محفوظة."
+  },
+  he: {
+    // nav
+    nav_home: "בית ▾",
+    nav_home1: "בית 1",
+    nav_home2: "בית 2",
+    nav_about: "עלינו",
+    nav_blog: "בלוג",
+    nav_services: "שירותים ▾",
+    nav_services_plain: "שירותים",
+    nav_all_services: "כל השירותים",
+    nav_service1: "חינוך",
+    nav_service2: "בריאות",
+    nav_service3: "הכשרה מקצועית",
+    nav_service4: "העצמה",
+    footer_service4: "העצמת נשים",
+    nav_service5: "סיוע בשעת אסון",
+    nav_service6: "שמירה על הסביבה",
+    nav_contact: "צור קשר",
+    logout: "התנתק",
+
+    // donate hero
+    donate_hero_title: "עשו שינוי היום",
+    donate_hero_text: "התמיכה שלכם עוזרת לנו להביא תקווה, חינוך וטיפול לנזקקים.",
+    donate_now: "תרום עכשיו",
+
+    // why donate
+    why_title: "מדוע התרומה שלך חשובה",
+    why_subtitle: "כל תרומה יוצרת תקווה ושינוי מתמשך.",
+    education: "חינוך",
+    education_text: "התרומה שלך מספקת ספרים, ציוד וגישה לבתי־ספר לילדים.",
+    healthcare: "בריאות",
+    healthcare_text: "אנו מעניקים סיוע רפואי חיוני לקהילות מוחלשות.",
+    food: "מזון ומקלט",
+    food_text: "התרומה שלך מסייעת לנו לספק ארוחות יומיות ודיור בטוח.",
+    community: "צמיחת קהילה",
+    community_text: "אנו מעצימים משפחות לשבור את מעגל העוני באופן בר־קיימא.",
+
+    // donation form
+    donation_form_title: "בצע תרומה",
+    donation_form_subtitle: "בחר סכום או הזן סכום משלך",
+    custom_amount: "הזן סכום מותאם (₹)",
+    full_name: "שם מלא",
+    email_address: "כתובת דוא\"ל",
+
+    // popup
+    thank_you: "תודה! 🎉",
+    thank_you_text: "התרומה שלך תעשה שינוי גדול.",
+    close: "סגור",
+
+    // other ways
+    other_ways: "דרכים נוספות לתרום",
+    other_ways_subtitle: "בחר את השיטה שנוחה לך",
+    upi: "UPI",
+    upi_text: "תרום ישירות באמצעות אפליקציות UPI",
+    bank_transfer: "העברה בנקאית",
+    bank_text: "שם החשבון: Helping Hands Foundation",
+    paypal: "פייפאל",
+    paypal_text: "לתרומות בינלאומיות",
+    donate_via_paypal: "תרומה דרך PayPal",
+    by_cheque: "צ'ק",
+    cheque_text: "שלח/י את הצ'ק אל:",
+
+    // contact section
+    need_assistance: "צריך עזרה?",
+    need_assistance_text: "יש לך שאלות על התרומה? נשמח לעזור בכל עת.",
+    contact_us: "צור קשר",
+
+    // footer/newsletter
+    footer_links: "קישורים מהירים",
+    footer_services: "חקור שירותים",
+    footer_contact: "צור קשר",
+    follow_us: "עקבו אחרינו",
+    footer_newsletter: "ניוזלטר",
+    newsletter_text: "קבלו טיפים ועדכונים שבועיים לתיבת הדואר.",
+    newsletter_btn: "הירשם",
+    newsletter_placeholder: "הכנס/י את האימייל",
+    newsletter_success: "✅ תודה שנרשמתם!",
+    footer_copy: "© 2025 שם החברה שלך. כל הזכויות שמורות."
+  }
+};
+
+function applyLanguage(lang) {
+  const dict = I18N[lang] || I18N.en;
+
+  // Update lang & direction
+  const html = document.documentElement;
+  html.setAttribute("lang", lang);
+  html.setAttribute("dir", (lang === "ar" || lang === "he") ? "rtl" : "ltr");
+
+  // Replace all nodes with data-i18n
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (dict[key] !== undefined) {
+      el.textContent = dict[key];
+    }
+  });
+
+  // Update placeholders
+  document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+    const key = el.getAttribute("data-i18n-placeholder");
+    if (dict[key] !== undefined) {
+      el.setAttribute("placeholder", dict[key]);
+    }
+  });
+
+  // Persist
+  try { localStorage.setItem("lang", lang); } catch(e) {}
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const select = document.getElementById("languageToggle");
+  // Initialize from localStorage or browser
+  let initLang = "en";
+  try {
+    initLang = localStorage.getItem("lang") || (navigator.language || "en").slice(0,2);
+  } catch(e){}
+  if (!I18N[initLang]) initLang = "en";
+  if (select) select.value = initLang;
+  applyLanguage(initLang);
+
+  if (select) {
+    select.addEventListener("change", (e) => {
+      applyLanguage(e.target.value);
+    });
+  }
+});
 </script>
 
 </body>

@@ -171,3 +171,46 @@ body.dark-theme .dropdown-menu li:hover {
     display: block;
   }
 }
+
+.profile-container {
+  position: relative; /* anchor for dropdown */
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 110%; /* just below the profile circle */
+  min-width: 150px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: none;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  z-index: 1000;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* LTR: align dropdown to the right edge */
+html[dir="ltr"] .profile-dropdown {
+  right: 0;
+}
+
+/* RTL: align dropdown to the left edge */
+html[dir="rtl"] .profile-dropdown {
+  left: 0;
+}
+
+/* Dark theme support */
+body.dark-theme .profile-dropdown {
+  background: #1a1a1a;
+  border: 1px solid #444;
+}
+body.dark-theme .profile-dropdown li a {
+  color: #eee;
+}
+body.dark-theme .profile-dropdown li:hover {
+  background: #333;
+}

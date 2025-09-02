@@ -839,3 +839,63 @@ body.dark-theme .orbit-item {
 body.dark-theme .orbit-item img {
   filter: brightness(0.85) contrast(1.05);
 }
+
+
+/* Timeline container */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Timeline line */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #0f766e;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/* Default LTR line */
+html[dir="ltr"] .timeline::after {
+  left: 50%;
+}
+
+/* RTL line */
+html[dir="rtl"] .timeline::after {
+  right: 50%;
+}
+
+/* Timeline item */
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+}
+
+/* Odd items */
+html[dir="ltr"] .timeline-item:nth-child(odd) {
+  left: 0;
+}
+html[dir="rtl"] .timeline-item:nth-child(odd) {
+  right: 0;
+}
+
+/* Even items */
+html[dir="ltr"] .timeline-item:nth-child(even) {
+  left: 50%;
+}
+html[dir="rtl"] .timeline-item:nth-child(even) {
+  right: 50%;
+}
+
+/* Card style */
+.timeline-item .card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}

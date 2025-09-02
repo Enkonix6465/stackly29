@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Improving Rural Healthcare Access</title>
+  <title data-key="page_title">Improving Rural Healthcare Access</title>
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/blog1.css">
@@ -11,6 +11,26 @@
   <script src="js/header.js" defer></script>
   <script src="js/auth-check.js" defer></script>
   <script src="js/newsletter.js" defer></script>
+
+  <style>
+    /* small helper styles for language selector (doesn't change layout) */
+    .language-toggle {
+      display: inline-block;
+      margin-left: 12px;
+      vertical-align: middle;
+    }
+    .language-toggle select {
+      padding: 6px 10px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      background: #fff;
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+    /* tiny RTL helpers so menus align when RTL active */
+    body.is-rtl .nav-links { direction: rtl; }
+    body.is-rtl .nav-links .dropdown-menu { text-align: right; }
+  </style>
 </head>
 <body>
   <!-- ================= HEADER ================= -->
@@ -23,36 +43,45 @@
       <nav>
         <ul class="nav-links">
           <li class="dropdown">
-            <a href="index.html">Home ▾</a>
+            <a href="index.html" data-key="nav_home">Home ▾</a>
             <ul class="dropdown-menu">
-              <li><a href="index.html">Home 1</a></li>
-              <li><a href="home2.html">Home 2</a></li>
+              <li><a href="index.html" data-key="nav_home1">Home 1</a></li>
+              <li><a href="home2.html" data-key="nav_home2">Home 2</a></li>
             </ul>
           </li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html" data-key="nav_about">About</a></li>
+          <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
           <li class="dropdown">
-            <a href="services.html">Services ▾</a>
+            <a href="services.html" data-key="nav_services">Services ▾</a>
             <ul class="dropdown-menu">
-              <li class="mobile-only"><a href="services.html">All Services</a></li>
-              <li><a href="service1.html">Education</a></li>
-              <li><a href="service2.html">Healthcare</a></li>
-              <li><a href="service3.html">Skill Training</a></li>
-              <li><a href="service4.html">Empowerment</a></li>
-              <li><a href="service5.html">Disaster Relief</a></li>
-              <li><a href="service6.html">Environmental Care</a></li>
+              <li class="mobile-only"><a href="services.html" data-key="nav_all_services">All Services</a></li>
+              <li><a href="service1.html" data-key="nav_service1">Education</a></li>
+              <li><a href="service2.html" data-key="nav_service2">Healthcare</a></li>
+              <li><a href="service3.html" data-key="nav_service3">Skill Training</a></li>
+              <li><a href="service4.html" data-key="nav_service4">Empowerment</a></li>
+              <li><a href="service5.html" data-key="nav_service5">Disaster Relief</a></li>
+              <li><a href="service6.html" data-key="nav_service6">Environmental Care</a></li>
             </ul>
           </li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
         </ul>
       </nav>
+
+      <!-- LANGUAGE TOGGLE (ADDED) -->
+      <div class="language-toggle" aria-hidden="false">
+        <select id="languageSelect" aria-label="Select language">
+          <option value="en">English</option>
+          <option value="ar">العربية</option>
+          <option value="he">עברית</option>
+        </select>
+      </div>
 
       <div class="profile-container">
         <div class="profile" id="profile-dropdown-toggle">
           <span id="profile-initials"></span>
         </div>
         <ul class="profile-dropdown" id="profile-dropdown">
-          <li><a href="#" id="logout-btn">Logout</a></li>
+          <li><a href="#" id="logout-btn" data-key="logout">Logout</a></li>
         </ul>
       </div>
 
@@ -65,8 +94,8 @@
   <section class="blog-hero">
     <img src="images/health.jpeg" alt="Healthcare in Villages">
     <div class="blog-hero-overlay">
-      <h1>Improving Rural Healthcare Access</h1>
-      <p>How we are bringing quality healthcare to underserved communities</p>
+      <h1 data-key="hero_title">Improving Rural Healthcare Access</h1>
+      <p data-key="hero_sub">How we are bringing quality healthcare to underserved communities</p>
     </div>
   </section>
 
@@ -75,23 +104,23 @@
     <!-- Blog Main Content -->
     <div class="blog-main">
       <article>
-        <h2>Bridging the Healthcare Gap</h2>
-        <p>Millions of people in rural areas lack access to basic healthcare. Our mission is to bring essential medical services to their doorstep through mobile clinics, health camps, and telemedicine.</p>
+        <h2 data-key="h_bridging">Bridging the Healthcare Gap</h2>
+        <p data-key="p_bridging">Millions of people in rural areas lack access to basic healthcare. Our mission is to bring essential medical services to their doorstep through mobile clinics, health camps, and telemedicine.</p>
 
-        <h2>Training Community Health Workers</h2>
-        <p>We empower local volunteers with medical knowledge so they can provide first-aid, maternal care, and preventive health education directly within their communities.</p>
+        <h2 data-key="h_training">Training Community Health Workers</h2>
+        <p data-key="p_training">We empower local volunteers with medical knowledge so they can provide first-aid, maternal care, and preventive health education directly within their communities.</p>
 
-        <h2>Maternal & Child Health</h2>
-        <p>Our programs focus on reducing maternal and infant mortality by ensuring timely check-ups, nutrition support, and safe delivery practices.</p>
+        <h2 data-key="h_maternal">Maternal & Child Health</h2>
+        <p data-key="p_maternal">Our programs focus on reducing maternal and infant mortality by ensuring timely check-ups, nutrition support, and safe delivery practices.</p>
 
-        <h2>Impact Stories</h2>
-        <p>From mothers receiving life-saving care during childbirth to children getting vaccinated for the first time, every life touched inspires us to do more.</p>
+        <h2 data-key="h_impact">Impact Stories</h2>
+        <p data-key="p_impact">From mothers receiving life-saving care during childbirth to children getting vaccinated for the first time, every life touched inspires us to do more.</p>
 
-        <h2>How You Can Help</h2>
-        <p>You can contribute by supporting our healthcare initiatives, donating medicines, or volunteering your expertise to improve health access in rural areas.</p>
+        <h2 data-key="h_help">How You Can Help</h2>
+        <p data-key="p_help">You can contribute by supporting our healthcare initiatives, donating medicines, or volunteering your expertise to improve health access in rural areas.</p>
 
         <div class="blog-cta">
-          <a href="donate.html" class="btn">Support Healthcare</a>
+          <a href="donate.html" class="btn" data-key="cta_support">Support Healthcare</a>
         </div>
       </article>
 
@@ -99,22 +128,22 @@
       <div class="author-box">
         <img src="images/1.jpg" alt="Author">
         <div>
-          <h4>Written by Abc</h4>
-          <p>Dedicated to improving healthcare access for underserved communities. Works with NGOs to make healthcare affordable and accessible to all.</p>
+          <h4 data-key="author_by">Written by Abc</h4>
+          <p data-key="author_bio">Dedicated to improving healthcare access for underserved communities. Works with NGOs to make healthcare affordable and accessible to all.</p>
         </div>
       </div>
 
       <!-- Related Posts -->
       <div class="related-posts">
-        <h3>Related Posts</h3>
+        <h3 data-key="related_title">Related Posts</h3>
         <div class="related-grid">
           <a href="blog1.html" class="related-card">
             <img src="images/child_edu.jpeg" alt="Education">
-            <p>Empowering Children with Education</p>
+            <p data-key="related_1">Empowering Children with Education</p>
           </a>
           <a href="blog3.html" class="related-card">
             <img src="images/disaster.jpeg" alt="Environment">
-            <p>Protecting the Environment Together</p>
+            <p data-key="related_2">Protecting the Environment Together</p>
           </a>
         </div>
       </div>
@@ -124,20 +153,20 @@
     <aside class="blog-sidebar">
      
       <div class="sidebar-box">
-        <h3>Categories</h3>
+        <h3 data-key="categories">Categories</h3>
         <ul>
-          <li><a href="blog1.html">Education</a></li>
-          <li><a href="blog2.html">Healthcare</a></li>
-          <li><a href="blog3.html">Environment</a></li>
+          <li><a href="blog1.html" data-key="cat_edu">Education</a></li>
+          <li><a href="blog2.html" data-key="cat_health">Healthcare</a></li>
+          <li><a href="blog3.html" data-key="cat_env">Environment</a></li>
         </ul>
       </div>
 
       <div class="sidebar-box">
-        <h3>Recent Posts</h3>
+        <h3 data-key="recent">Recent Posts</h3>
         <ul>
-          <li><a href="blog1.html">Empowering Children with Education</a></li>
-          <li><a href="blog2.html">Improving Rural Healthcare Access</a></li>
-          <li><a href="blog3.html">Protecting the Environment Together</a></li>
+          <li><a href="blog1.html" data-key="recent_1">Empowering Children with Education</a></li>
+          <li><a href="blog2.html" data-key="recent_2">Improving Rural Healthcare Access</a></li>
+          <li><a href="blog3.html" data-key="recent_3">Protecting the Environment Together</a></li>
         </ul>
       </div>
     </aside>
@@ -149,36 +178,36 @@
       <!-- Logo Section -->
       <div class="footer-logo">
         <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
-        <h4>NGO/CHARITY</h4>
+        <h4 data-key="footer_logo">NGO/CHARITY</h4>
       </div>
       <!-- Quick Links -->
       <div class="footer-links">
-        <h4>Quick Links</h4>
+        <h4 data-key="footer_quick">Quick Links</h4>
         <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html" data-key="nav_about_ft">About</a></li>
+          <li><a href="services.html" data-key="nav_services_ft">Services</a></li>
+          <li><a href="blog.html" data-key="nav_blog_ft">Blog</a></li>
+          <li><a href="contact.html" data-key="nav_contact_ft">Contact</a></li>
         </ul>
       </div>
       <!-- Services -->
       <div class="footer-services">
-        <h4>Explore Services</h4>
+        <h4 data-key="footer_services">Explore Services</h4>
         <ul>
-          <li><a href="service1.html">Education</a></li>
-          <li><a href="service2.html">Healthcare</a></li>
-          <li><a href="service3.html">Skill Training</a></li>
-          <li><a href="service4.html">Women Empowerment</a></li>
-          <li><a href="service5.html">Disaster Relief</a></li>
-          <li><a href="service6.html">Environmental Care</a></li>
+          <li><a href="service1.html" data-key="nav_service1_ft">Education</a></li>
+          <li><a href="service2.html" data-key="nav_service2_ft">Healthcare</a></li>
+          <li><a href="service3.html" data-key="nav_service3_ft">Skill Training</a></li>
+          <li><a href="service4.html" data-key="nav_service4_ft">Women Empowerment</a></li>
+          <li><a href="service5.html" data-key="nav_service5_ft">Disaster Relief</a></li>
+          <li><a href="service6.html" data-key="nav_service6_ft">Environmental Care</a></li>
         </ul>
       </div>
       <!-- Contact -->
       <div class="footer-contact">
-        <h4>Contact Us</h4>
-        <p><strong>Email:</strong> info@example.com</p>
-        <p><strong>Phone:</strong> +91 1234567890</p>
-        <h4>Follow Us</h4>
+        <h4 data-key="footer_contact">Contact Us</h4>
+        <p><strong data-key="email_label">Email:</strong> info@example.com</p>
+        <p><strong data-key="phone_label">Phone:</strong> +91 1234567890</p>
+        <h4 data-key="follow_us">Follow Us</h4>
         <div class="social">
           <a href="#"><img src="images/fb.png" alt="Facebook"></a>
           <a href="#"><img src="images/x.png" alt="Twitter"></a>
@@ -187,18 +216,318 @@
       </div>
       <!-- Newsletter -->
       <div class="footer-newsletter">
-        <h4>Newsletter</h4>
-        <p>Get weekly wellness tips and updates in your inbox.</p>
+        <h4 data-key="newsletter_title">Newsletter</h4>
+        <p data-key="newsletter_text">Get weekly wellness tips and updates in your inbox.</p>
         <form id="newsletter-form">
-          <input type="email" id="newsletter-email" placeholder="Enter your email" required>
-          <button type="submit">Subscribe</button>
+          <input type="email" id="newsletter-email" placeholder="Enter your email" required data-placeholder-key="newsletter_placeholder">
+          <button type="submit" data-key="subscribe_btn">Subscribe</button>
         </form>
-        <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;">
+        <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;" data-key="newsletter_success">
           ✅ Thank you for subscribing!
         </div>
       </div>
     </div>
-    <div class="footer-copy">&copy; 2025 Your Company Name. All Rights Reserved.</div>
+    <div class="footer-copy" data-key="footer_copy">&copy; 2025 Your Company Name. All Rights Reserved.</div>
   </footer>
+
+  <!-- ================= LANGUAGE DICTIONARY + LOGIC (ADDED) ================= -->
+  <script>
+    (function() {
+      const dictionary = {
+        en: {
+          // nav
+          nav_home: "Home ▾",
+          nav_home1: "Home 1",
+          nav_home2: "Home 2",
+          nav_about: "About",
+          nav_blog: "Blog",
+          nav_services: "Services ▾",
+          nav_all_services: "All Services",
+          nav_service1: "Education",
+          nav_service2: "Healthcare",
+          nav_service3: "Skill Training",
+          nav_service4: "Empowerment",
+          nav_service5: "Disaster Relief",
+          nav_service6: "Environmental Care",
+          nav_contact: "Contact",
+          logout: "Logout",
+
+          // hero
+          hero_title: "Improving Rural Healthcare Access",
+          hero_sub: "How we are bringing quality healthcare to underserved communities",
+
+          // article headings & paragraphs
+          h_bridging: "Bridging the Healthcare Gap",
+          p_bridging: "Millions of people in rural areas lack access to basic healthcare. Our mission is to bring essential medical services to their doorstep through mobile clinics, health camps, and telemedicine.",
+
+          h_training: "Training Community Health Workers",
+          p_training: "We empower local volunteers with medical knowledge so they can provide first-aid, maternal care, and preventive health education directly within their communities.",
+
+          h_maternal: "Maternal & Child Health",
+          p_maternal: "Our programs focus on reducing maternal and infant mortality by ensuring timely check-ups, nutrition support, and safe delivery practices.",
+
+          h_impact: "Impact Stories",
+          p_impact: "From mothers receiving life-saving care during childbirth to children getting vaccinated for the first time, every life touched inspires us to do more.",
+
+          h_help: "How You Can Help",
+          p_help: "You can contribute by supporting our healthcare initiatives, donating medicines, or volunteering your expertise to improve health access in rural areas.",
+          cta_support: "Support Healthcare",
+
+          author_by: "Written by Abc",
+          author_bio: "Dedicated to improving healthcare access for underserved communities. Works with NGOs to make healthcare affordable and accessible to all.",
+
+          related_title: "Related Posts",
+          related_1: "Empowering Children with Education",
+          related_2: "Protecting the Environment Together",
+
+          categories: "Categories",
+          cat_edu: "Education",
+          cat_health: "Healthcare",
+          cat_env: "Environment",
+
+          recent: "Recent Posts",
+          recent_1: "Empowering Children with Education",
+          recent_2: "Improving Rural Healthcare Access",
+          recent_3: "Protecting the Environment Together",
+
+          footer_logo: "NGO/CHARITY",
+          footer_quick: "Quick Links",
+          nav_about_ft: "About",
+          nav_services_ft: "Services",
+          nav_blog_ft: "Blog",
+          nav_contact_ft: "Contact",
+          footer_services: "Explore Services",
+          nav_service1_ft: "Education",
+          nav_service2_ft: "Healthcare",
+          nav_service3_ft: "Skill Training",
+          nav_service4_ft: "Women Empowerment",
+          nav_service5_ft: "Disaster Relief",
+          nav_service6_ft: "Environmental Care",
+          footer_contact: "Contact Us",
+          email_label: "Email:",
+          phone_label: "Phone:",
+          follow_us: "Follow Us",
+          newsletter_title: "Newsletter",
+          newsletter_text: "Get weekly wellness tips and updates in your inbox.",
+          newsletter_placeholder: "Enter your email",
+          subscribe_btn: "Subscribe",
+          newsletter_success: "✅ Thank you for subscribing!",
+          footer_copy: "© 2025 Your Company Name. All Rights Reserved.",
+          page_title: "Improving Rural Healthcare Access"
+        },
+
+        ar: {
+          nav_home: "الرئيسية ▾",
+          nav_home1: "الصفحة الرئيسية 1",
+          nav_home2: "الصفحة الرئيسية 2",
+          nav_about: "من نحن",
+          nav_blog: "المدونة",
+          nav_services: "الخدمات ▾",
+          nav_all_services: "كل الخدمات",
+          nav_service1: "التعليم",
+          nav_service2: "الرعاية الصحية",
+          nav_service3: "تدريب المهارات",
+          nav_service4: "التمكين",
+          nav_service5: "الإغاثة في الكوارث",
+          nav_service6: "رعاية البيئة",
+          nav_contact: "اتصل بنا",
+          logout: "تسجيل خروج",
+
+          hero_title: "تحسين الوصول إلى الرعاية الصحية في المناطق الريفية",
+          hero_sub: "كيف نوفر رعاية طبية ذات جودة للمجتمعات المحرومة",
+
+          h_bridging: "جسر فجوة الرعاية الصحية",
+          p_bridging: "يعاني ملايين الأشخاص في المناطق الريفية من نقص الوصول إلى الرعاية الصحية الأساسية. مهمتنا هي توفير الخدمات الطبية الأساسية حتى عتبة بيوتهم من خلال عيادات متنقلة، مخيمات صحية، والطب عن بُعد.",
+
+          h_training: "تدريب العاملين الصحيين المجتمعيين",
+          p_training: "نمكّن المتطوعين المحليين بالمعرفة الطبية ليقدموا الإسعافات الأولية، رعاية الأمومة، والتثقيف الصحي الوقائي داخل مجتمعاتهم.",
+
+          h_maternal: "صحة الأم والطفل",
+          p_maternal: "تركز برامجنا على تقليل وفيات الأمهات والأطفال عن طريق ضمان الفحوصات في الوقت المناسب، دعم التغذية، وممارسات الولادة الآمنة.",
+
+          h_impact: "قصص التأثير",
+          p_impact: "من الأمهات اللاتي تلقت رعاية أنقذت حياتهن أثناء الولادة إلى الأطفال الذين تم تطعيمهم لأول مرة، كل حياة نلمسها تلهمنا لفعل المزيد.",
+
+          h_help: "كيف يمكنك المساعدة",
+          p_help: "يمكنك المساهمة بدعم مبادراتنا الصحية، التبرع بالأدوية، أو التبرع بخبرتك لتحسين الوصول إلى الرعاية الصحية في المناطق الريفية.",
+          cta_support: "ادعم الرعاية الصحية",
+
+          author_by: "بقلم Abc",
+          author_bio: "مكرّس لتحسين الوصول للرعاية الصحية للمجتمعات المحرومة. يعمل مع المنظمات غير الحكومية لجعل الرعاية الصحية ميسورة ومتاحة للجميع.",
+
+          related_title: "منشورات ذات صلة",
+          related_1: "تمكين الأطفال من خلال التعليم",
+          related_2: "حماية البيئة معًا",
+
+          categories: "الفئات",
+          cat_edu: "التعليم",
+          cat_health: "الرعاية الصحية",
+          cat_env: "البيئة",
+
+          recent: "أحدث المنشورات",
+          recent_1: "تمكين الأطفال من خلال التعليم",
+          recent_2: "تحسين الوصول إلى الرعاية الصحية الريفية",
+          recent_3: "حماية البيئة معًا",
+
+          footer_logo: "المنظمة الخيرية",
+          footer_quick: "روابط سريعة",
+          nav_about_ft: "من نحن",
+          nav_services_ft: "الخدمات",
+          nav_blog_ft: "المدونة",
+          nav_contact_ft: "اتصل بنا",
+          footer_services: "استكشف الخدمات",
+          nav_service1_ft: "التعليم",
+          nav_service2_ft: "الرعاية الصحية",
+          nav_service3_ft: "تدريب المهارات",
+          nav_service4_ft: "تمكين المرأة",
+          nav_service5_ft: "الإغاثة في الكوارث",
+          nav_service6_ft: "رعاية البيئة",
+          footer_contact: "اتصل بنا",
+          email_label: "البريد الإلكتروني:",
+          phone_label: "الهاتف:",
+          follow_us: "تابعنا",
+          newsletter_title: "النشرة الإخبارية",
+          newsletter_text: "احصل على نصائح أسبوعية وتحديثات في بريدك.",
+          newsletter_placeholder: "أدخل بريدك الإلكتروني",
+          subscribe_btn: "اشترك",
+          newsletter_success: "✅ شكرًا لاشتراكك!",
+          footer_copy: "© 2025 اسم شركتك. جميع الحقوق محفوظة.",
+          page_title: "تحسين الوصول إلى الرعاية الصحية في المناطق الريفية"
+        },
+
+        he: {
+          nav_home: "בית ▾",
+          nav_home1: "בית 1",
+          nav_home2: "בית 2",
+          nav_about: "עלינו",
+          nav_blog: "בלוג",
+          nav_services: "שירותים ▾",
+          nav_all_services: "כל השירותים",
+          nav_service1: "חינוך",
+          nav_service2: "בריאות",
+          nav_service3: "הכשרת מיומנויות",
+          nav_service4: "העצמה",
+          nav_service5: "סיוע באסון",
+          nav_service6: "טיפול סביבתי",
+          nav_contact: "צור קשר",
+          logout: "התנתק",
+
+          hero_title: "שיפור הגישה לבריאות בכפרים",
+          hero_sub: "איך אנו מביאים שירותי בריאות איכותיים לקהילות שנמנעות מהם",
+
+          h_bridging: "גישור פערי הבריאות",
+          p_bridging: "מיליוני אנשים באזורים כפריים חסרים גישה לשירותי בריאות בסיסיים. המשימה שלנו היא להביא שירותים רפואיים חיוניים עד לפתח ביתם באמצעות קליניקות ניידות, מחנות בריאות ורפואה מרחוק.",
+
+          h_training: "הכשרת עובדי בריאות קהילתיים",
+          p_training: "אנו מעצימים מתנדבים מקומיים בידע רפואי כדי שיוכלו לספק עזרה ראשונה, טיפול מטרי והדרכה למניעה בתוך קהילותיהם.",
+
+          h_maternal: "בריאות אם ותינוק",
+          p_maternal: "התכניות שלנו מתמקדות בהפחתת תמותת אימהות ותינוקות על ידי הבטחת בדיקות בזמן, תמיכה תזונתית ופרקטיקות לידה בטוחות.",
+
+          h_impact: "סיפורי השפעה",
+          p_impact: "מאימהות שקיבלו טיפול מציל חיים בלידה ועד ילדים שחוסנו לראשונה — כל חיים שנגענו בהם מעוררים בנו השראה להמשיך.",
+
+          h_help: "כיצד תוכל לעזור",
+          p_help: "אתה יכול לתרום על ידי תמיכה ביוזמות הבריאות שלנו, תרומת תרופות או התנדבות במומחיותך כדי לשפר את הגישה לבריאות באזורים כפריים.",
+          cta_support: "תמוך בבריאות",
+
+          author_by: "נכתב על ידי Abc",
+          author_bio: "מסור לשיפור הגישה לבריאות באוכלוסיות מוחלשות. עובד עם ארגונים כדי להפוך את הבריאות לנגישה ולתת מענה לכולם.",
+
+          related_title: "פוסטים קשורים",
+          related_1: "העצמת ילדים באמצעות חינוך",
+          related_2: "שמירה על הסביבה יחד",
+
+          categories: "קטגוריות",
+          cat_edu: "חינוך",
+          cat_health: "בריאות",
+          cat_env: "סביבה",
+
+          recent: "פוסטים אחרונים",
+          recent_1: "העצמת ילדים באמצעות חינוך",
+          recent_2: "שיפור הגישה לבריאות כפרית",
+          recent_3: "שמירה על הסביבה יחד",
+
+          footer_logo: "עמותה/ארגון",
+          footer_quick: "קישורים מהירים",
+          nav_about_ft: "עלינו",
+          nav_services_ft: "שירותים",
+          nav_blog_ft: "בלוג",
+          nav_contact_ft: "צור קשר",
+          footer_services: "חקור שירותים",
+          nav_service1_ft: "חינוך",
+          nav_service2_ft: "בריאות",
+          nav_service3_ft: "הכשרת מיומנויות",
+          nav_service4_ft: "העצמת נשים",
+          nav_service5_ft: "סיוע באסון",
+          nav_service6_ft: "טיפוח הסביבה",
+          footer_contact: "צור קשר",
+          email_label: "אימייל:",
+          phone_label: "טלפון:",
+          follow_us: "עקבו אחרינו",
+          newsletter_title: "ניוזלטר",
+          newsletter_text: "קבל טיפים ועדכונים שבועיים לתיבת הדואר שלך.",
+          newsletter_placeholder: "הכנס את האימייל שלך",
+          subscribe_btn: "הרשם",
+          newsletter_success: "✅ תודה שנרשמת!",
+          footer_copy: "© 2025 שם החברה שלך. כל הזכויות שמורות.",
+          page_title: "שיפור הגישה לבריאות בכפרים"
+        }
+      };
+
+      function applyTranslations(lang) {
+        document.querySelectorAll('[data-key]').forEach(el => {
+          const key = el.getAttribute('data-key');
+          if (!key) return;
+          // update title element differently
+          if (el.tagName.toLowerCase() === 'title') {
+            if (dictionary[lang] && dictionary[lang][key]) document.title = dictionary[lang][key];
+            return;
+          }
+          if (dictionary[lang] && dictionary[lang][key] !== undefined) {
+            el.textContent = dictionary[lang][key];
+          }
+        });
+
+        // placeholders
+        document.querySelectorAll('[data-placeholder-key]').forEach(el => {
+          const key = el.getAttribute('data-placeholder-key');
+          if (!key) return;
+          if (dictionary[lang] && dictionary[lang][key] !== undefined) {
+            el.setAttribute('placeholder', dictionary[lang][key]);
+          }
+        });
+
+        // document direction & lang attr
+        document.documentElement.lang = lang;
+        if (lang === 'ar' || lang === 'he') {
+          document.documentElement.setAttribute('dir', 'rtl');
+          document.body.classList.add('is-rtl');
+        } else {
+          document.documentElement.setAttribute('dir', 'ltr');
+          document.body.classList.remove('is-rtl');
+        }
+      }
+
+      function setLanguage(lang) {
+        if (!dictionary[lang]) lang = 'en';
+        localStorage.setItem('siteLanguage', lang);
+        const sel = document.getElementById('languageSelect');
+        if (sel) sel.value = lang;
+        applyTranslations(lang);
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const saved = localStorage.getItem('siteLanguage') || 'en';
+        const sel = document.getElementById('languageSelect');
+        if (sel) {
+          sel.value = saved;
+          sel.addEventListener('change', e => setLanguage(e.target.value));
+        }
+        applyTranslations(saved);
+      });
+    })();
+  </script>
+
 </body>
 </html>

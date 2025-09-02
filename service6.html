@@ -8,11 +8,10 @@
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/services6.css">
 
-<script src="js/main.js" defer></script>
+  <script src="js/main.js" defer></script>
   <script src="js/header.js" defer></script>
   <script src="js/auth-check.js" defer></script>
-    <script src="js/newsletter.js" defer></script>
-
+  <script src="js/newsletter.js" defer></script>
 </head>
 <body>
   <!-- ================= HEADER ================= -->
@@ -25,36 +24,45 @@
     <nav>
       <ul class="nav-links">
         <li class="dropdown">
-          <a href="index.html">Home ▾</a>
+          <a href="index.html" data-key="nav_home">Home ▾</a>
           <ul class="dropdown-menu">
-            <li><a href="index.html">Home 1</a></li>
-            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="index.html" data-key="nav_home1">Home 1</a></li>
+            <li><a href="home2.html" data-key="nav_home2">Home 2</a></li>
           </ul>
         </li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html" data-key="nav_about">About</a></li>
+        <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
         <li class="dropdown">
-          <a href="services.html">Services ▾</a>
+          <a href="services.html" data-key="nav_services">Services ▾</a>
           <ul class="dropdown-menu">
-                        <li class="mobile-only"><a href="services.html">All Services</a></li>
-            <li><a href="service1.html">Education</a></li>
-        <li><a href="service2.html">Healthcare</a></li>
-        <li><a href="service3.html">Skill Training</a></li>
-        <li><a href="service4.html">Empowerment</a></li>
-        <li><a href="service5.html">Disaster Relief</a></li>
-        <li><a href="service6.html">Environmental Care</a></li>
+            <li class="mobile-only"><a href="services.html" data-key="nav_all_services">All Services</a></li>
+            <li><a href="service1.html" data-key="nav_service1">Education</a></li>
+            <li><a href="service2.html" data-key="nav_service2">Healthcare</a></li>
+            <li><a href="service3.html" data-key="nav_service3">Skill Training</a></li>
+            <li><a href="service4.html" data-key="nav_service4">Empowerment</a></li>
+            <li><a href="service5.html" data-key="nav_service5">Disaster Relief</a></li>
+            <li><a href="service6.html" data-key="nav_service6">Environmental Care</a></li>
           </ul>
         </li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
       </ul>
     </nav>
+
+    <!-- Language Toggle (unified with index.html) -->
+    <div class="language-toggle" style="display:inline-block; margin:0 12px;">
+      <select id="languageSelect" aria-label="Select language">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="he">עברית</option>
+      </select>
+    </div>
 
     <div class="profile-container">
       <div class="profile" id="profile-dropdown-toggle">
         <span id="profile-initials"></span>
       </div>
       <ul class="profile-dropdown" id="profile-dropdown">
-        <li><a href="#" id="logout-btn">Logout</a></li>
+        <li><a href="#" id="logout-btn" data-key="logout">Logout</a></li>
       </ul>
     </div>
 
@@ -66,22 +74,17 @@
   <!-- ================= MAIN SECTIONS ================= -->
   <main>
 <!-- Hero Section -->
-<!-- Hero Section -->
 <section class="service-hero">
   <div class="service-hero-overlay"></div>
   <div class="service-hero-content">
-    <h1>Environmental Care</h1>
-    <p>Protecting nature, promoting sustainability, and building a greener future for generations to come.</p>
+    <h1 data-key="s6_hero_title">Environmental Care</h1>
+    <p data-key="s6_hero_subtitle">Protecting nature, promoting sustainability, and building a greener future for generations to come.</p>
   </div>
 </section>
-
-
-
 
 <!-- About Section -->
 <section class="about-modern">
   <div class="about-container">
-    
     <!-- Image Side -->
     <div class="about-image">
       <img src="images/sustain.jpeg" alt="Environmental Care Program">
@@ -90,58 +93,59 @@
 
     <!-- Text Side -->
     <div class="about-content">
-      <h2>About Our Environmental Care Mission</h2>
-      <p>
+      <h2 data-key="s6_about_title">About Our Environmental Care Mission</h2>
+      <p data-key="s6_about_p1">
         A healthy environment is the foundation of a sustainable future. Our environmental care 
         initiatives focus on protecting natural resources, promoting eco-friendly practices, 
         and creating awareness about the importance of preserving our planet.
       </p>
-      <p>
+      <p data-key="s6_about_p2">
         From tree plantation drives and waste management campaigns to clean water projects 
         and climate change awareness programs, we are committed to building greener, healthier 
         communities. By working hand-in-hand with volunteers, schools, and local organizations, 
         we strive to create lasting impact for generations to come.
       </p>
-      <a href="contact.html" class="about-btn">Support Green Initiatives</a>
+      <a href="contact.html" class="about-btn" data-key="s6_about_btn">Support Green Initiatives</a>
     </div>
   </div>
 </section>
 
 <section class="impact" id="impact">
   <div class="impact-container">
-    <h2 class="section-title">Our Impact</h2>
-    <p class="section-subtitle">Together, we are empowering individuals with skills for a better tomorrow</p>
+    <h2 class="section-title" data-key="s6_impact_title">Our Impact</h2>
+    <p class="section-subtitle" data-key="s6_impact_subtitle">Together, we are empowering individuals with skills for a better tomorrow</p>
 
     <div class="impact-grid">
       <!-- Impact Card 1 -->
       <div class="impact-card">
         <h3 class="count" data-target="3000">0</h3>
-        <p>Youth trained in vocational and professional skills</p>
+        <p data-key="s6_impact_card1">Youth trained in vocational and professional skills</p>
       </div>
 
       <!-- Impact Card 2 -->
       <div class="impact-card">
         <h3 class="count" data-target="1500">0</h3>
-        <p>Women empowered through livelihood and self-employment programs</p>
+        <p data-key="s6_impact_card2">Women empowered through livelihood and self-employment programs</p>
       </div>
 
       <!-- Impact Card 3 -->
       <div class="impact-card">
         <h3 class="count" data-target="1200">0</h3>
-        <p>Individuals equipped with digital literacy and IT skills</p>
+        <p data-key="s6_impact_card3">Individuals equipped with digital literacy and IT skills</p>
       </div>
 
       <!-- Impact Card 4 -->
       <div class="impact-card">
         <h3 class="count" data-target="500">0</h3>
-        <p>Entrepreneurs supported in starting small businesses</p>
+        <p data-key="s6_impact_card4">Entrepreneurs supported in starting small businesses</p>
       </div>
     </div>
   </div>
 </section>
+
 <section class="programs-alt" id="programs">
-  <h2 class="section-title">Our Key Environmental Care Programs</h2>
-  <p class="section-subtitle">Sustainable initiatives to protect nature, conserve resources, and build greener communities</p>
+  <h2 class="section-title" data-key="s6_programs_title">Our Key Environmental Care Programs</h2>
+  <p class="section-subtitle" data-key="s6_programs_subtitle">Sustainable initiatives to protect nature, conserve resources, and build greener communities</p>
 
   <!-- Program 1 -->
   <div class="program-item reveal fade-left">
@@ -149,8 +153,8 @@
       <img src="images/ser6_1.jpeg" alt="Tree Plantation Drives">
     </div>
     <div class="program-text">
-      <h3>Tree Plantation Drives</h3>
-      <p>
+      <h3 data-key="s6_prog1_title">Tree Plantation Drives</h3>
+      <p data-key="s6_prog1_p">
         We organize regular plantation campaigns to restore green cover, reduce pollution, and combat climate change. Every tree planted is a step toward a healthier and cleaner environment for future generations. Our drives not only focus on planting trees but also on nurturing them to maturity, ensuring long-term sustainability. By engaging local communities, schools, and volunteers, we aim to create awareness about the importance of biodiversity, soil conservation, and the role of trees in maintaining ecological balance. Together, we can build greener cities and a healthier planet.
       </p>
     </div>
@@ -159,8 +163,8 @@
   <!-- Program 2 -->
   <div class="program-item reveal fade-right">
     <div class="program-text">
-      <h3>Waste Management & Recycling</h3>
-      <p>
+      <h3 data-key="s6_prog2_title">Waste Management & Recycling</h3>
+      <p data-key="s6_prog2_p">
         Promoting segregation, recycling, and responsible disposal of waste is central to our mission. Through awareness drives and clean-up campaigns, we aim to reduce plastic pollution and encourage sustainable living practices. We educate communities on the importance of the 3Rs—Reduce, Reuse, and Recycle—to minimize waste at the source. Our initiatives include plastic-free campaigns, e-waste collection drives, and collaborations with local bodies to ensure efficient waste management systems. By inspiring people to adopt eco-friendly habits, we strive to create cleaner neighborhoods and a sustainable future for all.
       </p>
     </div>
@@ -175,8 +179,8 @@
       <img src="images/ser6_3.jpeg" alt="Clean Water & Sanitation">
     </div>
     <div class="program-text">
-      <h3>Clean Water & Sanitation</h3>
-      <p>
+      <h3 data-key="s6_prog3_title">Clean Water & Sanitation</h3>
+      <p data-key="s6_prog3_p">
       Access to clean water is a basic right, and we are committed to making it a reality for every community. Our initiatives include rainwater harvesting systems, water purification solutions, and sanitation projects that ensure safe and sustainable water resources. We also conduct awareness programs on water conservation, hygiene practices, and the importance of maintaining clean surroundings. By addressing both availability and responsible usage, we aim to reduce waterborne diseases, improve community health, and build a future where clean water is accessible to all.
       </p>
     </div>
@@ -185,8 +189,8 @@
   <!-- Program 4 -->
   <div class="program-item reveal fade-right">
     <div class="program-text">
-      <h3>Climate Change Awareness</h3>
-      <p>
+      <h3 data-key="s6_prog4_title">Climate Change Awareness</h3>
+      <p data-key="s6_prog4_p">
         Educating communities about climate change, renewable energy, and eco-friendly practices is key to building resilience. Through workshops, awareness campaigns, and school programs, we empower people with the knowledge and tools to take meaningful action. Our initiatives highlight the urgent need to reduce carbon footprints, adopt clean energy solutions, and make sustainable lifestyle choices. By inspiring collective responsibility, we aim to create a generation of climate-conscious citizens who are ready to protect our planet for the future.
       </p>
     </div>
@@ -196,40 +200,39 @@
   </div>
 </section>
 
-
 <section class="testimonials" id="testimonials">
   <div class="container">
-    <h2 class="section-title">Voices for the Planet</h2>
-    <p class="section-subtitle">Real stories of change, commitment, and impact through our Environmental Care programs</p>
+    <h2 class="section-title" data-key="s6_testimonials_title">Voices for the Planet</h2>
+    <p class="section-subtitle" data-key="s6_testimonials_subtitle">Real stories of change, commitment, and impact through our Environmental Care programs</p>
 
     <div class="testimonials-grid">
       <!-- Testimonial 1 -->
       <div class="testimonial-card">
-        <p class="quote">“Joining the tree plantation drive transformed my outlook. Planting even one tree made me feel connected to nature and motivated to protect it for future generations.”</p>
+        <p class="quote" data-key="s6_t1_quote">“Joining the tree plantation drive transformed my outlook. Planting even one tree made me feel connected to nature and motivated to protect it for future generations.”</p>
         <div class="author">
           <img src="images/ser6_t1.jpeg" alt="Volunteer in Tree Plantation">
-          <h4>Ritika Sharma</h4>
-          <span>Community Volunteer</span>
+          <h4  data-key="s6_t1_name">Ritika Sharma</h4>
+          <span  data-key="s6_t1_role">Community Volunteer</span>
         </div>
       </div>
 
       <!-- Testimonial 2 -->
       <div class="testimonial-card">
-        <p class="quote">“Through the NGO’s waste management workshops, our community learned the importance of recycling and reducing plastic. Now, we see cleaner streets and healthier surroundings.”</p>
+        <p class="quote" data-key="s6_t2_quote">“Through the NGO’s waste management workshops, our community learned the importance of recycling and reducing plastic. Now, we see cleaner streets and healthier surroundings.”</p>
         <div class="author">
           <img src="images/ser6_t2.jpeg" alt="Community Member">
-          <h4>Rajesh Patel</h4>
-          <span>Community Member</span>
+          <h4 data-key="s6_t2_name">Rajesh Patel</h4>
+          <span data-key="s6_t2_role">Community Member</span>
         </div>
       </div>
 
       <!-- Testimonial 3 -->
       <div class="testimonial-card">
-        <p class="quote">“Supporting the environmental care mission has been deeply fulfilling. Knowing my contribution helps conserve water, plant trees, and fight climate change gives me immense pride.”</p>
-        <div class="author">
+        <p class="quote" data-key="s6_t3_quote">“Supporting the environmental care mission has been deeply fulfilling. Knowing my contribution helps conserve water, plant trees, and fight climate change gives me immense pride.”</p>
+        <div class="author" data-key="s6_t3_author">
           <img src="images/ser6_t3.jpeg" alt="Donor">
-          <h4>Ananya Verma</h4>
-          <span>Donor</span>
+          <h4 data-key="s6_t3_name">Ananya Verma</h4>
+          <span data-key="s6_t3_role">Donor</span>
         </div>
       </div>
     </div>
@@ -238,11 +241,11 @@
 
 <section class="cta" id="cta">
   <div class="cta-container">
-    <h2>Support Environmental Care</h2>
-    <p>Your contribution can protect forests, conserve water, reduce pollution, and create a greener tomorrow. Together, we can heal our planet.</p>
+    <h2 data-key="s6_cta_title">Support Environmental Care</h2>
+    <p data-key="s6_cta_text">Your contribution can protect forests, conserve water, reduce pollution, and create a greener tomorrow. Together, we can heal our planet.</p>
     <div class="cta-buttons">
-      <a href="donate.html" class="cta-btn donate-btn">Donate for Nature</a>
-      <a href="contact.html" class="cta-btn volunteer-btn">Join as Volunteer</a>
+      <a href="donate.html" class="cta-btn donate-btn" data-key="s6_cta_donate">Donate for Nature</a>
+      <a href="contact.html" class="cta-btn volunteer-btn" data-key="s6_cta_volunteer">Join as Volunteer</a>
     </div>
   </div>
 </section>
@@ -261,31 +264,31 @@
 
     <!-- Quick Links -->
     <div class="footer-links">
-      <h4>Quick Links</h4>
+      <h4 data-key="footer_links">Quick Links</h4>
       <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html" data-key="nav_about">About</a></li>
+        <li><a href="services.html" data-key="nav_services">Services</a></li>
+        <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
+        <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
       </ul>
     </div>
 
     <!-- Services -->
     <div class="footer-services">
-      <h4>Explore Services</h4>
+      <h4 data-key="footer_services">Explore Services</h4>
       <ul>
-        <li><a href="service1.html">Education</a></li>
-        <li><a href="service2.html">Healthcare</a></li>
-        <li><a href="service3.html">Skill Training</a></li>
-        <li><a href="service4.html">Women Empowerment</a></li>
-        <li><a href="service5.html">Disaster Relief</a></li>
-        <li><a href="service6.html">Environmental Care</a></li>
+        <li><a href="service1.html" data-key="nav_service1">Education</a></li>
+        <li><a href="service2.html" data-key="nav_service2">Healthcare</a></li>
+        <li><a href="service3.html" data-key="nav_service3">Skill Training</a></li>
+        <li><a href="service4.html" data-key="nav_service4">Women Empowerment</a></li>
+        <li><a href="service5.html" data-key="nav_service5">Disaster Relief</a></li>
+        <li><a href="service6.html" data-key="nav_service6">Environmental Care</a></li>
       </ul>
     </div>
 
     <!-- Contact -->
     <div class="footer-contact">
-      <h4>Contact Us</h4>
+      <h4 data-key="footer_contact">Contact Us</h4>
       <p><strong>Email:</strong> info@example.com</p>
       <p><strong>Phone:</strong> +91 1234567890</p>
 
@@ -299,19 +302,19 @@
 
     <!-- Newsletter -->
     <div class="footer-newsletter">
-      <h4>Newsletter</h4>
-      <p>Get weekly wellness tips and updates in your inbox.</p>
+      <h4 data-key="footer_newsletter">Newsletter</h4>
+      <p data-key="newsletter_text">Get weekly wellness tips and updates in your inbox.</p>
       <form id="newsletter-form">
-        <input type="email" id="newsletter-email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
+        <input type="email" id="newsletter-email" placeholder="Enter your email" required data-placeholder-key="newsletter_placeholder">
+        <button type="submit" data-key="newsletter_btn">Subscribe</button>
       </form>
-      <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;">
-    ✅ Thank you for subscribing!
-  </div>
+      <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;" data-key="newsletter_success">
+        ✅ Thank you for subscribing!
+      </div>
     </div>
   </div>
 
-  <div class="footer-copy">
+  <div class="footer-copy" data-key="footer_copy">
     &copy; 2025 Your Company Name. All Rights Reserved.
   </div>
 </footer>
@@ -370,7 +373,303 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", revealOnScroll);
   revealOnScroll();
 });
+</script>
 
+<!-- ================= Language logic (dictionary; unified with index.html) ================= -->
+<script>
+(function () {
+  const dictionary = {
+    en: {
+      // nav
+      nav_home: "Home ▾",
+      nav_home1: "Home 1",
+      nav_home2: "Home 2",
+      nav_about: "About",
+      nav_blog: "Blog",
+      nav_services: "Services ▾",
+      nav_all_services: "All Services",
+      nav_service1: "Education",
+      nav_service2: "Healthcare",
+      nav_service3: "Skill Training",
+      nav_service4: "Empowerment",
+      nav_service5: "Disaster Relief",
+      nav_service6: "Environmental Care",
+      nav_contact: "Contact",
+      logout: "Logout",
+
+      // page: service 6 (titles)
+      s6_hero_title: "Environmental Care",
+      s6_hero_subtitle: "Protecting nature, promoting sustainability, and building a greener future for generations to come.",
+      s6_about_title: "About Our Environmental Care Mission",
+      s6_about_p1: "A healthy environment is the foundation of a sustainable future. Our environmental care initiatives focus on protecting natural resources, promoting eco-friendly practices, and creating awareness about the importance of preserving our planet.",
+      s6_about_p2: "From tree plantation drives and waste management campaigns to clean water projects and climate change awareness programs, we are committed to building greener, healthier communities. By working hand-in-hand with volunteers, schools, and local organizations, we strive to create lasting impact for generations to come.",
+      s6_about_btn: "Support Green Initiatives",
+
+      s6_impact_title: "Our Impact",
+      s6_impact_subtitle: "Together, we are empowering individuals with skills for a better tomorrow",
+      s6_impact_card1: "Youth trained in vocational and professional skills",
+      s6_impact_card2: "Women empowered through livelihood and self-employment programs",
+      s6_impact_card3: "Individuals equipped with digital literacy and IT skills",
+      s6_impact_card4: "Entrepreneurs supported in starting small businesses",
+
+      s6_programs_title: "Our Key Environmental Care Programs",
+      s6_programs_subtitle: "Sustainable initiatives to protect nature, conserve resources, and build greener communities",
+      s6_prog1_title: "Tree Plantation Drives",
+      s6_prog2_title: "Waste Management & Recycling",
+      s6_prog3_title: "Clean Water & Sanitation",
+      s6_prog4_title: "Climate Change Awareness",
+
+      // NEW: program paragraphs
+      s6_prog1_p: `We organize regular plantation campaigns to restore green cover, reduce pollution, and combat climate change. Every tree planted is a step toward a healthier and cleaner environment for future generations. Our drives not only focus on planting trees but also on nurturing them to maturity, ensuring long-term sustainability. By engaging local communities, schools, and volunteers, we aim to create awareness about the importance of biodiversity, soil conservation, and the role of trees in maintaining ecological balance. Together, we can build greener cities and a healthier planet.`,
+      s6_prog2_p: `Promoting segregation, recycling, and responsible disposal of waste is central to our mission. Through awareness drives and clean-up campaigns, we aim to reduce plastic pollution and encourage sustainable living practices. We educate communities on the importance of the 3Rs—Reduce, Reuse, and Recycle—to minimize waste at the source. Our initiatives include plastic-free campaigns, e-waste collection drives, and collaborations with local bodies to ensure efficient waste management systems. By inspiring people to adopt eco-friendly habits, we strive to create cleaner neighborhoods and a sustainable future for all.`,
+      s6_prog3_p: `Access to clean water is a basic right, and we are committed to making it a reality for every community. Our initiatives include rainwater harvesting systems, water purification solutions, and sanitation projects that ensure safe and sustainable water resources. We also conduct awareness programs on water conservation, hygiene practices, and the importance of maintaining clean surroundings. By addressing both availability and responsible usage, we aim to reduce waterborne diseases, improve community health, and build a future where clean water is accessible to all.`,
+      s6_prog4_p: `Educating communities about climate change, renewable energy, and eco-friendly practices is key to building resilience. Through workshops, awareness campaigns, and school programs, we empower people with the knowledge and tools to take meaningful action. Our initiatives highlight the urgent need to reduce carbon footprints, adopt clean energy solutions, and make sustainable lifestyle choices. By inspiring collective responsibility, we aim to create a generation of climate-conscious citizens who are ready to protect our planet for the future.`,
+
+      // testimonials
+      s6_testimonials_title: "Voices for the Planet",
+      s6_testimonials_subtitle: "Real stories of change, commitment, and impact through our Environmental Care programs",
+      s6_t1_quote: `“Joining the tree plantation drive transformed my outlook. Planting even one tree made me feel connected to nature and motivated to protect it for future generations.”`,
+      s6_t1_name: "Ritika Sharma",
+      s6_t1_role: "Community Volunteer",
+      s6_t2_quote: `“Through the NGO’s waste management workshops, our community learned the importance of recycling and reducing plastic. Now, we see cleaner streets and healthier surroundings.”`,
+      s6_t2_name: "Rajesh Patel",
+      s6_t2_role: "Community Member",
+      s6_t3_quote: `“Supporting the environmental care mission has been deeply fulfilling. Knowing my contribution helps conserve water, plant trees, and fight climate change gives me immense pride.”`,
+      s6_t3_name: "Ananya Verma",
+      s6_t3_role: "Donor",
+
+      // CTA
+      s6_cta_title: "Support Environmental Care",
+      s6_cta_text: "Your contribution can protect forests, conserve water, reduce pollution, and create a greener tomorrow. Together, we can heal our planet.",
+      s6_cta_donate: "Donate for Nature",
+      s6_cta_volunteer: "Join as Volunteer",
+
+      // footer / newsletter
+      footer_links: "Quick Links",
+      footer_services: "Explore Services",
+      footer_contact: "Contact Us",
+      footer_newsletter: "Newsletter",
+      newsletter_text: "Get weekly wellness tips and updates in your inbox.",
+      newsletter_btn: "Subscribe",
+      newsletter_placeholder: "Enter your email",
+      newsletter_success: "✅ Thank you for subscribing!",
+      footer_copy: "© 2025 Your Company Name. All Rights Reserved.",
+      // NEW footer labels
+      footer_follow: "Follow Us",
+      label_email: "Email:",
+      label_phone: "Phone:"
+    },
+
+    ar: {
+      // nav
+      nav_home: "الرئيسية ▾",
+      nav_home1: "الرئيسية 1",
+      nav_home2: "الرئيسية 2",
+      nav_about: "معلومات عنا",
+      nav_blog: "المدونة",
+      nav_services: "الخدمات ▾",
+      nav_all_services: "جميع الخدمات",
+      nav_service1: "التعليم",
+      nav_service2: "الرعاية الصحية",
+      nav_service3: "التدريب المهني",
+      nav_service4: "التمكين",
+      nav_service5: "الإغاثة في الكوارث",
+      nav_service6: "رعاية البيئة",
+      nav_contact: "اتصل بنا",
+      logout: "تسجيل الخروج",
+
+      // page: service 6 (titles)
+      s6_hero_title: "رعاية البيئة",
+      s6_hero_subtitle: "حماية الطبيعة، تعزيز الاستدامة، وبناء مستقبل أكثر خضرة للأجيال القادمة.",
+      s6_about_title: "مهمتنا في رعاية البيئة",
+      s6_about_p1: "البيئة الصحية هي أساس المستقبل المستدام. تركز مبادرات رعاية البيئة لدينا على حماية الموارد الطبيعية وتشجيع الممارسات الصديقة للبيئة ونشر الوعي بأهمية الحفاظ على كوكبنا.",
+      s6_about_p2: "من حملات تشجير الأشجار وإدارة النفايات إلى مشاريع المياه النظيفة وبرامج التوعية بالمناخ، نلتزم ببناء مجتمعات أكثر خضرة وصحة. ومن خلال العمل مع المتطوعين والمدارس والمنظمات المحلية، نسعى لصنع تأثير مستدام للأجيال القادمة.",
+      s6_about_btn: "ادعم المبادرات الخضراء",
+
+      s6_impact_title: "أثرنا",
+      s6_impact_subtitle: "معًا نمكّن الأفراد بمهارات من أجل غدٍ أفضل",
+      s6_impact_card1: "شباب تلقّوا تدريبًا مهنيًا واحترافيًا",
+      s6_impact_card2: "تمكين النساء عبر برامج سبل العيش والعمل الحر",
+      s6_impact_card3: "أفراد مجهزون بمهارات الثقافة الرقمية وتقنية المعلومات",
+      s6_impact_card4: "روّاد أعمال حصلوا على دعم لبدء مشاريع صغيرة",
+
+      s6_programs_title: "برامج رعاية البيئة الرئيسية لدينا",
+      s6_programs_subtitle: "مبادرات مستدامة لحماية الطبيعة والحفاظ على الموارد وبناء مجتمعات أكثر خضرة",
+      s6_prog1_title: "حملات غرس الأشجار",
+      s6_prog2_title: "إدارة النفايات وإعادة التدوير",
+      s6_prog3_title: "المياه النظيفة والصرف الصحي",
+      s6_prog4_title: "التوعية بتغير المناخ",
+
+      // NEW: program paragraphs
+      s6_prog1_p: `ننظم حملات تشجير منتظمة لاستعادة الغطاء النباتي وتقليل التلوث ومكافحة تغيّر المناخ. كل شجرة تُزرع هي خطوة نحو بيئة أكثر صحة ونظافة للأجيال القادمة. لا تركز حملاتنا على الزراعة فحسب، بل على رعاية الأشجار حتى تنضج لضمان الاستدامة على المدى الطويل. ومن خلال إشراك المجتمعات المحلية والمدارس والمتطوعين، نسعى لرفع الوعي بأهمية التنوع الحيوي وحماية التربة ودور الأشجار في الحفاظ على التوازن البيئي. معًا نبني مدنًا أكثر خضرة وكوكبًا أكثر صحة.`,
+      s6_prog2_p: `يعدّ تعزيز الفرز وإعادة التدوير والتخلص المسؤول من النفايات محورًا أساسيًا في مهمتنا. ومن خلال حملات التوعية وأنشطة التنظيف، نسعى إلى الحد من تلوث البلاستيك وتشجيع أساليب عيش مستدامة. نُثقف المجتمعات حول أهمية مبادئ التقليل وإعادة الاستخدام وإعادة التدوير للحد من النفايات من المصدر. وتشمل مبادراتنا حملات خالية من البلاستيك وجمع النفايات الإلكترونية والتعاون مع الجهات المحلية لضمان أنظمة فعّالة لإدارة النفايات. بإلهام الناس على تبني عادات صديقة للبيئة، نسعى لبيئات أنظف ومستقبل مستدام للجميع.`,
+      s6_prog3_p: `إن الحصول على مياه نظيفة حق أساسي، ونحن ملتزمون بجعله واقعًا لكل مجتمع. تشمل مبادراتنا حصاد مياه الأمطار، وحلول تنقية المياه، ومشاريع الصرف الصحي التي تضمن موارد مائية آمنة ومستدامة. كما ننفّذ برامج توعوية حول ترشيد المياه والممارسات الصحية وأهمية نظافة المحيط. ومن خلال معالجة جانبَي التوفر والاستخدام الرشيد، نهدف إلى تقليل الأمراض المنقولة بالمياه وتحسين صحة المجتمع وبناء مستقبل تتوفر فيه المياه النظيفة للجميع.`,
+      s6_prog4_p: `يعد تثقيف المجتمعات حول تغيّر المناخ والطاقة المتجددة والممارسات الصديقة للبيئة مفتاحًا لبناء المرونة. ومن خلال ورش العمل وحملات التوعية وبرامج المدارس، نزوّد الناس بالمعرفة والأدوات لاتخاذ خطوات مؤثرة. وتبرز مبادراتنا الحاجة الملحة لخفض البصمة الكربونية واعتماد حلول الطاقة النظيفة وتبنّي أنماط حياة مستدامة. وبإلهام المسؤولية الجماعية، نسعى لصناعة جيل واعٍ مناخيًا مستعد لحماية كوكبنا.`,
+
+      // testimonials
+      s6_testimonials_title: "أصوات من أجل الكوكب",
+      s6_testimonials_subtitle: "قصص حقيقية عن التغيير والالتزام والأثر من خلال برامج رعاية البيئة لدينا",
+      s6_t1_quote: `«الانضمام إلى حملة غرس الأشجار غيّر نظرتي. مجرد زرع شجرة واحدة جعلني أشعر بالارتباط بالطبيعة ودفعني لحمايتها من أجل الأجيال القادمة.»`,
+      s6_t1_name: "ريتيكا شارما",
+      s6_t1_role: "متطوعة مجتمعية",
+      s6_t2_quote: `«من خلال ورش إدارة النفايات التابعة للمنظمة، تعلّم مجتمعنا أهمية إعادة التدوير وتقليل البلاستيك. الآن نرى شوارع أنظف وبيئة أكثر صحة.»`,
+      s6_t2_name: "راجِش باتيل",
+      s6_t2_role: "عضو في المجتمع",
+      s6_t3_quote: `«كانت مشاركتي في مهمة رعاية البيئة مُرضية للغاية. إن معرفتي بأن مساهمتي تساعد في الحفاظ على المياه وزراعة الأشجار ومكافحة تغيّر المناخ تمنحني فخرًا كبيرًا.»`,
+      s6_t3_name: "أنانيا فيرما",
+      s6_t3_role: "متبرعة",
+
+      // CTA
+      s6_cta_title: "ادعم رعاية البيئة",
+      s6_cta_text: "يمكن لمساهمتك حماية الغابات والحفاظ على المياه وتقليل التلوث وخلق غدٍ أكثر خضرة. معًا نستطيع شفاء كوكبنا.",
+      s6_cta_donate: "تبرع من أجل الطبيعة",
+      s6_cta_volunteer: "انضم كمتطوع",
+
+      // footer / newsletter
+      footer_links: "روابط سريعة",
+      footer_services: "استكشف الخدمات",
+      footer_contact: "اتصل بنا",
+      footer_newsletter: "النشرة البريدية",
+      newsletter_text: "احصل على نصائح أسبوعية وتحديثات على بريدك.",
+      newsletter_btn: "اشترك",
+      newsletter_placeholder: "أدخل بريدك الإلكتروني",
+      newsletter_success: "✅ شكرًا لاشتراكك!",
+      footer_copy: "© 2025 اسم شركتك. جميع الحقوق محفوظة.",
+      // NEW footer labels
+      footer_follow: "تابعنا",
+      label_email: "البريد الإلكتروني:",
+      label_phone: "الهاتف:"
+    },
+
+    he: {
+      // nav
+      nav_home: "בית ▾",
+      nav_home1: "בית 1",
+      nav_home2: "בית 2",
+      nav_about: "עלינו",
+      nav_blog: "בלוג",
+      nav_services: "שירותים ▾",
+      nav_all_services: "כל השירותים",
+      nav_service1: "חינוך",
+      nav_service2: "בריאות",
+      nav_service3: "הכשרה מקצועית",
+      nav_service4: "העצמה",
+      nav_service5: "סיוע בשעת חירום",
+      nav_service6: "שמירה על הסביבה",
+      nav_contact: "צור קשר",
+      logout: "התנתק",
+
+      // page: service 6 (titles)
+      s6_hero_title: "שמירה על הסביבה",
+      s6_hero_subtitle: "שמירה על הטבע, קידום קיימות ובניית עתיד ירוק לדורות הבאים.",
+      s6_about_title: "על משימתנו לשמירה על הסביבה",
+      s6_about_p1: "סביבה בריאה היא הבסיס לעתיד בר-קיימא. היוזמות שלנו מתמקדות בהגנה על משאבי טבע, עידוד פרקטיקות ידידותיות לסביבה והעלאת מודעות לחשיבות שמירת כדור הארץ.",
+      s6_about_p2: "ממבצעי נטיעות וניהול פסולת ועד פרויקטים של מים נקיים ותוכניות מודעות לאקלים — אנו מחויבים לבנות קהילות ירוקות ובריאות יותר. בשיתוף מתנדבים, בתי ספר וארגונים מקומיים אנו שואפים ליצור השפעה מתמשכת לדורות.",
+      s6_about_btn: "תמיכה ביוזמות ירוקות",
+
+      s6_impact_title: "ההשפעה שלנו",
+      s6_impact_subtitle: "ביחד אנו מעניקים לאנשים כישורים לעתיד טוב יותר",
+      s6_impact_card1: "צעירים שהוכשרו בכישורים מקצועיים",
+      s6_impact_card2: "נשים שהועצמו בתוכניות תעסוקה ועצמאות",
+      s6_impact_card3: "אנשים שרכשו אוריינות דיגיטלית ומיומנויות IT",
+      s6_impact_card4: "יזמים שקיבלו תמיכה להקמת עסקים קטנים",
+
+      s6_programs_title: "תוכניות ליבה לשמירה על הסביבה",
+      s6_programs_subtitle: "יוזמות ברות-קיימא לשמירת הטבע, חיסכון במשאבים ובניית קהילות ירוקות",
+      s6_prog1_title: "מבצעי נטיעת עצים",
+      s6_prog2_title: "ניהול פסולת ומיחזור",
+      s6_prog3_title: "מים נקיים ותברואה",
+      s6_prog4_title: "מודעות לשינויי אקלים",
+
+      // NEW: program paragraphs
+      s6_prog1_p: `אנו מקיימים מבצעי נטיעות קבועים לשיקום הירוק, להפחתת זיהום ולהתמודדות עם שינויי האקלים. כל עץ שניטע הוא צעד לעבר סביבה נקייה ובריאה יותר לדורות הבאים. הדגש שלנו אינו רק על נטיעה אלא גם על טיפוח העצים עד לבגרות, לשם קיימות ארוכת טווח. בשיתוף קהילות, בתי ספר ומתנדבים אנו מעלים מודעות לחשיבות המגוון הביולוגי, שימור הקרקע ותפקיד העצים בשמירה על האיזון האקולוגי. יחד נוכל לבנות ערים ירוקות יותר וכדור ארץ בריא יותר.`,
+      s6_prog2_p: `קידום מיון, מיחזור והשלכה אחראית של פסולת הוא מרכז המשימה שלנו. באמצעות פעילויות הסברה ומבצעי ניקיון אנו שואפים להפחית זיהום פלסטיק ולעודד אורח חיים בר-קיימא. אנו מחנכים לקהילות על חשיבות ה-3R — צמצום, שימוש חוזר ומיחזור — כדי למזער פסולת במקור. היוזמות כוללות קמפיינים ללא פלסטיק, איסוף פסולת אלקטרונית ושיתופי פעולה עם הרשויות לניהול פסולת יעיל. על ידי השראת הרגלים ידידותיים לסביבה, אנו פועלים לשכונות נקיות יותר ולעתיד בר-קיימא לכולם.`,
+      s6_prog3_p: `גישה למים נקיים היא זכות בסיסית, ואנו מחויבים להפוך זאת למציאות בכל קהילה. היוזמות שלנו כוללות מערכות לאגירת מי גשמים, פתרונות לטיהור מים ופרויקטים תברואתיים שמבטיחים משאבי מים בטוחים ובר-קיימא. בנוסף אנו מקיימים תוכניות הסברה על חיסכון במים, היגיינה ושמירה על ניקיון הסביבה. על ידי טיפול גם בזמינות וגם בשימוש אחראי, אנו שואפים להפחית מחלות המועברות במים, לשפר את בריאות הקהילה ולבנות עתיד שבו מים נקיים נגישים לכולם.`,
+      s6_prog4_p: `חינוך קהילות על שינויי אקלים, אנרגיות מתחדשות ופרקטיקות ירוקות הוא המפתח לחוסן. דרך סדנאות, קמפיינים ותוכניות בבתי ספר אנו מעניקים ידע וכלים לפעולה משמעותית. היוזמות מדגישות את הצורך הדחוף בהפחתת טביעת הרגל הפחמנית, אימוץ אנרגיה נקייה ואורחות חיים מקיימים. בהשראת אחריות משותפת, אנו שואפים ליצור דור מודע אקלימית המוכן להגן על כוכבנו.`,
+
+      // testimonials
+      s6_testimonials_title: "קולות למען כדור הארץ",
+      s6_testimonials_subtitle: "סיפורים אמיתיים של שינוי, מחויבות והשפעה מתוכניות שמירה על הסביבה שלנו",
+      s6_t1_quote: `“הצטרפותי למבצע הנטיעות שינתה את נקודת המבט שלי. נטיעה של עץ אחד גרמה לי להרגיש מחובר/ת לטבע והניעה אותי להגן עליו עבור הדורות הבאים.”`,
+      s6_t1_name: "ריטיקה שארמה",
+      s6_t1_role: "מתנדבת קהילתית",
+      s6_t2_quote: `“דרך סדנאות ניהול הפסולת של העמותה למדנו בקהילה שלנו את חשיבות המיחזור והפחתת פלסטיק. היום הרחובות נקיים יותר והסביבה בריאה יותר.”`,
+      s6_t2_name: "רג׳ש פאטל",
+      s6_t2_role: "חבר קהילה",
+      s6_t3_quote: `“לתמוך במשימת השמירה על הסביבה היה עבורי מספק מאוד. הידיעה שהתרומה שלי מסייעת לשימור מים, לנטיעת עצים ולהתמודדות עם שינויי האקלים ממלאת אותי גאווה.”`,
+      s6_t3_name: "אנניה ורמה",
+      s6_t3_role: "תורמת",
+
+      // CTA
+      s6_cta_title: "תמכו בשמירה על הסביבה",
+      s6_cta_text: "התרומה שלכם יכולה להגן על יערות, לשמר מים, להפחית זיהום וליצור מחר ירוק יותר. יחד נרפא את כוכבנו.",
+      s6_cta_donate: "תרומה לטבע",
+      s6_cta_volunteer: "הצטרפו כמתנדבים",
+
+      // footer / newsletter
+      footer_links: "קישורים מהירים",
+      footer_services: "חקור שירותים",
+      footer_contact: "צור קשר",
+      footer_newsletter: "ניוזלטר",
+      newsletter_text: "קבלו טיפים ועדכונים שבועיים לתיבת הדואר שלכם.",
+      newsletter_btn: "הירשם",
+      newsletter_placeholder: "הכנס את האימייל שלך",
+      newsletter_success: "✅ תודה שנרשמתם!",
+      footer_copy: "© 2025 שם החברה שלך. כל הזכויות שמורות.",
+      // NEW footer labels
+      footer_follow: "עקבו אחרינו",
+      label_email: "דוא\"ל:",
+      label_phone: "טלפון:"
+    }
+  };
+  function applyTranslations(lang) {
+    // text nodes
+    document.querySelectorAll('[data-key]').forEach(el => {
+      const key = el.getAttribute('data-key');
+      if (dictionary[lang] && dictionary[lang][key] !== undefined) {
+        el.textContent = dictionary[lang][key];
+      }
+    });
+
+    // placeholders
+    document.querySelectorAll('[data-placeholder-key]').forEach(el => {
+      const key = el.getAttribute('data-placeholder-key');
+      if (dictionary[lang] && dictionary[lang][key] !== undefined) {
+        el.setAttribute('placeholder', dictionary[lang][key]);
+      }
+    });
+
+    // lang + direction
+    document.documentElement.lang = lang;
+    if (lang === 'ar' || lang === 'he') {
+      document.documentElement.setAttribute('dir', 'rtl');
+      document.body.classList.add('is-rtl');
+    } else {
+      document.documentElement.setAttribute('dir', 'ltr');
+      document.body.classList.remove('is-rtl');
+    }
+  }
+
+  function setLanguage(lang) {
+    if (!dictionary[lang]) lang = 'en';
+    localStorage.setItem('siteLanguage', lang);
+    const sel = document.getElementById('languageSelect');
+    if (sel) sel.value = lang;
+    applyTranslations(lang);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const saved = localStorage.getItem('siteLanguage') || 'en';
+    const sel = document.getElementById('languageSelect');
+
+    if (sel) {
+      sel.value = dictionary[saved] ? saved : 'en';
+      sel.addEventListener('change', e => setLanguage(e.target.value));
+    }
+    applyTranslations(dictionary[saved] ? saved : 'en');
+  });
+})();
+  window.S6_I18N = dictionary;
 </script>
 
 </body>

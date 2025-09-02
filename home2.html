@@ -8,11 +8,11 @@
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/home2.css">
-<script src="js/main.js" defer></script>
+  <script src="js/main.js" defer></script>
   <script src="js/header.js" defer></script>
   <script src="js/auth-check.js" defer></script>
-    <script src="js/newsletter.js" defer></script>
-
+  <script src="js/newsletter.js" defer></script>
+  <!-- Language logic is inlined at the end of this file so you can paste a single file -->
 </head>
 <body>
   <!-- ================= HEADER ================= -->
@@ -25,36 +25,45 @@
     <nav>
       <ul class="nav-links">
         <li class="dropdown">
-          <a href="index.html">Home ▾</a>
+          <a href="index.html" data-key="nav_home">Home ▾</a>
           <ul class="dropdown-menu">
-            <li><a href="index.html">Home 1</a></li>
-            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="index.html" data-key="nav_home1">Home 1</a></li>
+            <li><a href="home2.html" data-key="nav_home2">Home 2</a></li>
           </ul>
         </li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html" data-key="nav_about">About</a></li>
+        <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
         <li class="dropdown">
-          <a href="services.html">Services ▾</a>
+          <a href="services.html" data-key="nav_services">Services ▾</a>
           <ul class="dropdown-menu">
-                        <li class="mobile-only"><a href="services.html">All Services</a></li>
-           <li><a href="service1.html">Education</a></li>
-        <li><a href="service2.html">Healthcare</a></li>
-        <li><a href="service3.html">Skill Training</a></li>
-        <li><a href="service4.html">Empowerment</a></li>
-        <li><a href="service5.html">Disaster Relief</a></li>
-        <li><a href="service6.html">Environmental Care</a></li>
+            <li class="mobile-only"><a href="services.html" data-key="nav_all_services">All Services</a></li>
+            <li><a href="service1.html" data-key="nav_service1">Education</a></li>
+            <li><a href="service2.html" data-key="nav_service2">Healthcare</a></li>
+            <li><a href="service3.html" data-key="nav_service3">Skill Training</a></li>
+            <li><a href="service4.html" data-key="nav_service4">Empowerment</a></li>
+            <li><a href="service5.html" data-key="nav_service5">Disaster Relief</a></li>
+            <li><a href="service6.html" data-key="nav_service6">Environmental Care</a></li>
           </ul>
         </li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
       </ul>
     </nav>
+
+    <!-- ========== Language Toggle (new) ========== -->
+    <div class="language-toggle" style="display:inline-block; margin:0 12px;">
+      <select id="languageSelect" aria-label="Select language">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="he">עברית</option>
+      </select>
+    </div>
 
     <div class="profile-container">
       <div class="profile" id="profile-dropdown-toggle">
         <span id="profile-initials"></span>
       </div>
       <ul class="profile-dropdown" id="profile-dropdown">
-        <li><a href="#" id="logout-btn">Logout</a></li>
+        <li><a href="#" id="logout-btn" data-key="logout">Logout</a></li>
       </ul>
     </div>
 
@@ -67,179 +76,175 @@
   <main>
 
     <section class="hero">
-  <video class="hero-video" autoplay muted loop playsinline>
-    <source src="videos/home2.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="videos/home2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
 
-  <div class="hero-overlay"></div>
+      <div class="hero-overlay"></div>
 
-  <div class="hero-content">
-    <h1>Building Hope, Changing Lives</h1>
-    <p>Together we create opportunities, uplift communities, and shape a brighter, sustainable future.</p>
-    <a href="services.html" class="hero-btn">Explore Our Work</a>
-    <a href="donate.html" class="hero-btn secondary">Support Us</a>
-  </div>
-</section>
+      <div class="hero-content">
+        <h1 data-key="hero_title">Building Hope, Changing Lives</h1>
+        <p data-key="hero_sub">Together we create opportunities, uplift communities, and shape a brighter, sustainable future.</p>
+        <a href="services.html" class="hero-btn" data-key="hero_btn1">Explore Our Work</a>
+        <a href="donate.html" class="hero-btn secondary" data-key="hero_btn2">Support Us</a>
+      </div>
+    </section>
 
-  <!-- About Section -->
-<section class="about-home" id="about">
-  <div class="about-overlay"></div>
-  <div class="about-container">
-    <div class="about-text">
-      <h2>About Us</h2>
-      <p>
-        We are a passionate team driven by the vision of a just and compassionate world.  
-        Through education, healthcare, and empowerment initiatives, we stand with 
-        communities to break barriers, nurture dreams, and build sustainable futures.  
-        Every step we take is guided by hope, dignity, and the belief that change begins with us. 
-      </p>
-      <a href="about.html" class="about-btn">Discover More</a>
-    </div>
-    <div class="about-img">
-      <img src="images/home2_abt.jpeg" alt="Our Work in Action">
-    </div>
-  </div>
-</section>
+    <!-- About Section -->
+    <section class="about-home" id="about">
+      <div class="about-overlay"></div>
+      <div class="about-container">
+        <div class="about-text">
+          <h2 data-key="about_title">About Us</h2>
+          <p data-key="about_text">
+            We are a passionate team driven by the vision of a just and compassionate world.  
+            Through education, healthcare, and empowerment initiatives, we stand with 
+            communities to break barriers, nurture dreams, and build sustainable futures.  
+            Every step we take is guided by hope, dignity, and the belief that change begins with us. 
+          </p>
+          <a href="about.html" class="about-btn" data-key="about_btn">Discover More</a>
+        </div>
+        <div class="about-img">
+          <img src="images/home2_abt.jpeg" alt="Our Work in Action">
+        </div>
+      </div>
+    </section>
 
-<!-- ✅ PROJECTS SECTION -->
-<section class="projects" id="projects">
-  <div class="projects-container">
-    <h2 class="section-title">Our Projects</h2>
-    <p class="section-subtitle">Explore some of the impactful initiatives we’ve been working on</p>
+    <!-- ✅ PROJECTS SECTION -->
+    <section class="projects" id="projects">
+      <div class="projects-container">
+        <h2 class="section-title" data-key="projects_title">Our Projects</h2>
+        <p class="section-subtitle" data-key="projects_sub">Explore some of the impactful initiatives we’ve been working on</p>
 
-    <div class="projects-grid">
-      <!-- Project 1 -->
-      <div class="project-card">
-        <img src="images/vilage.jpeg" alt="Project 1">
-        <div class="project-info">
-          <h3>Rural Healthcare Camps</h3>
-          <p>Organizing free medical camps in underserved areas, providing essential checkups, medicines, and health awareness programs.</p>
-          <a href="services.html">View More</a>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <img src="images/vilage.jpeg" alt="Project 1">
+            <div class="project-info">
+              <h3 data-key="proj1_title">Rural Healthcare Camps</h3>
+              <p data-key="proj1_text">Organizing free medical camps in underserved areas, providing essential checkups, medicines, and health awareness programs.</p>
+              <a href="services.html" data-key="view_more">View More</a>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <img src="images/futur.jpg" alt="Project 2">
+            <div class="project-info">
+              <h3 data-key="proj2_title">Bright Futures Program</h3>
+              <p data-key="proj2_text">Scholarships, school supplies, and digital learning opportunities for children from low-income families.</p>
+              <a href="services.html" data-key="view_more">View More</a>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <img src="images/farming.jpg" alt="Project 3">
+            <div class="project-info">
+              <h3 data-key="proj3_title">Community Farming</h3>
+              <p data-key="proj3_text">Supporting local farmers with modern techniques, organic practices, and access to sustainable markets.</p>
+              <a href="services.html" data-key="view_more">View More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Causes Grid -->
+    <div class="causes-grid">
+      <!-- Cause 1 -->
+      <div class="cause-block">
+        <img src="images/health.jpeg" alt="Healthcare">
+        <div class="cause-text">
+          <h3 data-key="cause1_title">Healthcare</h3>
+          <p data-key="cause1_text">Providing free medical checkups, essential medicines, and health awareness to rural and urban poor communities.</p>
         </div>
       </div>
 
-      <!-- Project 2 -->
-      <div class="project-card">
-        <img src="images/futur.jpg" alt="Project 2">
-        <div class="project-info">
-          <h3>Bright Futures Program</h3>
-          <p>Scholarships, school supplies, and digital learning opportunities for children from low-income families.</p>
-          <a href="services.html">View More</a>
+      <!-- Cause 2 -->
+      <div class="cause-block">
+        <img src="images/education.jpg" alt="Quality Education">
+        <div class="cause-text">
+          <h3 data-key="cause2_title">Quality Education</h3>
+          <p data-key="cause2_text">Ensuring every child has access to schools, scholarships, and digital learning resources for a brighter future.</p>
         </div>
       </div>
 
-      <!-- Project 3 -->
-      <div class="project-card">
-        <img src="images/farming.jpg" alt="Project 3">
-        <div class="project-info">
-          <h3>Community Farming</h3>
-          <p>Supporting local farmers with modern techniques, organic practices, and access to sustainable markets.</p>
-          <a href="services.html">View More</a>
+      <!-- Cause 3 -->
+      <div class="cause-block">
+        <img src="images/tree.jpeg" alt="Climate Action">
+        <div class="cause-text">
+          <h3 data-key="cause3_title">Climate Action</h3>
+          <p data-key="cause3_text">Promoting tree plantations, waste reduction, and clean energy solutions to protect our planet.</p>
+        </div>
+      </div>
+
+      <!-- Cause 4 -->
+      <div class="cause-block">
+        <img src="images/women.jpeg" alt="Women Empowerment">
+        <div class="cause-text">
+          <h3 data-key="cause4_title">Women Empowerment</h3>
+          <p data-key="cause4_text">Supporting women with skill training, leadership opportunities, and financial independence programs.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
 
+    <!-- ✅ TESTIMONIALS SECTION -->
+    <section class="testimonials" id="testimonials">
+      <div class="testimonials-container">
+        <h2 class="section-title" data-key="testimonials_title">What People Say</h2>
+        <p class="section-subtitle" data-key="testimonials_sub">Stories of hope and impact from our community</p>
 
-<div class="causes-grid">
-  <!-- Cause 1 -->
-  <div class="cause-block">
-    <img src="images/health.jpeg" alt="Healthcare">
-    <div class="cause-text">
-      <h3>Healthcare</h3>
-      <p>Providing free medical checkups, essential medicines, and health awareness to rural and urban poor communities.</p>
-    </div>
-  </div>
+        <div class="testimonial-slider">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <p data-key="testimonial1_text">“Thanks to this NGO, our village clinic now provides free medicines. My family’s life has completely changed.”</p>
+            <h4 data-key="testimonial1_author">- Lakshmi, Beneficiary</h4>
+          </div>
 
-  <!-- Cause 2 -->
-  <div class="cause-block">
-    <img src="images/education.jpg" alt="Quality Education">
-    <div class="cause-text">
-      <h3>Quality Education</h3>
-      <p>Ensuring every child has access to schools, scholarships, and digital learning resources for a brighter future.</p>
-    </div>
-  </div>
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <p data-key="testimonial2_text">“I trust this organization because they are transparent and every donation I make truly reaches the people in need.”</p>
+            <h4 data-key="testimonial2_author">- David, Donor</h4>
+          </div>
 
-  <!-- Cause 3 -->
-  <div class="cause-block">
-    <img src="images/tree.jpeg" alt="Climate Action">
-    <div class="cause-text">
-      <h3>Climate Action</h3>
-      <p>Promoting tree plantations, waste reduction, and clean energy solutions to protect our planet.</p>
-    </div>
-  </div>
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <p data-key="testimonial3_text">“Volunteering here opened my eyes to the struggles of underprivileged communities. It’s been a life-changing journey.”</p>
+            <h4 data-key="testimonial3_author">- Ananya, Volunteer</h4>
+          </div>
 
-  <!-- Cause 4 -->
-  <div class="cause-block">
-    <img src="images/women.jpeg" alt="Women Empowerment">
-    <div class="cause-text">
-      <h3>Women Empowerment</h3>
-      <p>Supporting women with skill training, leadership opportunities, and financial independence programs.</p>
-    </div>
-  </div>
-</div>
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card">
+            <p data-key="testimonial4_text">“The scholarship program allowed my daughter to continue her education. She now dreams of becoming a doctor.”</p>
+            <h4 data-key="testimonial4_author">- Ramesh, Parent</h4>
+          </div>
 
+          <!-- Testimonial 5 -->
+          <div class="testimonial-card">
+            <p data-key="testimonial5_text">“Working with this NGO has been inspiring. Their commitment to sustainability and real impact sets them apart.”</p>
+            <h4 data-key="testimonial5_author">- Elena, Partner Organization</h4>
+          </div>
 
-
-<!-- ✅ TESTIMONIALS SECTION -->
-<section class="testimonials" id="testimonials">
-  <div class="testimonials-container">
-    <h2 class="section-title">What People Say</h2>
-    <p class="section-subtitle">Stories of hope and impact from our community</p>
-
-    <div class="testimonial-slider">
-      <!-- Testimonial 1 -->
-      <div class="testimonial-card">
-        <p>“Thanks to this NGO, our village clinic now provides free medicines. My family’s life has completely changed.”</p>
-        <h4>- Lakshmi, Beneficiary</h4>
+          <!-- Testimonial 6 -->
+          <div class="testimonial-card">
+            <p data-key="testimonial6_text">“When floods hit our region, their relief team was the first to arrive with food, water, and shelter support.”</p>
+            <h4 data-key="testimonial6_author">- Ibrahim, Community Leader</h4>
+          </div>
+        </div>
       </div>
-
-      <!-- Testimonial 2 -->
-      <div class="testimonial-card">
-        <p>“I trust this organization because they are transparent and every donation I make truly reaches the people in need.”</p>
-        <h4>- David, Donor</h4>
-      </div>
-
-      <!-- Testimonial 3 -->
-      <div class="testimonial-card">
-        <p>“Volunteering here opened my eyes to the struggles of underprivileged communities. It’s been a life-changing journey.”</p>
-        <h4>- Ananya, Volunteer</h4>
-      </div>
-
-      <!-- Testimonial 4 -->
-      <div class="testimonial-card">
-        <p>“The scholarship program allowed my daughter to continue her education. She now dreams of becoming a doctor.”</p>
-        <h4>- Ramesh, Parent</h4>
-      </div>
-
-      <!-- Testimonial 5 -->
-      <div class="testimonial-card">
-        <p>“Working with this NGO has been inspiring. Their commitment to sustainability and real impact sets them apart.”</p>
-        <h4>- Elena, Partner Organization</h4>
-      </div>
-
-      <!-- Testimonial 6 -->
-      <div class="testimonial-card">
-        <p>“When floods hit our region, their relief team was the first to arrive with food, water, and shelter support.”</p>
-        <h4>- Ibrahim, Community Leader</h4>
-      </div>
-    </div>
-  </div>
-</section>
-
+    </section>
 
     <!-- ✅ CONTACT SECTION -->
-<section class="contact" id="contact">
-  <div class="contact-container">
-    <h2>Get in Touch</h2>
-    <p>We’re here to connect with you! Whether you want to volunteer, partner with us,  
-       or simply learn more about our initiatives, feel free to reach out.</p>
-    <a href="mailto:info@yourngo.org" class="contact-btn">Contact Us</a>
-  </div>
-</section>
-
+    <section class="contact" id="contact">
+      <div class="contact-container">
+        <h2 data-key="contact_title">Get in Touch</h2>
+        <p data-key="contact_text">We’re here to connect with you! Whether you want to volunteer, partner with us,  
+           or simply learn more about our initiatives, feel free to reach out.</p>
+        <a href="mailto:info@yourngo.org" class="contact-btn" data-key="contact_btn">Contact Us</a>
+      </div>
+    </section>
 
   </main>
 
@@ -255,35 +260,35 @@
 
     <!-- Quick Links -->
     <div class="footer-links">
-      <h4>Quick Links</h4>
+      <h4 data-key="quick_links">Quick Links</h4>
       <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html" data-key="nav_about">About</a></li>
+        <li><a href="services.html" data-key="nav_services">Services</a></li>
+        <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
+        <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
       </ul>
     </div>
 
     <!-- Services -->
     <div class="footer-services">
-      <h4>Explore Services</h4>
+      <h4 data-key="explore_services">Explore Services</h4>
       <ul>
-        <li><a href="service1.html">Education</a></li>
-        <li><a href="service2.html">Healthcare</a></li>
-        <li><a href="service3.html">Skill Training</a></li>
-        <li><a href="service4.html">Women Empowerment</a></li>
-        <li><a href="service5.html">Disaster Relief</a></li>
-        <li><a href="service6.html">Environmental Care</a></li>
+        <li><a href="service1.html" data-key="nav_service1">Education</a></li>
+        <li><a href="service2.html" data-key="nav_service2">Healthcare</a></li>
+        <li><a href="service3.html" data-key="nav_service3">Skill Training</a></li>
+        <li><a href="service4.html" data-key="nav_service4">Women Empowerment</a></li>
+        <li><a href="service5.html" data-key="nav_service5">Disaster Relief</a></li>
+        <li><a href="service6.html" data-key="nav_service6">Environmental Care</a></li>
       </ul>
     </div>
 
     <!-- Contact -->
     <div class="footer-contact">
-      <h4>Contact Us</h4>
+      <h4 data-key="footer_contact">Contact Us</h4>
       <p><strong>Email:</strong> info@example.com</p>
       <p><strong>Phone:</strong> +91 1234567890</p>
 
-      <h4>Follow Us</h4>
+      <h4 data-key="follow_us">Follow Us</h4>
       <div class="social">
         <a href="https://facebook.com"><img src="images/fb.png" alt="Facebook"></a>
         <a href="https://twitter.com"><img src="images/x.png" alt="Twitter"></a>
@@ -293,24 +298,319 @@
 
     <!-- Newsletter -->
     <div class="footer-newsletter">
-      <h4>Newsletter</h4>
-      <p>Get weekly wellness tips and updates in your inbox.</p>
+      <h4 data-key="newsletter">Newsletter</h4>
+      <p data-key="newsletter_text">Get weekly wellness tips and updates in your inbox.</p>
       <form id="newsletter-form">
-        <input type="email" id="newsletter-email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
+        <input type="email" id="newsletter-email" placeholder="Enter your email" required data-placeholder-key="newsletter_placeholder">
+        <button type="submit" data-key="subscribe_btn">Subscribe</button>
       </form>
-      <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;">
+      <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;" data-key="newsletter_success">
     ✅ Thank you for subscribing!
   </div>
     </div>
   </div>
 
-  <div class="footer-copy">
+  <div class="footer-copy" data-key="footer_copy">
     &copy; 2025 Your Company Name. All Rights Reserved.
   </div>
 </footer>
 
+<!-- ================= Language logic (inline) ================= -->
+<script>
+/*
+  Language toggle (dictionary format).
+  - Adds translations for English (en), Arabic (ar), Hebrew (he).
+  - Updates elements with data-key and inputs with data-placeholder-key.
+  - Persists choice to localStorage.
+  - Sets dir="rtl" for Arabic and Hebrew.
+  - DOES NOT remove or truncate any of your original markup or text.
+*/
 
+(function () {
+  const dictionary = {
+    en: {
+      nav_home: "Home ▾",
+      nav_home1: "Home 1",
+      nav_home2: "Home 2",
+      nav_about: "About",
+      nav_blog: "Blog",
+      nav_services: "Services ▾",
+      nav_all_services: "All Services",
+      nav_service1: "Education",
+      nav_service2: "Healthcare",
+      nav_service3: "Skill Training",
+      nav_service4: "Empowerment",
+      nav_service5: "Disaster Relief",
+      nav_service6: "Environmental Care",
+      nav_contact: "Contact",
+      logout: "Logout",
+
+      hero_title: "Building Hope, Changing Lives",
+      hero_sub: "Together we create opportunities, uplift communities, and shape a brighter, sustainable future.",
+      hero_btn1: "Explore Our Work",
+      hero_btn2: "Support Us",
+
+      about_title: "About Us",
+      about_text: "We are a passionate team driven by the vision of a just and compassionate world. Through education, healthcare, and empowerment initiatives, we stand with communities to break barriers, nurture dreams, and build sustainable futures. Every step we take is guided by hope, dignity, and the belief that change begins with us.",
+      about_btn: "Discover More",
+
+      projects_title: "Our Projects",
+      projects_sub: "Explore some of the impactful initiatives we’ve been working on",
+      proj1_title: "Rural Healthcare Camps",
+      proj1_text: "Organizing free medical camps in underserved areas, providing essential checkups, medicines, and health awareness programs.",
+      proj2_title: "Bright Futures Program",
+      proj2_text: "Scholarships, school supplies, and digital learning opportunities for children from low-income families.",
+      proj3_title: "Community Farming",
+      proj3_text: "Supporting local farmers with modern techniques, organic practices, and access to sustainable markets.",
+      view_more: "View More",
+
+      cause1_title: "Healthcare",
+      cause1_text: "Providing free medical checkups, essential medicines, and health awareness to rural and urban poor communities.",
+      cause2_title: "Quality Education",
+      cause2_text: "Ensuring every child has access to schools, scholarships, and digital learning resources for a brighter future.",
+      cause3_title: "Climate Action",
+      cause3_text: "Promoting tree plantations, waste reduction, and clean energy solutions to protect our planet.",
+      cause4_title: "Women Empowerment",
+      cause4_text: "Supporting women with skill training, leadership opportunities, and financial independence programs.",
+
+      testimonials_title: "What People Say",
+      testimonials_sub: "Stories of hope and impact from our community",
+      testimonial1_text: "“Thanks to this NGO, our village clinic now provides free medicines. My family’s life has completely changed.”",
+      testimonial1_author: "- Lakshmi, Beneficiary",
+      testimonial2_text: "“I trust this organization because they are transparent and every donation I make truly reaches the people in need.”",
+      testimonial2_author: "- David, Donor",
+      testimonial3_text: "“Volunteering here opened my eyes to the struggles of underprivileged communities. It’s been a life-changing journey.”",
+      testimonial3_author: "- Ananya, Volunteer",
+      testimonial4_text: "“The scholarship program allowed my daughter to continue her education. She now dreams of becoming a doctor.”",
+      testimonial4_author: "- Ramesh, Parent",
+      testimonial5_text: "“Working with this NGO has been inspiring. Their commitment to sustainability and real impact sets them apart.”",
+      testimonial5_author: "- Elena, Partner Organization",
+      testimonial6_text: "“When floods hit our region, their relief team was the first to arrive with food, water, and shelter support.”",
+      testimonial6_author: "- Ibrahim, Community Leader",
+
+      contact_title: "Get in Touch",
+      contact_text: "We’re here to connect with you! Whether you want to volunteer, partner with us, or simply learn more about our initiatives, feel free to reach out.",
+      contact_btn: "Contact Us",
+
+      quick_links: "Quick Links",
+      explore_services: "Explore Services",
+      footer_contact: "Contact Us",
+      follow_us: "Follow Us",
+      newsletter: "Newsletter",
+      newsletter_text: "Get weekly wellness tips and updates in your inbox.",
+      subscribe_btn: "Subscribe",
+      newsletter_placeholder: "Enter your email",
+      newsletter_success: "✅ Thank you for subscribing!",
+
+      footer_copy: "© 2025 Your Company Name. All Rights Reserved."
+    },
+    ar: {
+      nav_home: "الرئيسية ▾",
+      nav_home1: "الرئيسية 1",
+      nav_home2: "الرئيسية 2",
+      nav_about: "معلومات عنا",
+      nav_blog: "المدونة",
+      nav_services: "الخدمات ▾",
+      nav_all_services: "جميع الخدمات",
+      nav_service1: "التعليم",
+      nav_service2: "الرعاية الصحية",
+      nav_service3: "التدريب المهني",
+      nav_service4: "التمكين",
+      nav_service5: "الإغاثة في الكوارث",
+      nav_service6: "رعاية البيئة",
+      nav_contact: "اتصل بنا",
+      logout: "تسجيل الخروج",
+
+      hero_title: "بناء الأمل، تغيير الحياة",
+      hero_sub: "معًا نخلق فرصًا، نرفع مستوى المجتمعات، ونرسم مستقبلًا أكثر إشراقًا واستدامة.",
+      hero_btn1: "اكتشف عملنا",
+      hero_btn2: "ادعمنا",
+
+      about_title: "معلومات عنا",
+      about_text: "نحن فريق متحمس يقوده رؤية لعالم عادل ومتعاطف. من خلال مبادرات التعليم والرعاية الصحية والتمكين، نقف مع المجتمعات لكسر الحواجز، ورعاية الأحلام، وبناء مستقبل مستدام. كل خطوة نقوم بها مرشدة بالأمل والكرامة والإيمان بأن التغيير يبدأ بنا.",
+      about_btn: "اكتشف المزيد",
+
+      projects_title: "مشاريعنا",
+      projects_sub: "اكتشف بعض المبادرات المؤثرة التي عملنا عليها",
+      proj1_title: "حملات الرعاية الصحية الريفية",
+      proj1_text: "تنظيم مخيمات طبية مجانية في المناطق المحرومة، وتقديم فحوصات أساسية وأدوية وبرامج توعية صحية.",
+      proj2_title: "برنامج مستقبل مشرق",
+      proj2_text: "منح دراسية، لوازم مدرسية، وفرص تعلم رقمية للأطفال من الأسر ذات الدخل المنخفض.",
+      proj3_title: "الزراعة المجتمعية",
+      proj3_text: "دعم المزارعين المحليين بتقنيات حديثة وممارسات عضوية والوصول إلى أسواق مستدامة.",
+      view_more: "عرض المزيد",
+
+      cause1_title: "الرعاية الصحية",
+      cause1_text: "توفير فحوصات طبية مجانية، أدوية أساسية، وبرامج توعية صحية للمجتمعات الريفية والحضرية الفقيرة.",
+      cause2_title: "التعليم الجيد",
+      cause2_text: "ضمان وصول كل طفل إلى المدارس والمنح والموارد التعليمية الرقمية لمستقبل أفضل.",
+      cause3_title: "العمل من أجل المناخ",
+      cause3_text: "تعزيز زراعة الأشجار وتقليل النفايات وحلول الطاقة النظيفة لحماية كوكبنا.",
+      cause4_title: "تمكين المرأة",
+      cause4_text: "دعم النساء بالتدريب على المهارات وفرص القيادة وبرامج الاستقلال المالي.",
+
+      testimonials_title: "ماذا يقول الناس",
+      testimonials_sub: "قصص أمل وتأثير من مجتمعنا",
+      testimonial1_text: "“بفضل هذه المنظمة، يوفر عيادتنا القروية الآن أدوية مجانية. تغيرت حياة أسرتي تمامًا.”",
+      testimonial1_author: "- لاكشمي، مستفيدة",
+      testimonial2_text: "“أثق بهذه المنظمة لأنها شفافة وكل تبرع أقوم به يصل فعلاً إلى المحتاجين.”",
+      testimonial2_author: "- ديفيد، متبرع",
+      testimonial3_text: "“فتح التطوع هنا عيني على معاناة المجتمعات المحرومة. كانت رحلة مغيرة للحياة.”",
+      testimonial3_author: "- آنانيا، متطوعة",
+      testimonial4_text: "“سمحت برامج المنح لابنتي بمواصلة تعليمها. الآن تحلم بأن تصبح طبيبة.”",
+      testimonial4_author: "- راميش، والد",
+      testimonial5_text: "“العمل مع هذه المنظمة كان ملهمًا. التزامهم بالاستدامة والتأثير الحقيقي يميزهم.”",
+      testimonial5_author: "- إيلينا، منظمة شريكة",
+      testimonial6_text: "“عندما ضربت الفيضانات منطقتنا، كان فريق الإغاثة أول من وصل بالطعام والمياه والمأوى.”",
+      testimonial6_author: "- إبراهيم، زعيم المجتمع",
+
+      contact_title: "تواصل معنا",
+      contact_text: "نحن هنا للتواصل معك! سواء أردت التطوع أو الشراكة معنا أو مجرد معرفة المزيد عن مبادراتنا، لا تتردد في التواصل.",
+      contact_btn: "اتصل بنا",
+
+      quick_links: "روابط سريعة",
+      explore_services: "استكشف الخدمات",
+      footer_contact: "اتصل بنا",
+      follow_us: "تابعنا",
+      newsletter: "النشرة الإخبارية",
+      newsletter_text: "احصل على نصائح أسبوعية وتحديثات في بريدك.",
+      subscribe_btn: "اشترك",
+      newsletter_placeholder: "أدخل بريدك الإلكتروني",
+      newsletter_success: "✅ شكرًا لاشتراكك!",
+
+      footer_copy: "© 2025 اسم شركتك. جميع الحقوق محفوظة."
+    },
+    he: {
+      nav_home: "בית ▾",
+      nav_home1: "בית 1",
+      nav_home2: "בית 2",
+      nav_about: "עלינו",
+      nav_blog: "בלוג",
+      nav_services: "שירותים ▾",
+      nav_all_services: "כל השירותים",
+      nav_service1: "חינוך",
+      nav_service2: "בריאות",
+      nav_service3: "הכשרה מקצועית",
+      nav_service4: "העצמה",
+      nav_service5: "סיוע בשעת חירום",
+      nav_service6: "שמירה על הסביבה",
+      nav_contact: "צור קשר",
+      logout: "התנתק",
+
+      hero_title: "בניית תקווה, שינוי חיים",
+      hero_sub: "ביחד אנחנו יוצרים הזדמנויות, מרימים קהילות ומעצבים עתיד בהיר ובר-קיימא.",
+      hero_btn1: "גלה את עבודתנו",
+      hero_btn2: "תמוך בנו",
+
+      about_title: "עלינו",
+      about_text: "אנחנו צוות נלהב המונע על ידי חזון של עולם צודק וחומל. באמצעות יוזמות חינוך, בריאות והעצמה, אנו עומדים לצד הקהילות כדי לשבור חסמים, לטפח חלומות ולבנות עתיד בר-קיימא. כל צעד שאנו נוקטים מונחה על ידי תקווה, כבוד והאמונה שהשינוי מתחיל בנו.",
+      about_btn: "גלה עוד",
+
+      projects_title: "הפרויקטים שלנו",
+      projects_sub: "גלה יוזמות משמעותיות שעבדנו עליהן",
+      proj1_title: "מחנות בריאות כפריים",
+      proj1_text: "ארגון מחנות רפואיים חינמיים באזורים מוחלשים, מתן בדיקות חיוניות, תרופות ותוכניות מודעות בריאותית.",
+      proj2_title: "תוכנית עתיד מזהיר",
+      proj2_text: "מלגות, ציוד בית ספר והזדמנויות למידה דיגיטלית לילדים ממשפחות בעלות הכנסה נמוכה.",
+      proj3_title: "חקלאות קהילתית",
+      proj3_text: "תמיכה בחקלאים מקומיים עם טכניקות מודרניות, פרקטיקות אורגניות וגישה לשווקים ברי-קיימא.",
+      view_more: "הצג עוד",
+
+      cause1_title: "בריאות",
+      cause1_text: "מתן בדיקות רפואיות חינמיות, תרופות חיוניות ותוכניות מודעות בריאות בקהילות כפריות ועיוריות מוחלשות.",
+      cause2_title: "חינוך איכותי",
+      cause2_text: "הבטחת גישה לבית ספר, מלגות ומשאבי למידה דיגיטליים לכל ילד לעתיד טוב יותר.",
+      cause3_title: "פעולה למען האקלים",
+      cause3_text: "קידום נטיעת עצים, הפחתת פסולת ופתרונות אנרגיה נקיה להגנת כדור הארץ שלנו.",
+      cause4_title: "העצמת נשים",
+      cause4_text: "תמיכה בנשים עם הכשרה מקצועית, הזדמנויות מנהיגות ותכניות לעצמאות כלכלית.",
+
+      testimonials_title: "מה אנשים אומרים",
+      testimonials_sub: "סיפורי תקווה והשפעה מהקהילה שלנו",
+      testimonial1_text: "“תודה לארגון הזה, המרפאה הכפרית שלנו מספקת כעת תרופות חינמיות. חיי משפחתי השתנו לחלוטין.”",
+      testimonial1_author: "- לקשמי, מקבלת שירות",
+      testimonial2_text: "“אני סומך על הארגון הזה כי הוא שקוף וכל תרומה שלי מגיעה באמת למי שצריך.”",
+      testimonial2_author: "- דיוויד, תורם",
+      testimonial3_text: "“התנדבות כאן פתחה לי את העיניים לקשיי הקהילות המוחלשות. זו הייתה חוויה משנה חיים.”",
+      testimonial3_author: "- אנניה, מתנדבת",
+      testimonial4_text: "“תוכנית המלגות איפשרה לבתי להמשיך בלימודיה. היא עכשיו חולמת להיות רופאה.”",
+      testimonial4_author: "- רמש, הורה",
+      testimonial5_text: "“לעבוד עם הארגון הזה היה מעורר השראה. המחויבות שלהם לקיימות ולהשפעה אמיתית מבדילה אותם.”",
+      testimonial5_author: "- אלנה, ארגון שותף",
+      testimonial6_text: "“כאשר הצפות פגעו באזורנו, צוות הסיוע שלהם היה הראשון שהגיע עם מזון, מים ומקלט.”",
+      testimonial6_author: "- איברהים, מוביל קהילה",
+
+      contact_title: "צור קשר",
+      contact_text: "אנחנו כאן בשבילך! אם ברצונך להתנדב, לשתף פעולה או ללמוד על היוזמות שלנו, נשמח לשמוע ממך.",
+      contact_btn: "צור קשר",
+
+      quick_links: "קישורים מהירים",
+      explore_services: "חקור שירותים",
+      footer_contact: "צור קשר",
+      follow_us: "עקבו אחרינו",
+      newsletter: "ניוזלטר",
+      newsletter_text: "קבל טיפים ועדכונים שבועיים לתיבת הדואר שלך.",
+      subscribe_btn: "הירשם",
+      newsletter_placeholder: "הכנס את האימייל שלך",
+      newsletter_success: "✅ תודה שנרשמת!",
+
+      footer_copy: "© 2025 שם החברה שלך. כל הזכויות שמורות."
+    }
+  };
+
+  function applyTranslations(lang) {
+    document.querySelectorAll('[data-key]').forEach(el => {
+      const key = el.getAttribute('data-key');
+      if (!key) return;
+      if (dictionary[lang] && dictionary[lang][key] !== undefined) {
+        el.textContent = dictionary[lang][key];
+      }
+    });
+
+    document.querySelectorAll('[data-placeholder-key]').forEach(el => {
+      const key = el.getAttribute('data-placeholder-key');
+      if (!key) return;
+      if (dictionary[lang] && dictionary[lang][key] !== undefined) {
+        el.setAttribute('placeholder', dictionary[lang][key]);
+      }
+    });
+
+    // lang & direction
+    document.documentElement.lang = lang;
+    if (lang === 'ar' || lang === 'he') {
+      document.documentElement.setAttribute('dir', 'rtl');
+      document.body.classList.add('is-rtl');
+    } else {
+      document.documentElement.setAttribute('dir', 'ltr');
+      document.body.classList.remove('is-rtl');
+    }
+  }
+
+  function setLanguage(lang) {
+    if (!dictionary[lang]) lang = 'en';
+    localStorage.setItem('siteLanguage', lang);
+    const select = document.getElementById('languageSelect');
+    if (select) select.value = lang;
+    applyTranslations(lang);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const saved = localStorage.getItem('siteLanguage') || 'en';
+    const select = document.getElementById('languageSelect');
+
+    // ensure select present and set initial language
+    if (select) {
+      select.value = saved;
+      applyTranslations(saved);
+      select.addEventListener('change', function (e) {
+        setLanguage(e.target.value);
+      });
+    } else {
+      applyTranslations(saved);
+    }
+  });
+})();
+</script>
 
 </body>
 </html>

@@ -1,15 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NGO / Charity Website</title>
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/services.css">
-<script src="js/main.js" defer></script>
+  <script src="js/main.js" defer></script>
   <script src="js/header.js" defer></script>
   <script src="js/auth-check.js" defer></script>
+
+  <!-- Small RTL adjustments so switching dir doesn't break layout badly.
+       These are intentionally minimal — adjust in your CSS files as needed. -->
+  <style>
+    body.is-rtl { direction: rtl; }
+    body.is-rtl .hero-content,
+    body.is-rtl .services-container,
+    body.is-rtl .workflow-container,
+    body.is-rtl .stories-container,
+    body.is-rtl .testimonials-container,
+    body.is-rtl .donation-content,
+    body.is-rtl .footer-container {
+      text-align: right;
+    }
+
+    /* Example: swap timeline left/right positions if present on other pages */
+    body.is-rtl .timeline-item.left { left: auto !important; right: 50% !important; }
+    body.is-rtl .timeline-item.right { left: 0 !important; right: auto !important; }
+
+    /* Orbit items flip */
+    body.is-rtl .orbit-item.left { left: auto !important; right: -40px !important; transform: translateY(-50%); }
+    body.is-rtl .orbit-item.right { right: auto !important; left: -40px !important; transform: translateY(-50%); }
+
+    /* Make nav and dropdown flow RTL */
+    body.is-rtl .nav-links { direction: rtl; }
+    body.is-rtl .nav-links li { text-align: right; }
+
+    /* Keep the language-select visible and not interfering */
+    #languageSelect { margin-left: 12px; margin-right: 12px; }
+  </style>
 </head>
 <body>
   <!-- ================= HEADER ================= -->
@@ -22,36 +52,45 @@
     <nav>
       <ul class="nav-links">
         <li class="dropdown">
-          <a href="index.html">Home ▾</a>
+          <a href="index.html" data-key="nav_home">Home ▾</a>
           <ul class="dropdown-menu">
-            <li><a href="index.html">Home 1</a></li>
-            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="index.html" data-key="nav_home1">Home 1</a></li>
+            <li><a href="home2.html" data-key="nav_home2">Home 2</a></li>
           </ul>
         </li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html" data-key="nav_about">About</a></li>
+        <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
         <li class="dropdown">
-          <a href="services.html">Services ▾</a>
+          <a href="services.html" data-key="nav_services">Services ▾</a>
           <ul class="dropdown-menu">
-            <li class="mobile-only"><a href="services.html">All Services</a></li>
-            <li><a href="service1.html">Education</a></li>
-        <li><a href="service2.html">Healthcare</a></li>
-        <li><a href="service3.html">Skill Training</a></li>
-        <li><a href="service4.html">Empowerment</a></li>
-        <li><a href="service5.html">Disaster Relief</a></li>
-        <li><a href="service6.html">Environmental Care</a></li>
+            <li class="mobile-only"><a href="services.html" data-key="nav_all_services">All Services</a></li>
+            <li><a href="service1.html" data-key="nav_service1">Education</a></li>
+            <li><a href="service2.html" data-key="nav_service2">Healthcare</a></li>
+            <li><a href="service3.html" data-key="nav_service3">Skill Training</a></li>
+            <li><a href="service4.html" data-key="nav_service4">Empowerment</a></li>
+            <li><a href="service5.html" data-key="nav_service5">Disaster Relief</a></li>
+            <li><a href="service6.html" data-key="nav_service6">Environmental Care</a></li>
           </ul>
         </li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
       </ul>
     </nav>
+
+    <!-- Language Toggle -->
+    <div style="display:inline-block; vertical-align: middle;">
+      <select id="languageSelect" aria-label="Select language">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="he">עברית</option>
+      </select>
+    </div>
 
     <div class="profile-container">
       <div class="profile" id="profile-dropdown-toggle">
         <span id="profile-initials"></span>
       </div>
       <ul class="profile-dropdown" id="profile-dropdown">
-        <li><a href="#" id="logout-btn">Logout</a></li>
+        <li><a href="#" id="logout-btn" data-key="logout">Logout</a></li>
       </ul>
     </div>
 
@@ -73,214 +112,205 @@
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
-    <h1>Our Services</h1>
-    <p>Empowering communities through education, healthcare, sustainability, and more.  
-       Explore how we create lasting change together.</p>
-    <a href="#services" class="hero-btn">Explore Services</a>
+    <h1 data-key="hero_title">Our Services</h1>
+    <p data-key="hero_text">
+      Empowering communities through education, healthcare, sustainability, and more.  
+       Explore how we create lasting change together.
+    </p>
+    <a href="#services" class="hero-btn" data-key="hero_btn">Explore Services</a>
   </div>
 </section>
 
   <!-- SERVICES SECTION -->
 <section class="services" id="services">
   <div class="services-container">
-    <h2 class="section-title">Our Services</h2>
-    <p class="section-subtitle">Empowering communities through impactful programs</p>
+    <h2 class="section-title" data-key="services_title">Our Services</h2>
+    <p class="section-subtitle" data-key="services_sub">Empowering communities through impactful programs</p>
 
     <div class="services-grid">
       <!-- Service 1 -->
       <div class="service-card fade-in delay-1">
         <img src="images/books.jpeg" alt="Education Support">
-        <h3>Education Support</h3>
-        <p>Providing access to quality education, scholarships, and mentorship for underprivileged children.</p>
-        <a href="#" class="service-btn">Learn More</a>
+        <h3 data-key="service1_title">Education Support</h3>
+        <p data-key="service1_text">Providing access to quality education, scholarships, and mentorship for underprivileged children.</p>
+        <a href="#" class="service-btn" data-key="service_btn">Learn More</a>
       </div>
 
       <!-- Service 2 -->
       <div class="service-card fade-in delay-2">
         <img src="images/health2.jpeg" alt="Healthcare">
-        <h3>Healthcare Access</h3>
-        <p>Ensuring medical care, health awareness, and preventive solutions for vulnerable communities.</p>
-        <a href="#" class="service-btn">Learn More</a>
+        <h3 data-key="service2_title">Healthcare Access</h3>
+        <p data-key="service2_text">Ensuring medical care, health awareness, and preventive solutions for vulnerable communities.</p>
+        <a href="#" class="service-btn" data-key="service_btn">Learn More</a>
       </div>
 
       <!-- Service 3 -->
       <div class="service-card fade-in delay-3">
         <img src="images/youth.jpeg" alt="Skill Training">
-        <h3>Skill Training</h3>
-        <p>Equipping youth with professional and vocational skills to create sustainable livelihoods.</p>
-        <a href="#" class="service-btn">Learn More</a>
+        <h3 data-key="service3_title">Skill Training</h3>
+        <p data-key="service3_text">Equipping youth with professional and vocational skills to create sustainable livelihoods.</p>
+        <a href="#" class="service-btn" data-key="service_btn">Learn More</a>
       </div>
 
       <!-- Service 4 -->
       <div class="service-card fade-in delay-4">
         <img src="images/women.jpeg" alt="Women Empowerment">
-        <h3>Women Empowerment</h3>
-        <p>Promoting gender equality by supporting women-led initiatives and entrepreneurship.</p>
-        <a href="#" class="service-btn">Learn More</a>
+        <h3 data-key="service4_title">Women Empowerment</h3>
+        <p data-key="service4_text">Promoting gender equality by supporting women-led initiatives and entrepreneurship.</p>
+        <a href="#" class="service-btn" data-key="service_btn">Learn More</a>
       </div>
 
       <!-- Service 5 -->
       <div class="service-card fade-in delay-5">
         <img src="images/disaster.jpeg" alt="Community Development">
-          <h3>Disaster Relief</h3>
-        <p>Immediate aid and long-term recovery for communities affected by natural disasters.</p>
-        <a href="#" class="service-btn">Learn More</a>
+        <h3 data-key="service5_title">Disaster Relief</h3>
+        <p data-key="service5_text">Immediate aid and long-term recovery for communities affected by natural disasters.</p>
+        <a href="#" class="service-btn" data-key="service_btn">Learn More</a>
       </div>
 
       <!-- Service 6 -->
       <div class="service-card fade-in delay-6">
         <img src="images/p3.jpeg" alt="Environmental Care">
-        <h3>Environmental Care</h3>
-        <p>Encouraging eco-friendly practices and sustainable living to protect our planet.</p>
-        <a href="#" class="service-btn">Learn More</a>
+        <h3 data-key="service6_title">Environmental Care</h3>
+        <p data-key="service6_text">Encouraging eco-friendly practices and sustainable living to protect our planet.</p>
+        <a href="#" class="service-btn" data-key="service_btn">Learn More</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ✅ HOW WE WORK (Horizontal Steps) -->
+<!-- HOW WE WORK -->
 <section class="workflow" id="process">
   <div class="workflow-container">
-    <h2 class="section-title">How We Work</h2>
-    <p class="section-subtitle">A simple, transparent, and impactful process we follow</p>
+    <h2 class="section-title" data-key="workflow_title">How We Work</h2>
+    <p class="section-subtitle" data-key="workflow_sub">A simple, transparent, and impactful process we follow</p>
 
     <div class="workflow-steps">
-      <!-- Step 1 -->
       <div class="workflow-step">
         <div class="step-circle">1</div>
-        <h3>Identify Needs</h3>
-        <p>We collaborate with communities to understand their most urgent needs.</p>
+        <h3 data-key="step1_title">Identify Needs</h3>
+        <p data-key="step1_text">We collaborate with communities to understand their most urgent needs.</p>
       </div>
 
-      <!-- Step 2 -->
       <div class="workflow-step">
         <div class="step-circle">2</div>
-        <h3>Design Solutions</h3>
-        <p>We create sustainable programs tailored to local realities.</p>
+        <h3 data-key="step2_title">Design Solutions</h3>
+        <p data-key="step2_text">We create sustainable programs tailored to local realities.</p>
       </div>
 
-      <!-- Step 3 -->
       <div class="workflow-step">
         <div class="step-circle">3</div>
-        <h3>Implement Projects</h3>
-        <p>We execute with strong partnerships and active community involvement.</p>
+        <h3 data-key="step3_title">Implement Projects</h3>
+        <p data-key="step3_text">We execute with strong partnerships and active community involvement.</p>
       </div>
 
-      <!-- Step 4 -->
       <div class="workflow-step">
         <div class="step-circle">4</div>
-        <h3>Measure Impact</h3>
-        <p>We track results and ensure our efforts bring lasting change.</p>
+        <h3 data-key="step4_title">Measure Impact</h3>
+        <p data-key="step4_text">We track results and ensure our efforts bring lasting change.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SUCCESS STORIES SECTION -->
+<!-- SUCCESS STORIES -->
 <section class="success-stories" id="success-stories">
   <div class="stories-container">
-    <h2 class="section-title">Our Success Stories</h2>
-    <p class="section-subtitle">Real stories of hope, impact, and change</p>
+    <h2 class="section-title" data-key="stories_title">Our Success Stories</h2>
+    <p class="section-subtitle" data-key="stories_sub">Real stories of hope, impact, and change</p>
 
     <div class="stories-grid">
-      <!-- Story 1 -->
       <div class="story-card fade-up">
         <img src="images/Village_edu.jpeg" alt="Education Support">
         <div class="story-content">
-          <h3>Bringing Education to Every Child</h3>
-          <p>Our scholarship programs, hundreds of children have access to quality education & a brighter future.</p>
-          <a href="service1.html" class="story-btn">Read More</a>
+          <h3 data-key="story1_title">Bringing Education to Every Child</h3>
+          <p data-key="story1_text">Our scholarship programs, hundreds of children have access to quality education & a brighter future.</p>
+          <a href="service1.html" class="story-btn" data-key="read_more">Read More</a>
         </div>
       </div>
 
-      <!-- Story 2 -->
       <div class="story-card fade-up">
         <img src="images/vilage.jpeg" alt="Healthcare">
         <div class="story-content">
-          <h3>Healthcare for Remote Villages</h3>
-          <p>Our mobile clinics have provided life-saving care to thousands of people in underserved areas.</p>
-          <a href="service2.html" class="story-btn">Read More</a>
+          <h3 data-key="story2_title">Healthcare for Remote Villages</h3>
+          <p data-key="story2_text">Our mobile clinics have provided life-saving care to thousands of people in underserved areas.</p>
+          <a href="service2.html" class="story-btn" data-key="read_more">Read More</a>
         </div>
       </div>
 
-      <!-- Story 3 -->
       <div class="story-card fade-up">
         <img src="images/women_emp.jpeg" alt="Empowerment">
         <div class="story-content">
-          <h3>Women Entrepreneurs</h3>
-          <p>We supported women with skills training and micro-loans, helping them become financially independent.</p>
-          <a href="service4.html" class="story-btn">Read More</a>
+          <h3 data-key="story3_title">Women Entrepreneurs</h3>
+          <p data-key="story3_text">We supported women with skills training and micro-loans, helping them become financially independent.</p>
+          <a href="service4.html" class="story-btn" data-key="read_more">Read More</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS SECTION -->
+<!-- TESTIMONIALS -->
 <section class="testimonials" id="testimonials">
   <div class="testimonials-container">
-    <h2 class="section-title">What People Say</h2>
-    <p class="section-subtitle">Voices from our community, partners, and beneficiaries</p>
+    <h2 class="section-title" data-key="testimonials_title">What People Say</h2>
+    <p class="section-subtitle" data-key="testimonials_sub">Voices from our community, partners, and beneficiaries</p>
 
     <div class="testimonials-grid">
-      <!-- Testimonial 1 -->
       <div class="testimonial-card fade-in delay-1">
-        <p class="testimonial-text">
+        <p class="testimonial-text" data-key="testimonial1">
           “Thanks to this foundation, our village has clean water for the first time.  
           They didn’t just help us — they empowered us.”
         </p>
         <div class="testimonial-author">
           <img src="images/1.jpg" alt="Person 1">
-          <h4>John</h4>
-          <span>Community Member</span>
+          <h4 data-key="test1_name">John</h4>
+          <span data-key="test1_role">Community Member</span>
         </div>
       </div>
 
-      <!-- Testimonial 2 -->
       <div class="testimonial-card fade-in delay-2">
-        <p class="testimonial-text">
+        <p class="testimonial-text" data-key="testimonial2">
           “Working together with this team has been an inspiring journey.  
           Their dedication and transparency are unmatched.”
         </p>
         <div class="testimonial-author">
           <img src="images/test2.jpg" alt="Person 2">
-          <h4>Michael</h4>
-          <span>Partner Organization</span>
+          <h4 data-key="test2_name">Michael</h4>
+          <span data-key="test2_role">Partner Organization</span>
         </div>
       </div>
 
-      <!-- Testimonial 3 -->
       <div class="testimonial-card fade-in delay-3">
-        <p class="testimonial-text">
+        <p class="testimonial-text" data-key="testimonial3">
           “They don’t just give charity — they build sustainable solutions  
           that continue to change lives long after the project ends.”
         </p>
         <div class="testimonial-author">
           <img src="images/test3.jpg" alt="Person 3">
-          <h4>Ayesha Khan</h4>
-          <span>Beneficiary</span>
+          <h4 data-key="test3_name">Ayesha Khan</h4>
+          <span data-key="test3_role">Beneficiary</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- DONATION CTA SECTION -->
+<!-- DONATION CTA -->
 <section class="donation-cta" id="donate">
   <div class="donation-overlay"></div>
   <div class="donation-content fade-in">
-    <h2>Be the Change You Wish to See</h2>
-    <p>
+    <h2 data-key="donate_title">Be the Change You Wish to See</h2>
+    <p data-key="donate_text">
       Your contribution helps us provide food, education, and hope to those in need.  
       Every small act of kindness adds up to a big difference.
     </p>
     <div class="donation-buttons">
-      <a href="donate.html" class="donation-btn primary">Donate Now</a>
-      <a href="contact.html" class="donation-btn secondary">Become a Volunteer</a>
+      <a href="donate.html" class="donation-btn primary" data-key="donate_now">Donate Now</a>
+      <a href="contact.html" class="donation-btn secondary" data-key="become_volunteer">Become a Volunteer</a>
     </div>
   </div>
 </section>
-
 
   </main>
 
@@ -291,40 +321,40 @@
     <!-- Logo Section -->
     <div class="footer-logo">
       <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
-      <h4>NGO/CHARITY</h4>
+      <h4 data-key="footer_brand">NGO/CHARITY</h4>
     </div>
 
     <!-- Quick Links -->
     <div class="footer-links">
-      <h4>Quick Links</h4>
+      <h4 data-key="footer_quick_links">Quick Links</h4>
       <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html" data-key="nav_about">About</a></li>
+        <li><a href="services.html" data-key="nav_services">Services</a></li>
+        <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
+        <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
       </ul>
     </div>
 
     <!-- Services -->
     <div class="footer-services">
-      <h4>Explore Services</h4>
+      <h4 data-key="footer_services">Explore Services</h4>
       <ul>
-       <li><a href="service1.html">Education</a></li>
-        <li><a href="service2.html">Healthcare</a></li>
-        <li><a href="service3.html">Skill Training</a></li>
-        <li><a href="service4.html">Women Empowerment</a></li>
-        <li><a href="service5.html">Disaster Relief</a></li>
-        <li><a href="service6.html">Environmental Care</a></li>
+       <li><a href="service1.html" data-key="nav_service1">Education</a></li>
+        <li><a href="service2.html" data-key="nav_service2">Healthcare</a></li>
+        <li><a href="service3.html" data-key="nav_service3">Skill Training</a></li>
+        <li><a href="service4.html" data-key="nav_service4">Women Empowerment</a></li>
+        <li><a href="service5.html" data-key="nav_service5">Disaster Relief</a></li>
+        <li><a href="service6.html" data-key="nav_service6">Environmental Care</a></li>
       </ul>
     </div>
 
     <!-- Contact -->
     <div class="footer-contact">
-      <h4>Contact Us</h4>
-      <p><strong>Email:</strong> info@example.com</p>
-      <p><strong>Phone:</strong> +91 1234567890</p>
+      <h4 data-key="footer_contact">Contact Us</h4>
+      <p><strong data-key="footer_email_label">Email:</strong> info@example.com</p>
+      <p><strong data-key="footer_phone_label">Phone:</strong> +91 1234567890</p>
 
-      <h4>Follow Us</h4>
+      <h4 data-key="follow_us">Follow Us</h4>
       <div class="social">
         <a href="https://facebook.com"><img src="images/fb.png" alt="Facebook"></a>
         <a href="https://twitter.com"><img src="images/x.png" alt="Twitter"></a>
@@ -334,22 +364,343 @@
 
     <!-- Newsletter -->
     <div class="footer-newsletter">
-      <h4>Newsletter</h4>
-      <p>Get weekly wellness tips and updates in your inbox.</p>
+      <h4 data-key="newsletter_title">Newsletter</h4>
+      <p data-key="newsletter_text">Get weekly wellness tips and updates in your inbox.</p>
       <form id="newsletter-form">
-        <input type="email" id="newsletter-email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
+        <input type="email" id="newsletter-email" placeholder="Enter your email" required data-placeholder-key="newsletter_placeholder">
+        <button type="submit" data-key="subscribe_btn">Subscribe</button>
       </form>
-      <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;">
-    ✅ Thank you for subscribing!
-  </div>
+      <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;" data-key="newsletter_success">
+        ✅ Thank you for subscribing!
+      </div>
     </div>
   </div>
 
-  <div class="footer-copy">
+  <div class="footer-copy" data-key="footer_copy">
     &copy; 2025 Your Company Name. All Rights Reserved.
   </div>
 </footer>
+
+<!-- ================= Language logic (dictionary) ================= -->
+<script>
+(function() {
+  const dictionary = {
+    en: {
+      nav_home: "Home ▾",
+      nav_home1: "Home 1",
+      nav_home2: "Home 2",
+      nav_about: "About",
+      nav_blog: "Blog",
+      nav_services: "Services ▾",
+      nav_all_services: "All Services",
+      nav_service1: "Education",
+      nav_service2: "Healthcare",
+      nav_service3: "Skill Training",
+      nav_service4: "Empowerment",
+      nav_service5: "Disaster Relief",
+      nav_service6: "Environmental Care",
+      nav_contact: "Contact",
+      logout: "Logout",
+
+      hero_title: "Our Services",
+      hero_text: "Empowering communities through education, healthcare, sustainability, and more. Explore how we create lasting change together.",
+      hero_btn: "Explore Services",
+
+      services_title: "Our Services",
+      services_sub: "Empowering communities through impactful programs",
+      service1_title: "Education Support",
+      service1_text: "Providing access to quality education, scholarships, and mentorship for underprivileged children.",
+      service2_title: "Healthcare Access",
+      service2_text: "Ensuring medical care, health awareness, and preventive solutions for vulnerable communities.",
+      service3_title: "Skill Training",
+      service3_text: "Equipping youth with professional and vocational skills to create sustainable livelihoods.",
+      service4_title: "Women Empowerment",
+      service4_text: "Promoting gender equality by supporting women-led initiatives and entrepreneurship.",
+      service5_title: "Disaster Relief",
+      service5_text: "Immediate aid and long-term recovery for communities affected by natural disasters.",
+      service6_title: "Environmental Care",
+      service6_text: "Encouraging eco-friendly practices and sustainable living to protect our planet.",
+      service_btn: "Learn More",
+
+      workflow_title: "How We Work",
+      workflow_sub: "A simple, transparent, and impactful process we follow",
+      step1_title: "Identify Needs",
+      step1_text: "We collaborate with communities to understand their most urgent needs.",
+      step2_title: "Design Solutions",
+      step2_text: "We create sustainable programs tailored to local realities.",
+      step3_title: "Implement Projects",
+      step3_text: "We execute with strong partnerships and active community involvement.",
+      step4_title: "Measure Impact",
+      step4_text: "We track results and ensure our efforts bring lasting change.",
+
+      stories_title: "Our Success Stories",
+      stories_sub: "Real stories of hope, impact, and change",
+      story1_title: "Bringing Education to Every Child",
+      story1_text: "Our scholarship programs, hundreds of children have access to quality education & a brighter future.",
+      story2_title: "Healthcare for Remote Villages",
+      story2_text: "Our mobile clinics have provided life-saving care to thousands of people in underserved areas.",
+      story3_title: "Women Entrepreneurs",
+      story3_text: "We supported women with skills training and micro-loans, helping them become financially independent.",
+      read_more: "Read More",
+
+      testimonials_title: "What People Say",
+      testimonials_sub: "Voices from our community, partners, and beneficiaries",
+      testimonial1: "“Thanks to this foundation, our village has clean water for the first time. They didn’t just help us — they empowered us.”",
+      test1_name: "John",
+      test1_role: "Community Member",
+      testimonial2: "“Working together with this team has been an inspiring journey. Their dedication and transparency are unmatched.”",
+      test2_name: "Michael",
+      test2_role: "Partner Organization",
+      testimonial3: "“They don’t just give charity — they build sustainable solutions that continue to change lives long after the project ends.”",
+      test3_name: "Ayesha Khan",
+      test3_role: "Beneficiary",
+
+      donate_title: "Be the Change You Wish to See",
+      donate_text: "Your contribution helps us provide food, education, and hope to those in need. Every small act of kindness adds up to a big difference.",
+      donate_now: "Donate Now",
+      become_volunteer: "Become a Volunteer",
+
+      footer_brand: "NGO/CHARITY",
+      footer_quick_links: "Quick Links",
+      footer_services: "Explore Services",
+      footer_contact: "Contact Us",
+      follow_us: "Follow Us",
+      newsletter_title: "Newsletter",
+      newsletter_text: "Get weekly wellness tips and updates in your inbox.",
+      newsletter_placeholder: "Enter your email",
+      subscribe_btn: "Subscribe",
+      newsletter_success: "✅ Thank you for subscribing!",
+      footer_copy: "© 2025 Your Company Name. All Rights Reserved."
+    },
+
+    ar: {
+      nav_home: "الرئيسية ▾",
+      nav_home1: "الرئيسية 1",
+      nav_home2: "الرئيسية 2",
+      nav_about: "معلومات عنا",
+      nav_blog: "المدونة",
+      nav_services: "الخدمات ▾",
+      nav_all_services: "جميع الخدمات",
+      nav_service1: "التعليم",
+      nav_service2: "الرعاية الصحية",
+      nav_service3: "التدريب المهني",
+      nav_service4: "التمكين",
+      nav_service5: "الإغاثة في الكوارث",
+      nav_service6: "رعاية البيئة",
+      nav_contact: "اتصل بنا",
+      logout: "تسجيل الخروج",
+
+      hero_title: "خدماتنا",
+      hero_text: "تمكين المجتمعات من خلال التعليم والرعاية الصحية والاستدامة والمزيد. اكتشف كيف نصنع تغييرًا دائمًا معًا.",
+      hero_btn: "استكشف الخدمات",
+
+      services_title: "خدماتنا",
+      services_sub: "تمكين المجتمعات من خلال برامج ذات تأثير",
+      service1_title: "دعم التعليم",
+      service1_text: "توفير الوصول إلى تعليم ذو جودة ومنح دراسية وتوجيه للأطفال المحرومين.",
+      service2_title: "الوصول إلى الرعاية الصحية",
+      service2_text: "ضمان الرعاية الطبية والتوعية الصحية والحلول الوقائية للمجتمعات الضعيفة.",
+      service3_title: "تدريب المهارات",
+      service3_text: "تزويد الشباب بالمهارات المهنية والحرفية لإنشاء سبل معيشة مستدامة.",
+      service4_title: "تمكين المرأة",
+      service4_text: "تشجيع المساواة بين الجنسين من خلال دعم مبادرات النساء وريادة الأعمال.",
+      service5_title: "الإغاثة في الكوارث",
+      service5_text: "المساعدة الفورية والتعافي طويل الأمد للمجتمعات المتضررة من الكوارث الطبيعية.",
+      service6_title: "رعاية البيئة",
+      service6_text: "تشجيع الممارسات الصديقة للبيئة والحياة المستدامة لحماية كوكبنا.",
+      service_btn: "تعرف أكثر",
+
+      workflow_title: "كيف نعمل",
+      workflow_sub: "عملية بسيطة وشفافة وذات تأثير نتبعها",
+      step1_title: "تحديد الاحتياجات",
+      step1_text: "نتعاون مع المجتمعات لفهم احتياجاتهم الأكثر إلحاحًا.",
+      step2_title: "تصميم الحلول",
+      step2_text: "ننشئ برامج مستدامة مصممة وفق الواقع المحلي.",
+      step3_title: "تنفيذ المشاريع",
+      step3_text: "ننفيذ بالشراكة مع الجهات الفاعلة ومشاركة المجتمع.",
+      step4_title: "قياس الأثر",
+      step4_text: "نقوم بمتابعة النتائج لضمان تحقيق تغيير دائم.",
+
+      stories_title: "قصص نجاحنا",
+      stories_sub: "قصص حقيقية عن الأمل والأثر والتغيير",
+      story1_title: "إتاحة التعليم لكل طفل",
+      story1_text: "من خلال منحنا الدراسية، حصل مئات الأطفال على تعليم جيد ومستقبل أكثر إشراقًا.",
+      story2_title: "الرعاية الصحية للقرى النائية",
+      story2_text: "قامت عياداتنا المتنقلة بتقديم رعاية منقذة للحياة لآلاف الأشخاص في المناطق المحرومة.",
+      story3_title: "رائدات الأعمال من النساء",
+      story3_text: "دعمنا النساء بالتدريب والقروض الصغيرة لمساعدتهن على تحقيق الاستقلال المالي.",
+      read_more: "اقرأ المزيد",
+
+      testimonials_title: "ماذا يقول الناس",
+      testimonials_sub: "آراء مجتمعنا وشركائنا والمستفيدين",
+      testimonial1: "«بفضل هذه المؤسسة، أصبح لدى قريتنا مياه نظيفة لأول مرة. لم يساعدونا فقط — بل مكنونا.»",
+      test1_name: "جون",
+      test1_role: "عضو المجتمع",
+      testimonial2: "«العمل مع هذا الفريق كان رحلة ملهمة. التزامهم وشفافيتهم لا مثيل لهما.»",
+      test2_name: "مايكل",
+      test2_role: "منظمة شريكة",
+      testimonial3: "«هم لا يقدمون صدقة فقط — بل يبنون حلولًا مستدامة تغير الحياة لأجيال.»",
+      test3_name: "عائشة خان",
+      test3_role: "مستفيدة",
+
+      donate_title: "كن التغيير الذي تريد أن تراه",
+      donate_text: "مساهمتك تساعدنا في توفير الطعام والتعليم والأمل للمحتاجين. كل عمل صغير من اللطف يحدث فرقًا كبيرًا.",
+      donate_now: "تبرع الآن",
+      become_volunteer: "كن متطوّعًا",
+
+      footer_brand: "المنظمة/الخيرية",
+      footer_quick_links: "روابط سريعة",
+      footer_services: "استكشف الخدمات",
+      footer_contact: "اتصل بنا",
+      follow_us: "تابعنا",
+      newsletter_title: "النشرة الإخبارية",
+      newsletter_text: "احصل على نصائح أسبوعية وتحديثات في بريدك.",
+      newsletter_placeholder: "أدخل بريدك الإلكتروني",
+      subscribe_btn: "اشترك",
+      newsletter_success: "✅ شكرًا لاشتراكك!",
+      footer_copy: "© 2025 اسم شركتك. جميع الحقوق محفوظة."
+    },
+
+    he: {
+      nav_home: "בית ▾",
+      nav_home1: "בית 1",
+      nav_home2: "בית 2",
+      nav_about: "עלינו",
+      nav_blog: "בלוג",
+      nav_services: "שירותים ▾",
+      nav_all_services: "כל השירותים",
+      nav_service1: "חינוך",
+      nav_service2: "בריאות",
+      nav_service3: "הכשרה מקצועית",
+      nav_service4: "העצמה",
+      nav_service5: "סיוע בשעת חירום",
+      nav_service6: "שמירה על הסביבה",
+      nav_contact: "צור קשר",
+      logout: "התנתק",
+
+      hero_title: "השירותים שלנו",
+      hero_text: "מעצימים קהילות באמצעות חינוך, בריאות, קיימות ועוד. גלו כיצד אנו יוצרים שינוי מתמשך יחד.",
+      hero_btn: "גלה שירותים",
+
+      services_title: "השירותים שלנו",
+      services_sub: "העצמת קהילות באמצעות תוכניות בעלות השפעה",
+      service1_title: "תמיכה בחינוך",
+      service1_text: "מתן גישה לחינוך איכותי, מלגות והדרכה לילדים מוחלשים.",
+      service2_title: "נגישות לבריאות",
+      service2_text: "הבטחת טיפול רפואי, מודעות בריאותית ופתרונות מניעתיים לקהילות מוחלשות.",
+      service3_title: "הכשרת מיומנויות",
+      service3_text: "הקניית כישורים מקצועיים ותעסוקתיים לצעירים ליצירת פרנסה בת-קיימא.",
+      service4_title: "העצמת נשים",
+      service4_text: "קידום שוויון מגדרי באמצעות תמיכה ביוזמות נשים ויזמות.",
+      service5_title: "סיוע בשעת חירום",
+      service5_text: "סיוע מידי ושיקום ארוך טווח לקהילות שנפגעו מאסונות טבע.",
+      service6_title: "שימור הסביבה",
+      service6_text: "עידוד פרקטיקות ידידותיות לסביבה ואורח חיים בר קיימא כדי להגן על הפלנטה.",
+      service_btn: "למידע נוסף",
+
+      workflow_title: "כיצד אנו פועלים",
+      workflow_sub: "תהליך פשוט, שקוף ובעל השפעה שאנו פועלים לפיו",
+      step1_title: "זיהוי צרכים",
+      step1_text: "אנו משתפים פעולה עם קהילות להבין את הצרכים הדחופים ביותר.",
+      step2_title: "עיצוב פתרונות",
+      step2_text: "אנו מייצרים תוכניות ברות-קיימא המותאמות למציאות המקומית.",
+      step3_title: "ביצוע פרויקטים",
+      step3_text: "אנו מבצעים בעזרת שותפויות חזקות ומעורבות קהילתית פעילה.",
+      step4_title: "מדידת השפעה",
+      step4_text: "אנו עוקבים אחרי התוצאות ומוודאים שהמאמצים מביאים לשינוי מתמשך.",
+
+      stories_title: "סיפורי הצלחה שלנו",
+      stories_sub: "סיפורים אמיתיים של תקווה, השפעה ושינוי",
+      story1_title: "הבאת חינוך לכל ילד",
+      story1_text: "מתוך תוכניות המלגות שלנו, מאות ילדים זכו לחינוך איכותי ועתיד מזהיר יותר.",
+      story2_title: "בריאות לכפרים מרוחקים",
+      story2_text: "המרפאות הניידות שלנו סיפקו טיפול מציל חיים לאלפים באזורים מוחלשים.",
+      story3_title: "יזמיות נשים",
+      story3_text: "תמכנו בנשים בהכשרה ובמענקים קטנים שסייעו להן להשיג עצמאות כלכלית.",
+      read_more: "קרא עוד",
+
+      testimonials_title: "מה אנשים אומרים",
+      testimonials_sub: "קולות מהקהילה, שותפים ומקבלי שירות",
+      testimonial1: "״בעזרת הקרן הזו, הכפר שלנו קיבל מים נקיים לראשונה. הם לא רק עזרו לנו — הם העצימו אותנו.״",
+      test1_name: "John",
+      test1_role: "חבר הקהילה",
+      testimonial2: "״העבודה עם הצוות הזה הייתה מסע מעורר השראה. המחויבות והשקיפות שלהם ללא תחרות.״",
+      test2_name: "Michael",
+      test2_role: "ארגון שותף",
+      testimonial3: "״הם לא רק נותנים צדקה — הם בונים פתרונות ברי-קיימא שמשנים חיים לדורות.״",
+      test3_name: "Ayesha Khan",
+      test3_role: "מוטבת",
+
+      donate_title: "היה השינוי שברצונך לראות",
+      donate_text: "התרומה שלך עוזרת לנו לספק מזון, חינוך ותקווה לנזקקים. כל פעולה קטנה יוצרת השפעה גדולה.",
+      donate_now: "תרום עכשיו",
+      become_volunteer: "הצטרף כמתנדב",
+
+      footer_brand: "ארגון/עמותה",
+      footer_quick_links: "קישורים מהירים",
+      footer_services: "גלה שירותים",
+      footer_contact: "צור קשר",
+      follow_us: "עקבו אחרינו",
+      newsletter_title: "ניוזלטר",
+      newsletter_text: "קבל טיפים ועדכונים שבועיים לתיבת הדואר שלך.",
+      newsletter_placeholder: "הכנס את המייל שלך",
+      subscribe_btn: "הירשם",
+      newsletter_success: "✅ תודה שנרשמת!",
+      footer_copy: "© 2025 שם החברה שלך. כל הזכויות שמורות."
+    }
+  };
+
+  function applyTranslations(lang) {
+    // text nodes
+    document.querySelectorAll('[data-key]').forEach(el => {
+      const key = el.getAttribute('data-key');
+      if (!key) return;
+      if (dictionary[lang] && dictionary[lang][key] !== undefined) {
+        el.textContent = dictionary[lang][key];
+      }
+    });
+
+    // placeholders
+    document.querySelectorAll('[data-placeholder-key]').forEach(el => {
+      const key = el.getAttribute('data-placeholder-key');
+      if (!key) return;
+      if (dictionary[lang] && dictionary[lang][key] !== undefined) {
+        el.setAttribute('placeholder', dictionary[lang][key]);
+      }
+    });
+
+    // document language & direction
+    document.documentElement.lang = lang;
+    if (lang === 'ar' || lang === 'he') {
+      document.documentElement.setAttribute('dir', 'rtl');
+      document.body.classList.add('is-rtl');
+    } else {
+      document.documentElement.setAttribute('dir', 'ltr');
+      document.body.classList.remove('is-rtl');
+    }
+  }
+
+  function setLanguage(lang) {
+    if (!dictionary[lang]) lang = 'en';
+    localStorage.setItem('siteLanguage', lang);
+    const sel = document.getElementById('languageSelect');
+    if (sel) sel.value = lang;
+    applyTranslations(lang);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const saved = localStorage.getItem('siteLanguage') || 'en';
+    const sel = document.getElementById('languageSelect');
+    if (sel) {
+      sel.value = saved;
+      sel.addEventListener('change', e => setLanguage(e.target.value));
+    }
+    applyTranslations(saved);
+  });
+})();
+</script>
+
+<!-- ================= Existing scripts for animations / interactions (unchanged) ================= -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
     const faders = document.querySelectorAll(".fade-in");
@@ -390,7 +741,6 @@ const observer = new IntersectionObserver(entries => {
 
 fadeElements.forEach(el => observer.observe(el));
 </script>
-
 
 </body>
 </html>

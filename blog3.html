@@ -23,36 +23,45 @@
       <nav>
         <ul class="nav-links">
           <li class="dropdown">
-            <a href="index.html">Home ▾</a>
+            <a href="index.html" data-key="nav_home">Home ▾</a>
             <ul class="dropdown-menu">
-              <li><a href="index.html">Home 1</a></li>
-              <li><a href="home2.html">Home 2</a></li>
+              <li><a href="index.html" data-key="nav_home1">Home 1</a></li>
+              <li><a href="home2.html" data-key="nav_home2">Home 2</a></li>
             </ul>
           </li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html" data-key="nav_about">About</a></li>
+          <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
           <li class="dropdown">
-            <a href="services.html">Services ▾</a>
+            <a href="services.html" data-key="nav_services">Services ▾</a>
             <ul class="dropdown-menu">
-              <li class="mobile-only"><a href="services.html">All Services</a></li>
-              <li><a href="service1.html">Education</a></li>
-              <li><a href="service2.html">Healthcare</a></li>
-              <li><a href="service3.html">Skill Training</a></li>
-              <li><a href="service4.html">Empowerment</a></li>
-              <li><a href="service5.html">Disaster Relief</a></li>
-              <li><a href="service6.html">Environmental Care</a></li>
+              <li class="mobile-only"><a href="services.html" data-key="nav_all_services">All Services</a></li>
+              <li><a href="service1.html" data-key="nav_service1">Education</a></li>
+              <li><a href="service2.html" data-key="nav_service2">Healthcare</a></li>
+              <li><a href="service3.html" data-key="nav_service3">Skill Training</a></li>
+              <li><a href="service4.html" data-key="nav_service4">Empowerment</a></li>
+              <li><a href="service5.html" data-key="nav_service5">Disaster Relief</a></li>
+              <li><a href="service6.html" data-key="nav_service6">Environmental Care</a></li>
             </ul>
           </li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
         </ul>
       </nav>
+
+      <!-- Language Toggle (added) -->
+      <div class="language-toggle" style="display:inline-block; margin:0 12px;">
+        <select id="languageSelect" aria-label="Select language">
+          <option value="en">English</option>
+          <option value="ar">العربية</option>
+          <option value="he">עברית</option>
+        </select>
+      </div>
 
       <div class="profile-container">
         <div class="profile" id="profile-dropdown-toggle">
           <span id="profile-initials"></span>
         </div>
         <ul class="profile-dropdown" id="profile-dropdown">
-          <li><a href="#" id="logout-btn">Logout</a></li>
+          <li><a href="#" id="logout-btn" data-key="logout">Logout</a></li>
         </ul>
       </div>
 
@@ -65,8 +74,8 @@
   <section class="blog-hero">
     <img src="images/download (1).jpeg" alt="Protecting the Environment">
     <div class="blog-hero-overlay">
-      <h1>Protecting the Environment Together</h1>
-      <p>Building sustainable futures through community-driven environmental care</p>
+      <h1 data-key="hero_title">Protecting the Environment Together</h1>
+      <p data-key="hero_sub">Building sustainable futures through community-driven environmental care</p>
     </div>
   </section>
 
@@ -75,26 +84,26 @@
     <!-- Blog Main Content -->
     <div class="blog-main">
       <article>
-        <h2>Why Environmental Care Matters</h2>
-        <p>Climate change, deforestation, and pollution are urgent challenges that threaten the future of our planet. Our goal is to create awareness and take collective action for a greener tomorrow.</p>
+        <h2 data-key="why_title">Why Environmental Care Matters</h2>
+        <p data-key="why_p">Climate change, deforestation, and pollution are urgent challenges that threaten the future of our planet. Our goal is to create awareness and take collective action for a greener tomorrow.</p>
 
-        <h2>Tree Plantation Drives</h2>
-        <p>We organize large-scale tree plantation campaigns in rural and urban areas to restore green cover, combat soil erosion, and reduce carbon emissions.</p>
+        <h2 data-key="tree_title">Tree Plantation Drives</h2>
+        <p data-key="tree_p">We organize large-scale tree plantation campaigns in rural and urban areas to restore green cover, combat soil erosion, and reduce carbon emissions.</p>
 
-        <h2>Disaster Preparedness</h2>
-        <p>Communities living in disaster-prone regions are trained to handle emergencies with preparedness plans, first-aid training, and rescue support networks.</p>
+        <h2 data-key="disaster_title">Disaster Preparedness</h2>
+        <p data-key="disaster_p">Communities living in disaster-prone regions are trained to handle emergencies with preparedness plans, first-aid training, and rescue support networks.</p>
 
-        <h2>Waste Management & Clean Villages</h2>
-        <p>Our initiatives focus on reducing plastic waste, promoting recycling, and building community-driven waste management systems to keep villages clean.</p>
+        <h2 data-key="waste_title">Waste Management &amp; Clean Villages</h2>
+        <p data-key="waste_p">Our initiatives focus on reducing plastic waste, promoting recycling, and building community-driven waste management systems to keep villages clean.</p>
 
-        <h2>Impact Stories</h2>
-        <p>From flood relief in disaster-hit areas to villagers planting thousands of saplings in one day, these inspiring stories showcase the power of collective action.</p>
+        <h2 data-key="impact_title">Impact Stories</h2>
+        <p data-key="impact_p">From flood relief in disaster-hit areas to villagers planting thousands of saplings in one day, these inspiring stories showcase the power of collective action.</p>
 
-        <h2>How You Can Help</h2>
-        <p>You can join our environmental programs by volunteering, donating, or organizing awareness campaigns in your local community.</p>
+        <h2 data-key="help_title">How You Can Help</h2>
+        <p data-key="help_p">You can join our environmental programs by volunteering, donating, or organizing awareness campaigns in your local community.</p>
 
         <div class="blog-cta">
-          <a href="donate.html" class="btn">Support Environment</a>
+          <a href="donate.html" class="btn" data-key="support_btn">Support Environment</a>
         </div>
       </article>
 
@@ -102,22 +111,22 @@
       <div class="author-box">
         <img src="images/download (1).jpeg" alt="Author">
         <div>
-          <h4>Written by XYZ</h4>
-          <p>Environmental activist and community organizer working to protect ecosystems and build resilience against climate change.</p>
+          <h4 data-key="author_by">Written by XYZ</h4>
+          <p data-key="author_bio">Environmental activist and community organizer working to protect ecosystems and build resilience against climate change.</p>
         </div>
       </div>
 
       <!-- Related Posts -->
       <div class="related-posts">
-        <h3>Related Posts</h3>
+        <h3 data-key="related_title">Related Posts</h3>
         <div class="related-grid">
           <a href="blog1.html" class="related-card">
             <img src="images/child_edu.jpeg" alt="Education">
-            <p>Empowering Children with Education</p>
+            <p data-key="related_1">Empowering Children with Education</p>
           </a>
           <a href="blog2.html" class="related-card">
             <img src="images/health.jpeg" alt="Healthcare">
-            <p>Improving Rural Healthcare Access</p>
+            <p data-key="related_2">Improving Rural Healthcare Access</p>
           </a>
         </div>
       </div>
@@ -127,20 +136,20 @@
     <aside class="blog-sidebar">
      
       <div class="sidebar-box">
-        <h3>Categories</h3>
+        <h3 data-key="categories_title">Categories</h3>
         <ul>
-          <li><a href="blog1.html">Education</a></li>
-          <li><a href="blog2.html">Healthcare</a></li>
-          <li><a href="blog3.html">Environment</a></li>
+          <li><a href="blog1.html" data-key="cat_education">Education</a></li>
+          <li><a href="blog2.html" data-key="cat_health">Healthcare</a></li>
+          <li><a href="blog3.html" data-key="cat_env">Environment</a></li>
         </ul>
       </div>
 
       <div class="sidebar-box">
-        <h3>Recent Posts</h3>
+        <h3 data-key="recent_title">Recent Posts</h3>
         <ul>
-          <li><a href="blog1.html">Empowering Children with Education</a></li>
-          <li><a href="blog2.html">Improving Rural Healthcare Access</a></li>
-          <li><a href="blog3.html">Protecting the Environment Together</a></li>
+          <li><a href="blog1.html" data-key="recent_1">Empowering Children with Education</a></li>
+          <li><a href="blog2.html" data-key="recent_2">Improving Rural Healthcare Access</a></li>
+          <li><a href="blog3.html" data-key="recent_3">Protecting the Environment Together</a></li>
         </ul>
       </div>
     </aside>
@@ -152,36 +161,36 @@
       <!-- Logo Section -->
       <div class="footer-logo">
         <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
-        <h4>NGO/CHARITY</h4>
+        <h4 data-key="footer_brand">NGO/CHARITY</h4>
       </div>
       <!-- Quick Links -->
       <div class="footer-links">
-        <h4>Quick Links</h4>
+        <h4 data-key="footer_quick">Quick Links</h4>
         <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html" data-key="f_about">About</a></li>
+          <li><a href="services.html" data-key="f_services">Services</a></li>
+          <li><a href="blog.html" data-key="f_blog">Blog</a></li>
+          <li><a href="contact.html" data-key="f_contact">Contact</a></li>
         </ul>
       </div>
       <!-- Services -->
       <div class="footer-services">
-        <h4>Explore Services</h4>
+        <h4 data-key="footer_services">Explore Services</h4>
         <ul>
-          <li><a href="service1.html">Education</a></li>
-          <li><a href="service2.html">Healthcare</a></li>
-          <li><a href="service3.html">Skill Training</a></li>
-          <li><a href="service4.html">Women Empowerment</a></li>
-          <li><a href="service5.html">Disaster Relief</a></li>
-          <li><a href="service6.html">Environmental Care</a></li>
+          <li><a href="service1.html" data-key="f_service1">Education</a></li>
+          <li><a href="service2.html" data-key="f_service2">Healthcare</a></li>
+          <li><a href="service3.html" data-key="f_service3">Skill Training</a></li>
+          <li><a href="service4.html" data-key="f_service4">Women Empowerment</a></li>
+          <li><a href="service5.html" data-key="f_service5">Disaster Relief</a></li>
+          <li><a href="service6.html" data-key="f_service6">Environmental Care</a></li>
         </ul>
       </div>
       <!-- Contact -->
       <div class="footer-contact">
-        <h4>Contact Us</h4>
-        <p><strong>Email:</strong> info@example.com</p>
-        <p><strong>Phone:</strong> +91 1234567890</p>
-        <h4>Follow Us</h4>
+        <h4 data-key="footer_contact">Contact Us</h4>
+        <p><strong data-key="email_label">Email:</strong> info@example.com</p>
+        <p><strong data-key="phone_label">Phone:</strong> +91 1234567890</p>
+        <h4 data-key="footer_follow">Follow Us</h4>
         <div class="social">
           <a href="#"><img src="images/fb.png" alt="Facebook"></a>
           <a href="#"><img src="images/x.png" alt="Twitter"></a>
@@ -190,18 +199,324 @@
       </div>
       <!-- Newsletter -->
       <div class="footer-newsletter">
-        <h4>Newsletter</h4>
-        <p>Stay updated on disaster relief efforts and eco-friendly projects.</p>
+        <h4 data-key="newsletter_title">Newsletter</h4>
+        <p data-key="newsletter_text">Stay updated on disaster relief efforts and eco-friendly projects.</p>
         <form id="newsletter-form">
-          <input type="email" id="newsletter-email" placeholder="Enter your email" required>
-          <button type="submit">Subscribe</button>
+          <input type="email" id="newsletter-email" placeholder="Enter your email" required data-placeholder-key="newsletter_placeholder">
+          <button type="submit" data-key="subscribe_btn">Subscribe</button>
         </form>
-        <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;">
+        <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;" data-key="newsletter_success">
           ✅ Thank you for subscribing!
         </div>
       </div>
     </div>
-    <div class="footer-copy">&copy; 2025 Your Company Name. All Rights Reserved.</div>
+    <div class="footer-copy" data-key="footer_copy">&copy; 2025 Your Company Name. All Rights Reserved.</div>
   </footer>
+
+  <!-- ================= LANGUAGE SCRIPT ================= -->
+  <script>
+    (function () {
+      const dictionary = {
+        en: {
+          nav_home: "Home ▾",
+          nav_home1: "Home 1",
+          nav_home2: "Home 2",
+          nav_about: "About",
+          nav_blog: "Blog",
+          nav_services: "Services ▾",
+          nav_all_services: "All Services",
+          nav_service1: "Education",
+          nav_service2: "Healthcare",
+          nav_service3: "Skill Training",
+          nav_service4: "Empowerment",
+          nav_service5: "Disaster Relief",
+          nav_service6: "Environmental Care",
+          nav_contact: "Contact",
+          logout: "Logout",
+
+          hero_title: "Protecting the Environment Together",
+          hero_sub: "Building sustainable futures through community-driven environmental care",
+
+          why_title: "Why Environmental Care Matters",
+          why_p: "Climate change, deforestation, and pollution are urgent challenges that threaten the future of our planet. Our goal is to create awareness and take collective action for a greener tomorrow.",
+
+          tree_title: "Tree Plantation Drives",
+          tree_p: "We organize large-scale tree plantation campaigns in rural and urban areas to restore green cover, combat soil erosion, and reduce carbon emissions.",
+
+          disaster_title: "Disaster Preparedness",
+          disaster_p: "Communities living in disaster-prone regions are trained to handle emergencies with preparedness plans, first-aid training, and rescue support networks.",
+
+          waste_title: "Waste Management & Clean Villages",
+          waste_p: "Our initiatives focus on reducing plastic waste, promoting recycling, and building community-driven waste management systems to keep villages clean.",
+
+          impact_title: "Impact Stories",
+          impact_p: "From flood relief in disaster-hit areas to villagers planting thousands of saplings in one day, these inspiring stories showcase the power of collective action.",
+
+          help_title: "How You Can Help",
+          help_p: "You can join our environmental programs by volunteering, donating, or organizing awareness campaigns in your local community.",
+
+          support_btn: "Support Environment",
+
+          author_by: "Written by XYZ",
+          author_bio: "Environmental activist and community organizer working to protect ecosystems and build resilience against climate change.",
+
+          related_title: "Related Posts",
+          related_1: "Empowering Children with Education",
+          related_2: "Improving Rural Healthcare Access",
+
+          categories_title: "Categories",
+          cat_education: "Education",
+          cat_health: "Healthcare",
+          cat_env: "Environment",
+
+          recent_title: "Recent Posts",
+          recent_1: "Empowering Children with Education",
+          recent_2: "Improving Rural Healthcare Access",
+          recent_3: "Protecting the Environment Together",
+
+          footer_brand: "NGO/CHARITY",
+          footer_quick: "Quick Links",
+          f_about: "About",
+          f_services: "Services",
+          f_blog: "Blog",
+          f_contact: "Contact",
+
+          footer_services: "Explore Services",
+          f_service1: "Education",
+          f_service2: "Healthcare",
+          f_service3: "Skill Training",
+          f_service4: "Women Empowerment",
+          f_service5: "Disaster Relief",
+          f_service6: "Environmental Care",
+
+          footer_contact: "Contact Us",
+          email_label: "Email:",
+          phone_label: "Phone:",
+          footer_follow: "Follow Us",
+
+          newsletter_title: "Newsletter",
+          newsletter_text: "Stay updated on disaster relief efforts and eco-friendly projects.",
+          subscribe_btn: "Subscribe",
+          newsletter_placeholder: "Enter your email",
+          newsletter_success: "✅ Thank you for subscribing!",
+          footer_copy: "© 2025 Your Company Name. All Rights Reserved."
+        },
+        ar: {
+          nav_home: "الرئيسية ▾",
+          nav_home1: "الرئيسية 1",
+          nav_home2: "الرئيسية 2",
+          nav_about: "معلومات عنا",
+          nav_blog: "المدونة",
+          nav_services: "الخدمات ▾",
+          nav_all_services: "جميع الخدمات",
+          nav_service1: "التعليم",
+          nav_service2: "الرعاية الصحية",
+          nav_service3: "التدريب المهني",
+          nav_service4: "التمكين",
+          nav_service5: "الإغاثة في الكوارث",
+          nav_service6: "رعاية البيئة",
+          nav_contact: "اتصل بنا",
+          logout: "تسجيل الخروج",
+
+          hero_title: "حماية البيئة معًا",
+          hero_sub: "بناء مستقبل مستدام من خلال رعاية بيئية يقودها المجتمع",
+
+          why_title: "لماذا تهم رعاية البيئة",
+          why_p: "يعد تغير المناخ وإزالة الغابات والتلوث تحديات عاجلة تهدد مستقبل كوكبنا. هدفنا هو زيادة الوعي واتخاذ إجراءات جماعية من أجل مستقبل أكثر خضرة.",
+
+          tree_title: "مبادرات زراعة الأشجار",
+          tree_p: "ننظم حملات واسعة لزراعة الأشجار في المناطق الريفية والحضرية لاستعادة الغطاء النباتي، ومكافحة تآكل التربة، وتقليل انبعاثات الكربون.",
+
+          disaster_title: "الاستعداد للكوارث",
+          disaster_p: "يتم تدريب المجتمعات في المناطق المعرضة للكوارث على التعامل مع الطوارئ من خلال خطط الاستعداد والتدريب على الإسعافات الأولية وشبكات الدعم.",
+
+          waste_title: "إدارة النفايات وقرى نظيفة",
+          waste_p: "تركز مبادراتنا على تقليل النفايات البلاستيكية، وتشجيع إعادة التدوير، وبناء أنظمة إدارة نفايات يقودها المجتمع للحفاظ على نظافة القرى.",
+
+          impact_title: "قصص التأثير",
+          impact_p: "من الإغاثة من الفيضانات في المناطق المتضررة إلى قيام القرى بزراعة آلاف الشتلات في يوم واحد، تعرض هذه القصص الملهمة قوة العمل الجماعي.",
+
+          help_title: "كيف يمكنك المساعدة",
+          help_p: "يمكنك الانضمام إلى برامجنا البيئية عن طريق التطوع أو التبرع أو تنظيم حملات توعية في مجتمعك المحلي.",
+
+          support_btn: "ادعم البيئة",
+
+          author_by: "كتبه XYZ",
+          author_bio: "ناشط بيئي ومنظم مجتمعي يعمل على حماية النظم البيئية وبناء القدرة على الصمود أمام تغير المناخ.",
+
+          related_title: "مشاركات ذات صلة",
+          related_1: "تمكين الأطفال من خلال التعليم",
+          related_2: "تحسين الوصول إلى الرعاية الصحية الريفية",
+
+          categories_title: "التصنيفات",
+          cat_education: "التعليم",
+          cat_health: "الرعاية الصحية",
+          cat_env: "البيئة",
+
+          recent_title: "المنشورات الأخيرة",
+          recent_1: "تمكين الأطفال من خلال التعليم",
+          recent_2: "تحسين الوصول إلى الرعاية الصحية الريفية",
+          recent_3: "حماية البيئة معًا",
+
+          footer_brand: "منظمة / جمعيات خيرية",
+          footer_quick: "روابط سريعة",
+          f_about: "معلومات عنا",
+          f_services: "الخدمات",
+          f_blog: "المدونة",
+          f_contact: "اتصل بنا",
+
+          footer_services: "استكشف الخدمات",
+          f_service1: "التعليم",
+          f_service2: "الرعاية الصحية",
+          f_service3: "التدريب المهني",
+          f_service4: "تمكين المرأة",
+          f_service5: "الإغاثة في الكوارث",
+          f_service6: "رعاية البيئة",
+
+          footer_contact: "اتصل بنا",
+          email_label: "البريد الإلكتروني:",
+          phone_label: "الهاتف:",
+          footer_follow: "تابعنا",
+
+          newsletter_title: "النشرة الإخبارية",
+          newsletter_text: "ابقَ على اطلاع بجهود الإغاثة ومشروعات صديقة للبيئة.",
+          subscribe_btn: "اشترك",
+          newsletter_placeholder: "أدخل بريدك الإلكتروني",
+          newsletter_success: "✅ شكرًا لاشتراكك!",
+          footer_copy: "© 2025 اسم شركتك. جميع الحقوق محفوظة."
+        },
+        he: {
+          nav_home: "בית ▾",
+          nav_home1: "בית 1",
+          nav_home2: "בית 2",
+          nav_about: "אודות",
+          nav_blog: "בלוג",
+          nav_services: "שירותים ▾",
+          nav_all_services: "כל השירותים",
+          nav_service1: "חינוך",
+          nav_service2: "בריאות",
+          nav_service3: "הכשרה מקצועית",
+          nav_service4: "העצמה",
+          nav_service5: "סיוע בחירום",
+          nav_service6: "שמירה על הסביבה",
+          nav_contact: "צור קשר",
+          logout: "התנתק",
+
+          hero_title: "מגנים על הסביבה יחד",
+          hero_sub: "בונים עתיד בר קיימא באמצעות עבודת קהילה",
+
+          why_title: "מדוע שמירה על הסביבה חשובה",
+          why_p: "שינויי אקלים, בירוא יערות וזיהום הם אתגרים דחופים המסכנים את עתיד הפלנטה. מטרתנו היא להגביר מודעות ולפעול יחד למען עתיד ירוק יותר.",
+
+          tree_title: "מבצעי נטיעת עצים",
+          tree_p: "אנו מארגנים מבצעי נטיעת עצים נרחבים באזורים כפריים ועירוניים לשיקום הכיסוי הצמחי, להילחם בסחף ולצמצם פליטות פחמן.",
+
+          disaster_title: "היערכות לאסונות",
+          disaster_p: "קהילות שנמצאות בסיכון עובדות על תכניות מוכנות, הדרכות סיוע ראשוני ורשתות תמיכה להצלה.",
+
+          waste_title: "ניהול פסולת וכפרים נקיים",
+          waste_p: "היוזמות שלנו מתמקדות בהפחתת פסולת פלסטיק, קידום מיחזור ובניית מערכות ניהול פסולת בקהילה לשמירה על ניקיון הכפרים.",
+
+          impact_title: "סיפורי השפעה",
+          impact_p: "מסיוע לפליטים בשל שטפונות ועד אלפי שתילים שניטעו ביום אחד, הסיפורים הללו מדגימים את כוח הפעולה המשותפת.",
+
+          help_title: "איך אפשר לעזור",
+          help_p: "אתם יכולים להצטרף לתוכניות הסביבה שלנו בהתנדבות, בתרומה או בארגון מסעות מודעות בקהילה המקומית.",
+
+          support_btn: "תמכו בסביבה",
+
+          author_by: "נכתב על ידי XYZ",
+          author_bio: "פעיל סביבתי ומארגן קהילתי העובד להגן על המערכות האקולוגיות ולבנות חוסן לאתגרים אקלימיים.",
+
+          related_title: "פוסטים קשורים",
+          related_1: "העצמת ילדים באמצעות חינוך",
+          related_2: "שיפור הגישה לשירותי בריאות בכפר",
+
+          categories_title: "קטגוריות",
+          cat_education: "חינוך",
+          cat_health: "בריאות",
+          cat_env: "סביבה",
+
+          recent_title: "פוסטים אחרונים",
+          recent_1: "העצמת ילדים באמצעות חינוך",
+          recent_2: "שיפור הגישה לשירותי בריאות בכפר",
+          recent_3: "מגנים על הסביבה יחד",
+
+          footer_brand: "עמותה/ארגון צדקה",
+          footer_quick: "קישורים מהירים",
+          f_about: "אודות",
+          f_services: "שירותים",
+          f_blog: "בלוג",
+          f_contact: "צור קשר",
+
+          footer_services: "חקור שירותים",
+          f_service1: "חינוך",
+          f_service2: "בריאות",
+          f_service3: "הכשרה מקצועית",
+          f_service4: "העצמת נשים",
+          f_service5: "סיוע בחירום",
+          f_service6: "שמירה על הסביבה",
+
+          footer_contact: "צור קשר",
+          email_label: "אימייל:",
+          phone_label: "טלפון:",
+          footer_follow: "עקבו אחרינו",
+
+          newsletter_title: "ניוזלטר",
+          newsletter_text: "התעדכנו במאמצי סיוע ופרויקטים ירוקים.",
+          subscribe_btn: "הירשמו",
+          newsletter_placeholder: "הכנס את האימייל שלך",
+          newsletter_success: "✅ תודה שנרשמת!",
+          footer_copy: "© 2025 שם החברה שלך. כל הזכויות שמורות."
+        }
+      };
+
+      function applyTranslations(lang) {
+        document.querySelectorAll('[data-key]').forEach(el => {
+          const key = el.getAttribute('data-key');
+          if (!key) return;
+          if (dictionary[lang] && dictionary[lang][key] !== undefined) {
+            el.textContent = dictionary[lang][key];
+          }
+        });
+
+        document.querySelectorAll('[data-placeholder-key]').forEach(el => {
+          const key = el.getAttribute('data-placeholder-key');
+          if (!key) return;
+          if (dictionary[lang] && dictionary[lang][key] !== undefined) {
+            el.setAttribute('placeholder', dictionary[lang][key]);
+          }
+        });
+
+        document.documentElement.lang = lang;
+        if (lang === 'ar' || lang === 'he') {
+          document.documentElement.setAttribute('dir', 'rtl');
+          document.body.classList.add('is-rtl');
+        } else {
+          document.documentElement.setAttribute('dir', 'ltr');
+          document.body.classList.remove('is-rtl');
+        }
+      }
+
+      function setLanguage(lang) {
+        if (!dictionary[lang]) lang = 'en';
+        localStorage.setItem('siteLanguage', lang);
+        const sel = document.getElementById('languageSelect');
+        if (sel) sel.value = lang;
+        applyTranslations(lang);
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const saved = localStorage.getItem('siteLanguage') || 'en';
+        const sel = document.getElementById('languageSelect');
+        if (sel) {
+          sel.value = saved;
+          sel.addEventListener('change', e => setLanguage(e.target.value));
+        }
+        applyTranslations(saved);
+      });
+    })();
+  </script>
+
 </body>
 </html>

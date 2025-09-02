@@ -24,36 +24,45 @@
     <nav>
       <ul class="nav-links">
         <li class="dropdown">
-          <a href="index.html">Home ▾</a>
+          <a href="index.html" data-key="nav_home">Home ▾</a>
           <ul class="dropdown-menu">
-            <li><a href="index.html">Home 1</a></li>
-            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="index.html" data-key="nav_home1">Home 1</a></li>
+            <li><a href="home2.html" data-key="nav_home2">Home 2</a></li>
           </ul>
         </li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html" data-key="nav_about">About</a></li>
+        <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
         <li class="dropdown">
-          <a href="services.html">Services ▾</a>
+          <a href="services.html" data-key="nav_services">Services ▾</a>
           <ul class="dropdown-menu">
-                        <li class="mobile-only"><a href="services.html">All Services</a></li>
-            <li><a href="service1.html">Education</a></li>
-        <li><a href="service2.html">Healthcare</a></li>
-        <li><a href="service3.html">Skill Training</a></li>
-        <li><a href="service4.html">Empowerment</a></li>
-        <li><a href="service5.html">Disaster Relief</a></li>
-        <li><a href="service6.html">Environmental Care</a></li>
+                        <li class="mobile-only"><a href="services.html" data-key="nav_all_services">All Services</a></li>
+            <li><a href="service1.html" data-key="nav_service1">Education</a></li>
+        <li><a href="service2.html" data-key="nav_service2">Healthcare</a></li>
+        <li><a href="service3.html" data-key="nav_service3">Skill Training</a></li>
+        <li><a href="service4.html" data-key="nav_service4">Empowerment</a></li>
+        <li><a href="service5.html" data-key="nav_service5">Disaster Relief</a></li>
+        <li><a href="service6.html" data-key="nav_service6">Environmental Care</a></li>
           </ul>
         </li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
       </ul>
     </nav>
+
+    <!-- Language toggle -->
+    <div style="display:inline-block; margin:0 12px;">
+      <select id="languageSelect" aria-label="Select language">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="he">עברית</option>
+      </select>
+    </div>
 
     <div class="profile-container">
       <div class="profile" id="profile-dropdown-toggle">
         <span id="profile-initials"></span>
       </div>
       <ul class="profile-dropdown" id="profile-dropdown">
-        <li><a href="#" id="logout-btn">Logout</a></li>
+        <li><a href="#" id="logout-btn" data-key="logout">Logout</a></li>
       </ul>
     </div>
 
@@ -68,8 +77,8 @@
 <section class="service-hero">
   <div class="service-hero-overlay"></div>
   <div class="service-hero-content">
-    <h1>Healthcare Access</h1>
-    <p>Bringing quality healthcare closer to communities in need.</p>
+    <h1 data-key="hero_title">Healthcare Access</h1>
+    <p data-key="hero_sub">Bringing quality healthcare closer to communities in need.</p>
   </div>
 </section>
 
@@ -85,57 +94,57 @@
 
     <!-- Text Side -->
     <div class="about-content">
-      <h2>About Our Healthcare Mission</h2>
-      <p>
+      <h2 data-key="about_title">About Our Healthcare Mission</h2>
+      <p data-key="about_p1">
         We believe that good health is the foundation for a brighter future. Through our healthcare access programs, 
         we work to provide essential medical services to underprivileged communities that are often left behind. 
       </p>
-      <p>
+      <p data-key="about_p2">
         From health camps and check-ups to awareness drives and affordable medicines, our mission ensures that 
         families receive the care they need. By partnering with doctors, volunteers, and local health workers, 
         we bring quality healthcare within everyone’s reach.
       </p>
-      <a href="contact.html" class="about-btn">Support Our Work</a>
+      <a href="contact.html" class="about-btn" data-key="support_btn">Support Our Work</a>
     </div>
   </div>
 </section>
 
 <section class="impact" id="impact">
   <div class="impact-container">
-    <h2 class="section-title">Our Impact</h2>
-    <p class="section-subtitle">Together, we are creating meaningful change in communities every day</p>
+    <h2 class="section-title" data-key="impact_title">Our Impact</h2>
+    <p class="section-subtitle" data-key="impact_sub">Together, we are creating meaningful change in communities every day</p>
 
     <div class="impact-grid">
       <!-- Impact Card 1 -->
       <div class="impact-card">
         <h3 class="count" data-target="5000">0</h3>
-        <p>Children given access to quality education and learning resources</p>
+        <p data-key="impact_card1">Children given access to quality education and learning resources</p>
       </div>
 
       <!-- Impact Card 2 -->
       <div class="impact-card">
         <h3 class="count" data-target="12000">0</h3>
-        <p>Individuals provided with essential healthcare services and medical support</p>
+        <p data-key="impact_card2">Individuals provided with essential healthcare services and medical support</p>
       </div>
 
       <!-- Impact Card 3 -->
       <div class="impact-card">
         <h3 class="count" data-target="800">0</h3>
-        <p>Youth empowered with skill development and vocational training</p>
+        <p data-key="impact_card3">Youth empowered with skill development and vocational training</p>
       </div>
 
       <!-- Impact Card 4 -->
       <div class="impact-card">
         <h3 class="count" data-target="300">0</h3>
-        <p>Communities strengthened through development and empowerment initiatives</p>
+        <p data-key="impact_card4">Communities strengthened through development and empowerment initiatives</p>
       </div>
     </div>
   </div>
 </section>
 
 <section class="programs-alt" id="programs">
-  <h2 class="section-title">Our Key Healthcare Programs</h2>
-  <p class="section-subtitle">Focused initiatives to ensure healthier lives for vulnerable communities</p>
+  <h2 class="section-title" data-key="programs_title">Our Key Healthcare Programs</h2>
+  <p class="section-subtitle" data-key="programs_sub">Focused initiatives to ensure healthier lives for vulnerable communities</p>
 
   <!-- Program 1 -->
   <div class="program-item reveal fade-left">
@@ -143,8 +152,8 @@
       <img src="images/medical camp.jpeg" alt="Medical Camps">
     </div>
     <div class="program-text">
-      <h3>Community Medical Camps</h3>
-      <p>
+      <h3 data-key="program1_title">Community Medical Camps</h3>
+      <p data-key="program1_p">
         We organize free health camps in underserved areas, bringing doctors, nurses, and essential medicines directly to the people. These camps provide check-ups, diagnostics, and treatment for common illnesses, while also raising awareness about preventive care. Our outreach ensures that even remote villages have access to quality healthcare without financial burden.
       </p>
     </div>
@@ -153,8 +162,8 @@
   <!-- Program 2 -->
   <div class="program-item reveal fade-right">
     <div class="program-text">
-      <h3>Maternal & Child Health</h3>
-      <p>
+      <h3 data-key="program2_title">Maternal &amp; Child Health</h3>
+      <p data-key="program2_p">
         Healthy mothers and children are the foundation of strong communities. Through our maternal health initiatives, we provide prenatal check-ups, nutritional support, safe delivery assistance, and postnatal care. We also focus on child immunization, growth monitoring, and educating mothers about hygiene and nutrition, ensuring healthier futures for both mothers and babies.
       </p>
     </div>
@@ -169,8 +178,8 @@
       <img src="images/healthaware.jpeg" alt="Health Awareness">
     </div>
     <div class="program-text">
-      <h3>Health Awareness & Education</h3>
-      <p>
+      <h3 data-key="program3_title">Health Awareness &amp; Education</h3>
+      <p data-key="program3_p">
         Prevention is better than cure. Our health education programs spread awareness on topics like nutrition, hygiene, sanitation, mental health, and lifestyle diseases. By conducting workshops, community sessions, and school-based programs, we empower people to make healthier choices and reduce risks of chronic illness.
       </p>
     </div>
@@ -179,8 +188,8 @@
   <!-- Program 4 -->
   <div class="program-item reveal fade-right">
     <div class="program-text">
-      <h3>Access to Medicines</h3>
-      <p>
+      <h3 data-key="program4_title">Access to Medicines</h3>
+      <p data-key="program4_p">
         Many families cannot afford life-saving medicines. We partner with healthcare providers and pharmacies to distribute essential medicines at little or no cost. Special focus is given to chronic conditions like diabetes, hypertension, and asthma, ensuring that no one has to compromise their treatment due to financial hardship.
       </p>
     </div>
@@ -192,37 +201,37 @@
 
 <section class="testimonials" id="testimonials">
   <div class="container">
-    <h2 class="section-title">Voices of Change</h2>
-    <p class="section-subtitle">Real stories of hope and healing through our Healthcare Access program</p>
+    <h2 class="section-title" data-key="testimonials_title">Voices of Change</h2>
+    <p class="section-subtitle" data-key="testimonials_sub">Real stories of hope and healing through our Healthcare Access program</p>
 
     <div class="testimonials-grid">
       <!-- Testimonial 1 -->
       <div class="testimonial-card">
-        <p class="quote">“When my son fell sick, we couldn’t afford treatment. The NGO’s healthcare camp gave him the care he needed—free of cost. Today, he is healthy and smiling again.”</p>
+        <p class="quote" data-key="t1_quote">“When my son fell sick, we couldn’t afford treatment. The NGO’s healthcare camp gave him the care he needed—free of cost. Today, he is healthy and smiling again.”</p>
         <div class="author">
           <img src="images/ser2_t1.jpeg" alt="Parent">
-          <h4>Meena Devi</h4>
-          <span>Beneficiary</span>
+          <h4 data-key="t1_name">Meena Devi</h4>
+          <span data-key="t1_role">Beneficiary</span>
         </div>
       </div>
 
       <!-- Testimonial 2 -->
       <div class="testimonial-card">
-        <p class="quote">“As a volunteer doctor, I’ve seen firsthand how many lives we save by providing timely checkups and medicines in remote villages. It’s deeply rewarding.”</p>
+        <p class="quote" data-key="t2_quote">“As a volunteer doctor, I’ve seen firsthand how many lives we save by providing timely checkups and medicines in remote villages. It’s deeply rewarding.”</p>
         <div class="author">
           <img src="images/ser2_t2.jpeg" alt="Doctor Volunteer">
-          <h4>Dr. Arjun Patel</h4>
-          <span>Volunteer Doctor</span>
+          <h4 data-key="t2_name">Dr. Arjun Patel</h4>
+          <span data-key="t2_role">Volunteer Doctor</span>
         </div>
       </div>
 
       <!-- Testimonial 3 -->
       <div class="testimonial-card">
-        <p class="quote">“Supporting this healthcare initiative is the best decision I’ve made. Knowing my contribution helps families access life-saving treatments brings me peace.”</p>
+        <p class="quote" data-key="t3_quote">“Supporting this healthcare initiative is the best decision I’ve made. Knowing my contribution helps families access life-saving treatments brings me peace.”</p>
         <div class="author">
           <img src="images/ser2_t3.jpeg" alt="Donor">
-          <h4>Sanjay Mehta</h4>
-          <span>Donor</span>
+          <h4 data-key="t3_name">Sanjay Mehta</h4>
+          <span data-key="t3_role">Donor</span>
         </div>
       </div>
     </div>
@@ -232,11 +241,11 @@
 
 <section class="cta" id="cta">
   <div class="cta-container">
-    <h2>Support Healthcare Access</h2>
-    <p>Your contribution can provide life-saving treatments, free medical camps, and essential medicines to families in need.</p>
+    <h2 data-key="cta_title">Support Healthcare Access</h2>
+    <p data-key="cta_p">Your contribution can provide life-saving treatments, free medical camps, and essential medicines to families in need.</p>
     <div class="cta-buttons">
-      <a href="donate.html" class="cta-btn donate-btn">Donate for Healthcare</a>
-      <a href="contact.html" class="cta-btn volunteer-btn">Join as Medical Volunteer</a>
+      <a href="donate.html" class="cta-btn donate-btn" data-key="cta_donate">Donate for Healthcare</a>
+      <a href="contact.html" class="cta-btn volunteer-btn" data-key="cta_vol">Join as Medical Volunteer</a>
     </div>
   </div>
 </section>
@@ -250,40 +259,40 @@
     <!-- Logo Section -->
     <div class="footer-logo">
       <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
-      <h4>NGO/CHARITY</h4>
+      <h4 data-key="footer_brand">NGO/CHARITY</h4>
     </div>
 
     <!-- Quick Links -->
     <div class="footer-links">
-      <h4>Quick Links</h4>
+      <h4 data-key="footer_quick">Quick Links</h4>
       <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html" data-key="nav_about_f">About</a></li>
+        <li><a href="services.html" data-key="nav_services_f">Services</a></li>
+        <li><a href="blog.html" data-key="nav_blog_f">Blog</a></li>
+        <li><a href="contact.html" data-key="nav_contact_f">Contact</a></li>
       </ul>
     </div>
 
     <!-- Services -->
     <div class="footer-services">
-      <h4>Explore Services</h4>
+      <h4 data-key="footer_services">Explore Services</h4>
       <ul>
-        <li><a href="service1.html">Education</a></li>
-        <li><a href="service2.html">Healthcare</a></li>
-        <li><a href="service3.html">Skill Training</a></li>
-        <li><a href="service4.html">Women Empowerment</a></li>
-        <li><a href="service5.html">Disaster Relief</a></li>
-        <li><a href="service6.html">Environmental Care</a></li>
+        <li><a href="service1.html" data-key="nav_service1_f">Education</a></li>
+        <li><a href="service2.html" data-key="nav_service2_f">Healthcare</a></li>
+        <li><a href="service3.html" data-key="nav_service3_f">Skill Training</a></li>
+        <li><a href="service4.html" data-key="nav_service4_f">Women Empowerment</a></li>
+        <li><a href="service5.html" data-key="nav_service5_f">Disaster Relief</a></li>
+        <li><a href="service6.html" data-key="nav_service6_f">Environmental Care</a></li>
       </ul>
     </div>
 
     <!-- Contact -->
     <div class="footer-contact">
-      <h4>Contact Us</h4>
+      <h4 data-key="footer_contact">Contact Us</h4>
       <p><strong>Email:</strong> info@example.com</p>
       <p><strong>Phone:</strong> +91 1234567890</p>
 
-      <h4>Follow Us</h4>
+      <h4 data-key="footer_follow">Follow Us</h4>
       <div class="social">
         <a href="https://facebook.com"><img src="images/fb.png" alt="Facebook"></a>
         <a href="https://twitter.com"><img src="images/x.png" alt="Twitter"></a>
@@ -293,19 +302,19 @@
 
     <!-- Newsletter -->
     <div class="footer-newsletter">
-      <h4>Newsletter</h4>
-      <p>Get weekly wellness tips and updates in your inbox.</p>
+      <h4 data-key="newsletter_title">Newsletter</h4>
+      <p data-key="newsletter_text">Get weekly wellness tips and updates in your inbox.</p>
       <form id="newsletter-form">
-        <input type="email" id="newsletter-email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
+        <input type="email" id="newsletter-email" placeholder="Enter your email" required data-placeholder-key="newsletter_placeholder">
+        <button type="submit" data-key="subscribe_btn">Subscribe</button>
       </form>
-      <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;">
+      <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;" data-key="newsletter_success">
     ✅ Thank you for subscribing!
   </div>
     </div>
   </div>
 
-  <div class="footer-copy">
+  <div class="footer-copy" data-key="footer_copy">
     &copy; 2025 Your Company Name. All Rights Reserved.
   </div>
 </footer>
@@ -365,6 +374,317 @@ document.addEventListener("DOMContentLoaded", () => {
   revealOnScroll();
 });
 
+</script>
+
+<!-- ================= Language toggle script (dictionary) ================= -->
+<script>
+(function(){
+  const dictionary = {
+    en: {
+      nav_home: "Home ▾",
+      nav_home1: "Home 1",
+      nav_home2: "Home 2",
+      nav_about: "About",
+      nav_blog: "Blog",
+      nav_services: "Services ▾",
+      nav_all_services: "All Services",
+      nav_service1: "Education",
+      nav_service2: "Healthcare",
+      nav_service3: "Skill Training",
+      nav_service4: "Empowerment",
+      nav_service5: "Disaster Relief",
+      nav_service6: "Environmental Care",
+      nav_contact: "Contact",
+      logout: "Logout",
+
+      hero_title: "Healthcare Access",
+      hero_sub: "Bringing quality healthcare closer to communities in need.",
+
+      about_title: "About Our Healthcare Mission",
+      about_p1: "We believe that good health is the foundation for a brighter future. Through our healthcare access programs, we work to provide essential medical services to underprivileged communities that are often left behind.",
+      about_p2: "From health camps and check-ups to awareness drives and affordable medicines, our mission ensures that families receive the care they need. By partnering with doctors, volunteers, and local health workers, we bring quality healthcare within everyone’s reach.",
+      support_btn: "Support Our Work",
+
+      impact_title: "Our Impact",
+      impact_sub: "Together, we are creating meaningful change in communities every day",
+      impact_card1: "Children given access to quality education and learning resources",
+      impact_card2: "Individuals provided with essential healthcare services and medical support",
+      impact_card3: "Youth empowered with skill development and vocational training",
+      impact_card4: "Communities strengthened through development and empowerment initiatives",
+
+      programs_title: "Our Key Healthcare Programs",
+      programs_sub: "Focused initiatives to ensure healthier lives for vulnerable communities",
+
+      program1_title: "Community Medical Camps",
+      program1_p: "We organize free health camps in underserved areas, bringing doctors, nurses, and essential medicines directly to the people. These camps provide check-ups, diagnostics, and treatment for common illnesses, while also raising awareness about preventive care. Our outreach ensures that even remote villages have access to quality healthcare without financial burden.",
+
+      program2_title: "Maternal & Child Health",
+      program2_p: "Healthy mothers and children are the foundation of strong communities. Through our maternal health initiatives, we provide prenatal check-ups, nutritional support, safe delivery assistance, and postnatal care. We also focus on child immunization, growth monitoring, and educating mothers about hygiene and nutrition, ensuring healthier futures for both mothers and babies.",
+
+      program3_title: "Health Awareness & Education",
+      program3_p: "Prevention is better than cure. Our health education programs spread awareness on topics like nutrition, hygiene, sanitation, mental health, and lifestyle diseases. By conducting workshops, community sessions, and school-based programs, we empower people to make healthier choices and reduce risks of chronic illness.",
+
+      program4_title: "Access to Medicines",
+      program4_p: "Many families cannot afford life-saving medicines. We partner with healthcare providers and pharmacies to distribute essential medicines at little or no cost. Special focus is given to chronic conditions like diabetes, hypertension, and asthma, ensuring that no one has to compromise their treatment due to financial hardship.",
+
+      testimonials_title: "Voices of Change",
+      testimonials_sub: "Real stories of hope and healing through our Healthcare Access program",
+      t1_quote: "“When my son fell sick, we couldn’t afford treatment. The NGO’s healthcare camp gave him the care he needed—free of cost. Today, he is healthy and smiling again.”",
+      t1_name: "Meena Devi",
+      t1_role: "Beneficiary",
+      t2_quote: "“As a volunteer doctor, I’ve seen firsthand how many lives we save by providing timely checkups and medicines in remote villages. It’s deeply rewarding.”",
+      t2_name: "Dr. Arjun Patel",
+      t2_role: "Volunteer Doctor",
+      t3_quote: "“Supporting this healthcare initiative is the best decision I’ve made. Knowing my contribution helps families access life-saving treatments brings me peace.”",
+      t3_name: "Sanjay Mehta",
+      t3_role: "Donor",
+
+      cta_title: "Support Healthcare Access",
+      cta_p: "Your contribution can provide life-saving treatments, free medical camps, and essential medicines to families in need.",
+      cta_donate: "Donate for Healthcare",
+      cta_vol: "Join as Medical Volunteer",
+
+      footer_brand: "NGO/CHARITY",
+      footer_quick: "Quick Links",
+      nav_about_f: "About",
+      nav_services_f: "Services",
+      nav_blog_f: "Blog",
+      nav_contact_f: "Contact",
+      footer_services: "Explore Services",
+      nav_service1_f: "Education",
+      nav_service2_f: "Healthcare",
+      nav_service3_f: "Skill Training",
+      nav_service4_f: "Women Empowerment",
+      nav_service5_f: "Disaster Relief",
+      nav_service6_f: "Environmental Care",
+      footer_contact: "Contact Us",
+      footer_follow: "Follow Us",
+      newsletter_title: "Newsletter",
+      newsletter_text: "Get weekly wellness tips and updates in your inbox.",
+      newsletter_placeholder: "Enter your email",
+      subscribe_btn: "Subscribe",
+      newsletter_success: "✅ Thank you for subscribing!",
+      footer_copy: "© 2025 Your Company Name. All Rights Reserved."
+    },
+    ar: {
+      nav_home: "الرئيسية ▾",
+      nav_home1: "الرئيسية 1",
+      nav_home2: "الرئيسية 2",
+      nav_about: "معلومات عنا",
+      nav_blog: "المدونة",
+      nav_services: "الخدمات ▾",
+      nav_all_services: "جميع الخدمات",
+      nav_service1: "التعليم",
+      nav_service2: "الرعاية الصحية",
+      nav_service3: "التدريب المهني",
+      nav_service4: "التمكين",
+      nav_service5: "الإغاثة في الكوارث",
+      nav_service6: "رعاية البيئة",
+      nav_contact: "اتصل بنا",
+      logout: "تسجيل الخروج",
+
+      hero_title: "الوصول إلى الرعاية الصحية",
+      hero_sub: "جلب الرعاية الصحية عالية الجودة إلى المجتمعات المحتاجة.",
+
+      about_title: "حول مهمتنا الصحية",
+      about_p1: "نعتقد أن الصحة الجيدة هي أساس لمستقبل أكثر إشراقًا. من خلال برامجنا للوصول إلى الرعاية الصحية، نعمل على توفير الخدمات الطبية الأساسية للمجتمعات المحرومة التي غالبًا ما تُترك دون رعاية.",
+      about_p2: "من المخيمات الصحية والفحوصات إلى حملات التوعية والأدوية بأسعار معقولة، تضمن مهمتنا حصول العائلات على الرعاية التي تحتاجها. من خلال الشراكة مع الأطباء والمتطوعين والعاملين الصحيين المحليين، نجلب الرعاية الصحية عالية الجودة في متناول الجميع.",
+      support_btn: "ادعم عملنا",
+
+      impact_title: "تأثيرنا",
+      impact_sub: "معًا، نخلق تغييرًا ذا معنى في المجتمعات كل يوم",
+      impact_card1: "تمكين الأطفال من الوصول إلى التعليم وموارد التعلم",
+      impact_card2: "توفير خدمات الرعاية الصحية الأساسية والدعم الطبي للأفراد",
+      impact_card3: "تمكين الشباب من خلال تطوير المهارات والتدريب المهني",
+      impact_card4: "تقوية المجتمعات من خلال التنمية ومبادرات التمكين",
+
+      programs_title: "برامجنا الصحية الرئيسية",
+      programs_sub: "مبادرات مركزة لضمان حياة أكثر صحة للمجتمعات الضعيفة",
+
+      program1_title: "مخيمات طبية مجتمعية",
+      program1_p: "نقوم بتنظيم مخيمات صحية مجانية في المناطق المحرومة، مما يجلب الأطباء والممرضات والأدوية الأساسية مباشرة إلى الناس. توفر هذه المخيمات فحوصات وتشخيصات وعلاج للأمراض الشائعة، بينما ترفع أيضًا الوعي حول الرعاية الوقائية. يضمن وصولنا أن القرى البعيدة تتمكن من الحصول على رعاية صحية عالية الجودة دون عبء مالي.",
+
+      program2_title: "صحة الأم والطفل",
+      program2_p: "الأمهات والأطفال الأصحاء هم أساس المجتمعات القوية. من خلال مبادرات صحة الأم، نقدم فحوصات ما قبل الولادة، ودعمًا غذائيًا، ومساعدة في الولادة الآمنة، ورعاية ما بعد الولادة. نركز أيضًا على تطعيم الأطفال ومراقبة النمو وتثقيف الأمهات حول النظافة والتغذية.",
+
+      program3_title: "التوعية الصحية والتعليم",
+      program3_p: "الوقاية خير من العلاج. تنشر برامجنا للتثقيف الصحي الوعي حول مواضيع مثل التغذية والنظافة والصرف الصحي والصحة العقلية والأمراض المرتبطة بنمط الحياة. من خلال عقد ورش عمل وجلسات مجتمعية وبرامج مدرسية، نمكن الناس من اتخاذ خيارات صحية وتقليل مخاطر الأمراض المزمنة.",
+
+      program4_title: "الوصول إلى الأدوية",
+      program4_p: "لا تستطيع العديد من العائلات تحمل تكلفة الأدوية المنقذة للحياة. نتعاون مع مقدمي الرعاية الصحية والصيدليات لتوزيع الأدوية الأساسية بتكلفة منخفضة أو مجانًا. نركز بشكل خاص على الأمراض المزمنة مثل السكري وارتفاع ضغط الدم والربو.",
+
+      testimonials_title: "أصوات التغيير",
+      testimonials_sub: "قصص حقيقية عن الأمل والشفاء من خلال برنامج الوصول إلى الرعاية الصحية",
+      t1_quote: "“عندما مرض طفلي، لم نتمكن من تحمل تكلفة العلاج. قدم مخيم الصحة التابع للجمعية له الرعاية التي يحتاجها - مجانًا. اليوم هو بصحة جيدة ويبتسم مرة أخرى.”",
+      t1_name: "مينا ديفي",
+      t1_role: "مستفيدة",
+      t2_quote: "“بصفتي طبيبًا متطوعًا، رأيت بنفسي عدد الأرواح التي ننقذها من خلال توفير الفحوصات والأدوية في الوقت المناسب في القرى النائية. إنه أمر مجزٍ للغاية.”",
+      t2_name: "د. أرجون باتيل",
+      t2_role: "طبيب متطوع",
+      t3_quote: "“دعم هذه المبادرة الصحية هو أفضل قرار اتخذته. معرفة أن مساهمتي تساعد العائلات على الوصول إلى علاجات منقذة للحياة تمنحني راحة البال.”",
+      t3_name: "سانجاي ميهتا",
+      t3_role: "متبرع",
+
+      cta_title: "ادعم الوصول إلى الرعاية الصحية",
+      cta_p: "يمكن لمساهمتك أن توفر علاجات منقذة للحياة ومخيمات طبية مجانية وأدوية أساسية للعائلات المحتاجة.",
+      cta_donate: "تبرع للرعاية الصحية",
+      cta_vol: "انضم كمتطوع طبي",
+
+      footer_brand: "المنظمة/العمل الخيري",
+      footer_quick: "روابط سريعة",
+      nav_about_f: "معلومات عنا",
+      nav_services_f: "الخدمات",
+      nav_blog_f: "المدونة",
+      nav_contact_f: "اتصل بنا",
+      footer_services: "استكشف الخدمات",
+      nav_service1_f: "التعليم",
+      nav_service2_f: "الرعاية الصحية",
+      nav_service3_f: "التدريب المهني",
+      nav_service4_f: "تمكين المرأة",
+      nav_service5_f: "الإغاثة في الكوارث",
+      nav_service6_f: "رعاية البيئة",
+      footer_contact: "اتصل بنا",
+      footer_follow: "تابعنا",
+      newsletter_title: "النشرة الإخبارية",
+      newsletter_text: "احصل على نصائح أسبوعية وتحديثات في بريدك.",
+      newsletter_placeholder: "أدخل بريدك الإلكتروني",
+      subscribe_btn: "اشترك",
+      newsletter_success: "✅ شكرًا لاشتراكك!",
+      footer_copy: "© 2025 اسم شركتك. جميع الحقوق محفوظة."
+    },
+    he: {
+      nav_home: "בית ▾",
+      nav_home1: "בית 1",
+      nav_home2: "בית 2",
+      nav_about: "עלינו",
+      nav_blog: "בלוג",
+      nav_services: "שירותים ▾",
+      nav_all_services: "כל השירותים",
+      nav_service1: "חינוך",
+      nav_service2: "בריאות",
+      nav_service3: "הכשרה מקצועית",
+      nav_service4: "העצמה",
+      nav_service5: "סיוע בשעת חירום",
+      nav_service6: "שמירה על הסביבה",
+      nav_contact: "צור קשר",
+      logout: "התנתק",
+
+      hero_title: "נגישות לבריאות",
+      hero_sub: "מביאים שירותי בריאות איכותיים לקהילות נזקקות.",
+
+      about_title: "על המשימה הבריאותית שלנו",
+      about_p1: "אנו מאמינים שבריאות טובה היא הבסיס לעתיד מזהיר יותר. באמצעות תוכניות הגישה לבריאות שלנו, אנו פועלים לספק שירותים רפואיים חיוניים לקהילות מוחלשות שנשכחות לעיתים קרובות.",
+      about_p2: "ממחנות בריאות ובדיקות ועד ימי מודעות ותרופות זולות — המשימה שלנו מבטיחה שמשפחות יקבלו את הטיפול שהן זקוקות לו. בשיתוף רופאים, מתנדבים ועובדי בריאות מקומיים, אנו מביאים בריאות איכותית לכולם.",
+      support_btn: "תמוך בעבודתנו",
+
+      impact_title: "ההשפעה שלנו",
+      impact_sub: "ביחד, אנו יוצרים שינוי משמעותי בקהילות מדי יום",
+      impact_card1: "ילדים שקיבלו גישה לחינוך ומשאבי למידה",
+      impact_card2: "אנשים שקיבלו שירותי בריאות ותמיכה רפואית בסיסית",
+      impact_card3: "נוער שהתחזק באמצעות פיתוח מיומנויות והכשרה מקצועית",
+      impact_card4: "קהילות שהתחזקו באמצעות מיזמי פיתוח והעצמה",
+
+      programs_title: "תוכניות הבריאות העיקריות שלנו",
+      programs_sub: "יוזמות ממוקדות להבטחת חיים בריאים יותר לאוכלוסיות נזקקות",
+
+      program1_title: "מחנות רפואיים קהילתיים",
+      program1_p: "אנו מארגנים מחנות בריאות חינמיים באזורים מוחלשים, מביאים רופאים, אחיות ותרופות חיוניות ישירות לאנשים. המחנות מספקים בדיקות, אבחון וטיפול למחלות נפוצות, ומעלים ידע על טיפול מונע.",
+
+      program2_title: "בריאות האם והילד",
+      program2_p: "אמהות וילדים בריאים הם הבסיס לקהילות חזקות. באמצעות יוזמות בריאות האם, אנו מספקים בדיקות טרום לידה, תמיכה תזונתית, סיוע בלידה בטוחה וטיפול לאחר לידה. אנו מתמקדים גם בחיסוני ילדים ומעקב גדילה.",
+
+      program3_title: "הגברת המודעות והחינוך הבריאותי",
+      program3_p: "מניעה עדיפה על ריפוי. תוכניות החינוך הבריאותי שלנו מפיצות מודעות לנושאים כמו תזונה, היגיינה, ביוב, בריאות נפשית ומחלות אורח חיים. באמצעות סדנאות ומפגשים קהילתיים, אנו מעצימים אנשים לבחור בחירות בריאות.",
+
+      program4_title: "גישה לתרופות",
+      program4_p: "משפחות רבות אינן יכולות להרשות לעצמן תרופות מצילות חיים. אנו משתפים פעולה עם נותני שירותי בריאות ותיורים להענקת תרופות חיוניות בעלות נמוכה או בחינם, בדגש על מחלות כרוניות כמו סוכרת ולחץ דם גבוה.",
+
+      testimonials_title: "קולות השינוי",
+      testimonials_sub: "סיפורים אמיתיים של תקווה וריפוי באמצעות תוכנית נגישות הבריאות שלנו",
+      t1_quote: "“כשהבן שלי חלה, לא יכולנו להרשות לעצמנו טיפול. מחנה הבריאות של הארגון נתן לו את הטיפול — בחינם. היום הוא בריא וחיוך שוב.”",
+      t1_name: "מינה דבי",
+      t1_role: "מוטב",
+      t2_quote: "“כמתנדב רופא, ראיתי פנים אל פנים כמה חיים אנו מצילים על ידי מתן בדיקות ותרופות בזמן בכפרים מרוחקים. זה מספק מאוד.”",
+      t2_name: "ד\"ר ארג'ון פאטל",
+      t2_role: "רופא מתנדב",
+      t3_quote: "“תמיכה ביוזמת הבריאות הזו היא ההחלטה הטובה ביותר שעשיתי. לדעת שהתרומה שלי עוזרת למשפחות לקבל טיפולים מצילי חיים מקנה לי שלום.”",
+      t3_name: "סאנג'אי מהטה",
+      t3_role: "תורם",
+
+      cta_title: "תמכו בגישה לבריאות",
+      cta_p: "התרומה שלכם יכולה לספק טיפולים מצילי חיים, מחנות רפואיים חינמיים ותרופות חיוניות למשפחות נזקקות.",
+      cta_donate: "תרמו לבריאות",
+      cta_vol: "הצטרפו כמתנדב רפואי",
+
+      footer_brand: "NGO/CHARITY",
+      footer_quick: "קישורים מהירים",
+      nav_about_f: "עלינו",
+      nav_services_f: "שירותים",
+      nav_blog_f: "בלוג",
+      nav_contact_f: "יצירת קשר",
+      footer_services: "גלה שירותים",
+      nav_service1_f: "חינוך",
+      nav_service2_f: "בריאות",
+      nav_service3_f: "הכשרה",
+      nav_service4_f: "העצמת נשים",
+      nav_service5_f: "סיוע באסון",
+      nav_service6_f: "שמירה על הסביבה",
+      footer_contact: "צור קשר",
+      footer_follow: "עקבו אחרינו",
+      newsletter_title: "ניוזלטר",
+      newsletter_text: "קבלו טיפים ועדכונים שבועיים לתיבת הדואר שלכם.",
+      newsletter_placeholder: "הזן את האימייל שלך",
+      subscribe_btn: "הירשם",
+      newsletter_success: "✅ תודה שנרשמת!",
+      footer_copy: "© 2025 שם החברה שלך. כל הזכויות שמורות."
+    }
+  };
+
+  function applyTranslations(lang) {
+    document.querySelectorAll('[data-key]').forEach(el => {
+      const key = el.getAttribute('data-key');
+      if (!key) return;
+      if (dictionary[lang] && dictionary[lang][key] !== undefined) {
+        el.textContent = dictionary[lang][key];
+      }
+    });
+
+    document.querySelectorAll('[data-placeholder-key]').forEach(el => {
+      const key = el.getAttribute('data-placeholder-key');
+      if (!key) return;
+      if (dictionary[lang] && dictionary[lang][key] !== undefined) {
+        el.setAttribute('placeholder', dictionary[lang][key]);
+      }
+    });
+
+    document.documentElement.lang = lang;
+    if (lang === 'ar' || lang === 'he') {
+      document.documentElement.setAttribute('dir', 'rtl');
+      document.body.classList.add('is-rtl');
+    } else {
+      document.documentElement.setAttribute('dir', 'ltr');
+      document.body.classList.remove('is-rtl');
+    }
+  }
+
+  function setLanguage(lang) {
+    if (!dictionary[lang]) lang = 'en';
+    localStorage.setItem('siteLanguage', lang);
+    const sel = document.getElementById('languageSelect');
+    if (sel) sel.value = lang;
+    applyTranslations(lang);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const saved = localStorage.getItem('siteLanguage') || 'en';
+    const sel = document.getElementById('languageSelect');
+    if (sel) {
+      sel.value = saved;
+      sel.addEventListener('change', e => setLanguage(e.target.value));
+    }
+    applyTranslations(saved);
+  });
+})();
 </script>
 
 </body>

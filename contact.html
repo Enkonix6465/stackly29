@@ -7,13 +7,14 @@
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/contact.css">
-<script src="js/main.js" defer></script>
+  <script src="js/main.js" defer></script>
   <script src="js/header.js" defer></script>
   <script src="js/auth-check.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="js/newsletter.js" defer></script>
-
-
+  <script src="js/newsletter.js" defer></script>
+  <style>
+    .language-toggle { display:inline-block; margin:0 12px; }
+  </style>
 </head>
 <body>
   <!-- ================= HEADER ================= -->
@@ -26,36 +27,45 @@
     <nav>
       <ul class="nav-links">
         <li class="dropdown">
-          <a href="index.html">Home ▾</a>
+          <a href="index.html" data-key="nav_home">Home ▾</a>
           <ul class="dropdown-menu">
-            <li><a href="index.html">Home 1</a></li>
-            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="index.html" data-key="nav_home1">Home 1</a></li>
+            <li><a href="home2.html" data-key="nav_home2">Home 2</a></li>
           </ul>
         </li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html" data-key="nav_about">About</a></li>
+        <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
         <li class="dropdown">
-          <a href="services.html">Services ▾</a>
+          <a href="services.html" data-key="nav_services">Services ▾</a>
           <ul class="dropdown-menu">
-                        <li class="mobile-only"><a href="services.html">All Services</a></li>
-            <li><a href="service1.html">Education</a></li>
-        <li><a href="service2.html">Healthcare</a></li>
-        <li><a href="service3.html">Skill Training</a></li>
-        <li><a href="service4.html">Empowerment</a></li>
-        <li><a href="service5.html">Disaster Relief</a></li>
-        <li><a href="service6.html">Environmental Care</a></li>
+            <li class="mobile-only"><a href="services.html" data-key="nav_all_services">All Services</a></li>
+            <li><a href="service1.html" data-key="nav_service1">Education</a></li>
+            <li><a href="service2.html" data-key="nav_service2">Healthcare</a></li>
+            <li><a href="service3.html" data-key="nav_service3">Skill Training</a></li>
+            <li><a href="service4.html" data-key="nav_service4">Empowerment</a></li>
+            <li><a href="service5.html" data-key="nav_service5">Disaster Relief</a></li>
+            <li><a href="service6.html" data-key="nav_service6">Environmental Care</a></li>
           </ul>
         </li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
       </ul>
     </nav>
+
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+      <select id="languageSelect" aria-label="Select language">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="he">עברית</option>
+      </select>
+    </div>
 
     <div class="profile-container">
       <div class="profile" id="profile-dropdown-toggle">
         <span id="profile-initials"></span>
       </div>
       <ul class="profile-dropdown" id="profile-dropdown">
-        <li><a href="#" id="logout-btn">Logout</a></li>
+        <li><a href="#" id="logout-btn" data-key="logout">Logout</a></li>
       </ul>
     </div>
 
@@ -77,31 +87,31 @@
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
-    <h1>Get in Touch</h1>
-    <p>We’re here to answer your questions and support you every step of the way.</p>
-    <a href="#contact-form" class="hero-btn">Contact Us</a>
+    <h1 data-key="hero_title">Get in Touch</h1>
+    <p data-key="hero_subtitle">We’re here to answer your questions and support you every step of the way.</p>
+    <a href="#contact-form" class="hero-btn" data-key="hero_btn">Contact Us</a>
   </div>
 </section>
 
 <!-- Section 2: Contact Information (New Style) -->
 <section class="contact-info-alt">
   <div class="container">
-    <h2>Let’s Connect</h2>
-    <p class="subtitle">Reach us through any of the following ways:</p>
+    <h2 data-key="contact_title">Let’s Connect</h2>
+    <p class="subtitle" data-key="contact_subtitle">Reach us through any of the following ways:</p>
 
     <div class="info-list">
       <div class="info-item">
         <i class="fas fa-map-marker-alt"></i>
         <div class="info-text">
-          <h3>Visit Us</h3>
-          <p>123 Hope Street, Green City, India</p>
+          <h3 data-key="contact_visit">Visit Us</h3>
+          <p data-key="contact_address">123 Hope Street, Green City, India</p>
         </div>
       </div>
 
       <div class="info-item">
         <i class="fas fa-phone-alt"></i>
         <div class="info-text">
-          <h3>Call Us</h3>
+          <h3 data-key="contact_call">Call Us</h3>
           <p>+91 98765 43210</p>
         </div>
       </div>
@@ -109,7 +119,7 @@
       <div class="info-item">
         <i class="fas fa-envelope"></i>
         <div class="info-text">
-          <h3>Email Us</h3>
+          <h3 data-key="contact_email">Email Us</h3>
           <p>support@ngoexample.org</p>
         </div>
       </div>
@@ -120,27 +130,27 @@
 <!-- Section 3: Contact Form -->
 <section class="contact-form-section" id="contact-form">
   <div class="container">
-    <h2>Send Us a Message</h2>
-    <p class="subtitle">We’ll get back to you as soon as possible.</p>
+    <h2 data-key="form_title">Send Us a Message</h2>
+    <p class="subtitle" data-key="form_subtitle">We’ll get back to you as soon as possible.</p>
 
     <form class="contact-form" id="contactForm">
       <div class="form-group">
-        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="text" name="name" placeholder="Your Name" required data-placeholder-key="form_name_ph">
       </div>
 
       <div class="form-group">
-        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="email" name="email" placeholder="Your Email" required data-placeholder-key="form_email_ph">
       </div>
 
       <div class="form-group">
-        <input type="text" name="subject" placeholder="Subject" required>
+        <input type="text" name="subject" placeholder="Subject" required data-placeholder-key="form_subject_ph">
       </div>
 
       <div class="form-group">
-        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+        <textarea name="message" placeholder="Your Message" rows="6" required data-placeholder-key="form_message_ph"></textarea>
       </div>
 
-      <button type="submit" class="submit-btn">Send Message</button>
+      <button type="submit" class="submit-btn" data-key="form_submit">Send Message</button>
     </form>
   </div>
 </section>
@@ -148,19 +158,17 @@
 <!-- Popup Message -->
 <div class="popup" id="thankYouPopup">
   <div class="popup-content">
-    <h3>✅ Thank You!</h3>
-    <p>Your message has been sent successfully.</p>
-    <button id="closePopup">Close</button>
+    <h3 data-key="popup_title">✅ Thank You!</h3>
+    <p data-key="popup_msg">Your message has been sent successfully.</p>
+    <button id="closePopup" data-key="popup_close">Close</button>
   </div>
 </div>
 
-
-
-    <!-- Section 4: Google Map -->
+<!-- Section 4: Google Map -->
 <section class="contact-map">
   <div class="container">
-    <h2>Find Us Here</h2>
-    <p class="subtitle">Visit our office at the heart of the city.</p>
+    <h2 data-key="map_title">Find Us Here</h2>
+    <p class="subtitle" data-key="map_subtitle">Visit our office at the heart of the city.</p>
     <div class="map-container">
       <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0861974946753!2d-122.41941548468137!3d37.77492927975971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858155f7d4e44d%3A0xf0b25f3a84b94c9d!2sSan%20Francisco%20City%20Hall!5e0!3m2!1sen!2sin!4v1692349854025!5m2!1sen!2sin" 
@@ -174,42 +182,42 @@
     </div>
   </div>
 </section>
+
 <!-- Section 6: FAQ -->
 <section class="contact-faq">
   <div class="container">
-    <h2>Frequently Asked Questions</h2>
-    <p class="subtitle">Find quick answers to common questions.</p>
+    <h2 data-key="faq_title">Frequently Asked Questions</h2>
+    <p class="subtitle" data-key="faq_subtitle">Find quick answers to common questions.</p>
 
     <div class="faq-container">
 
       <div class="faq-item">
-        <button class="faq-question">How can I get in touch with your team? <span>+</span></button>
+        <button class="faq-question" data-key="faq_q1">How can I get in touch with your team? <span>+</span></button>
         <div class="faq-answer">
-          <p>You can reach us via our contact form, email, or phone. We typically respond within 24 hours.</p>
+          <p data-key="faq_a1">You can reach us via our contact form, email, or phone. We typically respond within 24 hours.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">Where is your office located? <span>+</span></button>
+        <button class="faq-question" data-key="faq_q2">Where is your office located? <span>+</span></button>
         <div class="faq-answer">
-          <p>Our office is located in Green City, India. You can find us on Google Maps above.</p>
+          <p data-key="faq_a2">Our office is located in Green City, India. You can find us on Google Maps above.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">Do you accept volunteer applications online? <span>+</span></button>
+        <button class="faq-question" data-key="faq_q3">Do you accept volunteer applications online? <span>+</span></button>
         <div class="faq-answer">
-          <p>Yes! Please visit our volunteer page or contact us directly for more details.</p>
+          <p data-key="faq_a3">Yes! Please visit our volunteer page or contact us directly for more details.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">What is the best way to support your NGO? <span>+</span></button>
+        <button class="faq-question" data-key="faq_q4">What is the best way to support your NGO? <span>+</span></button>
         <div class="faq-answer">
-          <p>You can support us through donations, volunteering, or spreading awareness about our mission.</p>
+          <p data-key="faq_a4">You can support us through donations, volunteering, or spreading awareness about our mission.</p>
         </div>
       </div>
-      
 
     </div>
   </div>
@@ -218,8 +226,8 @@
 <!-- Section 5: Social Media -->
 <section class="contact-social">
   <div class="container">
-    <h2>Connect With Us</h2>
-    <p class="subtitle">Follow us on social media and stay updated.</p>
+    <h2 data-key="social_title">Connect With Us</h2>
+    <p class="subtitle" data-key="social_subtitle">Follow us on social media and stay updated.</p>
 
     <div class="social-icons">
       <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -230,8 +238,6 @@
     </div>
   </div>
 </section>
-
-
 
   </main>
 
@@ -247,31 +253,31 @@
 
     <!-- Quick Links -->
     <div class="footer-links">
-      <h4>Quick Links</h4>
+      <h4 data-key="footer_links">Quick Links</h4>
       <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html" data-key="nav_about">About</a></li>
+        <li><a href="services.html" data-key="nav_services">Services</a></li>
+        <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
+        <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
       </ul>
     </div>
 
     <!-- Services -->
     <div class="footer-services">
-      <h4>Explore Services</h4>
+      <h4 data-key="footer_services">Explore Services</h4>
       <ul>
-        <li><a href="service1.html">Education</a></li>
-        <li><a href="service2.html">Healthcare</a></li>
-        <li><a href="service3.html">Skill Training</a></li>
-        <li><a href="service4.html">Women Empowerment</a></li>
-        <li><a href="service5.html">Disaster Relief</a></li>
-        <li><a href="service6.html">Environmental Care</a></li>
+        <li><a href="service1.html" data-key="nav_service1">Education</a></li>
+        <li><a href="service2.html" data-key="nav_service2">Healthcare</a></li>
+        <li><a href="service3.html" data-key="nav_service3">Skill Training</a></li>
+        <li><a href="service4.html" data-key="nav_service4">Women Empowerment</a></li>
+        <li><a href="service5.html" data-key="nav_service5">Disaster Relief</a></li>
+        <li><a href="service6.html" data-key="nav_service6">Environmental Care</a></li>
       </ul>
     </div>
 
     <!-- Contact -->
     <div class="footer-contact">
-      <h4>Contact Us</h4>
+      <h4 data-key="footer_contact">Contact Us</h4>
       <p><strong>Email:</strong> info@example.com</p>
       <p><strong>Phone:</strong> +91 1234567890</p>
 
@@ -285,22 +291,23 @@
 
     <!-- Newsletter -->
     <div class="footer-newsletter">
-      <h4>Newsletter</h4>
-      <p>Get weekly wellness tips and updates in your inbox.</p>
+      <h4 data-key="footer_newsletter">Newsletter</h4>
+      <p data-key="newsletter_text">Get weekly wellness tips and updates in your inbox.</p>
       <form id="newsletter-form">
-        <input type="email" id="newsletter-email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
+        <input type="email" id="newsletter-email" placeholder="Enter your email" required data-placeholder-key="newsletter_placeholder">
+        <button type="submit" data-key="newsletter_btn">Subscribe</button>
       </form>
-      <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;">
-    ✅ Thank you for subscribing!
-  </div>
+      <div id="newsletter-success" style="display:none; color:wheat; margin-top:8px;" data-key="newsletter_success">
+        ✅ Thank you for subscribing!
+      </div>
     </div>
   </div>
 
-  <div class="footer-copy">
+  <div class="footer-copy" data-key="footer_copy">
     &copy; 2025 Your Company Name. All Rights Reserved.
   </div>
 </footer>
+
 <script>
     // Contact Form Popup Logic
 const form = document.getElementById('contactForm');
@@ -323,16 +330,286 @@ window.addEventListener('click', function(e) {
     popup.style.display = 'none';
   }
 });
+
 // FAQ Accordion
 const faqQuestions = document.querySelectorAll(".faq-question");
-
 faqQuestions.forEach(button => {
   button.addEventListener("click", () => {
     const faqItem = button.parentElement;
     faqItem.classList.toggle("active");
   });
 });
+</script>
 
+<!-- ================= Language logic (dictionary, RTL, persistent) ================= -->
+<script>
+(function () {
+  const dictionary = {
+    en: {
+      nav_home: "Home ▾",
+      nav_home1: "Home 1",
+      nav_home2: "Home 2",
+      nav_about: "About",
+      nav_blog: "Blog",
+      nav_services: "Services ▾",
+      nav_all_services: "All Services",
+      nav_service1: "Education",
+      nav_service2: "Healthcare",
+      nav_service3: "Skill Training",
+      nav_service4: "Empowerment",
+      nav_service5: "Disaster Relief",
+      nav_service6: "Environmental Care",
+      nav_contact: "Contact",
+      logout: "Logout",
+
+      hero_title: "Get in Touch",
+      hero_subtitle: "We’re here to answer your questions and support you every step of the way.",
+      hero_btn: "Contact Us",
+
+      contact_title: "Let’s Connect",
+      contact_subtitle: "Reach us through any of the following ways:",
+      contact_visit: "Visit Us",
+      contact_address: "123 Hope Street, Green City, India",
+      contact_call: "Call Us",
+      contact_email: "Email Us",
+
+      form_title: "Send Us a Message",
+      form_subtitle: "We’ll get back to you as soon as possible.",
+      form_name_ph: "Your Name",
+      form_email_ph: "Your Email",
+      form_subject_ph: "Subject",
+      form_message_ph: "Your Message",
+      form_submit: "Send Message",
+
+      popup_title: "✅ Thank You!",
+      popup_msg: "Your message has been sent successfully.",
+      popup_close: "Close",
+
+      map_title: "Find Us Here",
+      map_subtitle: "Visit our office at the heart of the city.",
+
+      faq_title: "Frequently Asked Questions",
+      faq_subtitle: "Find quick answers to common questions.",
+      faq_q1: "How can I get in touch with your team? <span>+</span>",
+      faq_a1: "You can reach us via our contact form, email, or phone. We typically respond within 24 hours.",
+      faq_q2: "Where is your office located? <span>+</span>",
+      faq_a2: "Our office is located in Green City, India. You can find us on Google Maps above.",
+      faq_q3: "Do you accept volunteer applications online? <span>+</span>",
+      faq_a3: "Yes! Please visit our volunteer page or contact us directly for more details.",
+      faq_q4: "What is the best way to support your NGO? <span>+</span>",
+      faq_a4: "You can support us through donations, volunteering, or spreading awareness about our mission.",
+
+      social_title: "Connect With Us",
+      social_subtitle: "Follow us on social media and stay updated.",
+
+      footer_links: "Quick Links",
+      footer_services: "Explore Services",
+      footer_contact: "Contact Us",
+      footer_newsletter: "Newsletter",
+      newsletter_text: "Get weekly wellness tips and updates in your inbox.",
+      newsletter_btn: "Subscribe",
+      newsletter_placeholder: "Enter your email",
+      newsletter_success: "✅ Thank you for subscribing!",
+      footer_copy: "© 2025 Your Company Name. All Rights Reserved."
+    },
+    ar: {
+      nav_home: "الرئيسية ▾",
+      nav_home1: "الرئيسية 1",
+      nav_home2: "الرئيسية 2",
+      nav_about: "معلومات عنا",
+      nav_blog: "المدونة",
+      nav_services: "الخدمات ▾",
+      nav_all_services: "جميع الخدمات",
+      nav_service1: "التعليم",
+      nav_service2: "الرعاية الصحية",
+      nav_service3: "التدريب المهني",
+      nav_service4: "التمكين",
+      nav_service5: "الإغاثة في الكوارث",
+      nav_service6: "رعاية البيئة",
+      nav_contact: "اتصل بنا",
+      logout: "تسجيل الخروج",
+
+      hero_title: "تواصل معنا",
+      hero_subtitle: "نحن هنا للإجابة عن أسئلتك ودعمك في كل خطوة.",
+      hero_btn: "اتصل بنا",
+
+      contact_title: "لنتواصل",
+      contact_subtitle: "تواصل معنا عبر أي من الطرق التالية:",
+      contact_visit: "زرنا",
+      contact_address: "123 شارع الأمل، المدينة الخضراء، الهند",
+      contact_call: "اتصل بنا",
+      contact_email: "راسلنا",
+
+      form_title: "أرسل لنا رسالة",
+      form_subtitle: "سنعاود الاتصال بك في أقرب وقت ممكن.",
+      form_name_ph: "اسمك",
+      form_email_ph: "بريدك الإلكتروني",
+      form_subject_ph: "الموضوع",
+      form_message_ph: "رسالتك",
+      form_submit: "إرسال الرسالة",
+
+      popup_title: "✅ شكرًا لك!",
+      popup_msg: "تم إرسال رسالتك بنجاح.",
+      popup_close: "إغلاق",
+
+      map_title: "اعثر علينا هنا",
+      map_subtitle: "زر مكتبنا في قلب المدينة.",
+
+      faq_title: "الأسئلة الشائعة",
+      faq_subtitle: "اعثر على إجابات سريعة لأكثر الأسئلة شيوعًا.",
+      faq_q1: "كيف يمكنني التواصل مع فريقكم؟ <span>+</span>",
+      faq_a1: "يمكنك التواصل عبر نموذج الاتصال أو البريد الإلكتروني أو الهاتف. عادةً نرد خلال 24 ساعة.",
+      faq_q2: "أين يقع مكتبكم؟ <span>+</span>",
+      faq_a2: "يقع مكتبنا في المدينة الخضراء، الهند. ستجد موقعنا على خرائط جوجل أعلاه.",
+      faq_q3: "هل تقبلون طلبات التطوع عبر الإنترنت؟ <span>+</span>",
+      faq_a3: "نعم! تفضل بزيارة صفحة المتطوعين أو تواصل معنا مباشرةً لمزيد من التفاصيل.",
+      faq_q4: "ما هي أفضل طريقة لدعم منظمتكم؟ <span>+</span>",
+      faq_a4: "يمكنك دعمنا عبر التبرع أو التطوع أو نشر الوعي حول رسالتنا.",
+
+      social_title: "تواصل معنا",
+      social_subtitle: "تابعنا على وسائل التواصل الاجتماعي وابقَ على اطلاع.",
+
+      footer_links: "روابط سريعة",
+      footer_services: "استكشف الخدمات",
+      footer_contact: "اتصل بنا",
+      footer_newsletter: "النشرة الإخبارية",
+      newsletter_text: "احصل على نصائح وتحديثات أسبوعية في بريدك.",
+      newsletter_btn: "اشترك",
+      newsletter_placeholder: "أدخل بريدك الإلكتروني",
+      newsletter_success: "✅ شكرًا لاشتراكك!",
+      footer_copy: "© 2025 اسم شركتك. جميع الحقوق محفوظة."
+    },
+    he: {
+      nav_home: "בית ▾",
+      nav_home1: "בית 1",
+      nav_home2: "בית 2",
+      nav_about: "עלינו",
+      nav_blog: "בלוג",
+      nav_services: "שירותים ▾",
+      nav_all_services: "כל השירותים",
+      nav_service1: "חינוך",
+      nav_service2: "בריאות",
+      nav_service3: "הכשרה מקצועית",
+      nav_service4: "העצמה",
+      nav_service5: "סיוע בשעת חירום",
+      nav_service6: "שמירה על הסביבה",
+      nav_contact: "צור קשר",
+      logout: "התנתק",
+
+      hero_title: "צרו קשר",
+      hero_subtitle: "אנחנו כאן כדי לענות על השאלות שלכם ולסייע בכל שלב.",
+      hero_btn: "צור קשר",
+
+      contact_title: "בואו נתחבר",
+      contact_subtitle: "אפשר ליצור קשר באחת מהדרכים הבאות:",
+      contact_visit: "בקרו אותנו",
+      contact_address: "רחוב התקווה 123, העיר הירוקה, הודו",
+      contact_call: "התקשרו אלינו",
+      contact_email: "שלחו לנו מייל",
+
+      form_title: "שלחו לנו הודעה",
+      form_subtitle: "נחזור אליכם בהקדם האפשרי.",
+      form_name_ph: "השם שלך",
+      form_email_ph: "האימייל שלך",
+      form_subject_ph: "נושא",
+      form_message_ph: "ההודעה שלך",
+      form_submit: "שלח הודעה",
+
+      popup_title: "✅ תודה!",
+      popup_msg: "הודעתך נשלחה בהצלחה.",
+      popup_close: "סגור",
+
+      map_title: "מצאו אותנו כאן",
+      map_subtitle: "בקרו במשרדנו בלב העיר.",
+
+      faq_title: "שאלות נפוצות",
+      faq_subtitle: "תשובות מהירות לשאלות שכיחות.",
+      faq_q1: "איך אפשר ליצור קשר עם הצוות? <span>+</span>",
+      faq_a1: "ניתן לפנות דרך הטופס, במייל או בטלפון. בדרך כלל נשיב בתוך 24 שעות.",
+      faq_q2: "איפה המשרד שלכם נמצא? <span>+</span>",
+      faq_a2: "המשרד נמצא בעיר הירוקה, הודו. ניתן למצוא אותנו במפת גוגל למעלה.",
+      faq_q3: "האם ניתן להגיש בקשת התנדבות אונליין? <span>+</span>",
+      faq_a3: "כן! בקרו בעמוד המתנדבים או צרו קשר ישירות לקבלת פרטים.",
+      faq_q4: "מהי הדרך הטובה ביותר לתמוך בארגון? <span>+</span>",
+      faq_a4: "אפשר לתמוך בתרומות, בהתנדבות או בהעלאת המודעות למשימתנו.",
+
+      social_title: "התחברו איתנו",
+      social_subtitle: "עקבו אחרינו ברשתות החברתיות והישארו מעודכנים.",
+
+      footer_links: "קישורים מהירים",
+      footer_services: "חקור שירותים",
+      footer_contact: "צור קשר",
+      footer_newsletter: "ניוזלטר",
+      newsletter_text: "קבלו טיפים ועדכונים שבועיים לתיבת הדואר.",
+      newsletter_btn: "הירשם",
+      newsletter_placeholder: "הכנס את האימייל שלך",
+      newsletter_success: "✅ תודה שנרשמתם!",
+      footer_copy: "© 2025 שם החברה שלך. כל הזכויות שמורות."
+    }
+  };
+
+  function applyTranslations(lang) {
+    // text nodes
+    document.querySelectorAll('[data-key]').forEach(el => {
+      const key = el.getAttribute('data-key');
+      if (dictionary[lang] && dictionary[lang][key] !== undefined) {
+        // preserve inner <span> for FAQ toggles by setting innerHTML
+        const val = dictionary[lang][key];
+        if (/<\s*span/i.test(val)) {
+          el.innerHTML = val;
+        } else {
+          el.textContent = val;
+        }
+      }
+    });
+    // placeholders
+    document.querySelectorAll('[data-placeholder-key]').forEach(el => {
+      const key = el.getAttribute('data-placeholder-key');
+      if (dictionary[lang] && dictionary[lang][key] !== undefined) {
+        el.setAttribute('placeholder', dictionary[lang][key]);
+      }
+    });
+
+    // html lang + dir + optional body class
+    document.documentElement.lang = lang;
+    if (lang === 'ar' || lang === 'he') {
+      document.documentElement.setAttribute('dir', 'rtl');
+      document.body.classList.add('is-rtl');
+    } else {
+      document.documentElement.setAttribute('dir', 'ltr');
+      document.body.classList.remove('is-rtl');
+    }
+  }
+
+  function setLanguage(lang) {
+    if (!dictionary[lang]) lang = 'en';
+    // persist to both keys for cross-page compatibility
+    try {
+      localStorage.setItem('siteLanguage', lang);
+      localStorage.setItem('lang', lang);
+    } catch(e){}
+    const sel = document.getElementById('languageSelect');
+    if (sel) sel.value = lang;
+    applyTranslations(lang);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // read from either key (prefers siteLanguage to match index.html)
+    let saved = 'en';
+    try {
+      saved = localStorage.getItem('siteLanguage') || localStorage.getItem('lang') || 'en';
+    } catch(e){}
+    if (!dictionary[saved]) saved = 'en';
+    const sel = document.getElementById('languageSelect');
+    if (sel) {
+      sel.value = saved;
+      applyTranslations(saved);
+      sel.addEventListener('change', e => setLanguage(e.target.value));
+    } else {
+      applyTranslations(saved);
+    }
+  });
+})();
 </script>
 
 </body>
